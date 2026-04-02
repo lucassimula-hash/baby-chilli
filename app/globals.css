@@ -1,0 +1,740 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Chilli Design System — Design Tokens
+   Source: Figma variables.json export
+   Brand: Magenta (#ff4beb)
+   ============================================================ */
+
+/* ============================================================
+   PRIMITIVE TOKENS (from Figma _root collections)
+   ============================================================ */
+:root {
+  /* --- Base Colors --- */
+  --color-white: #ffffff;
+  --color-black: #140f14;
+
+  /* --- Neutral --- */
+  --color-neutral-50: #f5f5f5;
+  --color-neutral-100: #efefef;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #cfcecf;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #545454;
+  --color-neutral-700: #424242;
+  --color-neutral-800: #2c2c2c;
+  --color-neutral-850: #26232a;
+  --color-neutral-900: #211d23;
+  --color-neutral-950: #140f14;
+
+  /* --- Brand --- */
+  --color-brand-50: #fff6fe;
+  --color-brand-100: #ffedfd;
+  --color-brand-200: #ffe3fc;
+  --color-brand-300: #ffc9f9;
+  --color-brand-400: #ffb0f6;
+  --color-brand-500: #ff96f4;
+  --color-brand-600: #ff92f4;
+  --color-brand-700: #ff6ef1;
+  --color-brand-800: #ff4beb;
+  --color-brand-900: #e544d6;
+  --color-brand-950: #661e5f;
+
+  /* --- Success --- */
+  --color-success-50: #f6fef9;
+  --color-success-100: #ecfdf3;
+  --color-success-200: #dcfae6;
+  --color-success-300: #a9efc5;
+  --color-success-400: #75e0a7;
+  --color-success-500: #47cd89;
+  --color-success-600: #17b26a;
+  --color-success-700: #079455;
+  --color-success-800: #067647;
+  --color-success-900: #085d3a;
+  --color-success-950: #074d31;
+
+  /* --- Danger --- */
+  --color-danger-50: #fffbfa;
+  --color-danger-100: #fef3f2;
+  --color-danger-200: #fee4e2;
+  --color-danger-300: #fecdca;
+  --color-danger-400: #fda29b;
+  --color-danger-500: #f97066;
+  --color-danger-600: #f04438;
+  --color-danger-700: #d92d20;
+  --color-danger-800: #b42318;
+  --color-danger-900: #912018;
+  --color-danger-950: #7a271a;
+
+  /* --- Warning --- */
+  --color-warning-50: #fffcf5;
+  --color-warning-100: #fffaeb;
+  --color-warning-200: #fef0c7;
+  --color-warning-300: #fedf89;
+  --color-warning-400: #fec84b;
+  --color-warning-500: #fdb022;
+  --color-warning-600: #f79009;
+  --color-warning-700: #dc6803;
+  --color-warning-800: #b54708;
+  --color-warning-900: #93370d;
+  --color-warning-950: #7a2e0e;
+
+  /* --- Link --- */
+  --color-link-50: #eff6ff;
+  --color-link-100: #dbeafe;
+  --color-link-200: #bedbff;
+  --color-link-300: #8ec5ff;
+  --color-link-400: #51a2ff;
+  --color-link-500: #2b7fff;
+  --color-link-600: #155dfc;
+  --color-link-700: #1447e6;
+  --color-link-800: #193cb8;
+  --color-link-900: #1c398e;
+  --color-link-950: #162456;
+
+  /* --- Opacity / Neutral overlay --- */
+  --color-opacity-neutral-50: rgba(245, 245, 245, 0.02);
+  --color-opacity-neutral-100: rgba(245, 245, 245, 0.03);
+  --color-opacity-neutral-200: rgba(245, 245, 245, 0.06);
+  --color-opacity-neutral-300: rgba(245, 245, 245, 0.08);
+  --color-opacity-neutral-400: rgba(245, 245, 245, 0.13);
+  --color-opacity-neutral-500: rgba(245, 245, 245, 0.21);
+  --color-opacity-neutral-600: rgba(245, 245, 245, 0.34);
+  --color-opacity-neutral-700: rgba(245, 245, 245, 0.55);
+  --color-opacity-neutral-800: rgba(245, 245, 245, 0.78);
+  --color-opacity-neutral-900: #f5f5f5;
+
+  /* --- Opacity / Inverse (dark) overlay --- */
+  --color-opacity-inverse-50: rgba(20, 15, 20, 0.02);
+  --color-opacity-inverse-100: rgba(20, 15, 20, 0.03);
+  --color-opacity-inverse-200: rgba(20, 15, 20, 0.05);
+  --color-opacity-inverse-300: rgba(20, 15, 20, 0.08);
+  --color-opacity-inverse-400: rgba(20, 15, 20, 0.24);
+  --color-opacity-inverse-500: rgba(20, 15, 20, 0.32);
+  --color-opacity-inverse-600: rgba(20, 15, 20, 0.56);
+  --color-opacity-inverse-700: rgba(20, 15, 20, 0.64);
+  --color-opacity-inverse-800: rgba(20, 15, 20, 0.8);
+  --color-opacity-inverse-900: #140f14;
+
+  /* --- Opacity / Brand overlay --- */
+  --color-opacity-brand-50: rgba(255, 75, 235, 0.02);
+  --color-opacity-brand-100: rgba(255, 75, 235, 0.03);
+  --color-opacity-brand-200: rgba(255, 75, 235, 0.05);
+  --color-opacity-brand-300: rgba(255, 75, 235, 0.08);
+  --color-opacity-brand-400: rgba(255, 75, 235, 0.13);
+  --color-opacity-brand-500: rgba(255, 75, 235, 0.21);
+  --color-opacity-brand-600: rgba(255, 75, 235, 0.34);
+  --color-opacity-brand-700: rgba(255, 75, 235, 0.55);
+  --color-opacity-brand-800: rgba(255, 75, 235, 0.89);
+  --color-opacity-brand-900: #ff4beb;
+
+  /* --- Other Colors (lighter / strong pairs) --- */
+  --color-other-neon-pink-lighter: #ffebf1;
+  --color-other-neon-pink-strong: #ff2a6b;
+  --color-other-bright-pink-lighter: #ffebf5;
+  --color-other-bright-pink-strong: #ff329f;
+  --color-other-electric-magenta-lighter: #faecfb;
+  --color-other-electric-magenta-strong: #f133fb;
+  --color-other-purple-lighter: #f4ebff;
+  --color-other-purple-strong: #a350ff;
+  --color-other-ultra-blue-lighter: #eeecfb;
+  --color-other-ultra-blue-strong: #5b47fb;
+  --color-other-blue-lighter: #ebf5ff;
+  --color-other-blue-strong: #0283ff;
+  --color-other-cyan-blue-lighter: #e5eff4;
+  --color-other-cyan-blue-strong: #00a8f4;
+  --color-other-liquid-blue-lighter: #ebf9ff;
+  --color-other-liquid-blue-strong: #00b4ff;
+  --color-other-bright-cyan-lighter: #e8fafc;
+  --color-other-bright-cyan-strong: #06bacd;
+  --color-other-caribbean-green-lighter: #e8fcf6;
+  --color-other-caribbean-green-strong: #01b980;
+  --color-other-lime-green-lighter: #e8fcf0;
+  --color-other-lime-green-strong: #00c849;
+  --color-other-lime-lighter: #f5ffeb;
+  --color-other-lime-strong: #6ccf00;
+  --color-other-yellow-lighter: #f6f2e7;
+  --color-other-yellow-strong: #f6b101;
+  --color-other-amber-orange-lighter: #fef6ea;
+  --color-other-amber-orange-strong: #fe9a01;
+  --color-other-orange-lighter: #fef2ea;
+  --color-other-orange-strong: #fe6702;
+  --color-other-red-lighter: #ffebec;
+  --color-other-red-strong: #ff2a3b;
+  --color-other-antique-gold-lighter: #fffbf0;
+  --color-other-antique-gold-strong: #d6b44d;
+  --color-other-desert-orange-lighter: #fff4eb;
+  --color-other-desert-orange-strong: #d1894b;
+  --color-other-grey-lighter: #f9fafb;
+  --color-other-grey-strong: #344054;
+  --color-other-midnight-blue-lighter: #ebf4ff;
+  --color-other-midnight-blue-strong: #02346b;
+
+  /* --- Spacing (px) --- */
+  --space-0: 0px;
+  --space-1: 2px;
+  --space-2: 4px;
+  --space-3: 6px;
+  --space-4: 8px;
+  --space-5: 12px;
+  --space-6: 16px;
+  --space-7: 20px;
+  --space-8: 24px;
+  --space-9: 32px;
+  --space-10: 40px;
+  --space-11: 48px;
+  --space-12: 64px;
+  --space-13: 80px;
+  --space-14: 96px;
+  --space-15: 160px;
+  --space-16: 260px;
+
+  /* --- Radius (px) --- */
+  --radius-0: 0px;
+  --radius-1: 2px;
+  --radius-2: 4px;
+  --radius-3: 6px;
+  --radius-4: 8px;
+  --radius-5: 12px;
+  --radius-6: 16px;
+  --radius-7: 24px;
+  --radius-8: 32px;
+  --radius-full: 9999px;
+
+  /* --- Border Width (px) --- */
+  --border-width-0: 0px;
+  --border-width-1: 0.5px;
+  --border-width-2: 1px;
+  --border-width-3: 2px;
+  --border-width-4: 3px;
+  --border-width-5: 4px;
+  --border-width-6: 6px;
+  --border-width-7: 8px;
+
+  /* --- Size Scale (px) --- */
+  --size-1: 4px;
+  --size-2: 6px;
+  --size-3: 8px;
+  --size-4: 12px;
+  --size-5: 16px;
+  --size-6: 20px;
+  --size-7: 24px;
+  --size-8: 32px;
+  --size-9: 40px;
+  --size-10: 48px;
+  --size-11: 56px;
+  --size-12: 64px;
+  --size-13: 72px;
+  --size-14: 80px;
+  --size-15: 96px;
+  --size-16: 128px;
+
+  /* --- Font Size (px) --- */
+  --font-size-2xs: 10px;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 28px;
+  --font-size-4xl: 32px;
+  --font-size-5xl: 48px;
+  --font-size-6xl: 60px;
+  --font-size-7xl: 72px;
+  --font-size-8xl: 96px;
+  --font-size-9xl: 128px;
+
+  /* --- Line Height (px) --- */
+  --line-height-2xs: 14px;
+  --line-height-xs: 16px;
+  --line-height-sm: 20px;
+  --line-height-md: 24px;
+  --line-height-lg: 26px;
+  --line-height-xl: 28px;
+  --line-height-2xl: 32px;
+  --line-height-3xl: 40px;
+  --line-height-4xl: 46px;
+  --line-height-5xl: 54px;
+  --line-height-6xl: 66px;
+  --line-height-7xl: 78px;
+  --line-height-8xl: 106px;
+  --line-height-9xl: 136px;
+
+  /* --- Letter Spacing (px) --- */
+  --letter-spacing-xs: -2px;
+  --letter-spacing-sm: -1px;
+  --letter-spacing-md: 0px;
+  --letter-spacing-lg: 1px;
+  --letter-spacing-xl: 2px;
+
+  /* --- Breakpoints (px) --- */
+  --breakpoint-xs: 375px;
+  --breakpoint-sm: 440px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+
+  /* --- Font Families --- */
+  --font-family-primary: "SF Pro Display";
+  --font-family-secondary: "Inter";
+}
+
+/* ============================================================
+   SEMANTIC / THEME TOKENS — Light
+   ============================================================ */
+:root {
+  /* Backgrounds */
+  --backgrounds-base: #ffffff;
+  --backgrounds-elevated: #f5f5f5;
+  --backgrounds-selected: #fff6fe;
+  --backgrounds-fixed: #efefef;
+  --backgrounds-disabled: rgba(20, 15, 20, 0.08);
+
+  --backgrounds-neutral-primary-default: #ffffff;
+  --backgrounds-neutral-primary-hover: #f5f5f5;
+  --backgrounds-neutral-primary-pressed: #f5f5f5;
+  --backgrounds-neutral-secondary-default: #f5f5f5;
+  --backgrounds-neutral-secondary-hover: #efefef;
+  --backgrounds-neutral-secondary-pressed: #efefef;
+  --backgrounds-neutral-tertiary-default: #efefef;
+  --backgrounds-neutral-tertiary-hover: #e5e5e5;
+  --backgrounds-neutral-tertiary-pressed: #e5e5e5;
+  --backgrounds-neutral-inverse-default: #140f14;
+  --backgrounds-neutral-inverse-hover: #211d23;
+  --backgrounds-neutral-inverse-pressed: #211d23;
+
+  --backgrounds-neutral-glass-default: rgba(20, 15, 20, 0.8);
+  --backgrounds-neutral-glass-hover: rgba(20, 15, 20, 0.64);
+  --backgrounds-neutral-glass-pressed: rgba(20, 15, 20, 0.56);
+
+  --backgrounds-neutral-opacity-faint: rgba(245, 245, 245, 0.06);
+  --backgrounds-neutral-opacity-lighter: rgba(245, 245, 245, 0.08);
+  --backgrounds-neutral-opacity-medium: rgba(245, 245, 245, 0.13);
+  --backgrounds-neutral-opacity-moderate: rgba(245, 245, 245, 0.34);
+  --backgrounds-neutral-opacity-bolder: rgba(245, 245, 245, 0.55);
+  --backgrounds-neutral-opacity-strong: rgba(245, 245, 245, 0.78);
+
+  --backgrounds-brand-lighter-default: #ffedfd;
+  --backgrounds-brand-lighter-hover: #ffe3fc;
+  --backgrounds-brand-lighter-pressed: #ffe3fc;
+  --backgrounds-brand-strong-default: #ff4beb;
+  --backgrounds-brand-strong-hover: #e544d6;
+  --backgrounds-brand-strong-pressed: #e544d6;
+
+  --backgrounds-danger-lighter-default: #fee4e2;
+  --backgrounds-danger-lighter-hover: #fecdca;
+  --backgrounds-danger-lighter-pressed: #fee4e2;
+  --backgrounds-danger-strong-default: #f04438;
+  --backgrounds-danger-strong-hover: #d92d20;
+  --backgrounds-danger-strong-pressed: #d92d20;
+
+  --backgrounds-success-lighter-default: #ecfdf3;
+  --backgrounds-success-lighter-hover: #dcfae6;
+  --backgrounds-success-lighter-pressed: #dcfae6;
+  --backgrounds-success-strong-default: #47cd89;
+  --backgrounds-success-strong-hover: #75e0a7;
+  --backgrounds-success-strong-pressed: #75e0a7;
+
+  --backgrounds-warning-lighter-default: #fffaeb;
+  --backgrounds-warning-lighter-hover: #fef0c7;
+  --backgrounds-warning-lighter-pressed: #fef0c7;
+  --backgrounds-warning-strong-default: #fdb022;
+  --backgrounds-warning-strong-hover: #fec84b;
+  --backgrounds-warning-strong-pressed: #fec84b;
+
+  /* Other backgrounds (lighter / strong) */
+  --backgrounds-other-neon-pink-lighter: #ffebf1;
+  --backgrounds-other-neon-pink-strong: #ff2a6b;
+  --backgrounds-other-bright-pink-lighter: #ffebf5;
+  --backgrounds-other-bright-pink-strong: #ff329f;
+  --backgrounds-other-electric-magenta-lighter: #faecfb;
+  --backgrounds-other-electric-magenta-strong: #f133fb;
+  --backgrounds-other-purple-lighter: #f4ebff;
+  --backgrounds-other-purple-strong: #a350ff;
+  --backgrounds-other-ultra-blue-lighter: #eeecfb;
+  --backgrounds-other-ultra-blue-strong: #5b47fb;
+  --backgrounds-other-blue-lighter: #ebf5ff;
+  --backgrounds-other-blue-strong: #0283ff;
+  --backgrounds-other-cyan-blue-lighter: #e5eff4;
+  --backgrounds-other-cyan-blue-strong: #00a8f4;
+  --backgrounds-other-liquid-blue-lighter: #ebf9ff;
+  --backgrounds-other-liquid-blue-strong: #00b4ff;
+  --backgrounds-other-bright-cyan-lighter: #e8fafc;
+  --backgrounds-other-bright-cyan-strong: #06bacd;
+  --backgrounds-other-caribbean-green-lighter: #e8fcf6;
+  --backgrounds-other-caribbean-green-strong: #01b980;
+  --backgrounds-other-lime-green-lighter: #e8fcf0;
+  --backgrounds-other-lime-green-strong: #00c849;
+  --backgrounds-other-lime-lighter: #f5ffeb;
+  --backgrounds-other-lime-strong: #6ccf00;
+  --backgrounds-other-yellow-lighter: #f6f2e7;
+  --backgrounds-other-yellow-strong: #f6b101;
+  --backgrounds-other-amber-orange-lighter: #fef6ea;
+  --backgrounds-other-amber-orange-strong: #fe9a01;
+  --backgrounds-other-orange-lighter: #fef2ea;
+  --backgrounds-other-orange-strong: #fe6702;
+  --backgrounds-other-red-lighter: #ffebec;
+  --backgrounds-other-red-strong: #ff2a3b;
+  --backgrounds-other-antique-gold-lighter: #fffbf0;
+  --backgrounds-other-antique-gold-strong: #d6b44d;
+  --backgrounds-other-desert-orange-lighter: #fff4eb;
+  --backgrounds-other-desert-orange-strong: #d1894b;
+  --backgrounds-other-grey-lighter: #f9fafb;
+  --backgrounds-other-grey-strong: #344054;
+  --backgrounds-other-midnight-blue-lighter: #ebf4ff;
+  --backgrounds-other-midnight-blue-strong: #02346b;
+
+  /* Text */
+  --text-base-primary: #140f14;
+  --text-base-secondary: #737373;
+  --text-base-alternate: #f5f5f5;
+  --text-base-disabled: #a3a3a3;
+  --text-base-link: #193cb8;
+  --text-base-link-focus: #1c398e;
+  --text-selected: #ff4beb;
+  --text-disabled: #a3a3a3;
+  --text-fixed: #140f14;
+  --text-inverse: #ffffff;
+  --text-brand-primary: #ff4beb;
+  --text-brand-secondary: #ff92f4;
+  --text-danger-primary: #d92d20;
+  --text-danger-secondary: #f04438;
+  --text-warning-primary: #b54708;
+  --text-warning-secondary: #f79009;
+  --text-success-primary: #067647;
+  --text-success-secondary: #17b26a;
+  --text-glass-primary: rgba(245, 245, 245, 0.78);
+  --text-glass-subtle: rgba(245, 245, 245, 0.34);
+
+  /* Link */
+  --link-primary: #2b7fff;
+  --link-hover: #51a2ff;
+  --link-pressed: #51a2ff;
+  --link-visited: #51a2ff;
+
+  /* Borders */
+  --borders-base: #ffffff;
+  --borders-default: rgba(20, 15, 20, 0.08);
+  --borders-selected: #ff4beb;
+  --borders-divider: rgba(245, 245, 245, 0.08);
+  --borders-disabled: rgba(245, 245, 245, 0.03);
+  --borders-neutral-default: #f5f5f5;
+  --borders-neutral-moderate: #e5e5e5;
+  --borders-neutral-bolder: #cfcecf;
+  --borders-brand-default: #ff4beb;
+  --borders-brand-lighter: #ff92f4;
+  --borders-danger-default: #f97066;
+  --borders-danger-lighter: #fda29b;
+  --borders-warning-default: #fdb022;
+  --borders-warning-lighter: #fec84b;
+  --borders-success-default: #47cd89;
+  --borders-success-lighter: #75e0a7;
+  --borders-glass-lighter: rgba(245, 245, 245, 0.06);
+  --borders-glass-medium: rgba(245, 245, 245, 0.13);
+  --borders-glass-strong: rgba(245, 245, 245, 0.78);
+
+  /* Icons */
+  --icon-neutral-primary: #140f14;
+  --icon-neutral-secondary: #737373;
+  --icon-neutral-alternate: #efefef;
+  --icon-neutral-disabled: #a3a3a3;
+  --icon-brand-primary: #ff4beb;
+  --icon-brand-secondary: #ff92f4;
+  --icon-danger-primary: #b42318;
+  --icon-danger-secondary: #f04438;
+  --icon-warning-primary: #b54708;
+  --icon-warning-secondary: #f79009;
+  --icon-success-primary: #067647;
+  --icon-success-secondary: #17b26a;
+  --icon-link-default: #2b7fff;
+  --icon-link-hover: #51a2ff;
+  --icon-glass-primary: rgba(20, 15, 20, 0.8);
+  --icon-glass-subtle: rgba(20, 15, 20, 0.56);
+
+  /* Buttons */
+  --btn-primary-bg: #140f14;
+  --btn-primary-bg-hover: #211d23;
+  --btn-primary-bg-pressed: #211d23;
+  --btn-primary-bg-disabled: rgba(20, 15, 20, 0.08);
+  --btn-primary-text: #ffffff;
+
+  --btn-secondary-bg: #f5f5f5;
+  --btn-secondary-bg-hover: #efefef;
+  --btn-secondary-bg-pressed: #efefef;
+  --btn-secondary-bg-disabled: rgba(20, 15, 20, 0.08);
+  --btn-secondary-text: #140f14;
+
+  --btn-destructive-bg: #f04438;
+  --btn-destructive-bg-hover: #d92d20;
+  --btn-destructive-bg-pressed: #d92d20;
+  --btn-destructive-bg-disabled: rgba(20, 15, 20, 0.08);
+  --btn-destructive-text: #ffffff;
+  --btn-destructive-secondary-bg: #fef3f2;
+  --btn-destructive-secondary-bg-hover: #fee4e2;
+  --btn-destructive-secondary-bg-pressed: #fecdca;
+  --btn-destructive-secondary-text: #d92d20;
+
+  --btn-brand-bg: #ff4beb;
+  --btn-brand-bg-hover: #e544d6;
+  --btn-brand-bg-pressed: #e544d6;
+  --btn-brand-bg-disabled: rgba(20, 15, 20, 0.08);
+  --btn-brand-text: #ffffff;
+
+  --btn-glass-primary-bg: rgba(255, 75, 235, 0.89);
+  --btn-glass-primary-bg-hover: rgba(255, 75, 235, 0.89);
+  --btn-glass-primary-bg-pressed: rgba(255, 75, 235, 0.89);
+  --btn-glass-secondary-bg: rgba(245, 245, 245, 0.21);
+  --btn-glass-secondary-bg-hover: rgba(245, 245, 245, 0.13);
+  --btn-glass-secondary-bg-pressed: rgba(245, 245, 245, 0.13);
+  --btn-glass-ghost-bg: transparent;
+  --btn-glass-ghost-bg-hover: rgba(20, 15, 20, 0.05);
+  --btn-glass-ghost-text: #140f14;
+
+  --btn-disabled-bg: rgba(20, 15, 20, 0.08);
+  --btn-disabled-text: #a3a3a3;
+
+  /* Shadows */
+  --shadow-color-lighter: rgba(0, 0, 0, 0.56);
+  --shadow-brand-moderate: rgba(255, 75, 235, 0.34);
+  --shadow-danger-moderate: rgba(240, 68, 56, 0.34);
+
+  /* Root colors (legacy compat) */
+  --root-color-danger-600: #f04438;
+  --root-color-success-600: #17b26a;
+  --root-color-warning-500: #fdb022;
+
+  /* Layout */
+  --sidebar-width: 260px;
+  --header-height: 56px;
+}
+
+/* ============================================================
+   SEMANTIC / THEME TOKENS — Dark
+   ============================================================ */
+.dark {
+  /* Backgrounds */
+  --backgrounds-base: #140f14;
+  --backgrounds-elevated: #140f14;
+  --backgrounds-selected: #661e5f;
+  --backgrounds-fixed: #211d23;
+  --backgrounds-disabled: rgba(245, 245, 245, 0.08);
+
+  --backgrounds-neutral-primary-default: #211d23;
+  --backgrounds-neutral-primary-hover: #2c2c2c;
+  --backgrounds-neutral-primary-pressed: #2c2c2c;
+  --backgrounds-neutral-secondary-default: #26232a;
+  --backgrounds-neutral-secondary-hover: #2c2c2c;
+  --backgrounds-neutral-secondary-pressed: #2c2c2c;
+  --backgrounds-neutral-tertiary-default: #424242;
+  --backgrounds-neutral-tertiary-hover: #545454;
+  --backgrounds-neutral-tertiary-pressed: #545454;
+  --backgrounds-neutral-inverse-default: #f5f5f5;
+  --backgrounds-neutral-inverse-hover: #cfcecf;
+  --backgrounds-neutral-inverse-pressed: #cfcecf;
+
+  --backgrounds-neutral-glass-default: rgba(245, 245, 245, 0.78);
+  --backgrounds-neutral-glass-hover: rgba(245, 245, 245, 0.55);
+  --backgrounds-neutral-glass-pressed: rgba(245, 245, 245, 0.78);
+
+  --backgrounds-neutral-opacity-faint: rgba(245, 245, 245, 0.06);
+  --backgrounds-neutral-opacity-lighter: rgba(245, 245, 245, 0.08);
+  --backgrounds-neutral-opacity-medium: rgba(245, 245, 245, 0.13);
+  --backgrounds-neutral-opacity-moderate: rgba(245, 245, 245, 0.34);
+  --backgrounds-neutral-opacity-bolder: rgba(245, 245, 245, 0.55);
+  --backgrounds-neutral-opacity-strong: rgba(245, 245, 245, 0.78);
+
+  --backgrounds-brand-lighter-default: rgba(255, 75, 235, 0.08);
+  --backgrounds-brand-lighter-hover: rgba(255, 75, 235, 0.13);
+  --backgrounds-brand-lighter-pressed: rgba(255, 75, 235, 0.13);
+  --backgrounds-brand-strong-default: #ff4beb;
+  --backgrounds-brand-strong-hover: #e544d6;
+  --backgrounds-brand-strong-pressed: #e544d6;
+
+  --backgrounds-danger-lighter-default: #912018;
+  --backgrounds-danger-lighter-hover: #b42318;
+  --backgrounds-danger-lighter-pressed: #b42318;
+  --backgrounds-danger-strong-default: #f04438;
+  --backgrounds-danger-strong-hover: #f04438;
+  --backgrounds-danger-strong-pressed: #f04438;
+
+  --backgrounds-success-lighter-default: #085d3a;
+  --backgrounds-success-lighter-hover: #067647;
+  --backgrounds-success-lighter-pressed: #067647;
+  --backgrounds-success-strong-default: #47cd89;
+  --backgrounds-success-strong-hover: #17b26a;
+  --backgrounds-success-strong-pressed: #17b26a;
+
+  --backgrounds-warning-lighter-default: #93370d;
+  --backgrounds-warning-lighter-hover: #b54708;
+  --backgrounds-warning-lighter-pressed: #b54708;
+  --backgrounds-warning-strong-default: #fdb022;
+  --backgrounds-warning-strong-hover: #f79009;
+  --backgrounds-warning-strong-pressed: #f79009;
+
+  /* Other backgrounds (lighter / strong — dark mode uses opacity variants) */
+  --backgrounds-other-neon-pink-lighter: rgba(224, 32, 85, 0.2);
+  --backgrounds-other-neon-pink-strong: #ffd6e1;
+  --backgrounds-other-bright-pink-lighter: rgba(208, 33, 133, 0.2);
+  --backgrounds-other-bright-pink-strong: #ffdbf0;
+  --backgrounds-other-electric-magenta-lighter: rgba(192, 16, 232, 0.2);
+  --backgrounds-other-electric-magenta-strong: #f4c4ff;
+  --backgrounds-other-purple-lighter: rgba(123, 31, 255, 0.2);
+  --backgrounds-other-purple-strong: #d5b8ff;
+  --backgrounds-other-ultra-blue-lighter: rgba(63, 48, 255, 0.2);
+  --backgrounds-other-ultra-blue-strong: #63a7ff;
+  --backgrounds-other-blue-lighter: rgba(1, 96, 204, 0.2);
+  --backgrounds-other-blue-strong: #33b4ff;
+  --backgrounds-other-cyan-blue-lighter: rgba(0, 134, 196, 0.2);
+  --backgrounds-other-cyan-blue-strong: #33beff;
+  --backgrounds-other-liquid-blue-lighter: rgba(0, 150, 224, 0.2);
+  --backgrounds-other-liquid-blue-strong: #4dc4ff;
+  --backgrounds-other-bright-cyan-lighter: rgba(4, 144, 163, 0.2);
+  --backgrounds-other-bright-cyan-strong: #06e1ff;
+  --backgrounds-other-caribbean-green-lighter: rgba(1, 153, 102, 0.2);
+  --backgrounds-other-caribbean-green-strong: #02ffaa;
+  --backgrounds-other-lime-green-lighter: rgba(0, 167, 56, 0.2);
+  --backgrounds-other-lime-green-strong: #00ff56;
+  --backgrounds-other-lime-lighter: rgba(83, 164, 0, 0.2);
+  --backgrounds-other-lime-strong: #81ff00;
+  --backgrounds-other-yellow-lighter: rgba(196, 138, 0, 0.2);
+  --backgrounds-other-yellow-strong: #ffc333;
+  --backgrounds-other-amber-orange-lighter: rgba(204, 118, 0, 0.2);
+  --backgrounds-other-amber-orange-strong: #ffa933;
+  --backgrounds-other-orange-lighter: rgba(204, 78, 0, 0.2);
+  --backgrounds-other-orange-strong: #ff8133;
+  --backgrounds-other-red-lighter: rgba(208, 32, 46, 0.2);
+  --backgrounds-other-red-strong: #ff6672;
+  --backgrounds-other-antique-gold-lighter: rgba(163, 130, 56, 0.2);
+  --backgrounds-other-antique-gold-strong: #ffc033;
+  --backgrounds-other-desert-orange-lighter: rgba(160, 102, 54, 0.2);
+  --backgrounds-other-desert-orange-strong: #ff8f33;
+  --backgrounds-other-grey-lighter: rgba(245, 245, 245, 0.02);
+  --backgrounds-other-grey-strong: #ffffff;
+  --backgrounds-other-midnight-blue-lighter: rgba(4, 81, 154, 0.2);
+  --backgrounds-other-midnight-blue-strong: #54acff;
+
+  /* Text */
+  --text-base-primary: #f5f5f5;
+  --text-base-secondary: #a3a3a3;
+  --text-base-alternate: #140f14;
+  --text-base-disabled: #737373;
+  --text-base-link: #2b7fff;
+  --text-base-link-focus: #51a2ff;
+  --text-selected: #ff4beb;
+  --text-disabled: rgba(245, 245, 245, 0.08);
+  --text-fixed: #ffffff;
+  --text-inverse: #140f14;
+  --text-brand-primary: #ff4beb;
+  --text-brand-secondary: #ff92f4;
+  --text-danger-primary: #f04438;
+  --text-danger-secondary: #fda29b;
+  --text-warning-primary: #fdb022;
+  --text-warning-secondary: #fec84b;
+  --text-success-primary: #47cd89;
+  --text-success-secondary: #75e0a7;
+  --text-glass-primary: rgba(245, 245, 245, 0.78);
+  --text-glass-subtle: rgba(245, 245, 245, 0.34);
+
+  /* Link */
+  --link-primary: #2b7fff;
+  --link-hover: #155dfc;
+  --link-pressed: #155dfc;
+  --link-visited: #155dfc;
+
+  /* Borders */
+  --borders-base: #140f14;
+  --borders-default: rgba(245, 245, 245, 0.08);
+  --borders-selected: #ff4beb;
+  --borders-divider: rgba(20, 15, 20, 0.08);
+  --borders-disabled: rgba(20, 15, 20, 0.03);
+  --borders-neutral-default: #2c2c2c;
+  --borders-neutral-moderate: #424242;
+  --borders-neutral-bolder: #545454;
+  --borders-brand-default: #ff4beb;
+  --borders-brand-lighter: #ff92f4;
+  --borders-danger-default: #f97066;
+  --borders-danger-lighter: #fda29b;
+  --borders-warning-default: #fdb022;
+  --borders-warning-lighter: #fec84b;
+  --borders-success-default: #47cd89;
+  --borders-success-lighter: #75e0a7;
+  --borders-glass-lighter: rgba(245, 245, 245, 0.06);
+  --borders-glass-medium: rgba(245, 245, 245, 0.13);
+  --borders-glass-strong: rgba(245, 245, 245, 0.78);
+
+  /* Icons */
+  --icon-neutral-primary: #f5f5f5;
+  --icon-neutral-secondary: #a3a3a3;
+  --icon-neutral-alternate: #140f14;
+  --icon-neutral-disabled: #545454;
+  --icon-brand-primary: #ff4beb;
+  --icon-brand-secondary: #ff92f4;
+  --icon-danger-primary: #f04438;
+  --icon-danger-secondary: #fda29b;
+  --icon-warning-primary: #fdb022;
+  --icon-warning-secondary: #fec84b;
+  --icon-success-primary: #47cd89;
+  --icon-success-secondary: #75e0a7;
+  --icon-link-default: #2b7fff;
+  --icon-link-hover: #155dfc;
+  --icon-glass-primary: rgba(245, 245, 245, 0.78);
+  --icon-glass-subtle: rgba(245, 245, 245, 0.34);
+
+  /* Buttons */
+  --btn-primary-bg: #f5f5f5;
+  --btn-primary-bg-hover: #cfcecf;
+  --btn-primary-bg-pressed: #cfcecf;
+  --btn-primary-bg-disabled: rgba(245, 245, 245, 0.08);
+  --btn-primary-text: #140f14;
+
+  --btn-secondary-bg: #26232a;
+  --btn-secondary-bg-hover: #2c2c2c;
+  --btn-secondary-bg-pressed: #2c2c2c;
+  --btn-secondary-bg-disabled: rgba(245, 245, 245, 0.08);
+  --btn-secondary-text: #f5f5f5;
+
+  --btn-destructive-bg: #f04438;
+  --btn-destructive-bg-hover: #f04438;
+  --btn-destructive-bg-pressed: #f04438;
+  --btn-destructive-bg-disabled: rgba(245, 245, 245, 0.08);
+  --btn-destructive-text: #ffffff;
+  --btn-destructive-secondary-bg: rgba(240, 68, 56, 0.12);
+  --btn-destructive-secondary-bg-hover: rgba(240, 68, 56, 0.20);
+  --btn-destructive-secondary-bg-pressed: rgba(240, 68, 56, 0.20);
+  --btn-destructive-secondary-text: #f97066;
+
+  --btn-brand-bg: #ff4beb;
+  --btn-brand-bg-hover: #e544d6;
+  --btn-brand-bg-pressed: #e544d6;
+  --btn-brand-bg-disabled: rgba(245, 245, 245, 0.08);
+  --btn-brand-text: #140f14;
+
+  --btn-glass-primary-bg: rgba(255, 75, 235, 0.89);
+  --btn-glass-primary-bg-hover: rgba(255, 75, 235, 0.89);
+  --btn-glass-primary-bg-pressed: rgba(255, 75, 235, 0.89);
+  --btn-glass-secondary-bg: rgba(245, 245, 245, 0.06);
+  --btn-glass-secondary-bg-hover: rgba(245, 245, 245, 0.12);
+  --btn-glass-secondary-bg-pressed: rgba(245, 245, 245, 0.12);
+  --btn-glass-ghost-bg: transparent;
+  --btn-glass-ghost-bg-hover: rgba(245, 245, 245, 0.06);
+  --btn-glass-ghost-text: #f5f5f5;
+
+  --btn-disabled-bg: rgba(245, 245, 245, 0.08);
+  --btn-disabled-text: #545454;
+
+  /* Shadows */
+  --shadow-color-lighter: rgba(0, 0, 0, 0.56);
+  --shadow-brand-moderate: 0 4px 14px -2px rgba(255, 75, 235, 0.20);
+  --shadow-danger-moderate: 0 4px 14px -2px rgba(244, 85, 85, 0.20);
+
+  /* Root colors (legacy compat) */
+  --root-color-danger-600: #d92d20;
+  --root-color-success-600: #079455;
+  --root-color-warning-500: #f79009;
+}
+
+body {
+  font-family: var(--font-family-secondary), sans-serif;
+}
