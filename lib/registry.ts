@@ -1,5 +1,521 @@
 export const components = [
     {
+        name: "Action CTA Card",
+        slug: "action-cta-card",
+        description: "Glass action cards for campaign flows. 7 Types × 3 States (Default / Pinned / Completed) bound to the `action CTA` component set (32 variants) in the Product Figma library. Each preview below shows the three states side by side.",
+        installCmd: "npx chilli@latest add action-cta-card",
+        figma: {
+            source: "Product",
+            fileKey: "7S4EQFfpK3hIN87Nd7ggV8",
+            nodeId: "3403:68397",
+            componentKey: "09810efb32c8a28e5abc3a3e2c451b7275389627"
+        },
+        sections: [
+            {
+                title: "Installation",
+                type: "install"
+            },
+            {
+                title: "Send Email — Default / Pinned / Completed",
+                type: "preview",
+                demoKey: "action-cta-card-email",
+                demoCode: `import { ActionCtaCard } from "@chilli-ui/react"
+
+export function SendEmailStates() {
+  return (
+    <>
+      <ActionCtaCard type="send-email" state="default" />
+      <ActionCtaCard type="send-email" state="pinned" />
+      <ActionCtaCard type="send-email" state="completed" count={34} countLabel="emails sent" />
+    </>
+  )
+}`
+            },
+            {
+                title: "Instagram — Default / Pinned / Completed",
+                type: "preview",
+                demoKey: "action-cta-card-instagram",
+                demoCode: `import { ActionCtaCard } from "@chilli-ui/react"
+
+export function InstagramStates() {
+  return (
+    <>
+      <ActionCtaCard type="instagram" state="default" />
+      <ActionCtaCard type="instagram" state="pinned" />
+      <ActionCtaCard type="instagram" state="completed" count={142} countLabel="comments posted" />
+    </>
+  )
+}`
+            },
+            {
+                title: "Google Maps — Default / Pinned / Completed",
+                type: "preview",
+                demoKey: "action-cta-card-google-maps",
+                demoCode: `import { ActionCtaCard } from "@chilli-ui/react"
+
+export function GoogleMapsStates() {
+  return (
+    <>
+      <ActionCtaCard type="google-maps" state="default" />
+      <ActionCtaCard type="google-maps" state="pinned" />
+      <ActionCtaCard type="google-maps" state="completed" count={142} countLabel="reviews left" />
+    </>
+  )
+}`
+            },
+            {
+                title: "Phone Call — Default / Pinned / Completed",
+                type: "preview",
+                demoKey: "action-cta-card-phone",
+                demoCode: `import { ActionCtaCard } from "@chilli-ui/react"
+
+export function PhoneCallStates() {
+  return (
+    <>
+      <ActionCtaCard type="phone-call" state="default" />
+      <ActionCtaCard type="phone-call" state="pinned" />
+      <ActionCtaCard type="phone-call" state="completed" count={12} countLabel="calls done" />
+    </>
+  )
+}`
+            },
+            {
+                title: "Question — Default / Pinned / Completed",
+                type: "preview",
+                demoKey: "action-cta-card-question",
+                demoCode: `import { ActionCtaCard } from "@chilli-ui/react"
+
+export function QuestionStates() {
+  return (
+    <>
+      <ActionCtaCard type="question" state="default" />
+      <ActionCtaCard type="question" state="pinned" />
+      <ActionCtaCard type="question" state="completed" count={423} countLabel="replies" />
+    </>
+  )
+}`
+            },
+            {
+                title: "External Link — Default / Pinned / Completed",
+                type: "preview",
+                demoKey: "action-cta-card-external",
+                demoCode: `import { ActionCtaCard } from "@chilli-ui/react"
+
+export function ExternalLinkStates() {
+  return (
+    <>
+      <ActionCtaCard type="external-link" state="default" />
+      <ActionCtaCard type="external-link" state="pinned" />
+      <ActionCtaCard type="external-link" state="completed" count={52} countLabel="completed" />
+    </>
+  )
+}`
+            },
+            {
+                title: "Action — Default / Top supporters / Completed",
+                type: "preview",
+                demoKey: "action-cta-card-action",
+                demoCode: `import { ActionCtaCard } from "@chilli-ui/react"
+
+export function ActionStates() {
+  return (
+    <>
+      <ActionCtaCard type="action" state="default" count={1} />
+      <ActionCtaCard type="action" state="top-supporters" count={12} />
+      <ActionCtaCard type="action" state="completed" count={1} />
+    </>
+  )
+}`
+            },
+            {
+                title: "API Reference",
+                type: "api"
+            }
+        ],
+        apiTables: [
+            {
+                title: "ActionCtaCard",
+                props: [
+                    {
+                        prop: "type",
+                        type: '"send-email" | "instagram" | "google-maps" | "phone-call" | "question" | "external-link" | "action"',
+                        default: '"send-email"',
+                        description: "Card type — mirrors the Figma `Type` variant property (7 values)."
+                    },
+                    {
+                        prop: "state",
+                        type: '"default" | "pinned" | "completed" | "top-supporters"',
+                        default: '"default"',
+                        description: "Card state — mirrors the Figma `State` variant property. `completed` renders a horizontal compact banner instead of the vertical card. `top-supporters` is specific to the `action` type."
+                    },
+                    {
+                        prop: "title",
+                        type: "string",
+                        default: "type default",
+                        description: "Main content title — email subject for `send-email`, comment caption for `instagram`. Maps to the Figma `Email subject` text property."
+                    },
+                    {
+                        prop: "dear",
+                        type: "string",
+                        default: '"Dear U.S. Fish & Wildlife Service,"',
+                        description: "Email greeting line, rendered above the body on `send-email`. Maps to the Figma `dear` text property."
+                    },
+                    {
+                        prop: "body",
+                        type: "string",
+                        default: "type default",
+                        description: "Supporting content text — email body, comment text, phone-call script, question text, or external-link excerpt."
+                    },
+                    {
+                        prop: "count",
+                        type: "number",
+                        default: "type default",
+                        description: "Counter shown next to the CTA (vertical card) or as the big number in `completed` / `action` variants."
+                    },
+                    {
+                        prop: "countLabel",
+                        type: "string",
+                        default: "type default",
+                        description: 'Sub-label next to the counter (e.g. `"emails sent"`, `"calls done"`, `"replies"`).'
+                    },
+                    {
+                        prop: "actionLabel",
+                        type: "string",
+                        default: "type default",
+                        description: "CTA button label."
+                    },
+                    {
+                        prop: "channelLabel",
+                        type: "string",
+                        default: "—",
+                        description: "Override the chip label shown at the top of the card (default derives from `type`)."
+                    },
+                    {
+                        prop: "className",
+                        type: "string",
+                        default: "—",
+                        description: "Additional classes applied to the outer card container."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Campaign Card",
+        slug: "campaign-card",
+        description: "Mobile feed card for a campaign — tap anywhere on the card to open the campaign detail page. Hero image uses a framer-motion `layoutId` for a shared-element transition (App Store / Airbnb pattern). Bound to the `CampaignCard` component set (4 variants across Breakpoint × supporter × State) in the Product Figma library.",
+        installCmd: "npx chilli@latest add campaign-card",
+        figma: {
+            source: "Product",
+            fileKey: "7S4EQFfpK3hIN87Nd7ggV8",
+            nodeId: "4201:389668",
+        },
+        sections: [
+            {
+                title: "Installation",
+                type: "install"
+            },
+            {
+                title: "Default (supporter=false)",
+                type: "preview",
+                demoKey: "campaign-card-default",
+                demoCode: `import { CampaignCard } from "@chilli-ui/react"
+
+export function CampaignCardDefault() {
+  return (
+    <CampaignCard
+      campaignId="save-marine"
+      image="/hero.png"
+      creator={{ name: "@seaspiracy", avatar: "/creator.png", verified: true }}
+      title="Tell Thailand's Energy Ministry: Renewables needed amid Hormuz Crisis"
+      body="Trump wants to rollback the protections for the Northeast Canyons..."
+      supporters={{ count: 3400, avatars: [...] }}
+      commentCount={12}
+      sectionLabel="new from creator you like"
+      onOpen={() => navigate('/campaigns/save-marine')}
+    />
+  )
+}`
+            },
+            {
+                title: "Supporter — in progress",
+                type: "preview",
+                demoKey: "campaign-card-supporter",
+                demoCode: `import { CampaignCard } from "@chilli-ui/react"
+
+export function CampaignCardSupporter() {
+  return (
+    <CampaignCard
+      campaignId="save-marine"
+      // ...same props
+      supporter
+      progress={{ done: 2, total: 4 }}   // → button reads "continue →"
+      onCta={() => navigate('/campaigns/save-marine/call')}
+    />
+  )
+}`
+            },
+            {
+                title: "Supporter — just started",
+                type: "preview",
+                demoKey: "campaign-card-start",
+                demoCode: `// progress.done === 0 → button reads "start →"
+<CampaignCard supporter progress={{ done: 0, total: 4 }} />`
+            },
+            {
+                title: "Supporter — almost done",
+                type: "preview",
+                demoKey: "campaign-card-finish",
+                demoCode: `// progress.done === total - 1 → button reads "finish →"
+<CampaignCard supporter progress={{ done: 3, total: 4 }} />`
+            },
+            {
+                title: "Minus — compact mini card",
+                type: "preview",
+                demoKey: "campaign-card-minus",
+                demoCode: `import { CampaignCard } from "@chilli-ui/react"
+
+// 160×236 compact card — for "more from" carousels, related campaigns, etc.
+// Renders: image (160×160) + 2-line clamped title + small creator avatar label.
+export function CampaignCardMinus() {
+  return (
+    <CampaignCard
+      type="minus"
+      campaignId="write-tx"
+      image="/mini.png"
+      creator={{ name: "@celina_chen", avatar: "/creator.png" }}
+      title="Write to Texas officials: Total is poisoning communities and paying no taxes"
+    />
+  )
+}`
+            },
+            {
+                title: "Minus — without creator label",
+                type: "preview",
+                demoKey: "campaign-card-minus-nolabel",
+                demoCode: `// Hide creator label when the carousel already shows "more from @X" header.
+<CampaignCard type="minus" hideCreatorLabel ... />`
+            },
+            {
+                title: "API Reference",
+                type: "api"
+            }
+        ],
+        apiTables: [
+            {
+                title: "CampaignCard",
+                props: [
+                    {
+                        prop: "type",
+                        type: '"default" | "minus"',
+                        default: '"default"',
+                        description: "Card variant. `default` renders the full 343×363 card. `minus` renders the compact 160×236 mini card used in carousels (image + title + optional creator label)."
+                    },
+                    {
+                        prop: "campaignId",
+                        type: "string",
+                        default: "—",
+                        description: "Stable ID used as `layoutId` for the shared-element hero transition. Must match the `layoutId` on the campaign detail page's hero image."
+                    },
+                    {
+                        prop: "image",
+                        type: "string",
+                        default: "—",
+                        description: "URL of the hero image."
+                    },
+                    {
+                        prop: "creator",
+                        type: "{ name, avatar, verified? }",
+                        default: "—",
+                        description: "Campaign creator. `name` is the handle (e.g. `@seaspiracy`), `avatar` is the URL, `verified` adds the blue check."
+                    },
+                    {
+                        prop: "title",
+                        type: "string",
+                        default: "—",
+                        description: "Campaign title — clamped to 2 lines."
+                    },
+                    {
+                        prop: "body",
+                        type: "string",
+                        default: "—",
+                        description: "Supporting description — faded out via mask gradient after ~2 lines."
+                    },
+                    {
+                        prop: "supporters",
+                        type: "{ count: number, avatars: string[] }",
+                        default: "—",
+                        description: "Social proof. `count` is formatted (e.g. `3.4k`, `1.2M`). `avatars` shows up to 3 overlapping."
+                    },
+                    {
+                        prop: "commentCount",
+                        type: "number",
+                        default: "—",
+                        description: "Number of comments on the campaign."
+                    },
+                    {
+                        prop: "sectionLabel",
+                        type: "string",
+                        default: "—",
+                        description: "Optional label rendered above the card (e.g. `\"new from creator you like\"`)."
+                    },
+                    {
+                        prop: "supporter",
+                        type: "boolean",
+                        default: "false",
+                        description: "When true, the footer switches from social proof to a progress bar, and the CTA micro-copy adapts."
+                    },
+                    {
+                        prop: "progress",
+                        type: "{ done: number, total: number }",
+                        default: "—",
+                        description: "Required when `supporter=true`. Drives the progress bar and the CTA label: `start` (0), `continue` (1..total-2), `finish` (total-1)."
+                    },
+                    {
+                        prop: "onOpen",
+                        type: "() => void",
+                        default: "—",
+                        description: "Fires when the user taps anywhere on the card. Navigate to the campaign detail page."
+                    },
+                    {
+                        prop: "onCta",
+                        type: "() => void",
+                        default: "—",
+                        description: "Fires on the primary button tap. `supporter=false` → same as `onOpen`. `supporter=true` → should launch the next undone action directly."
+                    },
+                    {
+                        prop: "hideCreatorLabel",
+                        type: "boolean",
+                        default: "false",
+                        description: "`type=\"minus\"` only — hide the creator avatar + handle below the title (useful when the parent already displays the creator, e.g. in a \"more from @X\" carousel)."
+                    },
+                    {
+                        prop: "className",
+                        type: "string",
+                        default: "—",
+                        description: "Additional classes applied to the outer wrapper."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Support Creator Card",
+        slug: "support-creator-card",
+        description: "Compact creator profile card for the \"trending creators\" feed section. Avatar with tilted username badge, dual stats (actions / supporters), and a brand-pink \"support creator\" CTA. Mobile variant: 167.5 × 206.58px.",
+        installCmd: "npx chilli@latest add support-creator-card",
+        figma: {
+            source: "Foundations & Components",
+            fileKey: "RcR7D8LPcMhNadWgs8T5cF",
+            nodeId: "43407:6504",
+        },
+        sections: [
+            {
+                title: "Installation",
+                type: "install"
+            },
+            {
+                title: "Default",
+                type: "preview",
+                demoKey: "support-creator-card-default",
+                demoCode: `import { SupportCreatorCard } from "@chilli-ui/react"
+
+export function Default() {
+  return (
+    <SupportCreatorCard
+      username="ClimateChe"
+      avatar="/creator.png"
+      actions={230}
+      supporters="2.1k"
+      onSupport={() => donate()}
+      onOpen={() => navigate('/creators/ClimateChe')}
+    />
+  )
+}`
+            },
+            {
+                title: "Grid (horizontal carousel)",
+                type: "preview",
+                demoKey: "support-creator-card-grid",
+                demoCode: `<div className="flex gap-3 overflow-x-auto">
+  {creators.map((c) => (
+    <SupportCreatorCard key={c.username} {...c} />
+  ))}
+</div>`
+            },
+            {
+                title: "Large counts (1.2M supporters)",
+                type: "preview",
+                demoKey: "support-creator-card-large",
+                demoCode: `<SupportCreatorCard
+  username="ClimateChe"
+  avatar="/creator.png"
+  actions="12k"
+  supporters="1.2M"
+/>`
+            },
+            {
+                title: "API Reference",
+                type: "api"
+            }
+        ],
+        apiTables: [
+            {
+                title: "SupportCreatorCard",
+                props: [
+                    {
+                        prop: "username",
+                        type: "string",
+                        default: "—",
+                        description: "Creator handle without the `@` prefix (rendered with a colored `@` + handle text inside a tilted badge)."
+                    },
+                    {
+                        prop: "avatar",
+                        type: "string",
+                        default: "—",
+                        description: "Creator avatar image URL (rendered 84×84 round)."
+                    },
+                    {
+                        prop: "actions",
+                        type: "number | string",
+                        default: "—",
+                        description: "Number of actions completed — accepts formatted strings (e.g. `230`, `\"12k\"`)."
+                    },
+                    {
+                        prop: "supporters",
+                        type: "number | string",
+                        default: "—",
+                        description: "Number of supporters — accepts formatted strings (e.g. `\"2.1k\"`, `\"1.2M\"`)."
+                    },
+                    {
+                        prop: "ctaLabel",
+                        type: "string",
+                        default: '"support creator"',
+                        description: "Primary CTA label."
+                    },
+                    {
+                        prop: "onSupport",
+                        type: "() => void",
+                        default: "—",
+                        description: "Fires when the user taps the brand-pink CTA. Stops propagation (doesn't also fire `onOpen`)."
+                    },
+                    {
+                        prop: "onOpen",
+                        type: "() => void",
+                        default: "—",
+                        description: "Fires when the user taps the card (outside the CTA). When provided, the card becomes keyboard-focusable and responds to Enter/Space."
+                    },
+                    {
+                        prop: "className",
+                        type: "string",
+                        default: "—",
+                        description: "Additional classes applied to the outer card container."
+                    }
+                ]
+            }
+        ]
+    },
+    {
         name: "Accordion",
         slug: "accordion",
         description: "Collapsible content sections with animated expand/collapse, supporting single and multiple expand modes.",

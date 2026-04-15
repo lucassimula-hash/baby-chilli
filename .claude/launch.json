@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "chilli-docs",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["next", "dev", "--turbopack"],
+      "runtimeExecutable": "/bin/bash",
+      "runtimeArgs": ["-c", "cd /Users/lucassimula/Desktop/work/chilli-components/chilli-docs && export PATH=/Users/lucassimula/.nvm/versions/node/v22.21.0/bin:$PATH && npx next dev --turbopack"],
       "port": 3000
     }
   ]

@@ -13,11 +13,12 @@ const foundations = [
   { name: "Typography", slug: "typography" },
   { name: "Spacing", slug: "spacing" },
   { name: "Icons", slug: "icons" },
+  { name: "Flags", slug: "flags" },
   { name: "Logos", slug: "logos" },
 ];
 
-const showcasePages = [
-  { name: "Showcase", slug: "campaign" },
+const showcases = [
+  { name: "Campaign", slug: "campaign-showcase" },
 ];
 
 interface SidebarProps {
@@ -119,7 +120,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
         )}
       >
         <div className="flex items-center justify-between px-5 py-4 shrink-0">
-          <Link href="/docs/campaign" className="flex items-center gap-2.5">
+          <Link href="/" className="flex items-center gap-2.5">
             <Image
               src="/logo.png"
               alt="Chilli"
@@ -155,8 +156,11 @@ export function Sidebar({ open, onClose }: SidebarProps) {
 
           {/* Showcase */}
           <div className="mb-[var(--space-9)]">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.05em] text-[var(--text-base-secondary)] px-3 mb-2 block">
+              Showcase
+            </span>
             <ul className="space-y-0.5">
-              {showcasePages.map((item) => (
+              {showcases.map((item) => (
                 <li key={item.slug}>
                   <Link
                     href={`/docs/${item.slug}`}
