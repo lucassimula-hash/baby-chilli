@@ -1,0 +1,5 @@
+.claude
+app/docs/.claude
+.git
+.next
+node_modules

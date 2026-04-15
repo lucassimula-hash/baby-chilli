@@ -14,10 +14,37 @@ import { ActionInputDefault, ActionInputStates, ActionInputWithToggle, ActionInp
 import { AccordionDefault, AccordionSingle, AccordionMultiple } from "@/components/demos/accordion-demos";
 // ActionTextArea demos
 import { ActionTextAreaDefault, ActionTextAreaStates, ActionTextAreaGlass } from "@/components/demos/action-textarea-demos";
+// Campaign Card demos
+import {
+  CampaignCardDefault,
+  CampaignCardSupporter,
+  CampaignCardStart,
+  CampaignCardFinish,
+  CampaignCardMinusDemo,
+  CampaignCardMinusNoLabel,
+} from "@/components/demos/campaign-card-demos";
+// Support Creator Card demos
+import {
+  SupportCreatorCardDefault,
+  SupportCreatorCardGrid,
+  SupportCreatorCardLargeCounts,
+} from "@/components/demos/support-creator-card-demos";
+// Action CTA Card demos
+import {
+  ActionCtaCardEmailAll,
+  ActionCtaCardInstagramAll,
+  ActionCtaCardGoogleMapsAll,
+  ActionCtaCardPhoneAll,
+  ActionCtaCardQuestionAll,
+  ActionCtaCardExternalAll,
+  ActionCtaCardActionAll,
+} from "@/components/demos/action-cta-card-demos";
 // ActionFormTitle demos
 import { FormTitleDefault, FormTitleStates } from "@/components/demos/form-title-demos";
 // Avatar demos
 import { AvatarSizes, AvatarFallbacks, AvatarImageError, AvatarGroupDemo, AvatarDuoDemo, AvatarLabelDemo } from "@/components/demos/avatar-demos";
+// CTA Card demos
+import { CtaCardEmail, CtaCardComment, CtaCardQuestion, CtaCardPhoneCall, CtaCardExternalLink, CtaCardGoogleMaps } from "@/components/demos/cta-card-demos";
 // Chip demos
 import { ChipDefault, ChipAvatar, ChipSocial, ChipTypes, ChipRemovable } from "@/components/demos/chip-demos";
 // Button demos
@@ -70,6 +97,25 @@ const DEMO_MAP: Record<string, React.ReactNode> = {
   "action-textarea-default": <ActionTextAreaDefault />,
   "action-textarea-states": <ActionTextAreaStates />,
   "action-textarea-glass": <ActionTextAreaGlass />,
+  // Campaign Card
+  "campaign-card-default": <CampaignCardDefault />,
+  "campaign-card-supporter": <CampaignCardSupporter />,
+  "campaign-card-start": <CampaignCardStart />,
+  "campaign-card-finish": <CampaignCardFinish />,
+  "campaign-card-minus": <CampaignCardMinusDemo />,
+  "campaign-card-minus-nolabel": <CampaignCardMinusNoLabel />,
+  // Support Creator Card
+  "support-creator-card-default": <SupportCreatorCardDefault />,
+  "support-creator-card-grid": <SupportCreatorCardGrid />,
+  "support-creator-card-large": <SupportCreatorCardLargeCounts />,
+  // Action CTA Card — each demo shows Default / Pinned / Completed for that type
+  "action-cta-card-email": <ActionCtaCardEmailAll />,
+  "action-cta-card-instagram": <ActionCtaCardInstagramAll />,
+  "action-cta-card-google-maps": <ActionCtaCardGoogleMapsAll />,
+  "action-cta-card-phone": <ActionCtaCardPhoneAll />,
+  "action-cta-card-question": <ActionCtaCardQuestionAll />,
+  "action-cta-card-external": <ActionCtaCardExternalAll />,
+  "action-cta-card-action": <ActionCtaCardActionAll />,
   // ActionFormTitle
   "form-title-default": <FormTitleDefault />,
   "form-title-states": <FormTitleStates />,
@@ -90,6 +136,13 @@ const DEMO_MAP: Record<string, React.ReactNode> = {
   "avatar-group-default": <AvatarGroupDemo />,
   "avatar-duo-default": <AvatarDuoDemo />,
   "avatar-label-default": <AvatarLabelDemo />,
+  // CTA Card
+  "cta-card-email": <CtaCardEmail />,
+  "cta-card-comment": <CtaCardComment />,
+  "cta-card-question": <CtaCardQuestion />,
+  "cta-card-phone": <CtaCardPhoneCall />,
+  "cta-card-link": <CtaCardExternalLink />,
+  "cta-card-maps": <CtaCardGoogleMaps />,
   // Chip
   "chip-default": <ChipDefault />,
   "chip-types": <ChipTypes />,
