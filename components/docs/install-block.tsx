@@ -2,8 +2,9 @@
 
 import { useState, useCallback } from "react";
 import { Check, Copy, Terminal } from "lucide-react";
+import { cn } from "@/lib/utils";
 
-export function InstallBlock({ command }) {
+export function InstallBlock({ command }: { command: string }) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = useCallback(() => {
@@ -27,10 +28,22 @@ export function InstallBlock({ command }) {
 
         <button
           onClick={handleCopy}
-          className="ml-3 flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-[var(--borders-default)] bg-[var(--backgrounds-base)] text-[var(--text-base-secondary)] opacity-0 transition-all hover:text-[var(--text-base-primary)] group-hover:opacity-100"
+          className={cn(
+            "ml-3 flex shrink-0 items-center gap-1.5 rounded-md border border-[var(--borders-default)] bg-[var(--backgrounds-base)] px-2 py-1 text-[var(--text-base-secondary)] transition-all hover:text-[var(--text-base-primary)]",
+            copied
+              ? "opacity-100 text-[var(--text-base-primary)]"
+              : "opacity-0 group-hover:opacity-100"
+          )}
           aria-label="Copy command"
         >
-          {copied ? <Check size={13} /> : <Copy size={13} />}
+          {copied ? (
+            <>
+              <Check size={13} />
+              <span className="text-[11px] font-medium">Copied!</span>
+            </>
+          ) : (
+            <Copy size={13} />
+          )}
         </button>
       </div>
     </div>
