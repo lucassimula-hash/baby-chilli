@@ -1,0 +1,26 @@
+{
+  "name": "chilli-native",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Chilli design system for React Native + Expo (phase 1: foundations + primitives, dark only).",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "react-native": "src/index.ts",
+  "sideEffects": false,
+  "scripts": {
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "expo": "*",
+    "expo-blur": "*",
+    "expo-font": "*",
+    "react-native-svg": "*",
+    "lucide-react-native": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/react": "~18.3.0"
+  }
+}
