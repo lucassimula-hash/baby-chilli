@@ -1,0 +1,15 @@
+{
+  "name": "chilli-components-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "scripts": {
+    "typecheck": "pnpm -r --filter \"./packages/*\" typecheck",
+    "playground:ios": "pnpm --filter chilli-native-playground exec expo start --ios",
+    "playground:web": "pnpm --filter chilli-native-playground exec expo start --web",
+    "playground:export-web": "pnpm --filter chilli-native-playground exec expo export --platform web"
+  }
+}
