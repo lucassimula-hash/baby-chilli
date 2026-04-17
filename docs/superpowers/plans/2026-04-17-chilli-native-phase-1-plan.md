@@ -1205,22 +1205,22 @@ import { colors } from './colors';
 export const textColors = {
   basePrimary: colors.neutral[50],
   baseSecondary: colors.neutral[400],
-  baseAlternate: colors.neutral[900],
+  baseAlternate: colors.neutral[950],
   baseDisabled: colors.neutral[500],
-  baseLink: colors.link[400],
-  baseLinkFocus: colors.link[500],
+  baseLink: colors.link[500],
+  baseLinkFocus: colors.link[400],
   selected: colors.brand[800],
-  disabled: colors.neutral[500],
-  fixed: colors.neutral[50],
+  disabled: 'rgba(245, 245, 245, 0.08)',
+  fixed: colors.white,
   inverse: colors.neutral[950],
   brandPrimary: colors.brand[800],
   brandSecondary: colors.brand[600],
-  dangerPrimary: colors.danger[400],
-  dangerSecondary: colors.danger[500],
-  warningPrimary: colors.warning[400],
-  warningSecondary: colors.warning[500],
-  successPrimary: colors.success[400],
-  successSecondary: colors.success[500],
+  dangerPrimary: colors.danger[600],
+  dangerSecondary: colors.danger[400],
+  warningPrimary: colors.warning[500],
+  warningSecondary: colors.warning[400],
+  successPrimary: colors.success[500],
+  successSecondary: colors.success[400],
   glassPrimary: 'rgba(245, 245, 245, 0.78)',
   glassSubtle: 'rgba(245, 245, 245, 0.34)',
 } as const;
@@ -1228,7 +1228,12 @@ export const textColors = {
 export type TextColors = typeof textColors;
 ```
 
-NOTE: dark-mode mappings of `--text-base-primary` etc. need to be cross-checked against the source `.dark` block. The values above reflect the standard inversion (light text on dark bg). If the source defines them differently, use the source values.
+Values cross-checked against `chilli-docs/app/globals.css` `.dark` block (lines 619–638) during Phase 3 Task 3.2 execution. Notable corrections from the plan's initial draft:
+- `baseAlternate`: `neutral[900]` → `neutral[950]` (source `#140f14`).
+- `baseLink` / `baseLinkFocus`: swap — source `--text-base-link=#2b7fff` is `link[500]`, `--text-base-link-focus=#51a2ff` is `link[400]`.
+- `disabled`: `neutral[500]` → inline `'rgba(245, 245, 245, 0.08)'` (source is an opacity token, not a neutral hex).
+- `fixed`: `neutral[50]` → `colors.white` (source `#ffffff`, not `#f5f5f5`).
+- `dangerPrimary` / `dangerSecondary`, `warningPrimary` / `warningSecondary`, `successPrimary` / `successSecondary`: all three pairs were swapped in the plan — in dark mode, "primary" text uses the more saturated `[500]/[600]` shade and "secondary" uses the lighter `[400]` shade.
 
 - [ ] **Step 2: Type-check + commit.**
 
