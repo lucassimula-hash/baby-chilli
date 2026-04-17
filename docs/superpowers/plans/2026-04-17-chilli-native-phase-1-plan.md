@@ -439,10 +439,17 @@ git commit -m "feat(native): add chilli-native package skeleton"
 }
 ```
 
-- [ ] **Step 2: Run type-check (must succeed on empty src).**
+- [ ] **Step 2: Informational typecheck (TS18003 is expected at this stage).**
 
-Run: `pnpm --filter chilli-native typecheck`
-Expected: no errors (src is empty so far — we'll create index.ts next).
+TypeScript 5.x fails with `error TS18003: No inputs were found in config file ...` when the `include` glob matches zero files. Since `src/` is still empty at this point, this error is **expected and accepted**. Run the typecheck informationally to confirm TS18003 is the ONLY error (no unknown option, no missing type definitions, no other real problem):
+
+```bash
+pnpm --filter chilli-native typecheck || echo "EXPECTED-TS18003"
+```
+
+Expected output: `error TS18003` followed by the `EXPECTED-TS18003` marker. Any other error (TS5053 for unknown option, TS2688 for missing type definitions, TS6053 for file not found, etc.) is a real problem — stop and report.
+
+**Actual typecheck validation for this package** moves to Task 1.3 Step 4, once `src/index.ts` exists.
 
 - [ ] **Step 3: Commit.**
 
@@ -510,10 +517,12 @@ All notable token-level, helper-level, and convention-level decisions are record
 ## [Unreleased]
 ```
 
-- [ ] **Step 4: Type-check still passes.**
+- [ ] **Step 4: Type-check (first real validation gate for the package).**
+
+Now that `src/index.ts` exists, the `include: ["src/**/*"]` glob resolves to one file and TypeScript no longer errors with TS18003. This is the **first actual typecheck validation** for the chilli-native package (Task 1.2 Step 2 was informational only, see the deviation note there).
 
 Run: `pnpm --filter chilli-native typecheck`
-Expected: no errors.
+Expected: exit 0, no errors.
 
 - [ ] **Step 5: Commit.**
 
