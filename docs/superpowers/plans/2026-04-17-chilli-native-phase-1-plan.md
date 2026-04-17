@@ -1164,18 +1164,22 @@ export const backgrounds = {
     brightCyan:      { lighter: 'rgba(4, 144, 163, 0.2)',   strong: '#06e1ff' },
     caribbeanGreen:  { lighter: 'rgba(1, 153, 102, 0.2)',   strong: '#02ffaa' },
     limeGreen:       { lighter: 'rgba(0, 167, 56, 0.2)',    strong: '#00ff56' },
-    lime:            { lighter: 'rgba(83, 164, 0, 0.2)',    strong: '#aaff00' },
-    // Continue copying the remaining `--backgrounds-other-*` entries verbatim from the source
-    // .dark block. If the engineer cannot find a value for an entry that exists in the source,
-    // STOP and ask — do not invent. (yellow, amberOrange, orange, red, antiqueGold, desertOrange,
-    // grey, midnightBlue must all be present.)
+    lime:            { lighter: 'rgba(83, 164, 0, 0.2)',    strong: '#81ff00' },
+    yellow:          { lighter: 'rgba(196, 138, 0, 0.2)',   strong: '#ffc333' },
+    amberOrange:     { lighter: 'rgba(204, 118, 0, 0.2)',   strong: '#ffa933' },
+    orange:          { lighter: 'rgba(204, 78, 0, 0.2)',    strong: '#ff8133' },
+    red:             { lighter: 'rgba(208, 32, 46, 0.2)',   strong: '#ff6672' },
+    antiqueGold:     { lighter: 'rgba(163, 130, 56, 0.2)',  strong: '#ffc033' },
+    desertOrange:    { lighter: 'rgba(160, 102, 54, 0.2)',  strong: '#ff8f33' },
+    grey:            { lighter: 'rgba(245, 245, 245, 0.02)', strong: '#ffffff' },
+    midnightBlue:    { lighter: 'rgba(4, 81, 154, 0.2)',    strong: '#54acff' },
   },
 } as const;
 
 export type Backgrounds = typeof backgrounds;
 ```
 
-The 8 remaining `other` entries (yellow, amberOrange, orange, red, antiqueGold, desertOrange, grey, midnightBlue) must be filled in by reading the source. The engineer copies them exactly; if a value is absent in the source dark block, document the gap and ask.
+Values cross-checked against `chilli-docs/app/globals.css` `.dark` block (lines 518–616) during Phase 3 Task 3.1 execution. Notable correction from the plan's initial draft: `lime.strong` is `#81ff00` (source), not `#aaff00` (initial plan guess). The `grey.strong = #ffffff` entry is intentional in source — preserved verbatim.
 
 - [ ] **Step 2: Type-check.**
 
