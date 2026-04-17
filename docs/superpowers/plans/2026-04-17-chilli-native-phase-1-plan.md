@@ -1254,8 +1254,8 @@ export const borders = {
   base: colors.black,
   default: 'rgba(245, 245, 245, 0.08)',
   selected: colors.brand[800],
-  divider: 'rgba(245, 245, 245, 0.08)',
-  disabled: 'rgba(245, 245, 245, 0.03)',
+  divider: 'rgba(20, 15, 20, 0.08)',
+  disabled: 'rgba(20, 15, 20, 0.03)',
   neutral: {
     default: colors.neutral[800],
     moderate: colors.neutral[700],
@@ -1287,7 +1287,11 @@ export const borders = {
 export type Borders = typeof borders;
 ```
 
-Verify each value matches the source `.dark` block; adjust if the source dark variants differ from the structural defaults shown here.
+Values cross-checked against `chilli-docs/app/globals.css` `.dark` block (lines 647–665) during Phase 3 Task 3.3 execution. 17 of 19 entries matched the initial plan draft; 2 required correction:
+- `divider`: `'rgba(245, 245, 245, 0.08)'` → `'rgba(20, 15, 20, 0.08)'` (source line 650 uses the inverse overlay, not the neutral one).
+- `disabled`: `'rgba(245, 245, 245, 0.03)'` → `'rgba(20, 15, 20, 0.03)'` (source line 651, same reason).
+
+Semantic pairs (`brand`/`danger`/`warning`/`success` with `{default, lighter}`) and the neutral `{default, moderate, bolder}` scale all matched source with no swaps needed — different from Task 3.2 which had multiple pair inversions. Borders have no state slots in source.
 
 - [ ] **Step 2: Type-check + commit.**
 
