@@ -1311,18 +1311,18 @@ import { colors } from './colors';
 export const iconColors = {
   neutralPrimary: colors.neutral[50],
   neutralSecondary: colors.neutral[400],
-  neutralAlternate: colors.neutral[800],
-  neutralDisabled: colors.neutral[500],
+  neutralAlternate: colors.neutral[950],
+  neutralDisabled: colors.neutral[600],
   brandPrimary: colors.brand[800],
   brandSecondary: colors.brand[600],
-  dangerPrimary: colors.danger[400],
-  dangerSecondary: colors.danger[500],
-  warningPrimary: colors.warning[400],
-  warningSecondary: colors.warning[500],
-  successPrimary: colors.success[400],
-  successSecondary: colors.success[500],
-  linkDefault: colors.link[400],
-  linkHover: colors.link[300],
+  dangerPrimary: colors.danger[600],
+  dangerSecondary: colors.danger[400],
+  warningPrimary: colors.warning[500],
+  warningSecondary: colors.warning[400],
+  successPrimary: colors.success[500],
+  successSecondary: colors.success[400],
+  linkDefault: colors.link[500],
+  linkHover: colors.link[600],
   glassPrimary: 'rgba(245, 245, 245, 0.78)',
   glassSubtle: 'rgba(245, 245, 245, 0.34)',
 } as const;
@@ -1330,7 +1330,13 @@ export const iconColors = {
 export type IconColors = typeof iconColors;
 ```
 
-Cross-check against the source `.dark` block for `--icon-*`.
+Values cross-checked against `chilli-docs/app/globals.css` `.dark` block (lines 668–683) during Phase 3 Task 3.4 execution. 10 of 16 entries required correction from the plan's initial draft:
+- `neutralAlternate`: `neutral[800]` → `neutral[950]` (source `#140f14`).
+- `neutralDisabled`: `neutral[500]` → `neutral[600]` (source `#545454`, not `#737373`).
+- `dangerPrimary` / `dangerSecondary`, `warningPrimary` / `warningSecondary`, `successPrimary` / `successSecondary`: all three pairs swapped (source convention — consistent with Task 3.2 textColors: primary = saturated, secondary = lighter).
+- `linkDefault`: `link[400]` → `link[500]` (source `#2b7fff`).
+- `linkHover`: `link[300]` → `link[600]` (source `#155dfc`; note: NOT a simple swap like the base/focus pair in textColors — icon hover goes DARKER than default, not to a neighboring shade).
+- `glassPrimary` / `glassSubtle`: kept as inline rgba strings (sibling consistency with `backgrounds.ts`, `textColors.ts`, `borders.ts`).
 
 - [ ] **Step 2: Type-check + commit.**
 
