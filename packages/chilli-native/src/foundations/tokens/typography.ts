@@ -51,6 +51,14 @@ export const fontFamily = {
  * Pre-baked text styles. Derived/interpreted from observed usage in `chilli-docs/components/`.
  * NOT a 1:1 mirror of source CSS variables — see CHANGELOG and spec section 6.5.
  *
+ * Two-layer convention for fonts:
+ * - `fontFamily.secondary = 'Inter'` is a DESIGN TOKEN (mirror of source `--font-family-secondary`).
+ *   Preserved as-is for source fidelity but not consumed directly here.
+ * - `textStyles.fontFamily` values below are RUNTIME family names registered by `expo-font`
+ *   (per-weight keys: `'Inter-Medium'`, etc.) — matching the main chilli app's registration in
+ *   `hub/src/components/custom_text/inter.tsx`. The runtime layer is necessarily weight-explicit
+ *   because `expo-font` resolves family names by exact key, with no automatic weight mapping.
+ *
  * Initial set covers body sizes used by the phase 1 primitives. Headings are added when a
  * primitive (or playground assembly) requires them.
  */
@@ -58,22 +66,19 @@ export const textStyles = {
   bodyXs: {
     fontSize: fontSize.xs,
     lineHeight: lineHeight.xs,
-    fontFamily: fontFamily.secondary,
-    fontWeight: '500',
+    fontFamily: 'Inter-Medium',
     letterSpacing: letterSpacing.md,
   },
   bodySm: {
     fontSize: fontSize.sm,
     lineHeight: lineHeight.sm,
-    fontFamily: fontFamily.secondary,
-    fontWeight: '500',
+    fontFamily: 'Inter-Medium',
     letterSpacing: letterSpacing.md,
   },
   bodyMd: {
     fontSize: fontSize.md,
     lineHeight: lineHeight.md,
-    fontFamily: fontFamily.secondary,
-    fontWeight: '500',
+    fontFamily: 'Inter-Medium',
     letterSpacing: letterSpacing.md,
   },
 } as const satisfies Record<string, TextStyle>;
