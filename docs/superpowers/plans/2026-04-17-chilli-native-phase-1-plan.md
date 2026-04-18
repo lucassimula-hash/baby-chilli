@@ -1475,12 +1475,15 @@ git commit -m "feat(native): port semantic link tokens (dark)"
 
 ```ts
 /**
- * Source CSS only specifies the color of each shadow. The offsetX / offsetY / blur values
- * below are derived from observation of the source `chilli-docs/components/demos/`. They are
- * the initial best-guess and MUST be re-tuned by side-by-side screenshot comparison during
- * the Button implementation phase.
+ * Source CSS structure is asymmetric across light/dark blocks:
+ * - `--shadow-color-lighter`: color-only in both blocks. Offset/blur derived.
+ * - `--shadow-brand-moderate` and `--shadow-danger-moderate`: full CSS box-shadow
+ *   shorthand in the `.dark` block (`0 4px 14px -2px rgba(...)`) — offset/blur/spread
+ *   come from the source shorthand and are NOT derived. The light block stores these
+ *   as color-only, but we're dark-only in phase 1.
  *
- * Logged in CHANGELOG when adjusted.
+ * Any adjustment for Phase 10 (Button) will only affect `shadows.lighter` — the other
+ * two are source-pinned and change only if the source CSS changes.
  */
 export type ShadowToken = {
   color: string;
@@ -1498,16 +1501,18 @@ export const shadows = {
     blur: 12,
   },
   brandModerate: {
-    color: 'rgba(255, 75, 235, 0.34)',
+    color: 'rgba(255, 75, 235, 0.2)',
     offsetX: 0,
     offsetY: 4,
-    blur: 24,
+    blur: 14,
+    spread: -2,
   },
   dangerModerate: {
-    color: 'rgba(240, 68, 56, 0.34)',
+    color: 'rgba(244, 85, 85, 0.2)',
     offsetX: 0,
     offsetY: 4,
-    blur: 24,
+    blur: 14,
+    spread: -2,
   },
 } as const satisfies Record<string, ShadowToken>;
 
@@ -1519,7 +1524,8 @@ export type Shadows = typeof shadows;
 Append to `packages/chilli-native/CHANGELOG.md` under `## [Unreleased]`:
 
 ```markdown
-- `shadows.{lighter|brandModerate|dangerModerate}` — color sourced from CSS, offset/blur values derived from observation of source demos. To be re-tuned during Button implementation by visual side-by-side comparison.
+- `shadows.lighter` — color mirrored from source `--shadow-color-lighter` (`rgba(0, 0, 0, 0.56)`). Offset/blur are DERIVED from observation of source demos (source defines color-only for this token). To be re-tuned during Button implementation (Phase 10) by visual side-by-side comparison.
+- `shadows.brandModerate` and `shadows.dangerModerate` — ALL fields mirrored from the source `.dark` block. Source stores these two shadows as full CSS box-shadow shorthand (`0 4px 14px -2px rgba(...)`), so offset/blur/spread are source-specified, NOT derived. Note: dark-block colors differ from the light `:root` block (alpha 0.20 vs 0.34; danger uses `rgba(244, 85, 85, ...)` in dark, `rgba(240, 68, 56, ...)` in light).
 ```
 
 - [ ] **Step 3: Type-check + commit.**
