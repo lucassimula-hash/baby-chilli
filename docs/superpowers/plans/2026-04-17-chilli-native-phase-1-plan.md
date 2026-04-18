@@ -1373,42 +1373,62 @@ export const buttons = {
     bgHover: colors.brand[900],
     bgPressed: colors.brand[900],
     bgDisabled: 'rgba(245, 245, 245, 0.08)',
-    text: colors.white,
-  },
-  ghost: {
-    bg: 'transparent',
-    bgHover: 'rgba(245, 245, 245, 0.08)',
-    bgPressed: 'rgba(245, 245, 245, 0.08)',
-    text: colors.neutral[400],
+    text: colors.neutral[950],
   },
   destructive: {
     bg: colors.danger[600],
-    bgHover: colors.danger[700],
-    bgPressed: colors.danger[700],
+    bgHover: colors.danger[600],
+    bgPressed: colors.danger[600],
     bgDisabled: 'rgba(245, 245, 245, 0.08)',
     text: colors.white,
   },
   destructiveSecondary: {
-    bg: colors.danger[900],
-    bgHover: colors.danger[800],
-    bgPressed: colors.danger[800],
-    text: colors.danger[300],
+    bg: 'rgba(240, 68, 56, 0.12)',
+    bgHover: 'rgba(240, 68, 56, 0.2)',
+    bgPressed: 'rgba(240, 68, 56, 0.2)',
+    text: colors.danger[500],
   },
   glass: {
-    primary:   { bg: 'rgba(255, 75, 235, 0.89)', bgHover: 'rgba(255, 75, 235, 0.89)', bgPressed: 'rgba(255, 75, 235, 0.89)' },
-    secondary: { bg: 'rgba(245, 245, 245, 0.21)', bgHover: 'rgba(245, 245, 245, 0.13)', bgPressed: 'rgba(245, 245, 245, 0.13)' },
-    ghost:     { bg: 'transparent', bgHover: 'rgba(245, 245, 245, 0.05)', bgPressed: 'rgba(245, 245, 245, 0.05)' },
+    primary: {
+      bg: 'rgba(255, 75, 235, 0.89)',
+      bgHover: 'rgba(255, 75, 235, 0.89)',
+      bgPressed: 'rgba(255, 75, 235, 0.89)',
+    },
+    secondary: {
+      bg: 'rgba(245, 245, 245, 0.06)',
+      bgHover: 'rgba(245, 245, 245, 0.12)',
+      bgPressed: 'rgba(245, 245, 245, 0.12)',
+    },
+    ghost: {
+      bg: 'transparent',
+      bgHover: 'rgba(245, 245, 245, 0.06)',
+      text: colors.neutral[50],
+    },
   },
   disabled: {
     bg: 'rgba(245, 245, 245, 0.08)',
-    text: colors.neutral[500],
+    text: colors.neutral[600],
   },
 } as const;
 
 export type Buttons = typeof buttons;
 ```
 
-Map source `--btn-destructive-*` → `buttons.destructive.*` (NOT `danger`, the Button variant name `danger` maps to it at the primitive layer). Map `--btn-destructive-secondary-*` → `buttons.destructiveSecondary.*`. Source values must be re-verified for the dark block; the inversion above is structural, the engineer must cross-check.
+Values cross-checked against `chilli-docs/app/globals.css` `.dark` block (lines 686–725) during Phase 3 Task 3.5 execution. 15 mismatches found between the plan's initial draft and source; all corrected above. Major corrections:
+
+- **`ghost` variant removed entirely**: source defines NO `--btn-ghost-*` variables (neither in light nor dark block). The web Button source composes its ghost variant from `--backgrounds-neutral-secondary-*` + `--text-base-secondary`, not from dedicated `--btn-*` tokens. This has a downstream implication for Phase 10 — see the note below the buttons definition.
+- **`brand.text`**: `colors.white` → `colors.neutral[950]` (source `#140f14`). Dark text on bright magenta background.
+- **`destructive.bgHover` / `bgPressed`**: both `danger[700]` → `danger[600]` (same as bg). Source keeps the destructive hover/pressed at the same hue in dark mode — unusual but source-specified.
+- **`destructiveSecondary`**: all values changed. Source uses danger-red rgba overlays (rgba(240, 68, 56, 0.12/0.20)), not solid `danger[900]`/`danger[800]`/`danger[300]` shades. Inline rgba strings (no `colors.opacity.danger.*` primitive exists). `text` is `danger[500]` (`#f97066`), not `danger[300]`.
+- **`glass.secondary` alpha values**: 0.21/0.13/0.13 → 0.06/0.12/0.12. Source is much more subtle than the plan assumed.
+- **`glass.ghost`**: structure changed — removed `bgPressed` (absent from source), added `text: colors.neutral[50]` (source defines `--btn-glass-ghost-text: #f5f5f5`), bgHover 0.05 → 0.06.
+- **`disabled.text`**: `colors.neutral[500]` → `colors.neutral[600]` (source `#545454`).
+
+**Downstream implication for Phase 10 Button (note for execution)**: the `VARIANT_TO_BUTTONS_KEY` mapping in the Button primitive implementation currently includes `ghost: 'ghost'`, which no longer type-checks because `buttons.ghost` doesn't exist. When Phase 10 is reached, the implementer must:
+1. Remove `ghost` from `VARIANT_TO_BUTTONS_KEY` (make it a partial Record).
+2. Handle `variant === 'ghost'` as a special case in Button: use `backgrounds.neutral.secondary.default` for hover bg and `textColors.baseSecondary` for default text color (hover to `textColors.basePrimary`), matching the web Button composition pattern.
+3. For `glass` + `ghost`, use `buttons.glass.ghost` (which now includes `text`).
+Document this composition decision in the CHANGELOG under Task 3.5.
 
 - [ ] **Step 2: Type-check + commit.**
 
