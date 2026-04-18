@@ -909,22 +909,19 @@ export const textStyles = {
   bodyXs: {
     fontSize: fontSize.xs,
     lineHeight: lineHeight.xs,
-    fontFamily: fontFamily.secondary,
-    fontWeight: '500',
+    fontFamily: 'Inter-Medium',
     letterSpacing: letterSpacing.md,
   },
   bodySm: {
     fontSize: fontSize.sm,
     lineHeight: lineHeight.sm,
-    fontFamily: fontFamily.secondary,
-    fontWeight: '500',
+    fontFamily: 'Inter-Medium',
     letterSpacing: letterSpacing.md,
   },
   bodyMd: {
     fontSize: fontSize.md,
     lineHeight: lineHeight.md,
-    fontFamily: fontFamily.secondary,
-    fontWeight: '500',
+    fontFamily: 'Inter-Medium',
     letterSpacing: letterSpacing.md,
   },
 } as const satisfies Record<string, TextStyle>;
@@ -947,7 +944,8 @@ Expected: pass. If `react-native` types are not resolved at this point, install 
 Append under `## [Unreleased]` in `packages/chilli-native/CHANGELOG.md`:
 
 ```markdown
-- `textStyles.bodyXs|bodySm|bodyMd` introduced as a derived/interpreted layer on top of the source `fontSize` / `lineHeight` / `fontFamily` primitives. Mapping: bodyXs → 12/16/Inter/500, bodySm → 14/20/Inter/500, bodyMd → 16/24/Inter/500. Headings deferred until first needed.
+- `textStyles.bodyXs|bodySm|bodyMd` introduced as a derived/interpreted layer on top of the source `fontSize` / `lineHeight` / `fontFamily` primitives. Mapping: bodyXs → 12/16/Inter-Medium, bodySm → 14/20/Inter-Medium, bodyMd → 16/24/Inter-Medium. Headings deferred until first needed.
+- Two-layer convention for fonts in this design system: `fontFamily.secondary = 'Inter'` is a **design token** (mirror of source `--font-family-secondary: Inter`) and is preserved as-is. `textStyles.fontFamily` values are **runtime family names** registered by `expo-font` (e.g., `'Inter-Medium'`) — they match the per-weight registration pattern of the main chilli app (`hub/src/components/custom_text/inter.tsx`). The runtime layer is necessarily weight-explicit because `expo-font` resolves family names by exact key, with no automatic weight-to-variant mapping.
 ```
 
 - [ ] **Step 4: Commit.**
@@ -956,6 +954,10 @@ Append under `## [Unreleased]` in `packages/chilli-native/CHANGELOG.md`:
 git add packages/chilli-native/src/foundations/tokens/typography.ts packages/chilli-native/CHANGELOG.md
 git commit -m "feat(native): port typography primitives + initial textStyles"
 ```
+
+**Retroactive note (added during Phase 5 prep, after Task 2.3 was committed):**
+
+Task 2.3 was originally committed (`b7e4321`) with `textStyles` entries that used `fontFamily: fontFamily.secondary` (= `'Inter'`) plus `fontWeight: '500'`. When Phase 5 prep clarified that the main chilli app's `useFonts()` registers per-weight family keys (`'Inter-Regular'`, `'Inter-Medium'`, `'Inter-SemiBold'`) and NOT a generic `'Inter'`, the `fontFamily: 'Inter'` references in `textStyles` would resolve to system fallback at runtime — defeating the purpose of embedding Inter. The fix above (per-weight family names + remove `fontWeight`) was applied as a follow-up commit before Phase 5 execution. The two-layer convention (design token `fontFamily.secondary` preserved, runtime `textStyles.fontFamily` per-weight) is documented in the CHANGELOG.
 
 ### Task 2.4: Create `tokens/index.ts` barrel for primitives
 
@@ -1812,38 +1814,39 @@ git commit -m "feat(native): add platform helpers barrel"
 **Objective:** Provide `useLoadChilliFonts()` to load Inter weights via `expo-font`. SF Pro Display stays system-fallback per spec strategy 3B.
 
 **Files to create:**
-- `packages/chilli-native/assets/fonts/Inter-Regular.ttf`
-- `packages/chilli-native/assets/fonts/Inter-Medium.ttf`
-- `packages/chilli-native/assets/fonts/Inter-SemiBold.ttf`
-- `packages/chilli-native/assets/fonts/Inter-Bold.ttf`
+- `packages/chilli-native/assets/fonts/Inter/Inter-Regular.ttf`
+- `packages/chilli-native/assets/fonts/Inter/Inter-Medium.ttf`
+- `packages/chilli-native/assets/fonts/Inter/Inter-SemiBold.ttf`
 - `packages/chilli-native/src/foundations/fonts.ts`
+
+**Alignment with main chilli app (source of truth):** the main app at `/Users/lucassimula/Desktop/work/chilli-code/hub/assets/fonts/Inter/` ships exactly 3 weights: Regular, Medium, SemiBold. No Bold, no italics. The registered family keys in the main app's `useFonts()` are `'Inter-Regular'`, `'Inter-Medium'`, `'Inter-SemiBold'` — per-weight, not a generic `'Inter'`. Phase 5 mirrors this exactly to avoid divergence at integration time.
 
 ### Task 5.1: Acquire and place Inter font files
 
-- [ ] **Step 1: Download Inter font files.**
+- [ ] **Step 1: Copy the 3 Inter files from the main chilli app.**
 
-Visit https://fonts.google.com/specimen/Inter (or copy from the main Chilli app's existing assets if available — confirms exact same files end up in both projects). Required weights: Regular (400), Medium (500), SemiBold (600), Bold (700). Italics deferred per spec.
+Source path: `/Users/lucassimula/Desktop/work/chilli-code/hub/assets/fonts/Inter/`
 
-- [ ] **Step 2: Create the assets directory and place the files.**
+Destination: `packages/chilli-native/assets/fonts/Inter/` (preserving the `Inter/` subdirectory structure for easy visual diff if the main app ever updates its font set).
 
 ```bash
-mkdir -p packages/chilli-native/assets/fonts
-# Copy or move the four .ttf files into packages/chilli-native/assets/fonts/
-# Final names (must match exactly):
-#   Inter-Regular.ttf
-#   Inter-Medium.ttf
-#   Inter-SemiBold.ttf
-#   Inter-Bold.ttf
-ls packages/chilli-native/assets/fonts
+mkdir -p packages/chilli-native/assets/fonts/Inter
+cp /Users/lucassimula/Desktop/work/chilli-code/hub/assets/fonts/Inter/Inter-Regular.ttf \
+   /Users/lucassimula/Desktop/work/chilli-code/hub/assets/fonts/Inter/Inter-Medium.ttf \
+   /Users/lucassimula/Desktop/work/chilli-code/hub/assets/fonts/Inter/Inter-SemiBold.ttf \
+   packages/chilli-native/assets/fonts/Inter/
+ls packages/chilli-native/assets/fonts/Inter/
 ```
 
-Expected: lists the four files.
+Expected: lists the 3 `.ttf` files.
 
-- [ ] **Step 3: Commit the font binaries.**
+**Note on Bold**: the main chilli app does NOT currently ship `Inter-Bold.ttf`. Do NOT download or fabricate one — per "no invention" rule. If a future primitive (e.g., a heading text style) requires Bold, it will be added to both the main app AND this package together.
+
+- [ ] **Step 2: Commit the font binaries.**
 
 ```bash
 git add packages/chilli-native/assets/fonts
-git commit -m "chore(native): add Inter font weights (Regular/Medium/SemiBold/Bold)"
+git commit -m "chore(native): add Inter font weights (Regular/Medium/SemiBold) mirrored from main app"
 ```
 
 ### Task 5.2: Create `fonts.ts`
@@ -1854,55 +1857,59 @@ git commit -m "chore(native): add Inter font weights (Regular/Medium/SemiBold/Bo
 import { useFonts } from 'expo-font';
 
 /**
- * Font assets bundled by the design system. Consumers (playground or main app) load these
- * via `useLoadChilliFonts()` and gate their app entry on the result.
+ * Font assets bundled by the design system. Mirrors the main chilli app's registration
+ * pattern (`hub/src/components/custom_text/inter.tsx`): per-weight family keys
+ * (`'Inter-Regular'`, `'Inter-Medium'`, `'Inter-SemiBold'`), not a generic `'Inter'`.
+ *
+ * Consumers (playground or main app) load these via `useLoadChilliFonts()` and gate their
+ * app entry on the result.
  *
  * SF Pro Display is intentionally NOT bundled (strategy 3B from the spec): on iOS it resolves
- * via system; on web, it falls back through the chain `'SF Pro Display, -apple-system, system-ui'`
- * configured in textStyles.fontFamily.primary (consumed as-is — RN/RN Web treat the string as
- * a single family name on iOS and a font-family list on web).
+ * via system; on web it falls back through the chain configured by `fontFamily.primary`.
+ *
+ * Bold is NOT in the set — the main app does not currently ship it. Adding Bold requires
+ * adding it to the main app first; DO NOT fabricate.
  */
 export const fontAssets = {
-  Inter: require('../../assets/fonts/Inter-Regular.ttf'),
-  'Inter-Medium': require('../../assets/fonts/Inter-Medium.ttf'),
-  'Inter-SemiBold': require('../../assets/fonts/Inter-SemiBold.ttf'),
-  'Inter-Bold': require('../../assets/fonts/Inter-Bold.ttf'),
+  'Inter-Regular': require('../../assets/fonts/Inter/Inter-Regular.ttf'),
+  'Inter-Medium': require('../../assets/fonts/Inter/Inter-Medium.ttf'),
+  'Inter-SemiBold': require('../../assets/fonts/Inter/Inter-SemiBold.ttf'),
 } as const;
 
 /**
- * Returns `[loaded, error]` from expo-font's useFonts hook, scoped to the four Inter weights
- * required by phase 1 textStyles.
+ * Returns `[loaded, error]` from expo-font's useFonts hook, scoped to the 3 Inter weights
+ * mirrored from the main chilli app.
  */
 export function useLoadChilliFonts(): [boolean, Error | null] {
   return useFonts(fontAssets);
 }
 ```
 
-NOTE: the keys (`'Inter'`, `'Inter-Medium'`, etc.) are the family names that RN/RN Web will resolve when a TextStyle uses `fontFamily: 'Inter'` or via fontWeight mapping. The textStyles file uses `fontFamily: 'Inter'` and `fontWeight: '500'` etc. — Expo's font system maps weight to the closest family variant when configured this way; the engineer must verify this on iOS during Phase 9 (Text). If weight mapping is unreliable, switch the textStyles to explicitly reference family names (`fontFamily: 'Inter-Medium'`) and remove the `fontWeight` field. Document the chosen approach in CHANGELOG.
+NOTE: textStyles in `typography.ts` reference these family keys directly (e.g., `fontFamily: 'Inter-Medium'`) rather than going through a generic `'Inter'` + `fontWeight`. Rationale: `expo-font` registers each weight as a distinct family key in the main chilli app, so a generic `'Inter'` would not resolve to any loaded font. This convention was applied retroactively to `typography.ts` (see CHANGELOG).
 
 - [ ] **Step 2: Type-check.**
 
 Run: `pnpm --filter chilli-native typecheck`
-Expected: pass. If `expo-font` is not yet installed at root, install it: `pnpm add -Dw expo-font`.
+Expected: pass. If `expo-font` is not yet installed at workspace root, install it: `pnpm add -Dw expo-font`.
 
 - [ ] **Step 3: Commit.**
 
 ```bash
 git add packages/chilli-native/src/foundations/fonts.ts
-git commit -m "feat(native): add useLoadChilliFonts hook (Inter assets)"
+git commit -m "feat(native): add useLoadChilliFonts hook (3 Inter weights, main-app mirror)"
 ```
 
 **Phase 5 Definition of Done**
 
-- [ ] Four Inter `.ttf` files in `packages/chilli-native/assets/fonts/`.
-- [ ] `fonts.ts` exports `fontAssets` and `useLoadChilliFonts()`.
+- [ ] 3 Inter `.ttf` files in `packages/chilli-native/assets/fonts/Inter/` (Regular, Medium, SemiBold).
+- [ ] `fonts.ts` exports `fontAssets` (3 per-weight keys) and `useLoadChilliFonts()`.
+- [ ] Registration mirrors main chilli app exactly (same filenames, same family keys).
 - [ ] Type-check passes.
-- [ ] CHANGELOG entry noting strategy 3B and the weight-vs-family-name approach.
 
 **Risks / blockers**
 
-- Inter font weight resolution behaves differently on iOS vs Web. Mitigation: validated during Phase 9 (Text). Fallback documented above.
-- Binary files in git inflate repo size. Mitigation: acceptable for four ~300KB files; if larger weight set is needed later, consider a font-fetching approach.
+- Main app adds a Bold weight in the future. Mitigation: this package's `fontAssets` can be extended incrementally. Document the date/commit when the change is propagated from main app.
+- Binary files in git inflate repo size. Mitigation: acceptable for 3 ~300KB files.
 
 ---
 
