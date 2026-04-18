@@ -1446,16 +1446,20 @@ git commit -m "feat(native): port semantic button tokens (dark)"
 import { colors } from './colors';
 
 export const links = {
-  primary: colors.link[400],
-  hover: colors.link[300],
-  pressed: colors.link[300],
-  visited: colors.link[300],
+  primary: colors.link[500],
+  hover: colors.link[600],
+  pressed: colors.link[600],
+  visited: colors.link[600],
 } as const;
 
 export type Links = typeof links;
 ```
 
-Cross-check against the source `.dark` block for `--link-*`.
+Values cross-checked against `chilli-docs/app/globals.css` `.dark` block (lines 641–644) during Phase 3 Task 3.6 execution. All 4 entries required correction from the plan's initial draft — the plan assumed dark-mode hover/pressed/visited go *lighter* than primary (`link[300]` = `#8ec5ff`), but source goes *darker* (`link[600]` = `#155dfc`). Consistent with Task 3.4 `iconColors.linkHover` which also went darker on hover.
+
+- `primary`: `link[400]` → `link[500]` (source `#2b7fff`). Note: `--link-primary` has the same value in both light and dark blocks — only the hover/pressed/visited states differ.
+- `hover` / `pressed` / `visited`: all `link[300]` → `link[600]` (source `#155dfc`).
+- `visited` is present in the source dark block (line 644) — kept in TS. Structure remains symmetric because source is symmetric.
 
 - [ ] **Step 2: Type-check + commit.**
 
