@@ -23,3 +23,17 @@ export type {
   TextStyles,
   TextStyleVariant,
 } from './typography';
+export { backgrounds } from './backgrounds';
+export type { Backgrounds } from './backgrounds';
+export { textColors } from './textColors';
+export type { TextColors } from './textColors';
+export { borders } from './borders';
+export type { Borders } from './borders';
+export { iconColors } from './iconColors';
+export type { IconColors } from './iconColors';
+export { buttons } from './buttons';
+export type { Buttons } from './buttons';
+export { links } from './links';
+export type { Links } from './links';
+export { shadows } from './shadows';
+export type { Shadows, ShadowToken } from './shadows';

@@ -1,0 +1,41 @@
+import {
+  colors,
+  spacing,
+  radius,
+  borderWidth,
+  size,
+  fontSize,
+  lineHeight,
+  letterSpacing,
+  fontFamily,
+  textStyles,
+  backgrounds,
+  textColors,
+  borders,
+  iconColors,
+  buttons,
+  links,
+  shadows,
+} from './tokens';
+
+export const tokens = {
+  colors,
+  spacing,
+  radius,
+  borderWidth,
+  size,
+  fontSize,
+  lineHeight,
+  letterSpacing,
+  fontFamily,
+  textStyles,
+  backgrounds,
+  textColors,
+  borders,
+  iconColors,
+  buttons,
+  links,
+  shadows,
+} as const;
+
+export type Tokens = typeof tokens;
