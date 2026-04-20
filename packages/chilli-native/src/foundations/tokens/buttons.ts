@@ -20,7 +20,7 @@ export const buttons = {
     bgHover: colors.brand[900],
     bgPressed: colors.brand[900],
     bgDisabled: 'rgba(245, 245, 245, 0.08)',
-    text: colors.neutral[950],
+    text: colors.neutral[50],
   },
   destructive: {
     bg: colors.danger[600],

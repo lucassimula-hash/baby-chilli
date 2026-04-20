@@ -1,5 +1,5 @@
 import { ScrollView, StyleSheet, View } from 'react-native';
-import { Avatar, Text, tokens } from 'chilli-native';
+import { Avatar, AvatarDuo, AvatarGroup, AvatarLabel, Text, tokens } from 'chilli-native';
 
 const SIZES = [16, 20, 24, 32, 40, 48, 56, 64] as const;
 const FAKE_AVATAR = { uri: 'https://i.pravatar.cc/128?img=20' };
@@ -63,6 +63,32 @@ export default function AvatarPlayground() {
         <Text variant="bodyXs" color={tokens.textColors.baseSecondary}>
           accessibilityRole=image set on every avatar.
         </Text>
+      </Section>
+
+      <Section title="Composed variants">
+        <View style={styles.row}>
+          <AvatarGroup
+            size={24}
+            max={4}
+            avatars={[
+              { source: FAKE_AVATAR },
+              { initials: 'JD' },
+              { source: { uri: 'https://i.pravatar.cc/128?img=21' } },
+              { initials: 'AB' },
+              { initials: 'CD' },
+            ]}
+          />
+          <AvatarDuo
+            size={48}
+            primary={{ source: FAKE_AVATAR }}
+            secondary={{ source: { uri: 'https://i.pravatar.cc/128?img=22' } }}
+          />
+          <AvatarLabel
+            avatar={{ source: FAKE_AVATAR }}
+            title="Alex Carter"
+            subtitle="Climate creator"
+          />
+        </View>
       </Section>
     </ScrollView>
   );

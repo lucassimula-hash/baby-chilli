@@ -3,7 +3,7 @@ import { Text } from '../Text';
 import { tokens } from '../../foundations/theme';
 
 export type BadgeVariant = 'neutral' | 'brand' | 'danger' | 'success' | 'warning';
-export type BadgeSize = 'sm' | 'md';
+export type BadgeSize = 'sm' | 'md' | 'lg';
 
 export type BadgeProps = {
   label: string | number;
@@ -12,11 +12,12 @@ export type BadgeProps = {
   style?: StyleProp<ViewStyle>;
 };
 
-const SIZE_HEIGHT: Record<BadgeSize, number> = { sm: 16, md: 20 };
-const SIZE_PADDING: Record<BadgeSize, number> = { sm: 6, md: 8 };
+const SIZE_HEIGHT: Record<BadgeSize, number> = { sm: 20, md: 24, lg: 28 };
+const SIZE_PADDING: Record<BadgeSize, number> = { sm: 6, md: 8, lg: 8 };
+const SIZE_RADIUS: Record<BadgeSize, number> = { sm: 4, md: 6, lg: 8 };
 
 const VARIANT_BG: Record<BadgeVariant, string> = {
-  neutral: tokens.backgrounds.neutral.tertiary.default,
+  neutral: tokens.backgrounds.neutral.secondary.default,
   brand: tokens.backgrounds.brand.strong.default,
   danger: tokens.backgrounds.danger.strong.default,
   success: tokens.backgrounds.success.strong.default,
@@ -44,7 +45,10 @@ export function Badge({
         {
           height: SIZE_HEIGHT[size],
           paddingHorizontal: SIZE_PADDING[size],
+          borderRadius: SIZE_RADIUS[size],
           backgroundColor: VARIANT_BG[variant],
+          borderWidth: tokens.borderWidth[2],
+          borderColor: tokens.borders.default,
         },
         style,
       ]}
@@ -61,6 +65,5 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: tokens.radius.full,
   },
 });

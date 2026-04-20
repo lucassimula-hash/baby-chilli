@@ -14,18 +14,24 @@ import type { ChipProps, ChipSize, ChipType } from './Chip.types';
 
 const SIZE_HEIGHT: Record<ChipSize, number> = { sm: 20, md: 24, lg: 28, xl: 32 };
 
-const SIZE_PAD_DEFAULT: Record<ChipSize, [number, number]> = {
-  sm: [8, 2],
-  md: [8, 4],
-  lg: [12, 4],
-  xl: [16, 6],
+const SIZE_PAD_DEFAULT: Record<
+  ChipSize,
+  { left: number; right: number; vertical: number }
+> = {
+  sm: { left: 8, right: 8, vertical: 2 },
+  md: { left: 8, right: 8, vertical: 4 },
+  lg: { left: 12, right: 12, vertical: 4 },
+  xl: { left: 16, right: 16, vertical: 6 },
 };
 
-const SIZE_PAD_LEADING: Record<ChipSize, [number, number]> = {
-  sm: [4, 2],
-  md: [4, 4],
-  lg: [4, 4],
-  xl: [6, 6],
+const SIZE_PAD_LEADING: Record<
+  ChipSize,
+  { left: number; right: number; vertical: number }
+> = {
+  sm: { left: 4, right: 8, vertical: 2 },
+  md: { left: 4, right: 8, vertical: 4 },
+  lg: { left: 4, right: 12, vertical: 4 },
+  xl: { left: 6, right: 16, vertical: 6 },
 };
 
 const SIZE_AVATAR: Record<ChipSize, number> = { sm: 16, md: 20, lg: 20, xl: 24 };
@@ -66,7 +72,7 @@ export const Chip = forwardRef<ViewType, ChipProps>(function Chip(
   ref,
 ) {
   const hasLeading = variant === 'avatar' || variant === 'social';
-  const [padX, padY] = hasLeading ? SIZE_PAD_LEADING[size] : SIZE_PAD_DEFAULT[size];
+  const padding = hasLeading ? SIZE_PAD_LEADING[size] : SIZE_PAD_DEFAULT[size];
   const isInteractive = !!onPress || !!onRemove;
 
   const renderContent = (state: InteractionState) => {
@@ -78,8 +84,9 @@ export const Chip = forwardRef<ViewType, ChipProps>(function Chip(
           styles.base,
           {
             height: SIZE_HEIGHT[size],
-            paddingHorizontal: padX,
-            paddingVertical: padY,
+            paddingLeft: padding.left,
+            paddingRight: padding.right,
+            paddingVertical: padding.vertical,
             backgroundColor: bg,
             borderColor: type === 'light' ? tokens.borders.default : 'transparent',
             borderWidth: type === 'light' ? 1 : 0,

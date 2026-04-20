@@ -154,6 +154,12 @@ export const Button = forwardRef<ViewType, ButtonProps>(function Button(
           styles.base,
           SIZE_STYLES[size],
           variant === 'brand' && !isDisabled ? shadow(tokens.shadows.brandModerate) : null,
+          variant === 'brand'
+            ? {
+                borderWidth: tokens.borderWidth[2],
+                borderColor: tokens.borders.brand.lighter,
+              }
+            : null,
         ];
 
         if (isDisabled) {

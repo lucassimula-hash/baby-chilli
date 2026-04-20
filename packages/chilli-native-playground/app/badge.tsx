@@ -2,7 +2,7 @@ import { ScrollView, StyleSheet, View } from 'react-native';
 import { Badge, Text, tokens } from 'chilli-native';
 
 const VARIANTS = ['neutral', 'brand', 'danger', 'success', 'warning'] as const;
-const SIZES = ['sm', 'md'] as const;
+const SIZES = ['sm', 'md', 'lg'] as const;
 
 export default function BadgePlayground() {
   return (
