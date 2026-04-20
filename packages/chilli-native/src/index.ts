@@ -61,9 +61,10 @@ export { Icon } from './primitives/Icon';
 export type { IconProps, IconComponent } from './primitives/Icon';
 export { IconButton } from './primitives/IconButton';
 export type { IconButtonProps, IconButtonSize } from './primitives/IconButton';
+export { Badge } from './primitives/Badge';
+export type { BadgeProps, BadgeVariant, BadgeSize } from './primitives/Badge';
 
 // Remaining primitives — added phase by phase as they land:
-// export { Badge } from './primitives/Badge';
 // export { Chip } from './primitives/Chip';
 // export { Avatar } from './primitives/Avatar';
 // export { AvatarGroup } from './primitives/AvatarGroup';
