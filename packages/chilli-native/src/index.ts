@@ -67,8 +67,9 @@ export { Chip } from './primitives/Chip';
 export type { ChipProps, ChipType, ChipSize, ChipVariant } from './primitives/Chip';
 export { Avatar } from './primitives/Avatar';
 export type { AvatarProps, AvatarSize } from './primitives/Avatar';
+export { AvatarGroup } from './primitives/AvatarGroup';
+export type { AvatarGroupProps } from './primitives/AvatarGroup';
 
 // Remaining primitives — added phase by phase as they land:
-// export { AvatarGroup } from './primitives/AvatarGroup';
 // export { AvatarDuo } from './primitives/AvatarDuo';
 // export { AvatarLabel } from './primitives/AvatarLabel';
