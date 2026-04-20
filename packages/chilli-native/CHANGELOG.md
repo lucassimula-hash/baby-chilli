@@ -4,6 +4,7 @@ All notable token-level, helper-level, and convention-level decisions are record
 
 ## [Unreleased]
 
+- Internal primitive `GlassSurface` (`primitives/_internal/GlassSurface/`) introduced. Not exported publicly in phase 1. Powered by `expo-blur`'s `BlurView`. Default intensity centralized as `DEFAULT_GLASS_INTENSITY = 50`. Button (Phase 10) and IconButton (Phase 12) will consume it internally for the `glass` prop.
 - `textStyles.bodyXs|bodySm|bodyMd` introduced as a derived/interpreted layer on top of the source `fontSize` / `lineHeight` / `fontFamily` primitives. Mapping: bodyXs → 12/16/Inter-Medium, bodySm → 14/20/Inter-Medium, bodyMd → 16/24/Inter-Medium. Headings deferred until first needed.
 - Two-layer convention for fonts in this design system:
   - `fontFamily.secondary = 'Inter'` is a **design token** (mirror of source `--font-family-secondary: Inter`). Preserved as-is for source fidelity.
