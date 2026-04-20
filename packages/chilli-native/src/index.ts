@@ -65,9 +65,10 @@ export { Badge } from './primitives/Badge';
 export type { BadgeProps, BadgeVariant, BadgeSize } from './primitives/Badge';
 export { Chip } from './primitives/Chip';
 export type { ChipProps, ChipType, ChipSize, ChipVariant } from './primitives/Chip';
+export { Avatar } from './primitives/Avatar';
+export type { AvatarProps, AvatarSize } from './primitives/Avatar';
 
 // Remaining primitives — added phase by phase as they land:
-// export { Avatar } from './primitives/Avatar';
 // export { AvatarGroup } from './primitives/AvatarGroup';
 // export { AvatarDuo } from './primitives/AvatarDuo';
 // export { AvatarLabel } from './primitives/AvatarLabel';
