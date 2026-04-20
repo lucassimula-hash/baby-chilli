@@ -61,6 +61,8 @@ export { Icon } from './primitives/Icon';
 export type { IconProps, IconComponent } from './primitives/Icon';
 export { IconButton } from './primitives/IconButton';
 export type { IconButtonProps, IconButtonSize } from './primitives/IconButton';
+export { Input } from './primitives/Input';
+export type { InputActionButton, InputProps } from './primitives/Input';
 export { Badge } from './primitives/Badge';
 export type { BadgeProps, BadgeVariant, BadgeSize } from './primitives/Badge';
 export { Chip } from './primitives/Chip';
