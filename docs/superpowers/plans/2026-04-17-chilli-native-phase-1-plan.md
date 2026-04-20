@@ -2383,7 +2383,7 @@ export function GlassSurface({
     <View
       pointerEvents="none"
       style={[
-        StyleSheet.absoluteFillObject,
+        StyleSheet.absoluteFill,
         styles.clip,
         { borderRadius, borderColor, borderWidth },
       ]}
