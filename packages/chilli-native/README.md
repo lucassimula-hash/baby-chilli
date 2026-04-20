@@ -79,9 +79,12 @@ Full details live in `CHANGELOG.md`. The main intentional divergences are:
 
 - `textStyles` is a derived layer on top of the source typography scales, not a 1:1 CSS mirror.
 - Runtime font family names are explicit (`Inter-Regular`, `Inter-Medium`, `Inter-SemiBold`) to match `expo-font`.
+- The current body text presets (`bodyXs`, `bodySm`, `bodyMd`) use `Inter-Regular` by design-system decision.
 - Hover states are ignored on iOS.
 - Glass effect on `danger` and `danger-soft` button variants is unsupported and falls back to non-glass.
 - `buttons.ghost` does not exist as a token group; the primitive composes it from `backgrounds` + `textColors`.
+- `IconButton` follows the native phase-1 button API (`primary`, `secondary`, `brand`, `ghost`, `danger`, `danger-soft`) instead of mirroring the narrower web docs surface (`primary`, `secondary`, `transparent`).
+- `IconButton` ships only `sm` / `md` / `lg` square sizes in native phase 1; the web docs also show `xsm`.
 - `GlassSurface` is internal only in phase 1.
 
 ## Validation State
