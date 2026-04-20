@@ -51,7 +51,12 @@ export default function ProfileCardPlayground() {
         </View>
 
         <View style={styles.supportersRow}>
-          <AvatarGroup size={24} max={4} avatars={SUPPORTERS} />
+          <AvatarGroup
+            size={24}
+            max={4}
+            avatars={SUPPORTERS}
+            strokeColor={tokens.backgrounds.neutral.primary.default}
+          />
           <Text variant="bodyXs" color={tokens.textColors.baseSecondary}>
             +248 supporters today
           </Text>

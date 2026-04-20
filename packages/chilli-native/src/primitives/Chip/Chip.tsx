@@ -49,9 +49,9 @@ const TYPE_BG: Record<
   { default: string; hover?: string; pressed?: string }
 > = {
   fill: {
-    default: tokens.backgrounds.neutral.primary.default,
-    hover: tokens.backgrounds.neutral.primary.hover,
-    pressed: tokens.backgrounds.neutral.primary.pressed,
+    default: tokens.backgrounds.neutral.secondary.default,
+    hover: tokens.backgrounds.neutral.secondary.hover,
+    pressed: tokens.backgrounds.neutral.secondary.pressed,
   },
   light: { default: 'transparent' },
 };

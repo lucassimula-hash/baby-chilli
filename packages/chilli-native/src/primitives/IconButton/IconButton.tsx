@@ -36,7 +36,7 @@ const VARIANT_TO_BUTTONS_KEY: Partial<Record<ButtonVariant, ButtonTokensKey>> = 
 const GLASS_VARIANT_TO_KEY: Partial<
   Record<ButtonVariant, GlassButtonTokensKey>
 > = {
-  primary: 'secondary',
+  primary: 'ghost',
   secondary: 'secondary',
   brand: 'primary',
   ghost: 'ghost',
@@ -78,6 +78,7 @@ function getGlassBackground(
   state: { pressed: boolean; hovered?: boolean; focused?: boolean },
 ) {
   if (variant === 'ghost') return getGhostGlassBackground(state);
+  if (variant === 'primary') return pickStateful(tokens.backgrounds.neutral.glass, state);
 
   const glassKey = GLASS_VARIANT_TO_KEY[variant];
   if (!glassKey || glassKey === 'ghost') return getGhostGlassBackground(state);
@@ -153,6 +154,12 @@ export const IconButton = forwardRef<ViewType, IconButtonProps>(function IconBut
           styles.base,
           { width: SIZE_BOX[size], height: SIZE_BOX[size] },
           variant === 'brand' && !isDisabled ? shadow(tokens.shadows.brandModerate) : null,
+          isGlassActive
+            ? {
+                borderWidth: tokens.borderWidth[2],
+                borderColor: tokens.borders.glass.lighter,
+              }
+            : null,
         ];
 
         if (isDisabled) {

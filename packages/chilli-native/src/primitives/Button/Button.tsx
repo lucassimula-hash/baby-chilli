@@ -39,7 +39,7 @@ const VARIANT_TO_BUTTONS_KEY: Partial<
 const GLASS_VARIANT_TO_KEY: Partial<
   Record<ButtonVariant, GlassButtonTokensKey>
 > = {
-  primary: 'secondary',
+  primary: 'ghost',
   secondary: 'secondary',
   brand: 'primary',
   ghost: 'ghost',
@@ -78,6 +78,7 @@ function getGlassBackground(
   state: { pressed: boolean; hovered?: boolean; focused?: boolean },
 ) {
   if (variant === 'ghost') return getGhostGlassBackground(state);
+  if (variant === 'primary') return pickStateful(tokens.backgrounds.neutral.glass, state);
 
   const glassKey = GLASS_VARIANT_TO_KEY[variant];
   if (!glassKey || glassKey === 'ghost') return getGhostGlassBackground(state);
