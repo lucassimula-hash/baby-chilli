@@ -9,7 +9,6 @@ React Native + Expo design system for Chilli. **Phase 1 implementation is comple
 
 The code for phase 1 is in place and the playground bundles successfully on web. Final sign-off still requires:
 
-- the manual visual audit against `chilli-docs`
 - the iOS glass-blur check
 - the main-app integration sanity check
 
@@ -96,10 +95,10 @@ Already validated:
 - `pnpm --filter chilli-native-playground exec expo export --platform web`
 - one playground screen per primitive
 - one profile-card assembly screen
+- side-by-side visual audit against `chilli-docs`
 
 Still manual / pending:
 
-- side-by-side visual audit against `chilli-docs`
 - native iOS verification of real blur on glass buttons
 - sanity import inside the main Chilli app
 
