@@ -4,6 +4,19 @@ All notable token-level, helper-level, and convention-level decisions are record
 
 ## [Unreleased]
 
+### Added
+
+- Foundations: primitive tokens, semantic tokens, `tokens`, `pickStateful`, `resolveStateSlot`, `shadow()`, `useLoadChilliFonts()`.
+- Primitives: `Text`, `Button`, `Icon`, `IconButton`, `Badge`, `Chip`, `Avatar`, `AvatarGroup`, `AvatarDuo`, `AvatarLabel`.
+- Internal primitive `GlassSurface` (not exported publicly).
+- Playground app with one screen per primitive plus a `profile-card` assembly screen.
+
+### Sign-off still pending
+
+- Phase 20 visual audit against `chilli-docs` has not been completed yet.
+- Native iOS verification of the glass blur effect is still pending.
+- Phase 21 main-app integration sanity check is still pending.
+
 - Internal primitive `GlassSurface` (`primitives/_internal/GlassSurface/`) introduced. Not exported publicly in phase 1. Powered by `expo-blur`'s `BlurView`. Default intensity centralized as `DEFAULT_GLASS_INTENSITY = 50`. Button (Phase 10) and IconButton (Phase 12) will consume it internally for the `glass` prop.
 - `textStyles.bodyXs|bodySm|bodyMd` introduced as a derived/interpreted layer on top of the source `fontSize` / `lineHeight` / `fontFamily` primitives. Mapping: bodyXs → 12/16/Inter-Medium, bodySm → 14/20/Inter-Medium, bodyMd → 16/24/Inter-Medium. Headings deferred until first needed.
 - Two-layer convention for fonts in this design system:
