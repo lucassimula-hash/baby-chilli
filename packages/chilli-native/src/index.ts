@@ -69,7 +69,8 @@ export { Avatar } from './primitives/Avatar';
 export type { AvatarProps, AvatarSize } from './primitives/Avatar';
 export { AvatarGroup } from './primitives/AvatarGroup';
 export type { AvatarGroupProps } from './primitives/AvatarGroup';
+export { AvatarDuo } from './primitives/AvatarDuo';
+export type { AvatarDuoProps } from './primitives/AvatarDuo';
 
 // Remaining primitives — added phase by phase as they land:
-// export { AvatarDuo } from './primitives/AvatarDuo';
 // export { AvatarLabel } from './primitives/AvatarLabel';
