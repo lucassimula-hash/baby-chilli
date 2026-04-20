@@ -56,6 +56,8 @@ export default function IconButtonPlayground() {
 
       <Section title="Glass">
         <View style={[styles.row, styles.glassBg]}>
+          <View style={[styles.glassBlob, styles.glassBlobBrand]} />
+          <View style={[styles.glassBlob, styles.glassBlobNeutral]} />
           <IconButton
             variant="primary"
             glass
@@ -64,24 +66,10 @@ export default function IconButtonPlayground() {
             onPress={() => {}}
           />
           <IconButton
-            variant="brand"
-            glass
-            icon={Bell}
-            accessibilityLabel="Brand glass"
-            onPress={() => {}}
-          />
-          <IconButton
             variant="secondary"
             glass
             icon={Settings}
             accessibilityLabel="Secondary glass"
-            onPress={() => {}}
-          />
-          <IconButton
-            variant="ghost"
-            glass
-            icon={X}
-            accessibilityLabel="Ghost glass"
             onPress={() => {}}
           />
         </View>
@@ -139,8 +127,28 @@ const styles = StyleSheet.create({
   },
   cell: { alignItems: 'center', gap: tokens.spacing[3] },
   glassBg: {
+    position: 'relative',
+    overflow: 'hidden',
     padding: tokens.spacing[6],
     borderRadius: tokens.radius[6],
-    backgroundColor: tokens.colors.brand[800],
+    backgroundColor: tokens.backgrounds.neutral.primary.default,
+  },
+  glassBlob: {
+    position: 'absolute',
+    borderRadius: tokens.radius.full,
+  },
+  glassBlobBrand: {
+    width: 96,
+    height: 96,
+    top: -24,
+    left: -12,
+    backgroundColor: tokens.backgrounds.brand.strong.default,
+  },
+  glassBlobNeutral: {
+    width: 80,
+    height: 80,
+    right: -8,
+    bottom: -12,
+    backgroundColor: tokens.backgrounds.neutral.inverse.default,
   },
 });

@@ -3,6 +3,7 @@ import {
   ActivityIndicator,
   Pressable,
   StyleSheet,
+  View,
   type StyleProp,
   type View as ViewType,
   type ViewStyle,
@@ -199,6 +200,18 @@ export const IconButton = forwardRef<ViewType, IconButtonProps>(function IconBut
               )}
             />
           ) : null}
+          {isGlassActive && !isDisabled ? (
+            <>
+              <View
+                pointerEvents="none"
+                style={[styles.glassTopChrome, { borderRadius: tokens.radius.full }]}
+              />
+              <View
+                pointerEvents="none"
+                style={[styles.glassBottomChrome, { borderRadius: tokens.radius.full }]}
+              />
+            </>
+          ) : null}
           {loading ? (
             <ActivityIndicator size="small" color={iconColor} />
           ) : (
@@ -216,5 +229,21 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: tokens.radius.full,
     overflow: 'visible',
+  },
+  glassTopChrome: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    height: 1,
+    backgroundColor: tokens.borders.glass.strong,
+  },
+  glassBottomChrome: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
+    height: 1,
+    backgroundColor: tokens.borders.glass.medium,
   },
 });
