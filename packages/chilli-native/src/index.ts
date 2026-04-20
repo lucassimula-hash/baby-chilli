@@ -55,9 +55,10 @@ export { useLoadChilliFonts, fontAssets } from './foundations/fonts';
 // Primitives
 export { Text } from './primitives/Text';
 export type { TextProps } from './primitives/Text';
+export { Button } from './primitives/Button';
+export type { ButtonProps, ButtonVariant, ButtonSize } from './primitives/Button';
 
 // Remaining primitives — added phase by phase as they land:
-// export { Button } from './primitives/Button';
 // export { Icon } from './primitives/Icon';
 // export { IconButton } from './primitives/IconButton';
 // export { Badge } from './primitives/Badge';
