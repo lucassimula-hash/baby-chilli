@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "Chilli Native Playground",
+    "slug": "chilli-native-playground",
+    "version": "0.0.0",
+    "scheme": "chilli-native-playground",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.chilli.native.playground"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": ["expo-router", "expo-font"],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
