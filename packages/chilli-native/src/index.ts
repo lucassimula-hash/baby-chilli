@@ -52,7 +52,17 @@ export type { InteractionState, StateSlot } from './foundations/platform';
 // Fonts
 export { useLoadChilliFonts, fontAssets } from './foundations/fonts';
 
-// Primitives — added phase by phase as they land:
-// export { Text } from './primitives/Text';
+// Primitives
+export { Text } from './primitives/Text';
+export type { TextProps } from './primitives/Text';
+
+// Remaining primitives — added phase by phase as they land:
 // export { Button } from './primitives/Button';
-// ... etc.
+// export { Icon } from './primitives/Icon';
+// export { IconButton } from './primitives/IconButton';
+// export { Badge } from './primitives/Badge';
+// export { Chip } from './primitives/Chip';
+// export { Avatar } from './primitives/Avatar';
+// export { AvatarGroup } from './primitives/AvatarGroup';
+// export { AvatarDuo } from './primitives/AvatarDuo';
+// export { AvatarLabel } from './primitives/AvatarLabel';
