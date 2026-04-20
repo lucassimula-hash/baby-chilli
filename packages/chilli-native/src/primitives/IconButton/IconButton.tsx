@@ -3,7 +3,6 @@ import {
   ActivityIndicator,
   Pressable,
   StyleSheet,
-  View,
   type StyleProp,
   type View as ViewType,
   type ViewStyle,
@@ -155,10 +154,10 @@ export const IconButton = forwardRef<ViewType, IconButtonProps>(function IconBut
           styles.base,
           { width: SIZE_BOX[size], height: SIZE_BOX[size] },
           variant === 'brand' && !isDisabled ? shadow(tokens.shadows.brandModerate) : null,
-          isGlassActive
+          variant === 'brand'
             ? {
                 borderWidth: tokens.borderWidth[2],
-                borderColor: tokens.borders.glass.lighter,
+                borderColor: tokens.borders.brand.lighter,
               }
             : null,
         ];
@@ -194,23 +193,13 @@ export const IconButton = forwardRef<ViewType, IconButtonProps>(function IconBut
               intensity={DEFAULT_GLASS_INTENSITY}
               tint="dark"
               borderRadius={tokens.radius.full}
+              borderColor={tokens.borders.glass.lighter}
+              borderWidth={tokens.borderWidth[2]}
               overlayColor={getGlassBackground(
                 variant as Exclude<ButtonVariant, 'danger' | 'danger-soft'>,
                 state,
               )}
             />
-          ) : null}
-          {isGlassActive && !isDisabled ? (
-            <>
-              <View
-                pointerEvents="none"
-                style={[styles.glassTopChrome, { borderRadius: tokens.radius.full }]}
-              />
-              <View
-                pointerEvents="none"
-                style={[styles.glassBottomChrome, { borderRadius: tokens.radius.full }]}
-              />
-            </>
           ) : null}
           {loading ? (
             <ActivityIndicator size="small" color={iconColor} />
@@ -229,21 +218,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: tokens.radius.full,
     overflow: 'visible',
-  },
-  glassTopChrome: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    height: 1,
-    backgroundColor: tokens.borders.glass.strong,
-  },
-  glassBottomChrome: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    bottom: 0,
-    height: 1,
-    backgroundColor: tokens.borders.glass.medium,
   },
 });
