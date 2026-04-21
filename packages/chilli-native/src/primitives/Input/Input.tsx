@@ -241,7 +241,10 @@ const styles = StyleSheet.create({
     fontSize: tokens.fontSize.md,
     lineHeight: tokens.lineHeight.md,
     fontFamily: tokens.textStyles.bodyMd.fontFamily,
+    paddingTop: 0,
+    paddingBottom: 0,
     paddingVertical: 0,
+    margin: 0,
   },
   inputDisabled: {
     color: tokens.textColors.baseSecondary,
