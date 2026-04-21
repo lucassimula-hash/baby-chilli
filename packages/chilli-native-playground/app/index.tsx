@@ -8,6 +8,7 @@ const PRIMITIVES = [
   { href: '/icon', label: 'Icon' },
   { href: '/icon-button', label: 'IconButton' },
   { href: '/input', label: 'Input' },
+  { href: '/textarea', label: 'Textarea' },
   { href: '/badge', label: 'Badge' },
   { href: '/chip', label: 'Chip' },
   { href: '/avatar', label: 'Avatar' },
