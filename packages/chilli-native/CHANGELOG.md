@@ -2,7 +2,26 @@
 
 All notable token-level, helper-level, and convention-level decisions are recorded here as they happen during phase 1.
 
-## [Unreleased]
+## [0.2.0] — Phase 2
+
+### Added
+
+- Primitives: `Input`, `Textarea`, `SearchBar`, `Select`.
+- Internal primitives `_internal/Dropdown` and `_internal/MenuItem` (not exported publicly). Consumed by `Select`; kept internal for future reuse (context menus, filters, etc.), mirroring the `GlassSurface` pattern.
+- `Select` presentation is platform-responsive: anchored popover on web (`Modal` + `measureInWindow`), bottom sheet on iOS/Android.
+- Playground screens for each new primitive.
+
+### Divergences from source web
+
+- `Input`: adds `disabled` state styling that mirrors the web variant semantics; zero vertical padding on the underlying `TextInput` to prevent RN default paddings from shifting text baseline.
+- `Textarea`: adds `error` and `disabled` states beyond the web demos (web only shows default/focused/filled/disabled via native HTML); native API is consistent with `Input` for form-field cohesion.
+- `SearchBar`: mirrors strict source web (default + focused only, no label/helperText/error). Mobile-friendly defaults baked in (`returnKeyType="search"`, `autoCorrect=false`, `autoCapitalize="none"`, `clearButtonMode="never"`, `accessibilityRole="search"`), all overridable via props.
+- `Select` (trigger): single trailing chevron. Web source renders two `<ChevronDown>` in the trigger JSX, which reads as a copy-paste artifact; native ships the corrected design.
+- `Select` (trigger): adds `disabled` prop (absent from web source) for API consistency with `Input` / `Textarea`.
+- `Select` (menu): dropdown/sheet presentation diverges from web. Web uses `createPortal` with fixed positioning; RN Web uses a transparent `Modal` + `measureInWindow` to produce the same visual outcome. iOS/Android receive a bottom-sheet presentation (idiomatic mobile pattern), not a popover.
+- `Select` highlight behavior: web tracks hover to slide a highlight bar between items; native has no hover, so the highlight is initialized on the currently checked item and animates on tap before selection resolves.
+
+## [0.1.0] — Phase 1
 
 ### Added
 

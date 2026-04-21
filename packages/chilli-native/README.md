@@ -1,9 +1,9 @@
 # chilli-native
 
-React Native + Expo design system for Chilli. **Phase 1 implementation is complete**: foundations + 10 primitives, dark mode only, iOS + RN Web.
+React Native + Expo design system for Chilli. **Phase 2 is shipped**: foundations + 14 primitives, dark mode only, iOS + Android + RN Web.
 
-> Spec: `docs/superpowers/specs/2026-04-17-chilli-native-phase-1-design.md`
-> Plan: `docs/superpowers/plans/2026-04-17-chilli-native-phase-1-plan.md`
+> Phase 1 spec: `docs/superpowers/specs/2026-04-17-chilli-native-phase-1-design.md`
+> Phase 1 plan: `docs/superpowers/plans/2026-04-17-chilli-native-phase-1-plan.md`
 
 ## Status
 
@@ -50,6 +50,8 @@ Required peer dependencies on the consumer side:
 
 ### Primitives
 
+Phase 1:
+
 - `Text`
 - `Button`
 - `Icon`
@@ -61,7 +63,16 @@ Required peer dependencies on the consumer side:
 - `AvatarDuo`
 - `AvatarLabel`
 
-Each primitive exports its props type as `<Name>Props`.
+Phase 2 (form / navigation):
+
+- `Input`
+- `Textarea`
+- `SearchBar`
+- `Select` (platform-responsive: anchored popover on web, bottom sheet on iOS/Android)
+
+Each primitive exports its props type as `<Name>Props`. `Select` also exports `SelectOption`, `SelectSize`, `SelectVariant`.
+
+`_internal/Dropdown` and `_internal/MenuItem` power the `Select` menu but are intentionally not exported publicly.
 
 ## Conventions
 
@@ -85,6 +96,10 @@ Full details live in `CHANGELOG.md`. The main intentional divergences are:
 - `IconButton` follows the native phase-1 button API (`primary`, `secondary`, `brand`, `ghost`, `danger`, `danger-soft`) instead of mirroring the narrower web docs surface (`primary`, `secondary`, `transparent`).
 - `IconButton` ships only `sm` / `md` / `lg` square sizes in native phase 1; the web docs also show `xsm`.
 - `GlassSurface` is internal only in phase 1.
+- `Select` trigger ships a single trailing chevron; the web source has two `<ChevronDown>` in the trigger JSX, read here as a copy-paste artifact and corrected in native.
+- `Select` menu presentation: web uses an anchored popover via transparent `Modal` + `measureInWindow` (functional equivalent of `createPortal`); iOS/Android use a bottom sheet, not a popover, as the idiomatic mobile pattern.
+- `Input`, `Textarea`, and `Select` expose a `disabled` prop with consistent native semantics; this is a superset of the web demo surface.
+- `Dropdown` / `MenuItem` highlight tracks the currently checked item (and animates to the tapped item on press). Web tracks hover; that interaction model does not map to touch.
 
 ## Validation State
 
@@ -102,11 +117,8 @@ Still manual / pending:
 - native iOS verification of real blur on glass buttons
 - sanity import inside the main Chilli app
 
-## Phase 2 priority
+## Roadmap
 
-Priority order for the next phase:
+Phase 2 (form / navigation) shipped: `Input`, `Textarea`, `SearchBar`, `Select`.
 
-1. `Input`
-2. `Textarea`
-3. `SearchBar`
-4. `Select`
+Phase 3 candidates (not yet scoped): dropdown/menu as public API, date pickers, toggle/switch, radio group, tabs.
