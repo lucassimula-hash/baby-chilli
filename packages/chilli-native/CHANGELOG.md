@@ -4,6 +4,11 @@ All notable token-level, helper-level, and convention-level decisions are record
 
 ## [0.2.0] — Phase 2
 
+### Validated
+
+- Sanity import against an isolated consumer project (tarball via `npm pack`) using hub-aligned peer dep versions (Expo 54, RN 0.81.5, react-native-svg 15.12.1, expo-blur 15.0.8, expo-font 14.0.8, React 19.1). All public primitives, `tokens`, `useLoadChilliFonts`, and exported types (e.g. `SelectOption`) resolve under `strict: true` with `moduleResolution: bundler`. Zero type errors.
+- Integration into the hub app itself still requires hub to add `lucide-react-native` to its `package.json` (peer dep of chilli-native, not currently present in hub).
+
 ### Added
 
 - Primitives: `Input`, `Textarea`, `SearchBar`, `Select`.

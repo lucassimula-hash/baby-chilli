@@ -111,11 +111,12 @@ Already validated:
 - one playground screen per primitive
 - one profile-card assembly screen
 - side-by-side visual audit against `chilli-docs`
+- sanity import in an isolated consumer (`npm pack` → third-party tsconfig strict) against hub-aligned peer dep versions (Expo 54, RN 0.81.5, react-native-svg 15.12.1, expo-blur 15.0.8, expo-font 14.0.8, React 19.1) — all public primitives, `tokens`, `useLoadChilliFonts`, and `SelectOption` type resolve with zero errors
 
 Still manual / pending:
 
 - native iOS verification of real blur on glass buttons
-- sanity import inside the main Chilli app
+- actual integration inside the hub app — blocked on adding `lucide-react-native` to hub's deps (peer dep of chilli-native, not currently present in hub/package.json)
 
 ## Roadmap
 
