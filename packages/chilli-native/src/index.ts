@@ -67,6 +67,13 @@ export { Textarea } from './primitives/Textarea';
 export type { TextareaProps } from './primitives/Textarea';
 export { SearchBar } from './primitives/SearchBar';
 export type { SearchBarProps } from './primitives/SearchBar';
+export { Select } from './primitives/Select';
+export type {
+  SelectOption,
+  SelectProps,
+  SelectSize,
+  SelectVariant,
+} from './primitives/Select';
 export { Badge } from './primitives/Badge';
 export type { BadgeProps, BadgeVariant, BadgeSize } from './primitives/Badge';
 export { Chip } from './primitives/Chip';
