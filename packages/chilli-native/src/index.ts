@@ -65,6 +65,8 @@ export { Input } from './primitives/Input';
 export type { InputActionButton, InputProps } from './primitives/Input';
 export { Textarea } from './primitives/Textarea';
 export type { TextareaProps } from './primitives/Textarea';
+export { SearchBar } from './primitives/SearchBar';
+export type { SearchBarProps } from './primitives/SearchBar';
 export { Badge } from './primitives/Badge';
 export type { BadgeProps, BadgeVariant, BadgeSize } from './primitives/Badge';
 export { Chip } from './primitives/Chip';

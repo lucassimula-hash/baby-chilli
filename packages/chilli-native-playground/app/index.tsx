@@ -9,6 +9,7 @@ const PRIMITIVES = [
   { href: '/icon-button', label: 'IconButton' },
   { href: '/input', label: 'Input' },
   { href: '/textarea', label: 'Textarea' },
+  { href: '/search-bar', label: 'SearchBar' },
   { href: '/badge', label: 'Badge' },
   { href: '/chip', label: 'Chip' },
   { href: '/avatar', label: 'Avatar' },
