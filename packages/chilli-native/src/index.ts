@@ -76,6 +76,13 @@ export type {
 } from './primitives/Select';
 export { Toggle } from './primitives/Toggle';
 export type { ToggleProps, ToggleSize } from './primitives/Toggle';
+export { Radio, RadioGroup } from './primitives/Radio';
+export type {
+  RadioProps,
+  RadioGroupProps,
+  RadioSize,
+  RadioOrientation,
+} from './primitives/Radio';
 export { Badge } from './primitives/Badge';
 export type { BadgeProps, BadgeVariant, BadgeSize } from './primitives/Badge';
 export { Chip } from './primitives/Chip';
