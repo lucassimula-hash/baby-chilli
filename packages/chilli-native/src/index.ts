@@ -122,6 +122,8 @@ export { SelectDatePicker } from './primitives/SelectDatePicker';
 export type { SelectDatePickerProps } from './primitives/SelectDatePicker';
 export { ActionInput } from './primitives/ActionInput';
 export type { ActionInputProps } from './primitives/ActionInput';
+export { ActionTextarea } from './primitives/ActionTextarea';
+export type { ActionTextareaProps } from './primitives/ActionTextarea';
 export { Badge } from './primitives/Badge';
 export type { BadgeProps, BadgeVariant, BadgeSize } from './primitives/Badge';
 export { Chip } from './primitives/Chip';
