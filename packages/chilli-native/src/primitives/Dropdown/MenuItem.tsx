@@ -1,9 +1,9 @@
 import { useContext, useEffect, useRef } from 'react';
 import { Animated, Pressable, StyleSheet, View } from 'react-native';
 import { Check } from 'lucide-react-native';
-import type { IconComponent } from '../../Icon/Icon.types';
-import { Text } from '../../Text';
-import { tokens } from '../../../foundations/theme';
+import type { IconComponent } from '../Icon/Icon.types';
+import { Text } from '../Text';
+import { tokens } from '../../foundations/theme';
 import { DropdownContext, type DropdownSize } from './DropdownContext';
 
 type MenuItemProps = {

@@ -1,7 +1,7 @@
 import { Children, useCallback, useMemo, useRef, useState } from 'react';
 import { Animated, StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
-import { shadow } from '../../../foundations/platform';
-import { tokens } from '../../../foundations/theme';
+import { shadow } from '../../foundations/platform';
+import { tokens } from '../../foundations/theme';
 import { DropdownContext, type DropdownSize } from './DropdownContext';
 
 type DropdownVariant = 'floating' | 'flat';

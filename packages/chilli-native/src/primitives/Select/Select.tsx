@@ -14,7 +14,7 @@ import {
 import { ChevronDown } from 'lucide-react-native';
 import { Text } from '../Text';
 import { tokens } from '../../foundations/theme';
-import { Dropdown, MenuItem } from '../_internal/Dropdown';
+import { Dropdown, MenuItem } from '../Dropdown';
 import type { SelectProps, SelectSize, SelectVariant } from './Select.types';
 
 type SizeConfig = {

@@ -92,6 +92,10 @@ export type {
 } from './primitives/Accordion';
 export { Tabs } from './primitives/Tabs';
 export type { TabsProps, TabsType, TabsSize, TabItem } from './primitives/Tabs';
+export { Dropdown, MenuItem } from './primitives/Dropdown';
+export type { DropdownSize, DropdownContextValue } from './primitives/Dropdown';
+export { Menu } from './primitives/Menu';
+export type { MenuOption, MenuProps, MenuTriggerProps } from './primitives/Menu';
 export { Badge } from './primitives/Badge';
 export type { BadgeProps, BadgeVariant, BadgeSize } from './primitives/Badge';
 export { Chip } from './primitives/Chip';
