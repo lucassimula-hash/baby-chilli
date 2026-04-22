@@ -108,6 +108,8 @@ export { NumberInput } from './primitives/NumberInput';
 export type { NumberInputProps } from './primitives/NumberInput';
 export { DatePicker } from './primitives/DatePicker';
 export type { DatePickerProps } from './primitives/DatePicker';
+export { FormTitle } from './primitives/FormTitle';
+export type { FormTitleProps } from './primitives/FormTitle';
 export { Badge } from './primitives/Badge';
 export type { BadgeProps, BadgeVariant, BadgeSize } from './primitives/Badge';
 export { Chip } from './primitives/Chip';

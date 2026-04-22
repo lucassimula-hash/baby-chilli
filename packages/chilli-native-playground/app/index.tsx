@@ -21,6 +21,7 @@ const PRIMITIVES = [
   { href: '/tooltip', label: 'Tooltip' },
   { href: '/number-input', label: 'NumberInput' },
   { href: '/date-picker', label: 'DatePicker' },
+  { href: '/form-title', label: 'FormTitle' },
   { href: '/badge', label: 'Badge' },
   { href: '/chip', label: 'Chip' },
   { href: '/avatar', label: 'Avatar' },
