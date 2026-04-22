@@ -15,6 +15,7 @@ const PRIMITIVES = [
   { href: '/radio', label: 'Radio' },
   { href: '/checkbox', label: 'Checkbox' },
   { href: '/accordion', label: 'Accordion' },
+  { href: '/tabs', label: 'Tabs' },
   { href: '/badge', label: 'Badge' },
   { href: '/chip', label: 'Chip' },
   { href: '/avatar', label: 'Avatar' },

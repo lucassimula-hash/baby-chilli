@@ -90,6 +90,8 @@ export type {
   AccordionGroupProps,
   AccordionItemProps,
 } from './primitives/Accordion';
+export { Tabs } from './primitives/Tabs';
+export type { TabsProps, TabsType, TabsSize, TabItem } from './primitives/Tabs';
 export { Badge } from './primitives/Badge';
 export type { BadgeProps, BadgeVariant, BadgeSize } from './primitives/Badge';
 export { Chip } from './primitives/Chip';
