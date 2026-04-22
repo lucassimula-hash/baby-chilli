@@ -2,6 +2,24 @@
 
 All notable token-level, helper-level, and convention-level decisions are recorded here as they happen during phase 1.
 
+## [0.4.0] — Phase 4 (navigation)
+
+### Added
+
+- Primitives: `AccordionGroup`, `AccordionItem`, `Tabs`, `Dropdown`, `MenuItem`, `Menu`.
+- `Dropdown` and `MenuItem` graduate from `_internal/` to the public API surface (used previously only by `Select`). The `_internal/` folder is now empty and removed.
+- New `Menu` primitive: render-prop trigger + platform-responsive presentation (anchored popover on web via `Modal` + `measureInWindow`; bottom sheet on iOS / Android). Reuses the public `Dropdown` + `MenuItem` internally.
+- `Accordion` supports standalone mode (`AccordionItem` with `defaultOpen`) or grouped mode (`AccordionGroup` with `defaultValue`). Animated height (200ms layout-driver) measured from inner content; chevron rotation 0→90° via native-driver `Animated.timing`.
+- `Tabs` ships three visual types (`pill`, `underline`, `segmented`) and three sizes (sm 28 / md 32 / lg 40). Sliding highlight tracks the active tab via measured layouts; `translateX` + `width` animated together (200ms ease).
+
+### Divergences from source web
+
+- `AccordionGroup`: dropped the `multiple` open mode (and array `defaultValue`). Native API is single-open only — opening any item closes the previously open one. This matches the intended product behavior; users that need multi-open can compose multiple standalone `AccordionItem`s.
+- `Accordion` title weight stays `Inter-Regular` (no `Inter-Medium` swap on open). Open / closed state is differentiated by color only (`basePrimary` / `baseSecondary`).
+- `Tabs`: hover-driven highlight is omitted (no hover model on touch). The `underline` type drops the source's `-mb-px` overlap trick (RN borders do not compound the same way as CSS).
+- `Menu` is a new primitive with no direct web counterpart — it bundles the `createPortal`-style anchored popover (web) and a bottom-sheet presentation (iOS / Android) behind a single render-prop trigger. The web `chilli-docs` source exposes `Dropdown` + `MenuItem` as public primitives; the consumer wires up the trigger and modal themselves. Native consolidates that wiring.
+- `Select` is not yet refactored to use the shared `Menu` presentation. It keeps its own inline `Modal` / sheet copy. Internal refactor is queued for a later phase to avoid risky churn now.
+
 ## [0.3.0] — Phase 3 (state controls)
 
 ### Added

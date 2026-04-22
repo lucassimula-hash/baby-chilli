@@ -1,6 +1,6 @@
 # chilli-native
 
-React Native + Expo design system for Chilli. **Phase 3 is shipped**: foundations + 18 primitives, dark mode only, iOS + Android + RN Web.
+React Native + Expo design system for Chilli. **Phase 4 is shipped**: foundations + 24 primitives, dark mode only, iOS + Android + RN Web.
 
 > Phase 1 spec: `docs/superpowers/specs/2026-04-17-chilli-native-phase-1-design.md`
 > Phase 1 plan: `docs/superpowers/plans/2026-04-17-chilli-native-phase-1-plan.md`
@@ -76,9 +76,14 @@ Phase 3 (state controls):
 - `Radio` + `RadioGroup` (vertical / horizontal)
 - `Checkbox` (checked, indeterminate, number badge)
 
-Each primitive exports its props type as `<Name>Props`. `Select` also exports `SelectOption`, `SelectSize`, `SelectVariant`. `Radio` exports `RadioGroupProps`, `RadioSize`, `RadioOrientation`. `Toggle` exports `ToggleSize`. `Checkbox` exports `CheckboxSize`.
+Phase 4 (navigation):
 
-`_internal/Dropdown` and `_internal/MenuItem` power the `Select` menu but are intentionally not exported publicly.
+- `AccordionGroup` + `AccordionItem` (single-open, animated height)
+- `Tabs` (pill / underline / segmented × sm / md / lg)
+- `Dropdown` + `MenuItem` (low-level menu primitives, also consumed by `Select` and `Menu`)
+- `Menu` (render-prop trigger + platform-responsive presentation: anchored popover on web, bottom sheet on iOS / Android)
+
+Each primitive exports its props type as `<Name>Props`. `Select` also exports `SelectOption`, `SelectSize`, `SelectVariant`. `Radio` exports `RadioGroupProps`, `RadioSize`, `RadioOrientation`. `Toggle` exports `ToggleSize`. `Checkbox` exports `CheckboxSize`. `Tabs` exports `TabItem`, `TabsType`, `TabsSize`. `Menu` exports `MenuOption`, `MenuTriggerProps`. `Dropdown` exports `DropdownSize`, `DropdownContextValue`.
 
 ## Conventions
 
@@ -109,6 +114,11 @@ Full details live in `CHANGELOG.md`. The main intentional divergences are:
 - `Toggle`, `Radio`, `Checkbox`: label + description unified on `bodySm` (P3, `Inter-Regular` 14/20) regardless of size; web uses `font-medium` labels and size-scaled type with 12px descriptions.
 - `Toggle` press-extend animates the thumb via `transform: scaleX/scaleY` (native driver) rather than width/height. Hover pill-extension is omitted (no hover model on touch).
 - `Radio` / `Checkbox`: focus-visible ring is omitted (no keyboard focus pattern targeted in phase 3).
+- `AccordionGroup` is single-open only (no `multiple` mode, no array `defaultValue`); web source supports both.
+- `Accordion` title weight stays `Inter-Regular` regardless of open state — color differentiates state instead of weight.
+- `Tabs` highlight is selection-driven only (no hover); the `underline` type drops the source's `-mb-px` overlap trick.
+- `Menu` is native-only: bundles trigger + anchored-popover (web) + bottom-sheet (mobile) behind a single API. Web source exposes `Dropdown` + `MenuItem` raw and leaves wiring to the consumer.
+- `Select` is not yet refactored to consume the shared `Menu` presentation; keeps its inline copy for now.
 
 ## Validation State
 
@@ -133,4 +143,6 @@ Phase 2 (form / navigation) shipped: `Input`, `Textarea`, `SearchBar`, `Select`.
 
 Phase 3 (state controls) shipped: `Toggle`, `Radio`, `RadioGroup`, `Checkbox`.
 
-Phase 4 candidates (not yet scoped): `Tabs`, `Accordion`, `Tooltip`, `ProgressBar`, `NumberInput`, `DatePicker`, public `Dropdown` / `Menu`.
+Phase 4 (navigation) shipped: `AccordionGroup` / `AccordionItem`, `Tabs`, `Dropdown` / `MenuItem` (now public), `Menu`.
+
+Phase 5 candidates (not yet scoped): `Tooltip`, `ProgressBar`, `NumberInput`, `DatePicker`, plus an internal refactor pass to make `Select` consume the shared `Menu` presentation.
