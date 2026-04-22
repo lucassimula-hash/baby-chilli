@@ -112,6 +112,12 @@ export { FormTitle } from './primitives/FormTitle';
 export type { FormTitleProps } from './primitives/FormTitle';
 export { FlagIcon, FLAG_URLS, FLAG_OPTIONS } from './primitives/FlagIcon';
 export type { FlagIconProps, FlagCode } from './primitives/FlagIcon';
+export { SocialButton } from './primitives/SocialButton';
+export type {
+  SocialButtonProps,
+  SocialButtonVariant,
+  SocialProvider,
+} from './primitives/SocialButton';
 export { Badge } from './primitives/Badge';
 export type { BadgeProps, BadgeVariant, BadgeSize } from './primitives/Badge';
 export { Chip } from './primitives/Chip';
