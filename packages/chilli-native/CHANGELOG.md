@@ -2,6 +2,25 @@
 
 All notable token-level, helper-level, and convention-level decisions are recorded here as they happen during phase 1.
 
+## [0.3.0] — Phase 3 (state controls)
+
+### Added
+
+- Primitives: `Toggle`, `Radio`, `RadioGroup`, `Checkbox`.
+- `Toggle` supports tap and pointer drag (via `PanResponder`) with midpoint-snap on release. Press-extend animation uses `transform: scaleX/scaleY` on the thumb (native driver, 60fps) instead of source web's animated `width`/`height`. Track color crossfade is implemented as two stacked layers fading via opacity (native driver compatible).
+- `Radio` works standalone (`checked` / `onCheckedChange`) or inside a `RadioGroup` (shared `value` / `onValueChange`, `orientation: 'vertical' | 'horizontal'`).
+- `Checkbox` exposes four visual states: unchecked, checked (lucide `Check`), indeterminate (lucide `Minus`), and `number` badge (1-9 with 9px / 11px text inside the brand-filled box).
+- Playground screens for each new primitive.
+
+### Divergences from source web
+
+- `Toggle`, `Radio`, `Checkbox`: label and description always render in `bodySm` (P3, `Inter-Regular` 14/20). Source web uses `font-medium` labels with size-scaled text (sm = 14, md = 16) and 12px descriptions. Native unifies on P3 for cohesion across the form-controls family.
+- `Toggle` press-extend: implemented via `transform: scaleX / scaleY` (native driver) rather than animating `width` / `height`. Visually equivalent, but layout-driver-free for guaranteed 60fps under JS load.
+- `Toggle` track color transition: implemented as two stacked layers with opacity crossfade rather than a single animated `backgroundColor`, because RN `Animated` cannot interpolate colors with the native driver.
+- `Toggle` hover-state pill extension (web `PILL_EXTEND = 2`) is omitted on native — there is no hover model on touch.
+- `Radio` and `Checkbox`: focus-visible ring (web `focus-visible:shadow-[0_0_0_2px_var(...)]`) is omitted on native.
+- `Checkbox` `number` text uses raw 9/11 px font sizes (not in the design-token scale) to mirror the source web `text-[9px]` / `text-[11px]` literals.
+
 ## [0.2.0] — Phase 2
 
 ### Validated

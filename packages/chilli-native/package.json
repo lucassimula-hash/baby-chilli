@@ -1,6 +1,6 @@
 {
   "name": "chilli-native",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "Chilli design system for React Native + Expo (phase 1: foundations + primitives, dark only).",
   "main": "src/index.ts",

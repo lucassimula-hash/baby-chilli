@@ -1,6 +1,6 @@
 # chilli-native
 
-React Native + Expo design system for Chilli. **Phase 2 is shipped**: foundations + 14 primitives, dark mode only, iOS + Android + RN Web.
+React Native + Expo design system for Chilli. **Phase 3 is shipped**: foundations + 18 primitives, dark mode only, iOS + Android + RN Web.
 
 > Phase 1 spec: `docs/superpowers/specs/2026-04-17-chilli-native-phase-1-design.md`
 > Phase 1 plan: `docs/superpowers/plans/2026-04-17-chilli-native-phase-1-plan.md`
@@ -70,7 +70,13 @@ Phase 2 (form / navigation):
 - `SearchBar`
 - `Select` (platform-responsive: anchored popover on web, bottom sheet on iOS/Android)
 
-Each primitive exports its props type as `<Name>Props`. `Select` also exports `SelectOption`, `SelectSize`, `SelectVariant`.
+Phase 3 (state controls):
+
+- `Toggle` (tap + drag, press-extend via transform scale)
+- `Radio` + `RadioGroup` (vertical / horizontal)
+- `Checkbox` (checked, indeterminate, number badge)
+
+Each primitive exports its props type as `<Name>Props`. `Select` also exports `SelectOption`, `SelectSize`, `SelectVariant`. `Radio` exports `RadioGroupProps`, `RadioSize`, `RadioOrientation`. `Toggle` exports `ToggleSize`. `Checkbox` exports `CheckboxSize`.
 
 `_internal/Dropdown` and `_internal/MenuItem` power the `Select` menu but are intentionally not exported publicly.
 
@@ -100,6 +106,9 @@ Full details live in `CHANGELOG.md`. The main intentional divergences are:
 - `Select` menu presentation: web uses an anchored popover via transparent `Modal` + `measureInWindow` (functional equivalent of `createPortal`); iOS/Android use a bottom sheet, not a popover, as the idiomatic mobile pattern.
 - `Input`, `Textarea`, and `Select` expose a `disabled` prop with consistent native semantics; this is a superset of the web demo surface.
 - `Dropdown` / `MenuItem` highlight tracks the currently checked item (and animates to the tapped item on press). Web tracks hover; that interaction model does not map to touch.
+- `Toggle`, `Radio`, `Checkbox`: label + description unified on `bodySm` (P3, `Inter-Regular` 14/20) regardless of size; web uses `font-medium` labels and size-scaled type with 12px descriptions.
+- `Toggle` press-extend animates the thumb via `transform: scaleX/scaleY` (native driver) rather than width/height. Hover pill-extension is omitted (no hover model on touch).
+- `Radio` / `Checkbox`: focus-visible ring is omitted (no keyboard focus pattern targeted in phase 3).
 
 ## Validation State
 
@@ -122,4 +131,6 @@ Still manual / pending:
 
 Phase 2 (form / navigation) shipped: `Input`, `Textarea`, `SearchBar`, `Select`.
 
-Phase 3 candidates (not yet scoped): dropdown/menu as public API, date pickers, toggle/switch, radio group, tabs.
+Phase 3 (state controls) shipped: `Toggle`, `Radio`, `RadioGroup`, `Checkbox`.
+
+Phase 4 candidates (not yet scoped): `Tabs`, `Accordion`, `Tooltip`, `ProgressBar`, `NumberInput`, `DatePicker`, public `Dropdown` / `Menu`.
