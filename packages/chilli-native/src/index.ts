@@ -104,6 +104,8 @@ export type {
 } from './primitives/ProgressBar';
 export { Tooltip } from './primitives/Tooltip';
 export type { TooltipProps, TooltipSide } from './primitives/Tooltip';
+export { NumberInput } from './primitives/NumberInput';
+export type { NumberInputProps } from './primitives/NumberInput';
 export { Badge } from './primitives/Badge';
 export type { BadgeProps, BadgeVariant, BadgeSize } from './primitives/Badge';
 export { Chip } from './primitives/Chip';
