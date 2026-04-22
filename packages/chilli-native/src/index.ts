@@ -74,6 +74,8 @@ export type {
   SelectSize,
   SelectVariant,
 } from './primitives/Select';
+export { Toggle } from './primitives/Toggle';
+export type { ToggleProps, ToggleSize } from './primitives/Toggle';
 export { Badge } from './primitives/Badge';
 export type { BadgeProps, BadgeVariant, BadgeSize } from './primitives/Badge';
 export { Chip } from './primitives/Chip';
