@@ -85,6 +85,11 @@ export type {
 } from './primitives/Radio';
 export { Checkbox } from './primitives/Checkbox';
 export type { CheckboxProps, CheckboxSize } from './primitives/Checkbox';
+export { AccordionGroup, AccordionItem } from './primitives/Accordion';
+export type {
+  AccordionGroupProps,
+  AccordionItemProps,
+} from './primitives/Accordion';
 export { Badge } from './primitives/Badge';
 export type { BadgeProps, BadgeVariant, BadgeSize } from './primitives/Badge';
 export { Chip } from './primitives/Chip';
