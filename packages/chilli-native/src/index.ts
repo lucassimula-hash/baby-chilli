@@ -118,6 +118,8 @@ export type {
   SocialButtonVariant,
   SocialProvider,
 } from './primitives/SocialButton';
+export { SelectDatePicker } from './primitives/SelectDatePicker';
+export type { SelectDatePickerProps } from './primitives/SelectDatePicker';
 export { Badge } from './primitives/Badge';
 export type { BadgeProps, BadgeVariant, BadgeSize } from './primitives/Badge';
 export { Chip } from './primitives/Chip';

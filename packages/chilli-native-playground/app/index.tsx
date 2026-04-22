@@ -24,6 +24,7 @@ const PRIMITIVES = [
   { href: '/form-title', label: 'FormTitle' },
   { href: '/flag-icon', label: 'FlagIcon' },
   { href: '/social-button', label: 'SocialButton' },
+  { href: '/select-date-picker', label: 'SelectDatePicker' },
   { href: '/badge', label: 'Badge' },
   { href: '/chip', label: 'Chip' },
   { href: '/avatar', label: 'Avatar' },
