@@ -1,6 +1,6 @@
 # chilli-native
 
-React Native + Expo design system for Chilli. **Phase 4 is shipped**: foundations + 24 primitives, dark mode only, iOS + Android + RN Web.
+React Native + Expo design system for Chilli. **Phase 5 is shipped**: foundations + 28 primitives, dark mode only, iOS + Android + RN Web.
 
 > Phase 1 spec: `docs/superpowers/specs/2026-04-17-chilli-native-phase-1-design.md`
 > Phase 1 plan: `docs/superpowers/plans/2026-04-17-chilli-native-phase-1-plan.md`
@@ -83,7 +83,14 @@ Phase 4 (navigation):
 - `Dropdown` + `MenuItem` (low-level menu primitives, also consumed by `Select` and `Menu`)
 - `Menu` (render-prop trigger + platform-responsive presentation: anchored popover on web, bottom sheet on iOS / Android)
 
-Each primitive exports its props type as `<Name>Props`. `Select` also exports `SelectOption`, `SelectSize`, `SelectVariant`. `Radio` exports `RadioGroupProps`, `RadioSize`, `RadioOrientation`. `Toggle` exports `ToggleSize`. `Checkbox` exports `CheckboxSize`. `Tabs` exports `TabItem`, `TabsType`, `TabsSize`. `Menu` exports `MenuOption`, `MenuTriggerProps`. `Dropdown` exports `DropdownSize`, `DropdownContextValue`.
+Phase 5 (feedback + advanced inputs):
+
+- `ProgressBar` (segmented bar, sm / md / lg, optional label right or bottom)
+- `Tooltip` (hover on web via `react-dom` portal, long-press on mobile via `Modal`)
+- `NumberInput` (multi-cell OTP / verification-code input)
+- `DatePicker` (single-month calendar with min / max bounds; `default` surface only)
+
+Each primitive exports its props type as `<Name>Props`. `Select` also exports `SelectOption`, `SelectSize`, `SelectVariant`. `Radio` exports `RadioGroupProps`, `RadioSize`, `RadioOrientation`. `Toggle` exports `ToggleSize`. `Checkbox` exports `CheckboxSize`. `Tabs` exports `TabItem`, `TabsType`, `TabsSize`. `Menu` exports `MenuOption`, `MenuTriggerProps`. `Dropdown` exports `DropdownSize`, `DropdownContextValue`. `ProgressBar` exports `ProgressBarSize`, `ProgressBarLabelPosition`. `Tooltip` exports `TooltipSide`.
 
 ## Conventions
 
@@ -119,6 +126,10 @@ Full details live in `CHANGELOG.md`. The main intentional divergences are:
 - `Tabs` highlight is selection-driven only (no hover); the `underline` type drops the source's `-mb-px` overlap trick.
 - `Menu` is native-only: bundles trigger + anchored-popover (web) + bottom-sheet (mobile) behind a single API. Web source exposes `Dropdown` + `MenuItem` raw and leaves wiring to the consumer.
 - `Select` is not yet refactored to consume the shared `Menu` presentation; keeps its inline copy for now.
+- `Tooltip` web rendering uses `react-dom` `createPortal` (into `document.body`, `position: fixed`) rather than RN Modal; Modal triggers a scroll lock on web that causes flicker. Native iOS / Android still use RN Modal.
+- `Tooltip` API takes the trigger as a `children` element wrapped in a measurement View — clearer than the source web's `cloneElement`-injected handlers.
+- `DatePicker` ships only the `default` surface variant; the web source's `type='glass'` (backdrop-blur card) is omitted for this version.
+- `DatePicker` does not yet ship the `SelectDatePicker` companion display widget (start / end pills + timeline). Tracking as a Phase 6 candidate.
 
 ## Validation State
 
@@ -145,4 +156,6 @@ Phase 3 (state controls) shipped: `Toggle`, `Radio`, `RadioGroup`, `Checkbox`.
 
 Phase 4 (navigation) shipped: `AccordionGroup` / `AccordionItem`, `Tabs`, `Dropdown` / `MenuItem` (now public), `Menu`.
 
-Phase 5 candidates (not yet scoped): `Tooltip`, `ProgressBar`, `NumberInput`, `DatePicker`, plus an internal refactor pass to make `Select` consume the shared `Menu` presentation.
+Phase 5 (feedback + advanced inputs) shipped: `ProgressBar`, `Tooltip`, `NumberInput`, `DatePicker`.
+
+Phase 6 candidates (not yet scoped): `SelectDatePicker` (start / end display widget), `DatePicker` `glass` variant, internal refactor pass to make `Select` consume the shared `Menu` presentation, and any further primitives surfaced by real product usage.

@@ -2,6 +2,24 @@
 
 All notable token-level, helper-level, and convention-level decisions are recorded here as they happen during phase 1.
 
+## [0.5.0] — Phase 5 (feedback + advanced inputs)
+
+### Added
+
+- Primitives: `ProgressBar`, `Tooltip`, `NumberInput`, `DatePicker`.
+- `ProgressBar`: segmented bar (default 5 segments), three heights (sm 4 / md 6 / lg 8), optional label rendered to the right or below; custom `formatLabel` overrides the default percentage.
+- `Tooltip`: wraps any trigger child, four placements (top / bottom / left / right) with rotated-square arrow, viewport-clamped position. Web rendering uses `react-dom`'s `createPortal` directly into `document.body` (`position: fixed`); iOS / Android use RN `Modal`. Hover (web) and long-press (mobile) gestures, with a debounced 80ms hide to avoid flicker on brief mouse exits.
+- `NumberInput`: multi-cell OTP / verification-code input. N cells (default 6), one digit per cell, auto-advance on entry, backspace-rewind on empty cell, paste distributes across cells. States: default, focused (with pulsing dot), filled, error (digit text in danger color), disabled.
+- `DatePicker`: single-month calendar view. Month-name header + prev / next chevron navigation, 7-column day-of-week header, 5-6 row day grid with 40px round cells. Today highlighted in brand color; selected day in neutral-secondary background; out-of-month and out-of-bounds days disabled.
+
+### Divergences from source web
+
+- `Tooltip` rendering on web uses `react-dom` `createPortal` directly instead of RN `Modal`. RN Modal on web triggers a body-scroll lock that shifts layout, causing a hover/leave loop and visible flicker. The portal approach renders into `document.body` with `position: fixed`, mirroring the source web behavior more closely.
+- `Tooltip` API takes the trigger as a single `children` element rather than the source web's `cloneElement`-injected handlers — clearer surface, no fragile DOM-prop injection. Inner trigger keeps its own `onPress`.
+- `NumberInput` cells are slightly bigger on web because of the `caretHidden` overlay pattern (TextInput at opacity 0 covers the entire cell). Visual rendering matches source — cell width 34px, height 56px.
+- `DatePicker` ships only the `default` surface variant. The web source's `type='glass'` (backdrop-blur card) is omitted for this version; can be added later via the internal `GlassSurface`.
+- `DatePicker` does not yet ship the `SelectDatePicker` companion display widget (start / end pills + timeline). Tracking it as a Phase 6 candidate if a real consumer needs it.
+
 ## [0.4.0] — Phase 4 (navigation)
 
 ### Added
