@@ -126,6 +126,8 @@ export { ActionTextarea } from './primitives/ActionTextarea';
 export type { ActionTextareaProps } from './primitives/ActionTextarea';
 export { ActionNavigation } from './primitives/ActionNavigation';
 export type { ActionNavigationProps, ActionNavigationVariant } from './primitives/ActionNavigation';
+export { ThinkingIndicator } from './primitives/ThinkingIndicator';
+export type { ThinkingIndicatorProps } from './primitives/ThinkingIndicator';
 export { Badge } from './primitives/Badge';
 export type { BadgeProps, BadgeVariant, BadgeSize } from './primitives/Badge';
 export { Chip } from './primitives/Chip';

@@ -28,6 +28,7 @@ const PRIMITIVES = [
   { href: '/action-input', label: 'ActionInput' },
   { href: '/action-textarea', label: 'ActionTextarea' },
   { href: '/action-navigation', label: 'ActionNavigation' },
+  { href: '/thinking-indicator', label: 'ThinkingIndicator' },
   { href: '/badge', label: 'Badge' },
   { href: '/chip', label: 'Chip' },
   { href: '/avatar', label: 'Avatar' },
