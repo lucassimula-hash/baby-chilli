@@ -2,6 +2,33 @@
 
 All notable token-level, helper-level, and convention-level decisions are recorded here as they happen during phase 1.
 
+## [0.6.0] — Phase 6 (form / auth / action helpers)
+
+### Added
+
+- Primitives: `FormTitle`, `FlagIcon`, `SocialButton`, `SelectDatePicker`, `ActionInput`, `ActionTextarea`, `ActionNavigation`.
+- `FormTitle`: large 24/32 SF Pro Display Semibold (iOS native, Inter-SemiBold fallback) centered title input. Five states (default / filled / focused / error / disabled) with glass-style opacity-based bgs.
+- `FlagIcon`: circular country flag rendered from `FLAG_URLS` (Figma S3 CDN, same source as web). 200+ ISO 3166-1 alpha-2 codes via the `FlagCode` union. Re-exports `FLAG_URLS` and `FLAG_OPTIONS` for country-picker consumers.
+- `SocialButton`: pill auth button for `apple`, `google`, `facebook`, `apple-pay`. Each provider has a built-in 24px brand SVG (rendered via `react-native-svg`) and default label / variant. Press scale 0.98 via native-driver Animated.spring.
+- `SelectDatePicker`: 343 px display card with a left timeline (2 outlined dots + dashed line) and right start / end sections (label + date / time pills). Focused state swaps to brand border + brandModerate shadow.
+- `ActionInput`: glass-bg rounded-3xl card with the label sitting inside the bordered container above the input row. Supports left icon, optional 20px round avatar, and a right side that defaults to `ChevronRight` but can be overridden, suppressed (`rightIcon={null}`), or replaced with a small `Toggle` (`showToggle`).
+- `ActionTextarea`: rounded-3xl card with a medium-weight prompt above a multiline textarea. Two surface modes (non-glass / glass) and four states each.
+- `ActionNavigation`: modal/screen header with leading close, centered title, trailing actions or primary pill button. Two variants (`mobile` 56 / `desktop` 72). When `scrolled=true`, an absolutely-positioned `BlurView` (expo-blur, intensity 20, dark tint) renders behind the contents.
+
+### Skipped
+
+- `ActionCtaCard` (chilli-docs ~700 lines): scope is closer to a domain-specific feature assembly than a primitive — 7 types × 3-4 states with custom image assets (Google Maps basemap, comment avatars, gradients) and per-type content renderers. Documented as out-of-scope; consumers can compose it from existing primitives.
+- `cause-input` (chilli-docs): per the user, this primitive is being deprecated on the web side — not ported.
+
+### Divergences from source web
+
+- `FormTitle`: the canonical source is the Figma "ActionFormTitle" component (node 31315:9335 in the Foundations & Components file), NOT `chilli-docs/components/ui/form-title.tsx`. The chilli-docs source is treated as out of date for this primitive.
+- `FormTitle`: SF Pro Display Semibold lands on iOS via the system font; Android / web fall back to Inter-SemiBold. The two fonts have very close metrics at 24/32 but rendering will differ slightly.
+- `SocialButton`: brand SVGs are inlined via `react-native-svg` (same paths as the source) — no separate asset file.
+- `ActionInput` / `ActionTextarea`: the source's true backdrop-blur on focused-glass states is dropped. Translucent bg colors (`neutral.opacity.faint` / `lighter` / `medium`) carry the glass look; inner shadows and ring effects from the focused-glass state are omitted because they don't translate cleanly across iOS / Android / RN Web.
+- `ActionNavigation`: trailing IconButtons drop the source's `glass` prop. On RN with a flat dark base background, `BlurView` at icon scale renders nearly opaque and hides the lucide stroke. Plain secondary IconButtons keep the icons readable. The header itself still uses `BlurView` in `scrolled` state — that area is large enough for the blur to render correctly.
+- `ActionNavigation`: drops the source's `auto` responsive variant (which used `md:` Tailwind breakpoints). Native consumers explicitly choose `mobile` or `desktop`.
+
 ## [0.5.0] — Phase 5 (feedback + advanced inputs)
 
 ### Added

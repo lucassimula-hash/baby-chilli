@@ -1,6 +1,6 @@
 # chilli-native
 
-React Native + Expo design system for Chilli. **Phase 5 is shipped**: foundations + 28 primitives, dark mode only, iOS + Android + RN Web.
+React Native + Expo design system for Chilli. **Phase 6 is shipped**: foundations + 35 primitives, dark mode only, iOS + Android + RN Web.
 
 > Phase 1 spec: `docs/superpowers/specs/2026-04-17-chilli-native-phase-1-design.md`
 > Phase 1 plan: `docs/superpowers/plans/2026-04-17-chilli-native-phase-1-plan.md`
@@ -90,7 +90,17 @@ Phase 5 (feedback + advanced inputs):
 - `NumberInput` (multi-cell OTP / verification-code input)
 - `DatePicker` (single-month calendar with min / max bounds; `default` surface only)
 
-Each primitive exports its props type as `<Name>Props`. `Select` also exports `SelectOption`, `SelectSize`, `SelectVariant`. `Radio` exports `RadioGroupProps`, `RadioSize`, `RadioOrientation`. `Toggle` exports `ToggleSize`. `Checkbox` exports `CheckboxSize`. `Tabs` exports `TabItem`, `TabsType`, `TabsSize`. `Menu` exports `MenuOption`, `MenuTriggerProps`. `Dropdown` exports `DropdownSize`, `DropdownContextValue`. `ProgressBar` exports `ProgressBarSize`, `ProgressBarLabelPosition`. `Tooltip` exports `TooltipSide`.
+Phase 6 (form / auth / action helpers):
+
+- `FormTitle` (large 24/32 SF Pro Display Semibold centered title input — Figma "ActionFormTitle")
+- `FlagIcon` (200+ ISO country flags from Figma S3 CDN)
+- `SocialButton` (apple / google / facebook / apple-pay with built-in brand SVGs)
+- `SelectDatePicker` (343 px display card with start / end timeline)
+- `ActionInput` (glass card with label inside, optional avatar / toggle / right icon)
+- `ActionTextarea` (prompt + textarea, glass + non-glass variants)
+- `ActionNavigation` (modal/screen header, mobile / desktop variants, scrolled `BlurView`)
+
+Each primitive exports its props type as `<Name>Props`. `Select` also exports `SelectOption`, `SelectSize`, `SelectVariant`. `Radio` exports `RadioGroupProps`, `RadioSize`, `RadioOrientation`. `Toggle` exports `ToggleSize`. `Checkbox` exports `CheckboxSize`. `Tabs` exports `TabItem`, `TabsType`, `TabsSize`. `Menu` exports `MenuOption`, `MenuTriggerProps`. `Dropdown` exports `DropdownSize`, `DropdownContextValue`. `ProgressBar` exports `ProgressBarSize`, `ProgressBarLabelPosition`. `Tooltip` exports `TooltipSide`. `FlagIcon` re-exports `FlagCode`, `FLAG_URLS`, `FLAG_OPTIONS`. `SocialButton` exports `SocialProvider`, `SocialButtonVariant`. `ActionNavigation` exports `ActionNavigationVariant`.
 
 ## Conventions
 
@@ -158,4 +168,6 @@ Phase 4 (navigation) shipped: `AccordionGroup` / `AccordionItem`, `Tabs`, `Dropd
 
 Phase 5 (feedback + advanced inputs) shipped: `ProgressBar`, `Tooltip`, `NumberInput`, `DatePicker`.
 
-Phase 6 candidates (not yet scoped): `SelectDatePicker` (start / end display widget), `DatePicker` `glass` variant, internal refactor pass to make `Select` consume the shared `Menu` presentation, and any further primitives surfaced by real product usage.
+Phase 6 (form / auth / action helpers) shipped: `FormTitle`, `FlagIcon`, `SocialButton`, `SelectDatePicker`, `ActionInput`, `ActionTextarea`, `ActionNavigation`.
+
+Phase 7 candidates (not yet scoped): `PageNavigation`, `BreakpointSwitch`, `ThinkingIndicator`, `CauseChip`, `DatePicker` `glass` variant, internal refactor pass to make `Select` consume the shared `Menu` presentation. Skipped (out-of-scope as primitives): `ActionCtaCard`, `CauseInput` (deprecated upstream).
