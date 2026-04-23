@@ -1,6 +1,6 @@
 # chilli-native
 
-React Native + Expo design system for Chilli. **Phase 6 is shipped**: foundations + 35 primitives, dark mode only, iOS + Android + RN Web.
+React Native + Expo design system for Chilli. **Phase 7 is shipped**: foundations + 38 primitives, dark mode only, iOS + Android + RN Web.
 
 > Phase 1 spec: `docs/superpowers/specs/2026-04-17-chilli-native-phase-1-design.md`
 > Phase 1 plan: `docs/superpowers/plans/2026-04-17-chilli-native-phase-1-plan.md`
@@ -41,7 +41,7 @@ Required peer dependencies on the consumer side:
 - Individual token groups for convenience:
   - `colors`, `spacing`, `radius`, `borderWidth`, `size`
   - `fontSize`, `lineHeight`, `letterSpacing`, `fontFamily`, `textStyles`
-  - `backgrounds`, `textColors`, `borders`, `iconColors`, `buttons`, `links`, `shadows`
+  - `backgrounds`, `textColors`, `borders`, `iconColors`, `buttons`, `links`, `shadows`, `causeColors`
 - `useLoadChilliFonts()` — `expo-font` hook returning `[loaded, error]`
 - `fontAssets` — raw font asset map
 - `pickStateful(values, state)` — resolves `default` / `hover` / `pressed`
@@ -100,7 +100,13 @@ Phase 6 (form / auth / action helpers):
 - `ActionTextarea` (prompt + textarea, glass + non-glass variants)
 - `ActionNavigation` (modal/screen header, mobile / desktop variants, scrolled `BlurView`)
 
-Each primitive exports its props type as `<Name>Props`. `Select` also exports `SelectOption`, `SelectSize`, `SelectVariant`. `Radio` exports `RadioGroupProps`, `RadioSize`, `RadioOrientation`. `Toggle` exports `ToggleSize`. `Checkbox` exports `CheckboxSize`. `Tabs` exports `TabItem`, `TabsType`, `TabsSize`. `Menu` exports `MenuOption`, `MenuTriggerProps`. `Dropdown` exports `DropdownSize`, `DropdownContextValue`. `ProgressBar` exports `ProgressBarSize`, `ProgressBarLabelPosition`. `Tooltip` exports `TooltipSide`. `FlagIcon` re-exports `FlagCode`, `FLAG_URLS`, `FLAG_OPTIONS`. `SocialButton` exports `SocialProvider`, `SocialButtonVariant`. `ActionNavigation` exports `ActionNavigationVariant`.
+Phase 7 (chrome + cause):
+
+- `ThinkingIndicator` (animated SVG morph, 4 keyframes × 26 control numbers, ease-in-out interpolation via `setNativeProps`)
+- `PageNavigation` (page-level header, mobile / desktop variants, scrolled `BlurView`)
+- `CauseChip` (pill chip, 20 cause palettes, xs / md / lg sizes, default + glass types)
+
+Each primitive exports its props type as `<Name>Props`. `Select` also exports `SelectOption`, `SelectSize`, `SelectVariant`. `Radio` exports `RadioGroupProps`, `RadioSize`, `RadioOrientation`. `Toggle` exports `ToggleSize`. `Checkbox` exports `CheckboxSize`. `Tabs` exports `TabItem`, `TabsType`, `TabsSize`. `Menu` exports `MenuOption`, `MenuTriggerProps`. `Dropdown` exports `DropdownSize`, `DropdownContextValue`. `ProgressBar` exports `ProgressBarSize`, `ProgressBarLabelPosition`. `Tooltip` exports `TooltipSide`. `FlagIcon` re-exports `FlagCode`, `FLAG_URLS`, `FLAG_OPTIONS`. `SocialButton` exports `SocialProvider`, `SocialButtonVariant`. `ActionNavigation` exports `ActionNavigationVariant`. `PageNavigation` exports `PageNavigationVariant`. `CauseChip` exports `CauseChipSize`, `CauseChipType`, and the `CauseColor` union.
 
 ## Conventions
 
@@ -170,4 +176,6 @@ Phase 5 (feedback + advanced inputs) shipped: `ProgressBar`, `Tooltip`, `NumberI
 
 Phase 6 (form / auth / action helpers) shipped: `FormTitle`, `FlagIcon`, `SocialButton`, `SelectDatePicker`, `ActionInput`, `ActionTextarea`, `ActionNavigation`.
 
-Phase 7 candidates (not yet scoped): `PageNavigation`, `BreakpointSwitch`, `ThinkingIndicator`, `CauseChip`, `DatePicker` `glass` variant, internal refactor pass to make `Select` consume the shared `Menu` presentation. Skipped (out-of-scope as primitives): `ActionCtaCard`, `CauseInput` (deprecated upstream).
+Phase 7 (chrome + cause) shipped: `ThinkingIndicator`, `PageNavigation`, `CauseChip`. Skipped this phase: `BreakpointSwitch` (web docs–internal Tailwind utility — not needed; native picks `mobile` / `desktop` variants explicitly).
+
+Future candidates (not yet scoped): `DatePicker` `glass` variant, internal refactor pass to make `Select` consume the shared `Menu` presentation. Permanently out of scope as primitives: `ActionCtaCard`, `CauseInput` (deprecated upstream).

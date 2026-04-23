@@ -2,6 +2,27 @@
 
 All notable token-level, helper-level, and convention-level decisions are recorded here as they happen during phase 1.
 
+## [0.7.0] — Phase 7 (chrome + cause)
+
+### Added
+
+- Primitives: `ThinkingIndicator`, `PageNavigation`, `CauseChip`.
+- Tokens: `causeColors` — 20 cause palettes (`lighter` / `strong` pairs) added under `tokens.causeColors`. Dark-mode values mirror the `--backgrounds-other-*` CSS variables from `chilli-docs/app/globals.css`.
+- `ThinkingIndicator`: animated single-path SVG morphing between 4 keyframes (4 control points × 26 numbers each). Uses `Animated.Value` with `addListener` + `setNativeProps` on the `Path` ref to drive point-to-point linear interpolation with an ease-in-out pass — smooth at 60 fps without a reanimated dep.
+- `PageNavigation`: page-level header with leading `ChevronLeft` back button, centered title, and trailing actions (default: `Upload` + `Settings` ghost IconButtons). Two variants (`mobile` 56 / `desktop` 72). When `scrolled=true`, an absolutely-positioned `BlurView` (expo-blur, intensity 20, dark tint) renders behind the contents (same pattern as `ActionNavigation`).
+- `CauseChip`: pill chip in `xs` (h 20) / `md` (h 24) / `lg` (h 28) sizes. Two surface types: `default` (flat lighter bg) and `glass` (transparent bg with hairline border + `BlurView` backdrop). Label uses the matching `strong` color from the palette.
+
+### Skipped
+
+- `BreakpointSwitch` (chilli-docs): web docs–internal utility for swapping mobile/desktop renderers through Tailwind `md:` breakpoints. Native consumers control variants explicitly via component props (`variant="mobile"` / `"desktop"`), so no equivalent primitive is needed.
+
+### Divergences from source web
+
+- `causeColors`: only the dark-mode palette is shipped (native is dark-only). The 20 colors are exposed as a flat object keyed by color slug (`'neon-pink'`, `'caribbean-green'`, …); no kebab-case-to-camelCase normalization to keep parity with `CAUSE_COLORS` from the source.
+- `CauseChip`: the source uses `backdrop-blur-[8px]` on glass type — RN equivalent is `expo-blur` `BlurView` at intensity 20 (same intensity as `ActionNavigation` / `PageNavigation` for visual consistency). A second translucent `lighter` overlay is layered on top of the blur to keep the cause tint readable.
+- `PageNavigation`: drops the source's `auto` responsive variant (Tailwind `md:` breakpoints). Native consumers explicitly choose `mobile` or `desktop`.
+- `ThinkingIndicator`: the source uses an SVG morph driven by CSS keyframes; native version uses `Animated.Value` + `setNativeProps` on a `react-native-svg` `Path` to morph 26 control numbers between 4 keyframes with ease-in-out interpolation. Avoids depending on `react-native-reanimated`.
+
 ## [0.6.0] — Phase 6 (form / auth / action helpers)
 
 ### Added
