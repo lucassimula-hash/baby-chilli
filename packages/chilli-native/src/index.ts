@@ -128,6 +128,8 @@ export { ActionNavigation } from './primitives/ActionNavigation';
 export type { ActionNavigationProps, ActionNavigationVariant } from './primitives/ActionNavigation';
 export { ThinkingIndicator } from './primitives/ThinkingIndicator';
 export type { ThinkingIndicatorProps } from './primitives/ThinkingIndicator';
+export { PageNavigation } from './primitives/PageNavigation';
+export type { PageNavigationProps, PageNavigationVariant } from './primitives/PageNavigation';
 export { Badge } from './primitives/Badge';
 export type { BadgeProps, BadgeVariant, BadgeSize } from './primitives/Badge';
 export { Chip } from './primitives/Chip';
