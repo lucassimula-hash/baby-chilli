@@ -124,6 +124,8 @@ export { ActionInput } from './primitives/ActionInput';
 export type { ActionInputProps } from './primitives/ActionInput';
 export { ActionTextarea } from './primitives/ActionTextarea';
 export type { ActionTextareaProps } from './primitives/ActionTextarea';
+export { ActionNavigation } from './primitives/ActionNavigation';
+export type { ActionNavigationProps, ActionNavigationVariant } from './primitives/ActionNavigation';
 export { Badge } from './primitives/Badge';
 export type { BadgeProps, BadgeVariant, BadgeSize } from './primitives/Badge';
 export { Chip } from './primitives/Chip';

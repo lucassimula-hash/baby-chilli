@@ -27,6 +27,7 @@ const PRIMITIVES = [
   { href: '/select-date-picker', label: 'SelectDatePicker' },
   { href: '/action-input', label: 'ActionInput' },
   { href: '/action-textarea', label: 'ActionTextarea' },
+  { href: '/action-navigation', label: 'ActionNavigation' },
   { href: '/badge', label: 'Badge' },
   { href: '/chip', label: 'Chip' },
   { href: '/avatar', label: 'Avatar' },
