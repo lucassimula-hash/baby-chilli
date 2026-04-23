@@ -36,6 +36,7 @@ const PRIMITIVES = [
   { href: '/avatar-group', label: 'AvatarGroup' },
   { href: '/avatar-duo', label: 'AvatarDuo' },
   { href: '/avatar-label', label: 'AvatarLabel' },
+  { href: '/cause-chip', label: 'CauseChip' },
   { href: '/profile-card', label: 'Profile card (assembly)' },
 ] as const;
 

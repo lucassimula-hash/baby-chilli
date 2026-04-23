@@ -21,6 +21,7 @@ export {
   buttons,
   links,
   shadows,
+  causeColors,
 } from './foundations/tokens';
 
 export type {
@@ -43,6 +44,8 @@ export type {
   Links,
   Shadows,
   ShadowToken,
+  CauseColor,
+  CauseColors,
 } from './foundations/tokens';
 
 // Platform helpers
@@ -142,5 +145,11 @@ export { AvatarDuo } from './primitives/AvatarDuo';
 export type { AvatarDuoProps } from './primitives/AvatarDuo';
 export { AvatarLabel } from './primitives/AvatarLabel';
 export type { AvatarLabelProps, AvatarLabelSize } from './primitives/AvatarLabel';
+export { CauseChip } from './primitives/CauseChip';
+export type {
+  CauseChipProps,
+  CauseChipSize,
+  CauseChipType,
+} from './primitives/CauseChip';
 
 // Remaining primitives — added phase by phase as they land:

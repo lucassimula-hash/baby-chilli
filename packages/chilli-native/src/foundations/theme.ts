@@ -16,6 +16,7 @@ import {
   buttons,
   links,
   shadows,
+  causeColors,
 } from './tokens';
 
 export const tokens = {
@@ -36,6 +37,7 @@ export const tokens = {
   buttons,
   links,
   shadows,
+  causeColors,
 } as const;
 
 export type Tokens = typeof tokens;
