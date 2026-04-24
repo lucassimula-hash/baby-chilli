@@ -110,7 +110,7 @@ export type { TooltipProps, TooltipSide } from './primitives/Tooltip';
 export { NumberInput } from './primitives/NumberInput';
 export type { NumberInputProps } from './primitives/NumberInput';
 export { DatePicker } from './primitives/DatePicker';
-export type { DatePickerProps } from './primitives/DatePicker';
+export type { DatePickerProps, DatePickerType } from './primitives/DatePicker';
 export { FormTitle } from './primitives/FormTitle';
 export type { FormTitleProps } from './primitives/FormTitle';
 export { FlagIcon, FLAG_URLS, FLAG_OPTIONS } from './primitives/FlagIcon';

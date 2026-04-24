@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
+import { BlurView } from 'expo-blur';
 import { ChevronLeft, ChevronRight } from 'lucide-react-native';
 import { Text } from '../Text';
 import { tokens } from '../../foundations/theme';
@@ -56,7 +57,8 @@ function isSameDay(a: Date, b: Date) {
   );
 }
 
-export function DatePicker({ value, onChange, minDate, maxDate, style }: DatePickerProps) {
+export function DatePicker({ value, onChange, type = 'default', minDate, maxDate, style }: DatePickerProps) {
+  const isGlass = type === 'glass';
   const today = new Date();
   const [viewDate, setViewDate] = useState<Date>(value ?? today);
   const viewMonth = viewDate.getMonth();
@@ -74,7 +76,18 @@ export function DatePicker({ value, onChange, minDate, maxDate, style }: DatePic
   };
 
   return (
-    <View style={[styles.container, style]} accessibilityLabel="Date picker">
+    <View
+      style={[styles.container, isGlass ? styles.containerGlass : styles.containerDefault, style]}
+      accessibilityLabel="Date picker"
+    >
+      {isGlass ? (
+        <BlurView
+          intensity={40}
+          tint="dark"
+          pointerEvents="none"
+          style={[StyleSheet.absoluteFill, styles.blur]}
+        />
+      ) : null}
       <View style={styles.header}>
         <Text variant="bodyMd" color={tokens.textColors.basePrimary}>
           {MONTHS[viewMonth]}
@@ -166,9 +179,19 @@ const styles = StyleSheet.create({
     width: CONTAINER_WIDTH,
     padding: tokens.spacing[6],
     borderRadius: tokens.radius[7],
-    backgroundColor: tokens.backgrounds.neutral.primary.default,
     borderWidth: 1,
+    overflow: 'hidden',
+  },
+  containerDefault: {
+    backgroundColor: tokens.backgrounds.neutral.primary.default,
     borderColor: tokens.borders.default,
+  },
+  containerGlass: {
+    backgroundColor: 'rgba(20,15,20,0.8)',
+    borderColor: 'rgba(245,245,245,0.08)',
+  },
+  blur: {
+    borderRadius: tokens.radius[7],
   },
   header: {
     flexDirection: 'row',

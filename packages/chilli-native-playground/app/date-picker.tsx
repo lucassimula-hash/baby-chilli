@@ -5,6 +5,7 @@ import { DatePicker, Text, tokens } from 'chilli-native';
 export default function DatePickerPlayground() {
   const [date, setDate] = useState<Date | undefined>(undefined);
   const [bounded, setBounded] = useState<Date | undefined>(undefined);
+  const [glassDate, setGlassDate] = useState<Date | undefined>(undefined);
 
   const today = new Date();
   const minDate = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 5);
@@ -28,6 +29,13 @@ export default function DatePickerPlayground() {
         />
         <Text variant="bodySm" color={tokens.textColors.baseSecondary}>
           {bounded ? bounded.toDateString() : 'Out-of-bound days are dimmed'}
+        </Text>
+      </Section>
+
+      <Section title="Glass type">
+        <DatePicker value={glassDate} onChange={setGlassDate} type="glass" />
+        <Text variant="bodySm" color={tokens.textColors.baseSecondary}>
+          {glassDate ? glassDate.toDateString() : 'Translucent dark surface with backdrop blur'}
         </Text>
       </Section>
     </ScrollView>
