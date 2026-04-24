@@ -30,6 +30,8 @@ const PRIMITIVES = [
   { href: '/action-navigation', label: 'ActionNavigation' },
   { href: '/thinking-indicator', label: 'ThinkingIndicator' },
   { href: '/page-navigation', label: 'PageNavigation' },
+  { href: '/header-app', label: 'HeaderApp' },
+  { href: '/chilli-logo', label: 'ChilliLogo' },
   { href: '/badge', label: 'Badge' },
   { href: '/chip', label: 'Chip' },
   { href: '/avatar', label: 'Avatar' },
