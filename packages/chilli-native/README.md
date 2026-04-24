@@ -140,12 +140,10 @@ Full details live in `CHANGELOG.md`. The main intentional divergences are:
 - `AccordionGroup` is single-open only (no `multiple` mode, no array `defaultValue`); web source supports both.
 - `Accordion` title weight stays `Inter-Regular` regardless of open state — color differentiates state instead of weight.
 - `Tabs` highlight is selection-driven only (no hover); the `underline` type drops the source's `-mb-px` overlap trick.
-- `Menu` is native-only: bundles trigger + anchored-popover (web) + bottom-sheet (mobile) behind a single API. Web source exposes `Dropdown` + `MenuItem` raw and leaves wiring to the consumer.
-- `Select` is not yet refactored to consume the shared `Menu` presentation; keeps its inline copy for now.
+- `Menu` is native-only: bundles trigger + anchored-popover (web) + bottom-sheet (mobile) behind a single API. Web source exposes `Dropdown` + `MenuItem` raw and leaves wiring to the consumer. `Select` consumes this same `Menu` presentation internally.
 - `Tooltip` web rendering uses `react-dom` `createPortal` (into `document.body`, `position: fixed`) rather than RN Modal; Modal triggers a scroll lock on web that causes flicker. Native iOS / Android still use RN Modal.
 - `Tooltip` API takes the trigger as a `children` element wrapped in a measurement View — clearer than the source web's `cloneElement`-injected handlers.
-- `DatePicker` ships only the `default` surface variant; the web source's `type='glass'` (backdrop-blur card) is omitted for this version.
-- `DatePicker` does not yet ship the `SelectDatePicker` companion display widget (start / end pills + timeline). Tracking as a Phase 6 candidate.
+- `DatePicker` `glass` type: bg `rgba(20,15,20,0.8)` + hairline border `rgba(245,245,245,0.08)` (same values as the web source) + `expo-blur` `BlurView` at intensity 40 (web uses `backdrop-blur-[14px]`).
 
 ## Validation State
 
@@ -178,4 +176,4 @@ Phase 6 (form / auth / action helpers) shipped: `FormTitle`, `FlagIcon`, `Social
 
 Phase 7 (chrome + cause) shipped: `ThinkingIndicator`, `PageNavigation`, `CauseChip`. Skipped this phase: `BreakpointSwitch` (web docs–internal Tailwind utility — not needed; native picks `mobile` / `desktop` variants explicitly).
 
-Future candidates (not yet scoped): `DatePicker` `glass` variant, internal refactor pass to make `Select` consume the shared `Menu` presentation. Permanently out of scope as primitives: `ActionCtaCard`, `CauseInput` (deprecated upstream).
+Permanently out of scope as primitives: `ActionCtaCard`, `CauseInput` (deprecated upstream). Card / visual-effect primitives (`cta-card`, `campaign-card`, `support-creator-card`, `animated-glow-card`, `animated-gradient-border`) deferred pending upstream redesign. `aurora-shader` (WebGL) and `resizable-container` (web mouse-drag utility) have no native equivalent.
