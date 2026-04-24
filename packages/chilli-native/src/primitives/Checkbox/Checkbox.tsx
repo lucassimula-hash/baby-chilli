@@ -13,8 +13,8 @@ type SizeConfig = {
 };
 
 const SIZE_CONFIG: Record<CheckboxSize, SizeConfig> = {
-  sm: { box: 16, borderRadius: tokens.radius[1], iconSize: 12, numberFontSize: 9 },
-  md: { box: 20, borderRadius: tokens.radius[2], iconSize: 16, numberFontSize: 11 },
+  sm: { box: 16, borderRadius: tokens.radius[2], iconSize: 12, numberFontSize: 9 },
+  md: { box: 20, borderRadius: tokens.radius[3], iconSize: 16, numberFontSize: 11 },
 };
 
 export function Checkbox({

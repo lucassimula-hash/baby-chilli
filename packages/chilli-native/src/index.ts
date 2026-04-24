@@ -134,7 +134,7 @@ export type { ThinkingIndicatorProps } from './primitives/ThinkingIndicator';
 export { PageNavigation } from './primitives/PageNavigation';
 export type { PageNavigationProps, PageNavigationVariant } from './primitives/PageNavigation';
 export { Badge } from './primitives/Badge';
-export type { BadgeProps, BadgeVariant, BadgeSize } from './primitives/Badge';
+export type { BadgeProps, BadgeType, BadgeSize } from './primitives/Badge';
 export { Chip } from './primitives/Chip';
 export type { ChipProps, ChipType, ChipSize, ChipVariant } from './primitives/Chip';
 export { Avatar } from './primitives/Avatar';

@@ -31,7 +31,7 @@ function getCellState(
 export function NumberInput({
   value = '',
   onChange,
-  length = 6,
+  length = 4,
   error = false,
   disabled = false,
   style,

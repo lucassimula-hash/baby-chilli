@@ -3,7 +3,7 @@ import { Avatar, type AvatarProps } from '../Avatar';
 import { Text } from '../Text';
 import { tokens } from '../../foundations/theme';
 
-export type AvatarLabelSize = 'sm' | 'md' | 'lg';
+export type AvatarLabelSize = 'sm' | 'md' | 'lg' | 'xl';
 
 export type AvatarLabelProps = {
   avatar: AvatarProps;
@@ -13,21 +13,24 @@ export type AvatarLabelProps = {
   style?: StyleProp<ViewStyle>;
 };
 
-const SIZE_AVATAR: Record<AvatarLabelSize, number> = { sm: 24, md: 32, lg: 40 };
+const SIZE_AVATAR: Record<AvatarLabelSize, number> = { sm: 24, md: 32, lg: 40, xl: 40 };
 const SIZE_TITLE: Record<AvatarLabelSize, 'bodyXs' | 'bodySm' | 'bodyMd'> = {
   sm: 'bodyXs',
   md: 'bodySm',
   lg: 'bodySm',
+  xl: 'bodyMd',
 };
 const SIZE_SUBTITLE: Record<AvatarLabelSize, 'bodyXs' | 'bodySm'> = {
   sm: 'bodyXs',
   md: 'bodyXs',
   lg: 'bodySm',
+  xl: 'bodySm',
 };
 const SIZE_GAP: Record<AvatarLabelSize, number> = {
   sm: tokens.spacing[2],
   md: tokens.spacing[2],
   lg: tokens.spacing[4],
+  xl: tokens.spacing[4],
 };
 
 export function AvatarLabel({

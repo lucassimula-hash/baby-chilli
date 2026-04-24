@@ -2,6 +2,25 @@
 
 All notable token-level, helper-level, and convention-level decisions are recorded here as they happen during phase 1.
 
+## [0.8.0] — Audit visual pass 1 (Phase 1 → 5 alignment)
+
+### Breaking
+
+- `Badge`: API refonte pour coller à la source web. `variant` (neutral / brand / danger / success / warning) → `type` (fill / ghost). Les quatre variants colorés (brand / danger / success / warning) sont retirés : le DS web ne les définit pas sur `Badge`. Consumers utilisant `<Badge variant="brand" />` doivent passer à `<Badge dot dotColor={tokens.backgrounds.brand.strong.default} />` ou rendre une couleur via le slot `leftIcon`.
+- `Badge`: nouveaux slots `dot`, `dotColor`, `leftIcon`, `rightIcon` (présents dans la source web, oubliés dans le port initial).
+- `Badge`: `lg` passe de 12/16 à 14/20 (match source web).
+
+### Fixed
+
+- `Avatar`: fallback background par défaut passe de `backgrounds.neutral.tertiary.default` (gris) à `backgrounds.brand.strong.default` (match source web).
+- `AvatarGroup`: overlap par défaut passe de `size * 0.3` à `size * 0.5` (les avatars se chevauchent plus, cohérent avec la source web). Border color par défaut passe de `backgrounds.base` à `borders.base` (valeurs identiques mais token sémantiquement correct).
+- `AvatarGroup`: ajoute le slot `showAddButton` (+ `onAddPress`, `addButtonAccessibilityLabel`) — bouton `Plus` round trailing manquant dans le port initial.
+- `AvatarLabel`: ajoute la taille `xl` (avatar 40 / title 16 / subtitle 14) — manquait vs source web.
+- `Chip`: type `fill` utilisait `backgrounds.neutral.secondary.default` (neutral-850) au lieu de `backgrounds.neutral.primary.default` (neutral-900). Le chip rempli est maintenant plus contrasté avec le bg, comme sur le web.
+- `Checkbox`: radius passe de (sm 2 / md 4) à (sm 4 / md 6), match `rounded` / `rounded-md` de la source.
+- `Toggle`: gap de la row passe de `spacing[5]` (12) à `10`, match `gap-2.5` de la source.
+- `NumberInput`: `length` par défaut passe de 6 à 4, match la source web (la longueur reste configurable via prop).
+
 ## [0.7.0] — Phase 7 (chrome + cause)
 
 ### Added

@@ -236,7 +236,7 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: tokens.spacing[5],
+    gap: 10,
     alignSelf: 'flex-start',
   },
   disabled: {

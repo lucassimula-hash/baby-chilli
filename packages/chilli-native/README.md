@@ -1,6 +1,6 @@
 # chilli-native
 
-React Native + Expo design system for Chilli. **Phase 7 is shipped**: foundations + 38 primitives, dark mode only, iOS + Android + RN Web.
+React Native + Expo design system for Chilli. **Phase 7 is shipped** + audit visual pass 1: foundations + 38 primitives, dark mode only, iOS + Android + RN Web.
 
 > Phase 1 spec: `docs/superpowers/specs/2026-04-17-chilli-native-phase-1-design.md`
 > Phase 1 plan: `docs/superpowers/plans/2026-04-17-chilli-native-phase-1-plan.md`
