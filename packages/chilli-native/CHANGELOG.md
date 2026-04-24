@@ -2,6 +2,19 @@
 
 All notable token-level, helper-level, and convention-level decisions are recorded here as they happen during phase 1.
 
+## [0.9.0] — Brand primitives (HeaderApp + ChilliLogo)
+
+### Added
+
+- `HeaderApp`: mobile app-level header (width 375) with four types — `home` (logo + bell with brand dot + search IconButton + avatar), `notification` (back + centered title + settings spacer kept for layout balance), `search` (back + decoy search bar in focused-looking state — brand border + brand-moderate shadow, typically navigates to a search screen on tap), `profile` (back + centered title + settings). Based on Figma node 34341:161172.
+- `ChilliLogo`: brand mark primitive with three types (`symbol` 120×120, `favicon` 64×64, `logo` 200×171.574 with wordmark) × three colors (`brand` #FF4BEB, `black` #140F14, `white` #F5F5F5). SVG paths inlined via `react-native-svg` (paths sourced directly from Figma components 31271:66312–66329). Aspect ratio preserved from the longest dimension (`size` prop). `fill` prop can override the palette color for custom contexts.
+
+### Divergences from source web
+
+- `HeaderApp`: drops the Figma source's `@` color override (in dark mode, `text-base-primary` and `#f5f5f5` resolve to the same value, so the distinction has no visible effect).
+- `HeaderApp` `notification`: the Figma source keeps a 40×40 settings icon container with `opacity-0` for layout balance. Native substitutes an explicit 40×40 spacer `View` (same visual footprint, cleaner semantics).
+- `ChilliLogo`: the Figma source renders remote SVG assets (`<img src=...>`). Native embeds the SVG paths directly in TS to avoid a dependency on an asset CDN or bundled SVG loader. Paths are byte-equivalent to the Figma exports.
+
 ## [0.8.0] — Audit visual pass 1 (Phase 1 → 5 alignment)
 
 ### Breaking

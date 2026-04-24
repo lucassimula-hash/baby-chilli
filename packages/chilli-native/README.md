@@ -1,6 +1,6 @@
 # chilli-native
 
-React Native + Expo design system for Chilli. **Phase 7 is shipped** + audit visual pass 1: foundations + 38 primitives, dark mode only, iOS + Android + RN Web.
+React Native + Expo design system for Chilli. **Phase 7 shipped + audit visual pass 1 + brand primitives**: foundations + 40 primitives, dark mode only, iOS + Android + RN Web.
 
 > Phase 1 spec: `docs/superpowers/specs/2026-04-17-chilli-native-phase-1-design.md`
 > Phase 1 plan: `docs/superpowers/plans/2026-04-17-chilli-native-phase-1-plan.md`
@@ -106,7 +106,12 @@ Phase 7 (chrome + cause):
 - `PageNavigation` (page-level header, mobile / desktop variants, scrolled `BlurView`)
 - `CauseChip` (pill chip, 20 cause palettes, xs / md / lg sizes, default + glass types)
 
-Each primitive exports its props type as `<Name>Props`. `Select` also exports `SelectOption`, `SelectSize`, `SelectVariant`. `Radio` exports `RadioGroupProps`, `RadioSize`, `RadioOrientation`. `Toggle` exports `ToggleSize`. `Checkbox` exports `CheckboxSize`. `Tabs` exports `TabItem`, `TabsType`, `TabsSize`. `Menu` exports `MenuOption`, `MenuTriggerProps`. `Dropdown` exports `DropdownSize`, `DropdownContextValue`. `ProgressBar` exports `ProgressBarSize`, `ProgressBarLabelPosition`. `Tooltip` exports `TooltipSide`. `FlagIcon` re-exports `FlagCode`, `FLAG_URLS`, `FLAG_OPTIONS`. `SocialButton` exports `SocialProvider`, `SocialButtonVariant`. `ActionNavigation` exports `ActionNavigationVariant`. `PageNavigation` exports `PageNavigationVariant`. `CauseChip` exports `CauseChipSize`, `CauseChipType`, and the `CauseColor` union.
+Brand primitives:
+
+- `HeaderApp` (mobile app-level header — home / notification / search / profile types, width 375)
+- `ChilliLogo` (brand mark — symbol / favicon / logo types × brand / black / white colors, react-native-svg paths inlined)
+
+Each primitive exports its props type as `<Name>Props`. `Select` also exports `SelectOption`, `SelectSize`, `SelectVariant`. `Radio` exports `RadioGroupProps`, `RadioSize`, `RadioOrientation`. `Toggle` exports `ToggleSize`. `Checkbox` exports `CheckboxSize`. `Tabs` exports `TabItem`, `TabsType`, `TabsSize`. `Menu` exports `MenuOption`, `MenuTriggerProps`. `Dropdown` exports `DropdownSize`, `DropdownContextValue`. `ProgressBar` exports `ProgressBarSize`, `ProgressBarLabelPosition`. `Tooltip` exports `TooltipSide`. `FlagIcon` re-exports `FlagCode`, `FLAG_URLS`, `FLAG_OPTIONS`. `SocialButton` exports `SocialProvider`, `SocialButtonVariant`. `ActionNavigation` exports `ActionNavigationVariant`. `PageNavigation` exports `PageNavigationVariant`. `CauseChip` exports `CauseChipSize`, `CauseChipType`, and the `CauseColor` union. `HeaderApp` exports `HeaderAppType`. `ChilliLogo` exports `ChilliLogoType`, `ChilliLogoColor`.
 
 ## Conventions
 
