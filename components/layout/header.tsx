@@ -13,16 +13,9 @@ const foundations = [
   { name: "Logos", slug: "logos" },
 ];
 
-const showcases = [
-  { name: "Campaign", slug: "campaign-showcase" },
-];
-
 function getBreadcrumb(pathname: string): { category: string; name: string } | null {
   const slug = pathname.replace("/docs/", "");
   if (!slug || slug === "/docs") return null;
-
-  const showcase = showcases.find((s) => s.slug === slug);
-  if (showcase) return { category: "Showcase", name: showcase.name };
 
   const foundation = foundations.find((f) => f.slug === slug);
   if (foundation) return { category: "Foundations", name: foundation.name };

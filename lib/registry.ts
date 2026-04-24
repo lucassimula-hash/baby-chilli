@@ -1,206 +1,5 @@
 export const components = [
     {
-        name: "Action CTA Card",
-        slug: "action-cta-card",
-        description: "Glass action cards for campaign flows. 7 Types × 3 States (Default / Pinned / Completed) bound to the `action CTA` component set (32 variants) in the Product Figma library. Each preview below shows the three states side by side.",
-        installCmd: "npx chilli@latest add action-cta-card",
-        figma: {
-            source: "Product",
-            fileKey: "7S4EQFfpK3hIN87Nd7ggV8",
-            nodeId: "3403:68397",
-            componentKey: "09810efb32c8a28e5abc3a3e2c451b7275389627"
-        },
-        sections: [
-            {
-                title: "Installation",
-                type: "install"
-            },
-            {
-                title: "Send Email — Default / Pinned / Completed",
-                type: "preview",
-                demoKey: "action-cta-card-email",
-                demoCode: `import { ActionCtaCard } from "@chilli-ui/react"
-
-export function SendEmailStates() {
-  return (
-    <>
-      <ActionCtaCard type="send-email" state="default" />
-      <ActionCtaCard type="send-email" state="pinned" />
-      <ActionCtaCard type="send-email" state="completed" count={34} countLabel="emails sent" />
-    </>
-  )
-}`
-            },
-            {
-                title: "Instagram — Default / Pinned / Completed",
-                type: "preview",
-                demoKey: "action-cta-card-instagram",
-                demoCode: `import { ActionCtaCard } from "@chilli-ui/react"
-
-export function InstagramStates() {
-  return (
-    <>
-      <ActionCtaCard type="instagram" state="default" />
-      <ActionCtaCard type="instagram" state="pinned" />
-      <ActionCtaCard type="instagram" state="completed" count={142} countLabel="comments posted" />
-    </>
-  )
-}`
-            },
-            {
-                title: "Google Maps — Default / Pinned / Completed",
-                type: "preview",
-                demoKey: "action-cta-card-google-maps",
-                demoCode: `import { ActionCtaCard } from "@chilli-ui/react"
-
-export function GoogleMapsStates() {
-  return (
-    <>
-      <ActionCtaCard type="google-maps" state="default" />
-      <ActionCtaCard type="google-maps" state="pinned" />
-      <ActionCtaCard type="google-maps" state="completed" count={142} countLabel="reviews left" />
-    </>
-  )
-}`
-            },
-            {
-                title: "Phone Call — Default / Pinned / Completed",
-                type: "preview",
-                demoKey: "action-cta-card-phone",
-                demoCode: `import { ActionCtaCard } from "@chilli-ui/react"
-
-export function PhoneCallStates() {
-  return (
-    <>
-      <ActionCtaCard type="phone-call" state="default" />
-      <ActionCtaCard type="phone-call" state="pinned" />
-      <ActionCtaCard type="phone-call" state="completed" count={12} countLabel="calls done" />
-    </>
-  )
-}`
-            },
-            {
-                title: "Question — Default / Pinned / Completed",
-                type: "preview",
-                demoKey: "action-cta-card-question",
-                demoCode: `import { ActionCtaCard } from "@chilli-ui/react"
-
-export function QuestionStates() {
-  return (
-    <>
-      <ActionCtaCard type="question" state="default" />
-      <ActionCtaCard type="question" state="pinned" />
-      <ActionCtaCard type="question" state="completed" count={423} countLabel="replies" />
-    </>
-  )
-}`
-            },
-            {
-                title: "External Link — Default / Pinned / Completed",
-                type: "preview",
-                demoKey: "action-cta-card-external",
-                demoCode: `import { ActionCtaCard } from "@chilli-ui/react"
-
-export function ExternalLinkStates() {
-  return (
-    <>
-      <ActionCtaCard type="external-link" state="default" />
-      <ActionCtaCard type="external-link" state="pinned" />
-      <ActionCtaCard type="external-link" state="completed" count={52} countLabel="completed" />
-    </>
-  )
-}`
-            },
-            {
-                title: "Action — Default / Top supporters / Completed",
-                type: "preview",
-                demoKey: "action-cta-card-action",
-                demoCode: `import { ActionCtaCard } from "@chilli-ui/react"
-
-export function ActionStates() {
-  return (
-    <>
-      <ActionCtaCard type="action" state="default" count={1} />
-      <ActionCtaCard type="action" state="top-supporters" count={12} />
-      <ActionCtaCard type="action" state="completed" count={1} />
-    </>
-  )
-}`
-            },
-            {
-                title: "API Reference",
-                type: "api"
-            }
-        ],
-        apiTables: [
-            {
-                title: "ActionCtaCard",
-                props: [
-                    {
-                        prop: "type",
-                        type: '"send-email" | "instagram" | "google-maps" | "phone-call" | "question" | "external-link" | "action"',
-                        default: '"send-email"',
-                        description: "Card type — mirrors the Figma `Type` variant property (7 values)."
-                    },
-                    {
-                        prop: "state",
-                        type: '"default" | "pinned" | "completed" | "top-supporters"',
-                        default: '"default"',
-                        description: "Card state — mirrors the Figma `State` variant property. `completed` renders a horizontal compact banner instead of the vertical card. `top-supporters` is specific to the `action` type."
-                    },
-                    {
-                        prop: "title",
-                        type: "string",
-                        default: "type default",
-                        description: "Main content title — email subject for `send-email`, comment caption for `instagram`. Maps to the Figma `Email subject` text property."
-                    },
-                    {
-                        prop: "dear",
-                        type: "string",
-                        default: '"Dear U.S. Fish & Wildlife Service,"',
-                        description: "Email greeting line, rendered above the body on `send-email`. Maps to the Figma `dear` text property."
-                    },
-                    {
-                        prop: "body",
-                        type: "string",
-                        default: "type default",
-                        description: "Supporting content text — email body, comment text, phone-call script, question text, or external-link excerpt."
-                    },
-                    {
-                        prop: "count",
-                        type: "number",
-                        default: "type default",
-                        description: "Counter shown next to the CTA (vertical card) or as the big number in `completed` / `action` variants."
-                    },
-                    {
-                        prop: "countLabel",
-                        type: "string",
-                        default: "type default",
-                        description: 'Sub-label next to the counter (e.g. `"emails sent"`, `"calls done"`, `"replies"`).'
-                    },
-                    {
-                        prop: "actionLabel",
-                        type: "string",
-                        default: "type default",
-                        description: "CTA button label."
-                    },
-                    {
-                        prop: "channelLabel",
-                        type: "string",
-                        default: "—",
-                        description: "Override the chip label shown at the top of the card (default derives from `type`)."
-                    },
-                    {
-                        prop: "className",
-                        type: "string",
-                        default: "—",
-                        description: "Additional classes applied to the outer card container."
-                    }
-                ]
-            }
-        ]
-    },
-    {
         name: "Campaign Card",
         slug: "campaign-card",
         description: "Mobile feed card for a campaign — tap anywhere on the card to open the campaign detail page. Hero image uses a framer-motion `layoutId` for a shared-element transition (App Store / Airbnb pattern). Bound to the `CampaignCard` component set (4 variants across Breakpoint × supporter × State) in the Product Figma library.",
@@ -3673,6 +3472,152 @@ export default function TooltipDemo() {
                         type: "ReactNode",
                         default: "—",
                         description: "The trigger element."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        name: "HeaderApp (Mobile)",
+        slug: "header-app",
+        description: "Mobile app-level header (375px wide) with four discriminated types: `home` (logo + bell with brand dot + search icon button + avatar), `notification` (back + centered title + spacer), `search` (back + decoy search bar in focused state), `profile` (back + centered title + settings). Mirrors the Figma `HeaderApp` set (node 34341:161172) and the chilli-native `HeaderApp` primitive.",
+        installCmd: "npx chilli@latest add header-app",
+        figma: {
+            source: "Foundations & Components",
+            fileKey: "RcR7D8LPcMhNadWgs8T5cF",
+            nodeId: "34341:161172"
+        },
+        sections: [
+            {
+                title: "Installation",
+                type: "install"
+            },
+            {
+                title: "All types",
+                type: "preview",
+                demoKey: "header-app-all",
+                demoCode: `import { HeaderApp } from "@chilli-ui/react"
+import { ChilliLogo } from "@chilli-ui/react"
+
+export function HeaderAppDemo() {
+  return (
+    <div className="flex flex-col gap-4">
+      <HeaderApp type="home" logo={<ChilliLogo type="symbol" size={32} />} avatarSrc="/avatar.png" />
+      <HeaderApp type="search" />
+      <HeaderApp type="notification" title="notifications" />
+      <HeaderApp type="profile" title="@seaspiracy" />
+    </div>
+  )
+}`
+            },
+            {
+                title: "Home",
+                type: "preview",
+                demoKey: "header-app-home",
+                demoCode: `<HeaderApp
+  type="home"
+  logo={<ChilliLogo type="symbol" size={32} />}
+  avatarSrc="/avatar.png"
+/>`
+            },
+            {
+                title: "Search",
+                type: "preview",
+                demoKey: "header-app-search",
+                demoCode: `<HeaderApp type="search" onSearchClick={() => router.push("/search")} />`
+            },
+            {
+                title: "Notification",
+                type: "preview",
+                demoKey: "header-app-notification",
+                demoCode: `<HeaderApp type="notification" title="notifications" onBack={...} />`
+            },
+            {
+                title: "Profile",
+                type: "preview",
+                demoKey: "header-app-profile",
+                demoCode: `<HeaderApp type="profile" title="@seaspiracy" onBack={...} onSettingsClick={...} />`
+            },
+            {
+                title: "API Reference",
+                type: "api"
+            }
+        ],
+        apiTables: [
+            {
+                title: "HeaderApp",
+                props: [
+                    {
+                        prop: "type",
+                        type: '"home" | "notification" | "search" | "profile"',
+                        default: '"home"',
+                        description: "Layout variant. Each type swaps the slots and behavior."
+                    },
+                    {
+                        prop: "logo",
+                        type: "ReactNode",
+                        default: "—",
+                        description: "(home) Logo slot, 32×32. Pass a ChilliLogo or any node."
+                    },
+                    {
+                        prop: "hasNotificationDot",
+                        type: "boolean",
+                        default: "true",
+                        description: "(home) Show the brand-colored dot on the bell icon."
+                    },
+                    {
+                        prop: "avatarSrc",
+                        type: "string",
+                        default: "—",
+                        description: "(home) Avatar image src rendered as a 40×40 round button."
+                    },
+                    {
+                        prop: "onBellClick / onSearchIconClick / onAvatarClick",
+                        type: "() => void",
+                        default: "—",
+                        description: "(home) Handlers for the three trailing buttons."
+                    },
+                    {
+                        prop: "title",
+                        type: "string",
+                        default: "—",
+                        description: "(notification / profile) Centered title."
+                    },
+                    {
+                        prop: "showBack",
+                        type: "boolean",
+                        default: "true",
+                        description: "(notification / profile / search) Toggle the leading back button."
+                    },
+                    {
+                        prop: "onBack",
+                        type: "() => void",
+                        default: "—",
+                        description: "Back button handler."
+                    },
+                    {
+                        prop: "showSettings",
+                        type: "boolean",
+                        default: "true on profile, false on notification",
+                        description: "(notification / profile) Toggle the trailing settings icon. When false, a 40×40 spacer keeps the layout balanced."
+                    },
+                    {
+                        prop: "onSettingsClick",
+                        type: "() => void",
+                        default: "—",
+                        description: "Settings icon handler."
+                    },
+                    {
+                        prop: "searchPlaceholder",
+                        type: "string",
+                        default: '"search"',
+                        description: "(search) Placeholder text shown inside the decoy search bar."
+                    },
+                    {
+                        prop: "onSearchClick",
+                        type: "() => void",
+                        default: "—",
+                        description: "(search) Handler when the decoy search row is tapped — typically navigates to the search screen."
                     }
                 ]
             }

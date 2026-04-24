@@ -1,36 +1,10 @@
 "use client";
 
+import { ChilliLogo } from "@/components/ui/chilli-logo";
+
 /* ------------------------------------------------------------------ */
 /*  Logos & Brand Guidelines page                                      */
 /* ------------------------------------------------------------------ */
-
-function LogoPlaceholder({
-  label,
-  wide = false,
-  dark = false,
-}: {
-  label: string;
-  wide?: boolean;
-  dark?: boolean;
-}) {
-  return (
-    <div
-      className={`flex items-center justify-center rounded-xl border-2 border-dashed ${
-        dark
-          ? "border-[var(--borders-neutral-bolder)] bg-[var(--backgrounds-neutral-inverse-default)]"
-          : "border-[var(--borders-default)] bg-[var(--backgrounds-neutral-primary-default)]"
-      } ${wide ? "h-32 col-span-full" : "h-32"}`}
-    >
-      <span
-        className={`text-sm font-medium ${
-          dark ? "text-[var(--text-base-disabled)]" : "text-[var(--text-base-secondary)]"
-        }`}
-      >
-        {label}
-      </span>
-    </div>
-  );
-}
 
 function DontCard({ description }: { description: string }) {
   return (
@@ -86,13 +60,10 @@ export default function LogosPage() {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             <div className="rounded-xl border border-[var(--borders-default)] overflow-hidden">
               <div className="flex items-center justify-center h-32 bg-[var(--backgrounds-neutral-primary-default)]">
-                <div className="flex items-center gap-2">
-                  <div className="h-8 w-8 rounded-lg bg-[var(--backgrounds-brand-strong-default)]" />
-                  <span className="text-xl font-bold text-[var(--text-base-primary)]">Chilli</span>
-                </div>
+                <ChilliLogo type="logo" size={140} />
               </div>
               <div className="px-4 py-3 border-t border-[var(--borders-default)]">
-                <p className="text-sm font-medium text-[var(--text-base-primary)]">Full Logo</p>
+                <p className="text-sm font-medium text-[var(--text-base-primary)]">Logo</p>
                 <p className="text-xs text-[var(--text-base-secondary)]">
                   Mark + wordmark. Primary usage.
                 </p>
@@ -101,24 +72,24 @@ export default function LogosPage() {
 
             <div className="rounded-xl border border-[var(--borders-default)] overflow-hidden">
               <div className="flex items-center justify-center h-32 bg-[var(--backgrounds-neutral-primary-default)]">
-                <div className="h-10 w-10 rounded-lg bg-[var(--backgrounds-brand-strong-default)]" />
+                <ChilliLogo type="symbol" size={64} />
               </div>
               <div className="px-4 py-3 border-t border-[var(--borders-default)]">
-                <p className="text-sm font-medium text-[var(--text-base-primary)]">Mark</p>
+                <p className="text-sm font-medium text-[var(--text-base-primary)]">Symbol</p>
                 <p className="text-xs text-[var(--text-base-secondary)]">
-                  Icon only. Favicons, app icons, avatars.
+                  Round mark. Avatars, small surfaces.
                 </p>
               </div>
             </div>
 
             <div className="rounded-xl border border-[var(--borders-default)] overflow-hidden">
               <div className="flex items-center justify-center h-32 bg-[var(--backgrounds-neutral-primary-default)]">
-                <span className="text-2xl font-bold text-[var(--text-base-primary)]">Chilli</span>
+                <ChilliLogo type="favicon" size={48} />
               </div>
               <div className="px-4 py-3 border-t border-[var(--borders-default)]">
-                <p className="text-sm font-medium text-[var(--text-base-primary)]">Wordmark</p>
+                <p className="text-sm font-medium text-[var(--text-base-primary)]">Favicon</p>
                 <p className="text-xs text-[var(--text-base-secondary)]">
-                  Text only. Navigation, footers.
+                  Simplified shape. Browser tabs, app icons.
                 </p>
               </div>
             </div>
@@ -132,7 +103,7 @@ export default function LogosPage() {
               Clear Space
             </h2>
             <p className="mt-1 text-sm text-[var(--text-base-secondary)]">
-              Maintain a minimum clear space equal to the height of the mark around all sides of
+              Maintain a minimum clear space equal to the height of the symbol around all sides of
               the logo. This ensures the logo remains legible and visually distinct.
             </p>
           </div>
@@ -154,10 +125,8 @@ export default function LogosPage() {
                 </span>
               </div>
 
-              {/* Logo placeholder */}
-              <div className="flex items-center gap-3 bg-[var(--backgrounds-base)] rounded-lg px-6 py-4 border border-[var(--borders-default)]">
-                <div className="h-8 w-8 rounded-lg bg-[var(--backgrounds-brand-strong-default)]" />
-                <span className="text-lg font-bold text-[var(--text-base-primary)]">Chilli</span>
+              <div className="bg-[var(--backgrounds-base)] rounded-lg px-6 py-4 border border-[var(--borders-default)]">
+                <ChilliLogo type="logo" size={120} />
               </div>
             </div>
           </div>
@@ -175,45 +144,36 @@ export default function LogosPage() {
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            {/* Default */}
+            {/* Brand */}
             <div className="rounded-xl border border-[var(--borders-default)] overflow-hidden">
               <div className="flex h-28 items-center justify-center bg-[var(--backgrounds-base)]">
-                <div className="flex items-center gap-2">
-                  <div className="h-7 w-7 rounded-md bg-[var(--backgrounds-brand-strong-default)]" />
-                  <span className="text-lg font-bold text-[var(--text-base-primary)]">Chilli</span>
-                </div>
+                <ChilliLogo type="symbol" color="brand" size={56} />
               </div>
               <div className="px-4 py-3 border-t border-[var(--borders-default)]">
-                <p className="text-sm font-medium text-[var(--text-base-primary)]">Default</p>
-                <p className="text-xs text-[var(--text-base-secondary)]">Light backgrounds</p>
+                <p className="text-sm font-medium text-[var(--text-base-primary)]">Brand</p>
+                <p className="text-xs text-[var(--text-base-secondary)]">Default. #FF4BEB.</p>
               </div>
             </div>
 
-            {/* Inverse */}
+            {/* Black */}
             <div className="rounded-xl border border-[var(--borders-default)] overflow-hidden">
-              <div className="flex h-28 items-center justify-center bg-[var(--backgrounds-neutral-inverse-default)]">
-                <div className="flex items-center gap-2">
-                  <div className="h-7 w-7 rounded-md bg-[var(--backgrounds-brand-strong-default)]" />
-                  <span className="text-lg font-bold text-[var(--text-inverse)]">Chilli</span>
-                </div>
+              <div className="flex h-28 items-center justify-center bg-[#F5F5F5]">
+                <ChilliLogo type="symbol" color="black" size={56} />
               </div>
               <div className="px-4 py-3 border-t border-[var(--borders-default)]">
-                <p className="text-sm font-medium text-[var(--text-base-primary)]">Inverse</p>
-                <p className="text-xs text-[var(--text-base-secondary)]">Dark backgrounds</p>
+                <p className="text-sm font-medium text-[var(--text-base-primary)]">Black</p>
+                <p className="text-xs text-[var(--text-base-secondary)]">Light surfaces. #140F14.</p>
               </div>
             </div>
 
-            {/* Monochrome */}
+            {/* White */}
             <div className="rounded-xl border border-[var(--borders-default)] overflow-hidden">
-              <div className="flex h-28 items-center justify-center bg-[var(--backgrounds-neutral-secondary-default)]">
-                <div className="flex items-center gap-2">
-                  <div className="h-7 w-7 rounded-md bg-[var(--backgrounds-neutral-inverse-default)]" />
-                  <span className="text-lg font-bold text-[var(--text-base-primary)]">Chilli</span>
-                </div>
+              <div className="flex h-28 items-center justify-center bg-[#140F14]">
+                <ChilliLogo type="symbol" color="white" size={56} />
               </div>
               <div className="px-4 py-3 border-t border-[var(--borders-default)]">
-                <p className="text-sm font-medium text-[var(--text-base-primary)]">Monochrome</p>
-                <p className="text-xs text-[var(--text-base-secondary)]">Single-color contexts</p>
+                <p className="text-sm font-medium text-[var(--text-base-primary)]">White</p>
+                <p className="text-xs text-[var(--text-base-secondary)]">Dark surfaces. #F5F5F5.</p>
               </div>
             </div>
           </div>
@@ -232,10 +192,7 @@ export default function LogosPage() {
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="rounded-xl border border-[var(--borders-default)] p-6 flex flex-col items-center gap-3">
-              <div className="flex items-center gap-1.5">
-                <div className="h-5 w-5 rounded bg-[var(--backgrounds-brand-strong-default)]" />
-                <span className="text-xs font-bold text-[var(--text-base-primary)]">Chilli</span>
-              </div>
+              <ChilliLogo type="logo" size={80} />
               <div className="text-center">
                 <p className="text-xs font-medium text-[var(--text-base-primary)]">Full Logo</p>
                 <p className="text-[11px] font-mono text-[var(--text-base-secondary)]">
@@ -245,11 +202,11 @@ export default function LogosPage() {
             </div>
 
             <div className="rounded-xl border border-[var(--borders-default)] p-6 flex flex-col items-center gap-3">
-              <div className="h-5 w-5 rounded bg-[var(--backgrounds-brand-strong-default)]" />
+              <ChilliLogo type="symbol" size={16} />
               <div className="text-center">
-                <p className="text-xs font-medium text-[var(--text-base-primary)]">Mark</p>
+                <p className="text-xs font-medium text-[var(--text-base-primary)]">Symbol</p>
                 <p className="text-[11px] font-mono text-[var(--text-base-secondary)]">
-                  Min size: 16 x 16px
+                  Min size: 16 × 16px
                 </p>
               </div>
             </div>

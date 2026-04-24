@@ -29,16 +29,6 @@ import {
   SupportCreatorCardGrid,
   SupportCreatorCardLargeCounts,
 } from "@/components/demos/support-creator-card-demos";
-// Action CTA Card demos
-import {
-  ActionCtaCardEmailAll,
-  ActionCtaCardInstagramAll,
-  ActionCtaCardGoogleMapsAll,
-  ActionCtaCardPhoneAll,
-  ActionCtaCardQuestionAll,
-  ActionCtaCardExternalAll,
-  ActionCtaCardActionAll,
-} from "@/components/demos/action-cta-card-demos";
 // ActionFormTitle demos
 import { FormTitleDefault, FormTitleStates } from "@/components/demos/form-title-demos";
 // Avatar demos
@@ -65,6 +55,16 @@ import { InputFieldDemo, ActionInputDemo, CauseInputDemo, FormTitleDemo, NumberI
 import { NumberInputDefault, NumberInputStates, NumberInputLength } from "@/components/demos/number-input-demos";
 // Page Navigation demos
 import { PageNavigationDemo, PageNavigationStates, PageNavigationCustomActions } from "@/components/demos/page-navigation-demos";
+// HeaderApp demos
+import {
+  HeaderAppHome,
+  HeaderAppHomeNoDot,
+  HeaderAppSearch,
+  HeaderAppNotification,
+  HeaderAppProfile,
+  HeaderAppProfileNoSettings,
+  HeaderAppAllTypes,
+} from "@/components/demos/header-app-demos";
 // Radio demos
 import { RadioDefault, RadioSizes, RadioStates, RadioHorizontal, RadioWithTextDemo } from "@/components/demos/radio-demos";
 // Search Bar demos
@@ -108,14 +108,6 @@ const DEMO_MAP: Record<string, React.ReactNode> = {
   "support-creator-card-default": <SupportCreatorCardDefault />,
   "support-creator-card-grid": <SupportCreatorCardGrid />,
   "support-creator-card-large": <SupportCreatorCardLargeCounts />,
-  // Action CTA Card — each demo shows Default / Pinned / Completed for that type
-  "action-cta-card-email": <ActionCtaCardEmailAll />,
-  "action-cta-card-instagram": <ActionCtaCardInstagramAll />,
-  "action-cta-card-google-maps": <ActionCtaCardGoogleMapsAll />,
-  "action-cta-card-phone": <ActionCtaCardPhoneAll />,
-  "action-cta-card-question": <ActionCtaCardQuestionAll />,
-  "action-cta-card-external": <ActionCtaCardExternalAll />,
-  "action-cta-card-action": <ActionCtaCardActionAll />,
   // ActionFormTitle
   "form-title-default": <FormTitleDefault />,
   "form-title-states": <FormTitleStates />,
@@ -192,6 +184,14 @@ const DEMO_MAP: Record<string, React.ReactNode> = {
   "page-navigation-default": <PageNavigationDemo />,
   "page-navigation-states": <PageNavigationStates />,
   "page-navigation-custom": <PageNavigationCustomActions />,
+  // HeaderApp (mobile app-level header)
+  "header-app-all": <HeaderAppAllTypes />,
+  "header-app-home": <HeaderAppHome />,
+  "header-app-home-no-dot": <HeaderAppHomeNoDot />,
+  "header-app-search": <HeaderAppSearch />,
+  "header-app-notification": <HeaderAppNotification />,
+  "header-app-profile": <HeaderAppProfile />,
+  "header-app-profile-no-settings": <HeaderAppProfileNoSettings />,
   // Radio
   "radio-default": <RadioDefault />,
   "radio-sizes": <RadioSizes />,
