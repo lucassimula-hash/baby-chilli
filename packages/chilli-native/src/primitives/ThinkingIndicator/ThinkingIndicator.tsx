@@ -201,6 +201,7 @@ const styles = StyleSheet.create({
   spacer: {
     opacity: 0,
     fontFamily: 'Inter-Medium',
+    fontSize: 13,
   },
   absoluteText: {
     position: 'absolute',
@@ -209,5 +210,6 @@ const styles = StyleSheet.create({
   },
   label: {
     fontFamily: 'Inter-Medium',
+    fontSize: 13,
   },
 });

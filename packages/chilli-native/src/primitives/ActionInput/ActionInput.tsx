@@ -148,6 +148,7 @@ const styles = StyleSheet.create({
   },
   label: {
     fontFamily: 'Inter-Medium',
+    lineHeight: 22,
   },
   row: {
     flexDirection: 'row',

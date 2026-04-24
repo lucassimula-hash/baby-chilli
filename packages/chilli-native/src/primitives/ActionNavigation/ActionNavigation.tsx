@@ -122,6 +122,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: 'Inter-SemiBold',
+    lineHeight: 20,
     textAlign: 'center',
     flexShrink: 0,
   },

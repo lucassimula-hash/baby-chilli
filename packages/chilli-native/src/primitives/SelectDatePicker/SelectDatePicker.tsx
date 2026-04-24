@@ -9,7 +9,9 @@ function DateTimePill({ value, selected }: { value: string; selected: boolean })
     <View
       style={[
         styles.pill,
-        selected ? styles.pillSelected : styles.pillDefault,
+        selected
+          ? [styles.pillSelected, shadow(tokens.shadows.brandModerate)]
+          : styles.pillDefault,
       ]}
     >
       <Text
@@ -55,6 +57,7 @@ export function SelectDatePicker({
               },
         ]}
       >
+        {focused ? <View pointerEvents="none" style={styles.focusInnerRing} /> : null}
         <View style={styles.row}>
           <View style={styles.timeline}>
             <View style={styles.timelineDot} />
@@ -64,7 +67,7 @@ export function SelectDatePicker({
 
           <View style={styles.content}>
             <View style={styles.section}>
-              <Text variant="bodySm" color={tokens.textColors.baseSecondary}>
+              <Text variant="bodySm" color={tokens.textColors.baseSecondary} style={styles.sectionLabel}>
                 start
               </Text>
               <View style={styles.pillRow}>
@@ -76,7 +79,7 @@ export function SelectDatePicker({
             <View style={styles.divider} />
 
             <View style={styles.sectionEnd}>
-              <Text variant="bodySm" color={tokens.textColors.baseSecondary}>
+              <Text variant="bodySm" color={tokens.textColors.baseSecondary} style={styles.sectionLabel}>
                 end
               </Text>
               <View style={styles.pillRow}>
@@ -171,5 +174,18 @@ const styles = StyleSheet.create({
     backgroundColor: tokens.backgrounds.neutral.opacity.lighter,
     borderWidth: 0.5,
     borderColor: '#a6a6a6',
+  },
+  focusInnerRing: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    borderRadius: tokens.radius[7],
+    borderWidth: 0.5,
+    borderColor: '#a6a6a6',
+  },
+  sectionLabel: {
+    fontFamily: 'Inter-Medium',
   },
 });
