@@ -17,10 +17,6 @@ const foundations = [
   { name: "Logos", slug: "logos" },
 ];
 
-const showcases = [
-  { name: "Campaign", slug: "campaign-showcase" },
-];
-
 interface SidebarProps {
   open: boolean;
   onClose: () => void;
@@ -153,33 +149,6 @@ export function Sidebar({ open, onClose }: SidebarProps) {
                 "top 150ms ease, height 150ms ease, opacity 100ms ease",
             }}
           />
-
-          {/* Showcase */}
-          <div className="mb-[var(--space-9)]">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.05em] text-[var(--text-base-secondary)] px-3 mb-2 block">
-              Showcase
-            </span>
-            <ul className="space-y-0.5">
-              {showcases.map((item) => (
-                <li key={item.slug}>
-                  <Link
-                    href={`/docs/${item.slug}`}
-                    ref={(el) => registerRef(item.slug, el)}
-                    onClick={onClose}
-                    onMouseEnter={() => handleItemHover(item.slug)}
-                    className={cn(
-                      "relative z-10 rounded-full px-3 py-2 text-sm transition-colors duration-100 block",
-                      isActive(item.slug)
-                        ? "text-[var(--text-base-primary)] font-medium"
-                        : "text-[var(--text-base-secondary)]"
-                    )}
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
 
           <div className="mb-[var(--space-9)]">
             <span className="text-[11px] font-semibold uppercase tracking-[0.05em] text-[var(--text-base-secondary)] px-3 mb-2 block">

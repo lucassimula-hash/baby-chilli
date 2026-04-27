@@ -6,6 +6,7 @@ out/
 next-env.d.ts
 app/docs/.claude/
 .claude/
+_claude-stale/
 
 # Bridge DS — knowledge base data (regenerated via /design-workflow setup)
 .claude/skills/design-workflow/references/knowledge-base/registries/*.json
