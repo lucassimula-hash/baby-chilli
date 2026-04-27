@@ -32,7 +32,7 @@ export default function ProfileCardPlayground() {
             subtitle="Climate creator · 12.4k supporters"
             style={styles.headerLabel}
           />
-          <Badge label="Verified" variant="brand" />
+          <Badge label="Verified" dot dotColor={tokens.backgrounds.brand.strong.default} />
         </View>
 
         <Text variant="bodyMd">

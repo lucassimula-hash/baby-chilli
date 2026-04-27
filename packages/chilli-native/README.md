@@ -1,15 +1,14 @@
 # chilli-native
 
-React Native + Expo design system for Chilli. **Phase 1 implementation is complete**: foundations + 10 primitives, dark mode only, iOS + RN Web.
+React Native + Expo design system for Chilli. **Phase 7 shipped + audit visual pass 1 + brand primitives**: foundations + 40 primitives, dark mode only, iOS + Android + RN Web.
 
-> Spec: `docs/superpowers/specs/2026-04-17-chilli-native-phase-1-design.md`
-> Plan: `docs/superpowers/plans/2026-04-17-chilli-native-phase-1-plan.md`
+> Phase 1 spec: `docs/superpowers/specs/2026-04-17-chilli-native-phase-1-design.md`
+> Phase 1 plan: `docs/superpowers/plans/2026-04-17-chilli-native-phase-1-plan.md`
 
 ## Status
 
 The code for phase 1 is in place and the playground bundles successfully on web. Final sign-off still requires:
 
-- the manual visual audit against `chilli-docs`
 - the iOS glass-blur check
 - the main-app integration sanity check
 
@@ -42,7 +41,7 @@ Required peer dependencies on the consumer side:
 - Individual token groups for convenience:
   - `colors`, `spacing`, `radius`, `borderWidth`, `size`
   - `fontSize`, `lineHeight`, `letterSpacing`, `fontFamily`, `textStyles`
-  - `backgrounds`, `textColors`, `borders`, `iconColors`, `buttons`, `links`, `shadows`
+  - `backgrounds`, `textColors`, `borders`, `iconColors`, `buttons`, `links`, `shadows`, `causeColors`
 - `useLoadChilliFonts()` — `expo-font` hook returning `[loaded, error]`
 - `fontAssets` — raw font asset map
 - `pickStateful(values, state)` — resolves `default` / `hover` / `pressed`
@@ -50,6 +49,8 @@ Required peer dependencies on the consumer side:
 - `shadow(token)` — converts a `ShadowToken` to a platform-appropriate `ViewStyle`
 
 ### Primitives
+
+Phase 1:
 
 - `Text`
 - `Button`
@@ -62,7 +63,55 @@ Required peer dependencies on the consumer side:
 - `AvatarDuo`
 - `AvatarLabel`
 
-Each primitive exports its props type as `<Name>Props`.
+Phase 2 (form / navigation):
+
+- `Input`
+- `Textarea`
+- `SearchBar`
+- `Select` (platform-responsive: anchored popover on web, bottom sheet on iOS/Android)
+
+Phase 3 (state controls):
+
+- `Toggle` (tap + drag, press-extend via transform scale)
+- `Radio` + `RadioGroup` (vertical / horizontal)
+- `Checkbox` (checked, indeterminate, number badge)
+
+Phase 4 (navigation):
+
+- `AccordionGroup` + `AccordionItem` (single-open, animated height)
+- `Tabs` (pill / underline / segmented × sm / md / lg)
+- `Dropdown` + `MenuItem` (low-level menu primitives, also consumed by `Select` and `Menu`)
+- `Menu` (render-prop trigger + platform-responsive presentation: anchored popover on web, bottom sheet on iOS / Android)
+
+Phase 5 (feedback + advanced inputs):
+
+- `ProgressBar` (segmented bar, sm / md / lg, optional label right or bottom)
+- `Tooltip` (hover on web via `react-dom` portal, long-press on mobile via `Modal`)
+- `NumberInput` (multi-cell OTP / verification-code input)
+- `DatePicker` (single-month calendar with min / max bounds; `default` surface only)
+
+Phase 6 (form / auth / action helpers):
+
+- `FormTitle` (large 24/32 SF Pro Display Semibold centered title input — Figma "ActionFormTitle")
+- `FlagIcon` (200+ ISO country flags from Figma S3 CDN)
+- `SocialButton` (apple / google / facebook / apple-pay with built-in brand SVGs)
+- `SelectDatePicker` (343 px display card with start / end timeline)
+- `ActionInput` (glass card with label inside, optional avatar / toggle / right icon)
+- `ActionTextarea` (prompt + textarea, glass + non-glass variants)
+- `ActionNavigation` (modal/screen header, mobile / desktop variants, scrolled `BlurView`)
+
+Phase 7 (chrome + cause):
+
+- `ThinkingIndicator` (animated SVG morph, 4 keyframes × 26 control numbers, ease-in-out interpolation via `setNativeProps`)
+- `PageNavigation` (page-level header, mobile / desktop variants, scrolled `BlurView`)
+- `CauseChip` (pill chip, 20 cause palettes, xs / md / lg sizes, default + glass types)
+
+Brand primitives:
+
+- `HeaderApp` (mobile app-level header — home / notification / search / profile types, width 375)
+- `ChilliLogo` (brand mark — symbol / favicon / logo types × brand / black / white colors, react-native-svg paths inlined)
+
+Each primitive exports its props type as `<Name>Props`. `Select` also exports `SelectOption`, `SelectSize`, `SelectVariant`. `Radio` exports `RadioGroupProps`, `RadioSize`, `RadioOrientation`. `Toggle` exports `ToggleSize`. `Checkbox` exports `CheckboxSize`. `Tabs` exports `TabItem`, `TabsType`, `TabsSize`. `Menu` exports `MenuOption`, `MenuTriggerProps`. `Dropdown` exports `DropdownSize`, `DropdownContextValue`. `ProgressBar` exports `ProgressBarSize`, `ProgressBarLabelPosition`. `Tooltip` exports `TooltipSide`. `FlagIcon` re-exports `FlagCode`, `FLAG_URLS`, `FLAG_OPTIONS`. `SocialButton` exports `SocialProvider`, `SocialButtonVariant`. `ActionNavigation` exports `ActionNavigationVariant`. `PageNavigation` exports `PageNavigationVariant`. `CauseChip` exports `CauseChipSize`, `CauseChipType`, and the `CauseColor` union. `HeaderApp` exports `HeaderAppType`. `ChilliLogo` exports `ChilliLogoType`, `ChilliLogoColor`.
 
 ## Conventions
 
@@ -79,10 +128,27 @@ Full details live in `CHANGELOG.md`. The main intentional divergences are:
 
 - `textStyles` is a derived layer on top of the source typography scales, not a 1:1 CSS mirror.
 - Runtime font family names are explicit (`Inter-Regular`, `Inter-Medium`, `Inter-SemiBold`) to match `expo-font`.
+- The current body text presets (`bodyXs`, `bodySm`, `bodyMd`) use `Inter-Regular` by design-system decision.
 - Hover states are ignored on iOS.
 - Glass effect on `danger` and `danger-soft` button variants is unsupported and falls back to non-glass.
 - `buttons.ghost` does not exist as a token group; the primitive composes it from `backgrounds` + `textColors`.
+- `IconButton` follows the native phase-1 button API (`primary`, `secondary`, `brand`, `ghost`, `danger`, `danger-soft`) instead of mirroring the narrower web docs surface (`primary`, `secondary`, `transparent`).
+- `IconButton` ships only `sm` / `md` / `lg` square sizes in native phase 1; the web docs also show `xsm`.
 - `GlassSurface` is internal only in phase 1.
+- `Select` trigger ships a single trailing chevron; the web source has two `<ChevronDown>` in the trigger JSX, read here as a copy-paste artifact and corrected in native.
+- `Select` menu presentation: web uses an anchored popover via transparent `Modal` + `measureInWindow` (functional equivalent of `createPortal`); iOS/Android use a bottom sheet, not a popover, as the idiomatic mobile pattern.
+- `Input`, `Textarea`, and `Select` expose a `disabled` prop with consistent native semantics; this is a superset of the web demo surface.
+- `Dropdown` / `MenuItem` highlight tracks the currently checked item (and animates to the tapped item on press). Web tracks hover; that interaction model does not map to touch.
+- `Toggle`, `Radio`, `Checkbox`: label + description unified on `bodySm` (P3, `Inter-Regular` 14/20) regardless of size; web uses `font-medium` labels and size-scaled type with 12px descriptions.
+- `Toggle` press-extend animates the thumb via `transform: scaleX/scaleY` (native driver) rather than width/height. Hover pill-extension is omitted (no hover model on touch).
+- `Radio` / `Checkbox`: focus-visible ring is omitted (no keyboard focus pattern targeted in phase 3).
+- `AccordionGroup` is single-open only (no `multiple` mode, no array `defaultValue`); web source supports both.
+- `Accordion` title weight stays `Inter-Regular` regardless of open state — color differentiates state instead of weight.
+- `Tabs` highlight is selection-driven only (no hover); the `underline` type drops the source's `-mb-px` overlap trick.
+- `Menu` is native-only: bundles trigger + anchored-popover (web) + bottom-sheet (mobile) behind a single API. Web source exposes `Dropdown` + `MenuItem` raw and leaves wiring to the consumer. `Select` consumes this same `Menu` presentation internally.
+- `Tooltip` web rendering uses `react-dom` `createPortal` (into `document.body`, `position: fixed`) rather than RN Modal; Modal triggers a scroll lock on web that causes flicker. Native iOS / Android still use RN Modal.
+- `Tooltip` API takes the trigger as a `children` element wrapped in a measurement View — clearer than the source web's `cloneElement`-injected handlers.
+- `DatePicker` `glass` type: bg `rgba(20,15,20,0.8)` + hairline border `rgba(245,245,245,0.08)` (same values as the web source) + `expo-blur` `BlurView` at intensity 40 (web uses `backdrop-blur-[14px]`).
 
 ## Validation State
 
@@ -93,18 +159,26 @@ Already validated:
 - `pnpm --filter chilli-native-playground exec expo export --platform web`
 - one playground screen per primitive
 - one profile-card assembly screen
+- side-by-side visual audit against `chilli-docs`
+- sanity import in an isolated consumer (`npm pack` → third-party tsconfig strict) against hub-aligned peer dep versions (Expo 54, RN 0.81.5, react-native-svg 15.12.1, expo-blur 15.0.8, expo-font 14.0.8, React 19.1) — all public primitives, `tokens`, `useLoadChilliFonts`, and `SelectOption` type resolve with zero errors
 
 Still manual / pending:
 
-- side-by-side visual audit against `chilli-docs`
 - native iOS verification of real blur on glass buttons
-- sanity import inside the main Chilli app
+- actual integration inside the hub app — blocked on adding `lucide-react-native` to hub's deps (peer dep of chilli-native, not currently present in hub/package.json)
 
-## Phase 2 priority
+## Roadmap
 
-Priority order for the next phase:
+Phase 2 (form / navigation) shipped: `Input`, `Textarea`, `SearchBar`, `Select`.
 
-1. `Input`
-2. `Textarea`
-3. `SearchBar`
-4. `Select`
+Phase 3 (state controls) shipped: `Toggle`, `Radio`, `RadioGroup`, `Checkbox`.
+
+Phase 4 (navigation) shipped: `AccordionGroup` / `AccordionItem`, `Tabs`, `Dropdown` / `MenuItem` (now public), `Menu`.
+
+Phase 5 (feedback + advanced inputs) shipped: `ProgressBar`, `Tooltip`, `NumberInput`, `DatePicker`.
+
+Phase 6 (form / auth / action helpers) shipped: `FormTitle`, `FlagIcon`, `SocialButton`, `SelectDatePicker`, `ActionInput`, `ActionTextarea`, `ActionNavigation`.
+
+Phase 7 (chrome + cause) shipped: `ThinkingIndicator`, `PageNavigation`, `CauseChip`. Skipped this phase: `BreakpointSwitch` (web docs–internal Tailwind utility — not needed; native picks `mobile` / `desktop` variants explicitly).
+
+Permanently out of scope as primitives: `ActionCtaCard`, `CauseInput` (deprecated upstream). Card / visual-effect primitives (`cta-card`, `campaign-card`, `support-creator-card`, `animated-glow-card`, `animated-gradient-border`) deferred pending upstream redesign. `aurora-shader` (WebGL) and `resizable-container` (web mouse-drag utility) have no native equivalent.

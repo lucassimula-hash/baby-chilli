@@ -19,7 +19,7 @@ export function Avatar({
   initials,
   size = 32,
   ring = false,
-  backgroundColor = tokens.backgrounds.neutral.tertiary.default,
+  backgroundColor = tokens.backgrounds.brand.strong.default,
   style,
 }: AvatarProps) {
   const [imageFailed, setImageFailed] = useState(false);

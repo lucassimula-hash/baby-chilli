@@ -37,3 +37,5 @@ export { links } from './links';
 export type { Links } from './links';
 export { shadows } from './shadows';
 export type { Shadows, ShadowToken } from './shadows';
+export { causeColors } from './causeColors';
+export type { CauseColor, CauseColors } from './causeColors';

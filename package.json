@@ -10,6 +10,7 @@
     "typecheck": "pnpm -r --filter \"./packages/*\" typecheck",
     "playground:ios": "pnpm --filter chilli-native-playground exec expo start --ios",
     "playground:web": "pnpm --filter chilli-native-playground exec expo start --web",
-    "playground:export-web": "pnpm --filter chilli-native-playground exec expo export --platform web"
+    "playground:export-web": "pnpm --filter chilli-native-playground exec expo export --platform web",
+    "scaffold:primitive": "node scripts/scaffold-primitive.mjs"
   }
 }

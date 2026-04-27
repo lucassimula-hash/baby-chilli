@@ -21,6 +21,7 @@ export {
   buttons,
   links,
   shadows,
+  causeColors,
 } from './foundations/tokens';
 
 export type {
@@ -43,6 +44,8 @@ export type {
   Links,
   Shadows,
   ShadowToken,
+  CauseColor,
+  CauseColors,
 } from './foundations/tokens';
 
 // Platform helpers
@@ -61,8 +64,81 @@ export { Icon } from './primitives/Icon';
 export type { IconProps, IconComponent } from './primitives/Icon';
 export { IconButton } from './primitives/IconButton';
 export type { IconButtonProps, IconButtonSize } from './primitives/IconButton';
+export { Input } from './primitives/Input';
+export type { InputActionButton, InputProps } from './primitives/Input';
+export { Textarea } from './primitives/Textarea';
+export type { TextareaProps } from './primitives/Textarea';
+export { SearchBar } from './primitives/SearchBar';
+export type { SearchBarProps } from './primitives/SearchBar';
+export { Select } from './primitives/Select';
+export type {
+  SelectOption,
+  SelectProps,
+  SelectSize,
+  SelectVariant,
+} from './primitives/Select';
+export { Toggle } from './primitives/Toggle';
+export type { ToggleProps, ToggleSize } from './primitives/Toggle';
+export { Radio, RadioGroup } from './primitives/Radio';
+export type {
+  RadioProps,
+  RadioGroupProps,
+  RadioSize,
+  RadioOrientation,
+} from './primitives/Radio';
+export { Checkbox } from './primitives/Checkbox';
+export type { CheckboxProps, CheckboxSize } from './primitives/Checkbox';
+export { AccordionGroup, AccordionItem } from './primitives/Accordion';
+export type {
+  AccordionGroupProps,
+  AccordionItemProps,
+} from './primitives/Accordion';
+export { Tabs } from './primitives/Tabs';
+export type { TabsProps, TabsType, TabsSize, TabItem } from './primitives/Tabs';
+export { Dropdown, MenuItem } from './primitives/Dropdown';
+export type { DropdownSize, DropdownContextValue } from './primitives/Dropdown';
+export { Menu } from './primitives/Menu';
+export type { MenuOption, MenuProps, MenuTriggerProps } from './primitives/Menu';
+export { ProgressBar } from './primitives/ProgressBar';
+export type {
+  ProgressBarProps,
+  ProgressBarSize,
+  ProgressBarLabelPosition,
+} from './primitives/ProgressBar';
+export { Tooltip } from './primitives/Tooltip';
+export type { TooltipProps, TooltipSide } from './primitives/Tooltip';
+export { NumberInput } from './primitives/NumberInput';
+export type { NumberInputProps } from './primitives/NumberInput';
+export { DatePicker } from './primitives/DatePicker';
+export type { DatePickerProps, DatePickerType } from './primitives/DatePicker';
+export { FormTitle } from './primitives/FormTitle';
+export type { FormTitleProps } from './primitives/FormTitle';
+export { FlagIcon, FLAG_URLS, FLAG_OPTIONS } from './primitives/FlagIcon';
+export type { FlagIconProps, FlagCode } from './primitives/FlagIcon';
+export { SocialButton } from './primitives/SocialButton';
+export type {
+  SocialButtonProps,
+  SocialButtonVariant,
+  SocialProvider,
+} from './primitives/SocialButton';
+export { SelectDatePicker } from './primitives/SelectDatePicker';
+export type { SelectDatePickerProps } from './primitives/SelectDatePicker';
+export { ActionInput } from './primitives/ActionInput';
+export type { ActionInputProps } from './primitives/ActionInput';
+export { ActionTextarea } from './primitives/ActionTextarea';
+export type { ActionTextareaProps } from './primitives/ActionTextarea';
+export { ActionNavigation } from './primitives/ActionNavigation';
+export type { ActionNavigationProps, ActionNavigationVariant } from './primitives/ActionNavigation';
+export { ThinkingIndicator } from './primitives/ThinkingIndicator';
+export type { ThinkingIndicatorProps } from './primitives/ThinkingIndicator';
+export { PageNavigation } from './primitives/PageNavigation';
+export type { PageNavigationProps, PageNavigationVariant } from './primitives/PageNavigation';
+export { HeaderApp } from './primitives/HeaderApp';
+export type { HeaderAppProps, HeaderAppType } from './primitives/HeaderApp';
+export { ChilliLogo } from './primitives/ChilliLogo';
+export type { ChilliLogoProps, ChilliLogoColor, ChilliLogoType } from './primitives/ChilliLogo';
 export { Badge } from './primitives/Badge';
-export type { BadgeProps, BadgeVariant, BadgeSize } from './primitives/Badge';
+export type { BadgeProps, BadgeType, BadgeSize } from './primitives/Badge';
 export { Chip } from './primitives/Chip';
 export type { ChipProps, ChipType, ChipSize, ChipVariant } from './primitives/Chip';
 export { Avatar } from './primitives/Avatar';
@@ -73,5 +149,11 @@ export { AvatarDuo } from './primitives/AvatarDuo';
 export type { AvatarDuoProps } from './primitives/AvatarDuo';
 export { AvatarLabel } from './primitives/AvatarLabel';
 export type { AvatarLabelProps, AvatarLabelSize } from './primitives/AvatarLabel';
+export { CauseChip } from './primitives/CauseChip';
+export type {
+  CauseChipProps,
+  CauseChipSize,
+  CauseChipType,
+} from './primitives/CauseChip';
 
 // Remaining primitives — added phase by phase as they land:

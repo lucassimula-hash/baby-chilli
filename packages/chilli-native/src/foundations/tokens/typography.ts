@@ -66,19 +66,19 @@ export const textStyles = {
   bodyXs: {
     fontSize: fontSize.xs,
     lineHeight: lineHeight.xs,
-    fontFamily: 'Inter-Medium',
+    fontFamily: 'Inter-Regular',
     letterSpacing: letterSpacing.md,
   },
   bodySm: {
     fontSize: fontSize.sm,
     lineHeight: lineHeight.sm,
-    fontFamily: 'Inter-Medium',
+    fontFamily: 'Inter-Regular',
     letterSpacing: letterSpacing.md,
   },
   bodyMd: {
     fontSize: fontSize.md,
     lineHeight: lineHeight.md,
-    fontFamily: 'Inter-Medium',
+    fontFamily: 'Inter-Regular',
     letterSpacing: letterSpacing.md,
   },
 } as const satisfies Record<string, TextStyle>;

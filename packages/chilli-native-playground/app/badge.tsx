@@ -1,41 +1,43 @@
 import { ScrollView, StyleSheet, View } from 'react-native';
-import { Badge, Text, tokens } from 'chilli-native';
+import { Check, Star } from 'lucide-react-native';
+import { Badge, Icon, Text, tokens } from 'chilli-native';
 
-const VARIANTS = ['neutral', 'brand', 'danger', 'success', 'warning'] as const;
 const SIZES = ['sm', 'md', 'lg'] as const;
 
 export default function BadgePlayground() {
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-      <Section title="Variants × Sizes">
-        {VARIANTS.map((variant) => (
-          <View key={variant} style={styles.row}>
+      <Section title="Type × Size">
+        {(['fill', 'ghost'] as const).map((type) => (
+          <View key={type} style={styles.row}>
             {SIZES.map((size) => (
-              <Badge
-                key={`${variant}-${size}`}
-                variant={variant}
-                size={size}
-                label={`${variant} ${size}`}
-              />
+              <Badge key={`${type}-${size}`} type={type} size={size} label={`${type} ${size}`} />
             ))}
           </View>
         ))}
       </Section>
 
-      <Section title="Numeric labels">
+      <Section title="With dot">
         <View style={styles.row}>
-          <Badge label={1} variant="brand" />
-          <Badge label={42} variant="danger" />
-          <Badge label={999} variant="success" />
+          <Badge label="Live" dot />
+          <Badge label="Pending" dot dotColor={tokens.backgrounds.warning.strong.default} />
+          <Badge label="Error" dot dotColor={tokens.backgrounds.danger.strong.default} />
+          <Badge label="Success" dot dotColor={tokens.backgrounds.success.strong.default} />
         </View>
       </Section>
 
-      <Section title="Edge cases">
+      <Section title="With icons">
         <View style={styles.row}>
-          <Badge
-            label="A very long badge text that should still center its baseline"
-            variant="neutral"
-          />
+          <Badge label="Verified" leftIcon={<Icon source={Check} size={12} />} />
+          <Badge label="Featured" rightIcon={<Icon source={Star} size={12} />} />
+        </View>
+      </Section>
+
+      <Section title="Numeric labels">
+        <View style={styles.row}>
+          <Badge label={1} />
+          <Badge label={42} />
+          <Badge label={999} />
         </View>
       </Section>
 
