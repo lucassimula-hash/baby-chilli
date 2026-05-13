@@ -114,10 +114,10 @@ export default function SpacingPage() {
   return (
     <article>
       <header className="mb-10">
-        <h1 className="text-3xl font-bold tracking-tight text-[var(--text-base-primary)]">
+        <h1 className="text-[24px] font-bold tracking-tight text-[var(--text-base-primary)]">
           Spacing
         </h1>
-        <p className="mt-2 text-base text-[var(--text-base-secondary)] max-w-2xl leading-relaxed">
+        <p className="mt-2 max-w-2xl text-[14px] leading-relaxed text-[var(--text-base-secondary)]">
           Spacing, sizing, radius, border-width and breakpoint tokens. Values come directly from
           the Figma <code className="font-mono text-xs">_root global</code> collection and are exposed
           as CSS custom properties.
@@ -128,7 +128,7 @@ export default function SpacingPage() {
         {/* ---- Space Scale ---- */}
         <section>
           <div className="mb-5">
-            <h2 className="text-xl font-semibold text-[var(--text-base-primary)]">
+            <h2 className="text-[16px] leading-[24px] font-semibold font-[family-name:var(--font-family-primary)] text-[var(--text-base-primary)]">
               Space
             </h2>
             <p className="mt-1 text-sm text-[var(--text-base-secondary)]">
@@ -175,7 +175,7 @@ export default function SpacingPage() {
         {/* ---- Size Scale ---- */}
         <section>
           <div className="mb-5">
-            <h2 className="text-xl font-semibold text-[var(--text-base-primary)]">
+            <h2 className="text-[16px] leading-[24px] font-semibold font-[family-name:var(--font-family-primary)] text-[var(--text-base-primary)]">
               Size
             </h2>
             <p className="mt-1 text-sm text-[var(--text-base-secondary)]">
@@ -214,7 +214,7 @@ export default function SpacingPage() {
         {/* ---- Radius ---- */}
         <section>
           <div className="mb-5">
-            <h2 className="text-xl font-semibold text-[var(--text-base-primary)]">
+            <h2 className="text-[16px] leading-[24px] font-semibold font-[family-name:var(--font-family-primary)] text-[var(--text-base-primary)]">
               Border Radius
             </h2>
             <p className="mt-1 text-sm text-[var(--text-base-secondary)]">
@@ -248,7 +248,7 @@ export default function SpacingPage() {
         {/* ---- Border Width ---- */}
         <section>
           <div className="mb-5">
-            <h2 className="text-xl font-semibold text-[var(--text-base-primary)]">
+            <h2 className="text-[16px] leading-[24px] font-semibold font-[family-name:var(--font-family-primary)] text-[var(--text-base-primary)]">
               Border Width
             </h2>
             <p className="mt-1 text-sm text-[var(--text-base-secondary)]">
@@ -282,7 +282,7 @@ export default function SpacingPage() {
         {/* ---- Breakpoints ---- */}
         <section>
           <div className="mb-5">
-            <h2 className="text-xl font-semibold text-[var(--text-base-primary)]">
+            <h2 className="text-[16px] leading-[24px] font-semibold font-[family-name:var(--font-family-primary)] text-[var(--text-base-primary)]">
               Breakpoints
             </h2>
             <p className="mt-1 text-sm text-[var(--text-base-secondary)]">

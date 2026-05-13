@@ -46,10 +46,10 @@ export default function FlagsPage() {
   return (
     <article>
       <header className="mb-10">
-        <h1 className="text-3xl font-bold tracking-tight text-[var(--text-base-primary)]">
+        <h1 className="text-[24px] font-bold tracking-tight text-[var(--text-base-primary)]">
           Flags
         </h1>
-        <p className="mt-2 max-w-2xl text-base leading-relaxed text-[var(--text-base-secondary)]">
+        <p className="mt-2 max-w-2xl text-[14px] leading-relaxed text-[var(--text-base-secondary)]">
           Circular country flags used across the Chilli product for geo context, supporter stacks,
           and campaign UI. The library follows the 24px foundation from Figma. Click any flag to
           copy its country code.
@@ -58,7 +58,7 @@ export default function FlagsPage() {
 
       <section className="space-y-5">
         <div>
-          <h2 className="text-xl font-semibold text-[var(--text-base-primary)]">
+          <h2 className="text-[16px] leading-[24px] font-semibold font-[family-name:var(--font-family-primary)] text-[var(--text-base-primary)]">
             Library
           </h2>
           <p className="mt-1 text-sm text-[var(--text-base-secondary)]">

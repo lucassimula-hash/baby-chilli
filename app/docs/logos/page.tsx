@@ -35,10 +35,10 @@ export default function LogosPage() {
   return (
     <article>
       <header className="mb-10">
-        <h1 className="text-3xl font-bold tracking-tight text-[var(--text-base-primary)]">
+        <h1 className="text-[24px] font-bold tracking-tight text-[var(--text-base-primary)]">
           Logos
         </h1>
-        <p className="mt-2 text-base text-[var(--text-base-secondary)] max-w-2xl leading-relaxed">
+        <p className="mt-2 max-w-2xl text-[14px] leading-relaxed text-[var(--text-base-secondary)]">
           Brand guidelines for using the Chilli logo across products, marketing, and partner
           materials. Consistent usage protects brand recognition and visual trust.
         </p>
@@ -48,7 +48,7 @@ export default function LogosPage() {
         {/* ---- Logo Variants ---- */}
         <section>
           <div className="mb-5">
-            <h2 className="text-xl font-semibold text-[var(--text-base-primary)]">
+            <h2 className="text-[16px] leading-[24px] font-semibold font-[family-name:var(--font-family-primary)] text-[var(--text-base-primary)]">
               Logo Variants
             </h2>
             <p className="mt-1 text-sm text-[var(--text-base-secondary)]">
@@ -99,7 +99,7 @@ export default function LogosPage() {
         {/* ---- Clear Space ---- */}
         <section>
           <div className="mb-5">
-            <h2 className="text-xl font-semibold text-[var(--text-base-primary)]">
+            <h2 className="text-[16px] leading-[24px] font-semibold font-[family-name:var(--font-family-primary)] text-[var(--text-base-primary)]">
               Clear Space
             </h2>
             <p className="mt-1 text-sm text-[var(--text-base-secondary)]">
@@ -135,7 +135,7 @@ export default function LogosPage() {
         {/* ---- Color Variations ---- */}
         <section>
           <div className="mb-5">
-            <h2 className="text-xl font-semibold text-[var(--text-base-primary)]">
+            <h2 className="text-[16px] leading-[24px] font-semibold font-[family-name:var(--font-family-primary)] text-[var(--text-base-primary)]">
               Color Variations
             </h2>
             <p className="mt-1 text-sm text-[var(--text-base-secondary)]">
@@ -182,7 +182,7 @@ export default function LogosPage() {
         {/* ---- Minimum Sizes ---- */}
         <section>
           <div className="mb-5">
-            <h2 className="text-xl font-semibold text-[var(--text-base-primary)]">
+            <h2 className="text-[16px] leading-[24px] font-semibold font-[family-name:var(--font-family-primary)] text-[var(--text-base-primary)]">
               Minimum Sizes
             </h2>
             <p className="mt-1 text-sm text-[var(--text-base-secondary)]">
@@ -216,7 +216,7 @@ export default function LogosPage() {
         {/* ---- Don'ts ---- */}
         <section>
           <div className="mb-5">
-            <h2 className="text-xl font-semibold text-[var(--text-base-primary)]">
+            <h2 className="text-[16px] leading-[24px] font-semibold font-[family-name:var(--font-family-primary)] text-[var(--text-base-primary)]">
               Incorrect Usage
             </h2>
             <p className="mt-1 text-sm text-[var(--text-base-secondary)]">
@@ -237,7 +237,7 @@ export default function LogosPage() {
         {/* ---- Download ---- */}
         <section>
           <div className="rounded-xl border border-[var(--borders-default)] bg-[var(--backgrounds-neutral-primary-default)] p-6">
-            <h2 className="text-lg font-semibold text-[var(--text-base-primary)] mb-2">
+            <h2 className="text-[16px] leading-[24px] font-semibold font-[family-name:var(--font-family-primary)] text-[var(--text-base-primary)] mb-2">
               Download Assets
             </h2>
             <p className="text-sm text-[var(--text-base-secondary)] mb-4">

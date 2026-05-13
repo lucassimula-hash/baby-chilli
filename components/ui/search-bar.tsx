@@ -21,7 +21,7 @@ export const SearchBar = forwardRef<HTMLInputElement, SearchBarProps>(
           "flex items-center w-full rounded-2xl border overflow-clip transition-all duration-150",
           "pl-2 pr-3 py-2",
           focused
-            ? "bg-[var(--backgrounds-neutral-secondary-default)] border-[var(--borders-brand-default)] shadow-[0_0_0_2px_var(--shadow-brand-moderate)]"
+            ? "bg-[var(--backgrounds-neutral-secondary-default)] border-[var(--borders-brand-default)] shadow-[0_0_0_1px_var(--borders-brand-default)]"
             : "bg-[var(--backgrounds-neutral-secondary-default)] border-[var(--borders-default)] hover:bg-[var(--backgrounds-neutral-secondary-hover)]",
           className
         )}

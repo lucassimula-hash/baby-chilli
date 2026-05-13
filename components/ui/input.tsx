@@ -9,8 +9,8 @@ const inputContainerVariants = cva("flex items-center gap-2 w-full h-12 px-3 rou
   variants: {
     state: {
       default: "bg-[var(--backgrounds-neutral-secondary-default)] border border-[var(--borders-neutral-moderate)]",
-      focused: "bg-[var(--backgrounds-neutral-secondary-default)] border border-[var(--borders-brand-default)] shadow-[0_0_0_2px_var(--shadow-brand-moderate)]",
-      error: "bg-[var(--backgrounds-neutral-secondary-default)] border border-[var(--borders-danger-default)] shadow-[0_0_0_2px_var(--shadow-danger-moderate)]",
+      focused: "bg-[var(--backgrounds-neutral-secondary-default)] border border-[var(--borders-brand-default)] shadow-[0_0_0_1px_var(--borders-brand-default)]",
+      error: "bg-[var(--backgrounds-neutral-secondary-default)] border border-[var(--borders-danger-default)] shadow-[0_0_0_1px_var(--borders-danger-default)]",
       disabled: "bg-[var(--backgrounds-disabled)] border border-[var(--borders-disabled)] cursor-not-allowed opacity-50"
     }
   },
