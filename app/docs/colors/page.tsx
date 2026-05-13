@@ -410,10 +410,10 @@ export default function ColorsPage() {
   return (
     <article>
       <header className="mb-10">
-        <h1 className="text-3xl font-bold tracking-tight text-[var(--text-base-primary)]">
+        <h1 className="text-[24px] font-bold tracking-tight text-[var(--text-base-primary)]">
           Colors
         </h1>
-        <p className="mt-2 text-base text-[var(--text-base-secondary)] max-w-2xl leading-relaxed">
+        <p className="mt-2 max-w-2xl text-[14px] leading-relaxed text-[var(--text-base-secondary)]">
           The Chilli design system uses semantic color tokens mapped to CSS custom properties.
           Each token adapts automatically between light and dark themes. Click any swatch to
           copy its CSS variable.
@@ -424,7 +424,7 @@ export default function ColorsPage() {
         {sections.map((section) => (
           <section key={section.title}>
             <div className="mb-5">
-              <h2 className="text-xl font-semibold text-[var(--text-base-primary)]">
+              <h2 className="text-[16px] leading-[24px] font-semibold font-[family-name:var(--font-family-primary)] text-[var(--text-base-primary)]">
                 {section.title}
               </h2>
               <p className="mt-1 text-sm text-[var(--text-base-secondary)]">

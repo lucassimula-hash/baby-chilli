@@ -22,13 +22,12 @@ export const SHARED_ELEMENT_TRANSITION = {
 };
 
 export interface CampaignCreator {
-  name: string; // e.g. "@seaspiracy"
+  name: string;
   avatar: string;
   verified?: boolean;
 }
 
 export interface CampaignCardProps {
-  /** Stable ID used for the shared-element hero transition. */
   campaignId: string;
   image: string;
   creator: CampaignCreator;

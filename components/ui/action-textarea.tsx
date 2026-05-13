@@ -43,23 +43,23 @@ export const ActionTextArea = forwardRef<HTMLTextAreaElement, ActionTextAreaProp
             "flex flex-col gap-2 w-full p-3 rounded-3xl border transition-all duration-150",
             glass
               ? cn(
-                  "backdrop-blur-[8px]",
+                  "backdrop-blur-[6px]",
                   state === "default" &&
                     "bg-[var(--backgrounds-neutral-opacity-faint)] border-[var(--borders-default)]",
                   state === "focused" &&
-                    "border-[var(--borders-brand-lighter)] shadow-[0_0_0_2px_var(--shadow-brand-moderate),0_0_2px_0_rgba(0,0,0,0.1),0_2px_10px_0_rgba(0,0,0,0.1)] overflow-clip",
+                    "border-[var(--borders-brand-default)] shadow-[0_0_0_1px_var(--borders-brand-default)] overflow-clip",
                   state === "error" &&
                     "bg-[var(--backgrounds-neutral-opacity-lighter)] border-[var(--borders-danger-default)]",
                   state === "disabled" &&
-                    "bg-[var(--backgrounds-disabled)] border-[rgba(20,15,20,0.03)] backdrop-blur-[12px]"
+                    "bg-[var(--backgrounds-disabled)] border-[var(--borders-disabled)] backdrop-blur-[8px]"
                 )
               : cn(
                   state === "default" &&
                     "bg-[var(--backgrounds-neutral-primary-default)] border-[var(--borders-default)]",
                   state === "focused" &&
-                    "bg-[var(--backgrounds-neutral-primary-default)] border-[var(--borders-brand-default)] shadow-[0_0_0_2px_var(--shadow-brand-moderate)] overflow-clip",
+                    "bg-[var(--backgrounds-neutral-primary-default)] border-[var(--borders-brand-default)] shadow-[0_0_0_1px_var(--borders-brand-default)] overflow-clip",
                   state === "error" &&
-                    "bg-[var(--backgrounds-neutral-primary-default)] border-[var(--borders-danger-default)] shadow-[0_0_0_2px_var(--shadow-danger-moderate)] overflow-clip",
+                    "bg-[var(--backgrounds-neutral-primary-default)] border-[var(--borders-danger-default)] shadow-[0_0_0_1px_var(--borders-danger-default)] overflow-clip",
                   state === "disabled" &&
                     "bg-[var(--backgrounds-disabled)] border-[var(--borders-disabled)]"
                 )
@@ -114,9 +114,7 @@ export const ActionTextArea = forwardRef<HTMLTextAreaElement, ActionTextAreaProp
           />
 
           {/* Inner ring for focused glass */}
-          {glass && state === "focused" && (
-            <div className="absolute inset-0 pointer-events-none rounded-[inherit] ring-[0.5px] ring-inset ring-[#a6a6a6]" />
-          )}
+          {glass && state === "focused" && <div className="absolute inset-0 pointer-events-none rounded-[inherit] ring-[0.5px] ring-inset ring-[#a6a6a6]" />}
         </div>
       </div>
     );

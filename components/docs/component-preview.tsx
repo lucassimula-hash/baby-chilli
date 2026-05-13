@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import { cn } from "@/lib/utils";
 import { CodeBlock } from "@/components/docs/code-block";
+import { PreviewControlsSlotProvider } from "@/components/docs/preview-controls-context";
 
 // Action Navigation demos
 import { ActionNavigationDemo, ActionNavigationStates, ActionNavigationWithButton } from "@/components/demos/action-navigation-demos";
@@ -238,32 +239,44 @@ export function ComponentPreview({
 }) {
   const [tab, setTab] = useState<"preview" | "code">("preview");
   const liveDemo = demoKey ? DEMO_MAP[demoKey] : null;
+  const controlsSlotId = `preview-controls-${useId().replace(/[:]/g, "")}`;
+  void title;
 
   return (
-    <div className="overflow-hidden rounded-[16px] border border-[var(--borders-default)]">
-      <div className="flex items-center gap-0 border-b border-[var(--borders-default)] bg-[var(--backgrounds-neutral-primary-default)]">
-        <button
-          onClick={() => setTab("preview")}
-          className={cn(
-            "px-4 py-2.5 text-[13px] font-medium transition-colors",
-            tab === "preview"
-              ? "text-[var(--text-base-primary)]"
-              : "text-[var(--text-base-secondary)] hover:text-[var(--text-base-primary)]"
-          )}
-        >
-          Preview
-        </button>
-        <button
-          onClick={() => setTab("code")}
-          className={cn(
-            "px-4 py-2.5 text-[13px] font-medium transition-colors",
-            tab === "code"
-              ? "text-[var(--text-base-primary)]"
-              : "text-[var(--text-base-secondary)] hover:text-[var(--text-base-primary)]"
-          )}
-        >
-          Code
-        </button>
+    <PreviewControlsSlotProvider slotId={controlsSlotId}>
+      <div className="overflow-hidden rounded-[16px] border border-[var(--borders-default)]">
+      <div className="flex items-center justify-between px-4 py-3">
+        <div className="relative inline-grid grid-cols-2 rounded-full border border-[var(--borders-default)] p-1">
+          <span
+            className={cn(
+              "pointer-events-none absolute inset-y-1 left-1 w-[calc(50%-4px)] rounded-full bg-[var(--backgrounds-neutral-secondary-default)] transition-transform duration-200 ease-out",
+              tab === "code" && "translate-x-full"
+            )}
+          />
+          <button
+            onClick={() => setTab("preview")}
+            className={cn(
+              "relative z-10 rounded-full px-3 py-1.5 text-[13px] font-medium transition-colors",
+              tab === "preview"
+                ? "text-[var(--text-base-primary)]"
+                : "text-[var(--text-base-secondary)] hover:text-[var(--text-base-primary)]"
+            )}
+          >
+            Preview
+          </button>
+          <button
+            onClick={() => setTab("code")}
+            className={cn(
+              "relative z-10 rounded-full px-3 py-1.5 text-[13px] font-medium transition-colors",
+              tab === "code"
+                ? "text-[var(--text-base-primary)]"
+                : "text-[var(--text-base-secondary)] hover:text-[var(--text-base-primary)]"
+            )}
+          >
+            Code
+          </button>
+        </div>
+        <div id={controlsSlotId} className="flex min-w-0 items-center justify-end" />
       </div>
 
       {tab === "preview" ? (
@@ -283,5 +296,6 @@ export function ComponentPreview({
         </div>
       )}
     </div>
+    </PreviewControlsSlotProvider>
   );
 }

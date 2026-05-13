@@ -60,9 +60,9 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           className={cn(
             "flex flex-col gap-2 items-end justify-end w-full min-h-[120px] p-3 rounded-2xl border transition-all duration-150",
             state === "focused" &&
-              "bg-[var(--backgrounds-neutral-secondary-default)] border-[var(--borders-brand-default)] shadow-[0_0_0_2px_var(--shadow-brand-moderate)]",
+              "bg-[var(--backgrounds-neutral-secondary-default)] border-[var(--borders-brand-default)] shadow-[0_0_0_1px_var(--borders-brand-default)]",
             state === "error" &&
-              "bg-[var(--backgrounds-neutral-secondary-default)] border-[var(--borders-danger-default)] shadow-[0_0_0_2px_var(--shadow-danger-moderate)]",
+              "bg-[var(--backgrounds-neutral-secondary-default)] border-[var(--borders-danger-default)] shadow-[0_0_0_1px_var(--borders-danger-default)]",
             state === "disabled" &&
               "bg-[var(--backgrounds-disabled)] border-[var(--borders-disabled)] cursor-not-allowed",
             state === "default" &&

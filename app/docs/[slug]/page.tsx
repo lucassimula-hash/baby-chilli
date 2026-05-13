@@ -38,10 +38,10 @@ export default async function DocsPage({
   return (
     <div className="flex gap-10">
       <div className="min-w-0 flex-1">
-        <h1 className="mb-2 text-3xl font-bold text-[var(--text-base-primary)]">
+        <h1 className="mb-2 text-[24px] font-bold text-[var(--text-base-primary)]">
           {component.name}
         </h1>
-        <p className="text-[var(--text-base-secondary)] mb-12">
+        <p className="mb-12 text-[14px] text-[var(--text-base-secondary)]">
           {component.description}
         </p>
 
@@ -53,7 +53,7 @@ export default async function DocsPage({
               section.type === "api" ? "mt-16 mb-10" : "mb-8"
             }`}
           >
-            <h3 className="mb-5 text-xl font-semibold text-[var(--text-base-primary)]">
+            <h3 className="mb-5 text-[16px] leading-[24px] font-semibold font-[family-name:var(--font-family-primary)] text-[var(--text-base-primary)]">
               {section.title}
             </h3>
 

@@ -8,9 +8,9 @@ export function ActionInputDefault() {
   return (
     <div className="flex flex-col gap-6 w-full max-w-[343px]">
       <ActionInput
-        label="Label"
-        placeholder="placeholder"
-        helperText="helper text"
+        label="Location"
+        placeholder="Add a city"
+        helperText="Used to personalize nearby actions."
         leftIcon={<MapPin size={20} />}
       />
     </div>
@@ -21,27 +21,27 @@ export function ActionInputStates() {
   return (
     <div className="flex flex-col gap-6 w-full max-w-[343px]">
       <ActionInput
-        label="Placeholder"
-        placeholder="placeholder"
-        helperText="helper text"
+        label="Location"
+        placeholder="Add a city"
+        helperText="Used to personalize nearby actions."
         leftIcon={<MapPin size={20} />}
       />
       <ActionInput
         label="Filled"
-        defaultValue="user text"
-        helperText="helper text"
+        defaultValue="Paris, France"
+        helperText="Used to personalize nearby actions."
         leftIcon={<MapPin size={20} />}
       />
       <ActionInput
         label="Error"
-        defaultValue="user text"
-        error="helper text"
+        defaultValue="Pa"
+        error="Enter at least 3 characters."
         leftIcon={<MapPin size={20} />}
       />
       <ActionInput
         label="Disabled"
-        defaultValue="user text"
-        helperText="helper text"
+        defaultValue="Paris, France"
+        helperText="Location is locked for this step."
         leftIcon={<MapPin size={20} />}
         disabled
       />
@@ -54,9 +54,9 @@ export function ActionInputWithToggle() {
   return (
     <div className="flex flex-col gap-6 w-full max-w-[343px]">
       <ActionInput
-        label="Label"
-        placeholder="placeholder"
-        helperText="helper text"
+        label="Notifications"
+        placeholder="Select preferences"
+        helperText="Enable push updates for new activity."
         leftIcon={<MapPin size={20} />}
         showToggle
         toggleChecked={toggle}
@@ -70,16 +70,16 @@ export function ActionInputWithAvatar() {
   return (
     <div className="flex flex-col gap-6 w-full max-w-[343px]">
       <ActionInput
-        label="Label"
-        placeholder="placeholder"
-        helperText="helper text"
+        label="Assigned to"
+        placeholder="@username"
+        helperText="Tag the owner of this action."
         showAvatar
         avatarSrc="https://i.pravatar.cc/40?u=1"
       />
       <ActionInput
-        label="Label"
-        defaultValue="user text"
-        helperText="helper text"
+        label="Assigned to"
+        defaultValue="@marina"
+        helperText="Tag the owner of this action."
         showAvatar
         avatarSrc="https://i.pravatar.cc/40?u=1"
       />

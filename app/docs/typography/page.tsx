@@ -166,10 +166,10 @@ export default function TypographyPage() {
   return (
     <article>
       <header className="mb-10">
-        <h1 className="text-3xl font-bold tracking-tight text-[var(--text-base-primary)]">
+        <h1 className="text-[24px] font-bold tracking-tight text-[var(--text-base-primary)]">
           Typography
         </h1>
-        <p className="mt-2 text-base text-[var(--text-base-secondary)] max-w-2xl leading-relaxed">
+        <p className="mt-2 max-w-2xl text-[14px] leading-relaxed text-[var(--text-base-secondary)]">
           The Chilli design system uses{" "}
           <strong className="text-[var(--text-base-primary)]">SF Pro Display</strong> for headings
           and <strong className="text-[var(--text-base-primary)]">Inter</strong> for body copy,
@@ -181,7 +181,7 @@ export default function TypographyPage() {
       <div className="space-y-14">
         {/* Font Families */}
         <section>
-          <h2 className="text-xl font-semibold text-[var(--text-base-primary)] mb-4">
+          <h2 className="text-[16px] leading-[24px] font-semibold font-[family-name:var(--font-family-primary)] text-[var(--text-base-primary)] mb-4">
             Font Families
           </h2>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -206,7 +206,7 @@ export default function TypographyPage() {
         {/* Text styles (Headings / Body / Button) */}
         <section>
           <div className="mb-5">
-            <h2 className="text-xl font-semibold text-[var(--text-base-primary)]">Text Styles</h2>
+            <h2 className="text-[16px] leading-[24px] font-semibold font-[family-name:var(--font-family-primary)] text-[var(--text-base-primary)]">Text Styles</h2>
             <p className="mt-1 text-sm text-[var(--text-base-secondary)]">
               Named styles from the Figma library. Use these as the first choice — they pin font
               family, size, line height, and weight together.
@@ -234,7 +234,7 @@ export default function TypographyPage() {
         {/* Font Size Scale */}
         <section>
           <div className="mb-5">
-            <h2 className="text-xl font-semibold text-[var(--text-base-primary)]">Font Size</h2>
+            <h2 className="text-[16px] leading-[24px] font-semibold font-[family-name:var(--font-family-primary)] text-[var(--text-base-primary)]">Font Size</h2>
             <p className="mt-1 text-sm text-[var(--text-base-secondary)]">
               14 sizes from 10px to 128px. Match with a corresponding line-height token below.
             </p>
@@ -291,7 +291,7 @@ export default function TypographyPage() {
         {/* Line Heights */}
         <section>
           <div className="mb-5">
-            <h2 className="text-xl font-semibold text-[var(--text-base-primary)]">Line Height</h2>
+            <h2 className="text-[16px] leading-[24px] font-semibold font-[family-name:var(--font-family-primary)] text-[var(--text-base-primary)]">Line Height</h2>
             <p className="mt-1 text-sm text-[var(--text-base-secondary)]">
               Absolute line-height values (px). Pair with the matching font-size.
             </p>
@@ -327,7 +327,7 @@ export default function TypographyPage() {
         {/* Letter Spacing */}
         <section>
           <div className="mb-5">
-            <h2 className="text-xl font-semibold text-[var(--text-base-primary)]">Letter Spacing</h2>
+            <h2 className="text-[16px] leading-[24px] font-semibold font-[family-name:var(--font-family-primary)] text-[var(--text-base-primary)]">Letter Spacing</h2>
             <p className="mt-1 text-sm text-[var(--text-base-secondary)]">
               5 tracking tokens adjust horizontal spacing between characters.
             </p>
@@ -364,7 +364,7 @@ export default function TypographyPage() {
         {/* Font Weights */}
         <section>
           <div className="mb-5">
-            <h2 className="text-xl font-semibold text-[var(--text-base-primary)]">Font Weights</h2>
+            <h2 className="text-[16px] leading-[24px] font-semibold font-[family-name:var(--font-family-primary)] text-[var(--text-base-primary)]">Font Weights</h2>
             <p className="mt-1 text-sm text-[var(--text-base-secondary)]">
               Four weights cover text styles from body copy to bold headings.
             </p>

@@ -160,10 +160,10 @@ export default function IconsPage() {
   return (
     <article>
       <header className="mb-10">
-        <h1 className="text-3xl font-bold tracking-tight text-[var(--text-base-primary)]">
+        <h1 className="text-[24px] font-bold tracking-tight text-[var(--text-base-primary)]">
           Icons
         </h1>
-        <p className="mt-2 text-base text-[var(--text-base-secondary)] max-w-2xl leading-relaxed">
+        <p className="mt-2 max-w-2xl text-[14px] leading-relaxed text-[var(--text-base-secondary)]">
           The Chilli design system uses <strong className="text-[var(--text-base-primary)]">Lucide</strong> as
           its icon library. Over 1,400 icons are available -- below are the most commonly used
           ones. Click any icon to copy its import statement.
@@ -227,7 +227,7 @@ export default function IconsPage() {
 
         {/* ---- Usage guide ---- */}
         <section className="rounded-xl border border-[var(--borders-default)] bg-[var(--backgrounds-neutral-primary-default)] p-6 space-y-4">
-          <h2 className="text-lg font-semibold text-[var(--text-base-primary)]">
+          <h2 className="text-[16px] leading-[24px] font-semibold font-[family-name:var(--font-family-primary)] text-[var(--text-base-primary)]">
             Usage
           </h2>
           <div className="space-y-3">
