@@ -24,12 +24,6 @@ import {
   CampaignCardMinusDemo,
   CampaignCardMinusNoLabel,
 } from "@/components/demos/campaign-card-demos";
-// Support Creator Card demos
-import {
-  SupportCreatorCardDefault,
-  SupportCreatorCardGrid,
-  SupportCreatorCardLargeCounts,
-} from "@/components/demos/support-creator-card-demos";
 // ActionFormTitle demos
 import { FormTitleDefault, FormTitleStates } from "@/components/demos/form-title-demos";
 // Avatar demos
@@ -105,10 +99,6 @@ const DEMO_MAP: Record<string, React.ReactNode> = {
   "campaign-card-finish": <CampaignCardFinish />,
   "campaign-card-minus": <CampaignCardMinusDemo />,
   "campaign-card-minus-nolabel": <CampaignCardMinusNoLabel />,
-  // Support Creator Card
-  "support-creator-card-default": <SupportCreatorCardDefault />,
-  "support-creator-card-grid": <SupportCreatorCardGrid />,
-  "support-creator-card-large": <SupportCreatorCardLargeCounts />,
   // ActionFormTitle
   "form-title-default": <FormTitleDefault />,
   "form-title-states": <FormTitleStates />,

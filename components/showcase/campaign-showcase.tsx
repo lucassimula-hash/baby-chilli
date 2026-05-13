@@ -5,7 +5,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Bell, ChevronRight, ArrowRight, Home, Compass, User } from "lucide-react";
 import { CampaignCard, SHARED_ELEMENT_TRANSITION } from "@/components/ui/campaign-card";
 import { CampaignPage } from "@/components/ui/campaign-page";
-import { SupportCreatorCard } from "@/components/ui/support-creator-card";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -133,7 +132,6 @@ function FeedView({ onOpen }: { onOpen: (id: string) => void }) {
         </section>
 
         {/* Trending creators */}
-        <TrendingCreators />
 
         {/* Third campaign */}
         <section className="px-4">
@@ -283,48 +281,6 @@ function MoreFromSection({
                 creator={creator as { name: string; avatar: string; verified?: boolean }}
                 title={item.title}
                 hideCreatorLabel
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ------------------------------------------------------------------ */
-/*  Trending creators section                                          */
-/* ------------------------------------------------------------------ */
-
-function TrendingCreators() {
-  const creators = [
-    { id: "seaspiracy", username: "seaspiracy", avatar: SEASPIRACY.avatar, actions: 336, supporters: "3.1k" },
-    { id: "celina", username: "celina_chen", avatar: "/campaign-card/creator-celina.png", actions: 128, supporters: 940 },
-    { id: "chris", username: "chris_from", avatar: "/campaign-card/creator-chris.png", actions: 86, supporters: 512 },
-  ];
-
-  return (
-    <section className="flex flex-col gap-4">
-      <div className="flex flex-col gap-1 px-4">
-        <h2
-          className="text-xl font-semibold leading-7 tracking-[-0.4px] text-[var(--text-base-primary)]"
-          style={{ fontFamily: "var(--font-family-primary), sans-serif" }}
-        >
-          trending creators
-        </h2>
-        <p className="text-sm leading-5 text-[var(--text-base-secondary)]">
-          support a creator with real funds and help them go bigger — no cuts, no fees, 100% theirs.
-        </p>
-      </div>
-      <div className="overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        <div className="flex w-max snap-x snap-mandatory gap-3 px-4">
-          {creators.map((c) => (
-            <div key={c.id} className="snap-start">
-              <SupportCreatorCard
-                username={c.username}
-                avatar={c.avatar}
-                actions={c.actions}
-                supporters={c.supporters}
               />
             </div>
           ))}
