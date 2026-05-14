@@ -1,0 +1,6 @@
+dsName: "chilli"
+figmaFileKey: "RcR7D8LPcMhNadWgs8T5cF"
+kbPath: "bridge-ds"
+cron:
+  cadence: "daily"
+  time: "06:00"

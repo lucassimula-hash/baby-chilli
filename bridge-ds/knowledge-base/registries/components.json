@@ -1,0 +1,7302 @@
+{
+  "version": 1,
+  "generatedAt": "2026-05-14T08:09:11.379Z",
+  "components": [
+    {
+      "key": "8b8ae84e4481ea318bae4c4043a5b7eba8280eaf",
+      "name": "_Design system header",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Property 1",
+          "values": [
+            "Default"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Text#43248:0",
+          "type": "TEXT",
+          "default": "The logo is a key component of the Lyse Design System, representing the visual identity of the product across all touchpoints. This section provides the guidelines for using the logo, ensuring consistency and proper implementation in various contexts."
+        },
+        {
+          "name": "Title#43248:2",
+          "type": "TEXT",
+          "default": "Logo"
+        },
+        {
+          "name": "Property 1",
+          "type": "VARIANT(Default)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "9227f5f6b44362b7515c47da9ebd6bb4140784bd",
+      "name": "_Annotation List Item",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Main",
+            "Sub",
+            "Last"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Type",
+          "type": "VARIANT(Main,Sub,Last)",
+          "default": "Main"
+        }
+      ]
+    },
+    {
+      "key": "f35509bfe43b9edfab561ba320087343a6dbbf2d",
+      "name": "_Annotation Head List",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Property 1",
+          "values": [
+            "Default"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Property 1",
+          "type": "VARIANT(Default)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "453637da3967835efa78d7d20779c4812f673b3f",
+      "name": "_Annotation Category List",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Color",
+            "Font"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Type",
+          "type": "VARIANT(Color,Font)",
+          "default": "Color"
+        }
+      ]
+    },
+    {
+      "key": "18c2abbe109f93d0eba02025a4c70a53c9e03553",
+      "name": "Status Bar",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Status",
+          "values": [
+            "⚫️ Work In Progress",
+            "🟡 To Review",
+            "🟢 Ready for Dev",
+            "🔴 On Hold",
+            "🔵 Updated"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Status",
+          "type": "VARIANT(⚫️ Work In Progress,🟡 To Review,🟢 Ready for Dev,🔴 On Hold,🔵 Updated)",
+          "default": "⚫️ Work In Progress"
+        }
+      ]
+    },
+    {
+      "key": "c311fd5a84024474b7c8ac44c97b5ffd0610e64d",
+      "name": "Canvas / Flow Header",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Size",
+          "values": [
+            "Large",
+            "Medium"
+          ]
+        },
+        {
+          "name": "Description",
+          "values": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "Status",
+          "values": [
+            "Yes",
+            "No"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Title#31931:0",
+          "type": "TEXT",
+          "default": "Flow Heading"
+        },
+        {
+          "name": "Description#31931:9",
+          "type": "TEXT",
+          "default": "Description"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(Large,Medium)",
+          "default": "Medium"
+        },
+        {
+          "name": "Description",
+          "type": "VARIANT(Yes,No)",
+          "default": "Yes"
+        },
+        {
+          "name": "Status",
+          "type": "VARIANT(Yes,No)",
+          "default": "No"
+        }
+      ]
+    },
+    {
+      "key": "37cb32adf12c4eb7077ab5e5faa39c96d1c2dcfb",
+      "name": "Canvas / Screen Context",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Size",
+          "values": [
+            "Large",
+            "Small"
+          ]
+        },
+        {
+          "name": "Title",
+          "values": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "Description",
+          "values": [
+            "Yes",
+            "No"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Size",
+          "type": "VARIANT(Large,Small)",
+          "default": "Large"
+        },
+        {
+          "name": "Title",
+          "type": "VARIANT(Yes,No)",
+          "default": "Yes"
+        },
+        {
+          "name": "Description",
+          "type": "VARIANT(Yes,No)",
+          "default": "Yes"
+        }
+      ]
+    },
+    {
+      "key": "851787e26479adaad2c5e0fb518ad09e7eb69ee7",
+      "name": "Note /  Pointed",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Pointer",
+          "values": [
+            "Top",
+            "Right",
+            "Bottom",
+            "Left"
+          ]
+        },
+        {
+          "name": "Background",
+          "values": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "Title",
+          "values": [
+            "Yes",
+            "No"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Pointer",
+          "type": "VARIANT(Top,Right,Bottom,Left)",
+          "default": "Top"
+        },
+        {
+          "name": "Background",
+          "type": "VARIANT(Yes,No)",
+          "default": "Yes"
+        },
+        {
+          "name": "Title",
+          "type": "VARIANT(Yes,No)",
+          "default": "Yes"
+        }
+      ]
+    },
+    {
+      "key": "5eee62609809c025591fb4d9165692365f404917",
+      "name": "chilli_logo",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "type",
+          "values": [
+            "symbol",
+            "favicon",
+            "logo"
+          ]
+        },
+        {
+          "name": "color",
+          "values": [
+            "brand",
+            "black",
+            "white"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "type",
+          "type": "VARIANT(symbol,favicon,logo)",
+          "default": "logo"
+        },
+        {
+          "name": "color",
+          "type": "VARIANT(brand,black,white)",
+          "default": "brand"
+        }
+      ]
+    },
+    {
+      "key": "b01ce3b2624cf88b228b4b4445f08235bcd12618",
+      "name": "Social Icons",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Platform",
+          "values": [
+            "Apple",
+            "Clubhouse",
+            "Discord",
+            "Dribbble",
+            "Facebook",
+            "Figma",
+            "Github",
+            "Google",
+            "Instagram",
+            "LinkedIn",
+            "Medium",
+            "Pinterest",
+            "Reddit",
+            "Signal",
+            "Snapchat",
+            "Spotify",
+            "Telegram",
+            "TikTok",
+            "Tumblr",
+            "Twitch",
+            "VK",
+            "YouTube",
+            "X (Twitter)",
+            "Threads",
+            "WhatsApp",
+            "Messenger"
+          ]
+        },
+        {
+          "name": "Color",
+          "values": [
+            "Negative",
+            "Original"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Platform",
+          "type": "VARIANT(Apple,Clubhouse,Discord,Dribbble,Facebook,Figma,Github,Google,Instagram,LinkedIn,Medium,Pinterest,Reddit,Signal,Snapchat,Spotify,Telegram,TikTok,Tumblr,Twitch,VK,YouTube,X (Twitter),Threads,WhatsApp,Messenger)",
+          "default": "Facebook"
+        },
+        {
+          "name": "Color",
+          "type": "VARIANT(Negative,Original)",
+          "default": "Original"
+        }
+      ]
+    },
+    {
+      "key": "b659d49b95850123952b6622b7259ba8a5cf25f6",
+      "name": "Star icon",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Fill",
+          "values": [
+            "0%",
+            "10%",
+            "20%",
+            "30%",
+            "40%",
+            "50%",
+            "60%",
+            "70%",
+            "80%",
+            "90%",
+            "100%"
+          ]
+        },
+        {
+          "name": "Color",
+          "values": [
+            "Yellow",
+            "Gray"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Fill",
+          "type": "VARIANT(0%,10%,20%,30%,40%,50%,60%,70%,80%,90%,100%)",
+          "default": "0%"
+        },
+        {
+          "name": "Color",
+          "type": "VARIANT(Yellow,Gray)",
+          "default": "Yellow"
+        }
+      ]
+    },
+    {
+      "key": "391f6b336236d0a6efce05a1daa8d8cf34c05e1d",
+      "name": "streak_icon",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "size",
+          "values": [
+            "md",
+            "sm"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "size",
+          "type": "VARIANT(md,sm)",
+          "default": "sm"
+        }
+      ]
+    },
+    {
+      "key": "93334d5eea2cee5c6e239ea53aa23d9859e58a46",
+      "name": "chilli-coin",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "size",
+          "values": [
+            "lg",
+            "md",
+            "sm",
+            "xsm",
+            "xxsm",
+            "giant"
+          ]
+        },
+        {
+          "name": "style",
+          "values": [
+            "Default",
+            "modern",
+            "retro"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "size",
+          "type": "VARIANT(lg,md,sm,xsm,xxsm,giant)",
+          "default": "lg"
+        },
+        {
+          "name": "style",
+          "type": "VARIANT(Default,modern,retro)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "e996c08c9c5439ab7d8c9356f436eeff0de0bae5",
+      "name": "coin",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "size",
+          "values": [
+            "md",
+            "lg",
+            "sm",
+            "Group"
+          ]
+        },
+        {
+          "name": "Type",
+          "values": [
+            "Modern",
+            "Retro"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "size",
+          "type": "VARIANT(md,lg,sm,Group)",
+          "default": "sm"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Modern,Retro)",
+          "default": "Modern"
+        }
+      ]
+    },
+    {
+      "key": "d55ef9e90c5eedc0f0a632d3e4de7332d354be2b",
+      "name": "badges",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "type",
+          "values": [
+            "fist",
+            "chilli",
+            "streak",
+            "contributor",
+            "locked"
+          ]
+        },
+        {
+          "name": "size",
+          "values": [
+            "lg",
+            "sm",
+            "xl",
+            "md",
+            "xsm"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "type",
+          "type": "VARIANT(fist,chilli,streak,contributor,locked)",
+          "default": "fist"
+        },
+        {
+          "name": "size",
+          "type": "VARIANT(lg,sm,xl,md,xsm)",
+          "default": "xsm"
+        }
+      ]
+    },
+    {
+      "key": "03545f91239f9f92414d8f175fdcfc51b8fde323",
+      "name": "ticket",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "color",
+          "values": [
+            "blue",
+            "green",
+            "purple",
+            "orange"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "color",
+          "type": "VARIANT(blue,green,purple,orange)",
+          "default": "blue"
+        }
+      ]
+    },
+    {
+      "key": "3c8829d13b8a4db931738ee0b78b142958185259",
+      "name": "Cursor",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Arrow",
+            "Drag",
+            "Hand"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "State",
+          "type": "VARIANT(Arrow,Drag,Hand)",
+          "default": "Hand"
+        }
+      ]
+    },
+    {
+      "key": "960198d1fa15e16792d8d29b0571d7c275d9f9b6",
+      "name": "CTA-icons",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Property 1",
+          "values": [
+            "instagram",
+            "survey",
+            "email",
+            "link",
+            "call",
+            "map",
+            "Linkedin",
+            "X",
+            "Petition"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Property 1",
+          "type": "VARIANT(instagram,survey,email,link,call,map,Linkedin,X,Petition)",
+          "default": "email"
+        }
+      ]
+    },
+    {
+      "key": "11d1d834ed4786c79691f5f11f24f2a54afa9f3e",
+      "name": "Keyboard - iPhone",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Mode",
+          "values": [
+            "Light",
+            "Dark",
+            "Vibrant"
+          ]
+        },
+        {
+          "name": "Type",
+          "values": [
+            "Default",
+            "Numbers and Punctuation",
+            "Dictation",
+            "Emoji",
+            "Find and Replace",
+            "Email",
+            "URL",
+            "Toolbar"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Show Replace#113:1",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Email 1#118:7",
+          "type": "TEXT",
+          "default": "name@email.com"
+        },
+        {
+          "name": "Email 2#118:14",
+          "type": "TEXT",
+          "default": "Hide My Email"
+        },
+        {
+          "name": "Mode",
+          "type": "VARIANT(Light,Dark,Vibrant)",
+          "default": "Light"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Default,Numbers and Punctuation,Dictation,Emoji,Find and Replace,Email,URL,Toolbar)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "201b2674b43d3e0525a21bbc01743317015f6d70",
+      "name": "PhotoPicker",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Dark Mode",
+          "values": [
+            "False",
+            "True"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Dark Mode",
+          "type": "VARIANT(False,True)",
+          "default": "False"
+        }
+      ]
+    },
+    {
+      "key": "f69bb6cff5fa647971b6ac2fb63f963ddbe64d6f",
+      "name": "IOS iPhone / Browser Tab bar",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Theme",
+          "values": [
+            "Light",
+            "Dark"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Theme",
+          "type": "VARIANT(Light,Dark)",
+          "default": "Light"
+        }
+      ]
+    },
+    {
+      "key": "05656519f40d57100d17a75dc927a3031f395159",
+      "name": "IOS iPhone / Browser Safari",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Theme",
+          "values": [
+            "Light",
+            "Dark"
+          ]
+        },
+        {
+          "name": "Size",
+          "values": [
+            "True",
+            "False"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "URL#446:3",
+          "type": "TEXT",
+          "default": "example.com"
+        },
+        {
+          "name": "Theme",
+          "type": "VARIANT(Light,Dark)",
+          "default": "Light"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(True,False)",
+          "default": "True"
+        }
+      ]
+    },
+    {
+      "key": "e3bdb455c374634c455ccff592efa8471a677672",
+      "name": "Status Bar - iPhone",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Mode",
+          "values": [
+            "Dark",
+            "Light"
+          ]
+        },
+        {
+          "name": "Background",
+          "values": [
+            "True",
+            "False"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Mode",
+          "type": "VARIANT(Dark,Light)",
+          "default": "Light"
+        },
+        {
+          "name": "Background",
+          "type": "VARIANT(True,False)",
+          "default": "True"
+        }
+      ]
+    },
+    {
+      "key": "6a7500899e8793378ad8e5ffffe616785df9242d",
+      "name": "Alert",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Mode",
+          "values": [
+            "Light",
+            "Dark"
+          ]
+        },
+        {
+          "name": "Buttons",
+          "values": [
+            "1",
+            "2 Stacked",
+            "3 Stacked",
+            "2 (Side by Side)"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Description#63:1",
+          "type": "TEXT",
+          "default": "A message should be a short,\ncomplete sentence."
+        },
+        {
+          "name": "Show description#63:2",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Title#63:3",
+          "type": "TEXT",
+          "default": "A Short Title Is Best"
+        },
+        {
+          "name": "Show text field#65:7",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Mode",
+          "type": "VARIANT(Light,Dark)",
+          "default": "Light"
+        },
+        {
+          "name": "Buttons",
+          "type": "VARIANT(1,2 Stacked,3 Stacked,2 (Side by Side))",
+          "default": "1"
+        }
+      ]
+    },
+    {
+      "key": "7dc16f5d83ff6a1c9b53c03f7c28d11db7821b2b",
+      "name": "Home Indicator",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Device",
+          "values": [
+            "iPad",
+            "iPhone"
+          ]
+        },
+        {
+          "name": "Orientation",
+          "values": [
+            "Portrait",
+            "Landscape"
+          ]
+        },
+        {
+          "name": "Mode",
+          "values": [
+            "Light",
+            "Dark"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Device",
+          "type": "VARIANT(iPad,iPhone)",
+          "default": "iPhone"
+        },
+        {
+          "name": "Orientation",
+          "type": "VARIANT(Portrait,Landscape)",
+          "default": "Portrait"
+        },
+        {
+          "name": "Mode",
+          "type": "VARIANT(Light,Dark)",
+          "default": "Light"
+        }
+      ]
+    },
+    {
+      "key": "c8951a657c375424e570189f50ad9dcd7367c9e1",
+      "name": "Face ID",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Mode",
+          "values": [
+            "Dark",
+            "Light"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Success",
+            "Authenticating"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Mode",
+          "type": "VARIANT(Dark,Light)",
+          "default": "Light"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Success,Authenticating)",
+          "default": "Authenticating"
+        }
+      ]
+    },
+    {
+      "key": "5193bb862b85d1eed5cf43cc6df95cf6f271b3ba",
+      "name": "Touch ID",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Mode",
+          "values": [
+            "Light",
+            "Dark"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Mode",
+          "type": "VARIANT(Light,Dark)",
+          "default": "Light"
+        }
+      ]
+    },
+    {
+      "key": "2c4d62c8bd5b7e9f7d3a559453ee9fdd885f42c5",
+      "name": "Browser toolbar",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Safari",
+            "Minimal monotone",
+            "Minimal color"
+          ]
+        },
+        {
+          "name": "Theme",
+          "values": [
+            "Light",
+            "Dark"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Type",
+          "type": "VARIANT(Safari,Minimal monotone,Minimal color)",
+          "default": "Minimal color"
+        },
+        {
+          "name": "Theme",
+          "type": "VARIANT(Light,Dark)",
+          "default": "Light"
+        }
+      ]
+    },
+    {
+      "key": "f1ef3c1e605a8b1b38738f39933e199fe58a71ff",
+      "name": "reCAPATCH",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "state",
+          "values": [
+            "Default",
+            "error",
+            "in process",
+            "tick",
+            "expired"
+          ]
+        },
+        {
+          "name": "mode",
+          "values": [
+            "light",
+            "dark"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "state",
+          "type": "VARIANT(Default,error,in process,tick,expired)",
+          "default": "Default"
+        },
+        {
+          "name": "mode",
+          "type": "VARIANT(light,dark)",
+          "default": "light"
+        }
+      ]
+    },
+    {
+      "key": "9ffe64e52be9b25632f926b31db8ec68950ff430",
+      "name": "_Action Sheet/Buttons/Light",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Default",
+            "Destructive",
+            "Disabled"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Label#495:113",
+          "type": "TEXT",
+          "default": "Action"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Default,Destructive,Disabled)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "3c1da53af8fc59f0670df8e5ac546ba7257f7f14",
+      "name": "_Action Sheet/Buttons/Dark",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Default",
+            "Destructive",
+            "Disabled"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Label#495:117",
+          "type": "TEXT",
+          "default": "Action"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Default,Destructive,Disabled)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "974b1a0cbacd7628b74c5252971101c7ada87ef1",
+      "name": "Action Sheet - iPhone",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Mode",
+          "values": [
+            "Light",
+            "Dark"
+          ]
+        },
+        {
+          "name": "Header",
+          "values": [
+            "False",
+            "True"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Description#63:1",
+          "type": "TEXT",
+          "default": "A message should be a short, complete sentence."
+        },
+        {
+          "name": "Show description#63:2",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Title#63:3",
+          "type": "TEXT",
+          "default": "A Short Title Is Best"
+        },
+        {
+          "name": "Show Cancel#104:25",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show Button 7#104:27",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show Button 6#104:30",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show Button 5#104:33",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show Button 4#104:36",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show Button 3#104:39",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show Button 2#104:42",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Mode",
+          "type": "VARIANT(Light,Dark)",
+          "default": "Dark"
+        },
+        {
+          "name": "Header",
+          "type": "VARIANT(False,True)",
+          "default": "True"
+        }
+      ]
+    },
+    {
+      "key": "d77502cbed1e93d2a301ebe768328ce3ff7c3122",
+      "name": "Menu - Compact",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Mode",
+          "values": [
+            "Light",
+            "Dark"
+          ]
+        },
+        {
+          "name": "Actions",
+          "values": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Action 1#492:0",
+          "type": "TEXT",
+          "default": "Action 1"
+        },
+        {
+          "name": "Action 2#492:5",
+          "type": "TEXT",
+          "default": "Action 2"
+        },
+        {
+          "name": "Action 3#492:10",
+          "type": "TEXT",
+          "default": "Action 3"
+        },
+        {
+          "name": "Action 4#492:15",
+          "type": "TEXT",
+          "default": "Action 4"
+        },
+        {
+          "name": "Action 5#492:20",
+          "type": "TEXT",
+          "default": "Action 5"
+        },
+        {
+          "name": "Mode",
+          "type": "VARIANT(Light,Dark)",
+          "default": "Light"
+        },
+        {
+          "name": "Actions",
+          "type": "VARIANT(2,3,4,5)",
+          "default": "2"
+        }
+      ]
+    },
+    {
+      "key": "c4b384b48b0ed517d048bbdd46ab7cbca60eb0a6",
+      "name": "IOS 26-Keyboard/Default",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Keyboard",
+            "Numpad"
+          ]
+        },
+        {
+          "name": "Dark",
+          "values": [
+            "Off",
+            "On"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Option#1028:3",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Suggestion#1028:6",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Action#1806:19",
+          "type": "INSTANCE_SWAP",
+          "default": "36235:86333"
+        },
+        {
+          "name": "Show Suggestion#1819:0",
+          "type": "INSTANCE_SWAP",
+          "default": "36235:86347"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Keyboard,Numpad)",
+          "default": "Keyboard"
+        },
+        {
+          "name": "Dark",
+          "type": "VARIANT(Off,On)",
+          "default": "Off"
+        }
+      ]
+    },
+    {
+      "key": "64afae87762599ea1a5314eb9e615b1ab41ff081",
+      "name": "IOS 26-Status Bar",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Dark Mode",
+          "values": [
+            "Off",
+            "On"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Dynamic Island#1010:0",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Dark Mode",
+          "type": "VARIANT(Off,On)",
+          "default": "Off"
+        }
+      ]
+    },
+    {
+      "key": "2395a0a659c42cd80b35bfe5ed20c0e3581c1ab6",
+      "name": "Overlay",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Breakpoint",
+          "values": [
+            "Mobile",
+            "Desktop"
+          ]
+        },
+        {
+          "name": "Blur",
+          "values": [
+            "True",
+            "False"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Breakpoint",
+          "type": "VARIANT(Mobile,Desktop)",
+          "default": "Mobile"
+        },
+        {
+          "name": "Blur",
+          "type": "VARIANT(True,False)",
+          "default": "True"
+        }
+      ]
+    },
+    {
+      "key": "fb16db1d7c5880a144d2bf150fae2c3cb277c4da",
+      "name": "Accordion",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Open"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Question Title#44047:1",
+          "type": "TEXT",
+          "default": "Question title"
+        },
+        {
+          "name": "Text#44047:2",
+          "type": "TEXT",
+          "default": "Install the component and import it into your project. The accordion supports both single and multiple expand modes."
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Open)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "8bf82541ed47b4848b7596bbbff5d684e3e716cc",
+      "name": "donation user",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "2",
+            "1",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "name": "Type",
+          "values": [
+            "Row",
+            "grouped"
+          ]
+        },
+        {
+          "name": "Mode",
+          "values": [
+            "Dark",
+            "Light"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "State",
+          "type": "VARIANT(2,1,3,4)",
+          "default": "1"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Row,grouped)",
+          "default": "grouped"
+        },
+        {
+          "name": "Mode",
+          "type": "VARIANT(Dark,Light)",
+          "default": "Dark"
+        }
+      ]
+    },
+    {
+      "key": "3c58cb1c4ded2518014ddbd4d64c2ded2a85421b",
+      "name": "_Avatar user",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "name",
+          "values": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "22",
+            "23",
+            "24",
+            "25",
+            "29",
+            "28",
+            "27",
+            "26",
+            "39",
+            "38",
+            "chilli",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "21"
+          ]
+        },
+        {
+          "name": "Creator",
+          "values": [
+            "False",
+            "True"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "name",
+          "type": "VARIANT(01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,22,23,24,25,29,28,27,26,39,38,chilli,1,2,3,4,5,6,7,8,9,21)",
+          "default": "01"
+        },
+        {
+          "name": "Creator",
+          "type": "VARIANT(False,True)",
+          "default": "False"
+        }
+      ]
+    },
+    {
+      "key": "b6dea473b7ced8e6e6ddf462069e11b5acadb5b7",
+      "name": "_Avatar button",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "size",
+          "values": [
+            "xs",
+            "sm",
+            "md"
+          ]
+        },
+        {
+          "name": "state",
+          "values": [
+            "Default",
+            "hover",
+            "pressed",
+            "disabled",
+            "focused"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "size",
+          "type": "VARIANT(xs,sm,md)",
+          "default": "xs"
+        },
+        {
+          "name": "state",
+          "type": "VARIANT(Default,hover,pressed,disabled,focused)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "acce6c29e3ab0067d376ff185158bb86de1defb0",
+      "name": "Avatar",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Placeholder",
+          "values": [
+            "False",
+            "true"
+          ]
+        },
+        {
+          "name": "Size",
+          "values": [
+            "5xl",
+            "4xl",
+            "3xl",
+            "2xl",
+            "xl",
+            "lg",
+            "md",
+            "sm",
+            "xsm",
+            "xxsm"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Text#43287:0",
+          "type": "TEXT",
+          "default": "L"
+        },
+        {
+          "name": "username#43652:0",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Placeholder",
+          "type": "VARIANT(False,true)",
+          "default": "False"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(5xl,4xl,3xl,2xl,xl,lg,md,sm,xsm,xxsm)",
+          "default": "xxsm"
+        }
+      ]
+    },
+    {
+      "key": "3dc4ba31076a14f7e1a9cd133d426147f4b21979",
+      "name": "_username badge",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Size",
+          "values": [
+            "md",
+            "sm"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "username#34211:0",
+          "type": "TEXT",
+          "default": "@ClimateChe"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(md,sm)",
+          "default": "sm"
+        }
+      ]
+    },
+    {
+      "key": "6ab61449ed71e3345ec76e8152a4e586d5484b9e",
+      "name": "Avatars_group",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Size",
+          "values": [
+            "sm",
+            "md",
+            "xsm",
+            "xxsm"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Size",
+          "type": "VARIANT(sm,md,xsm,xxsm)",
+          "default": "md"
+        }
+      ]
+    },
+    {
+      "key": "f23eecc202530265abd13f6dcfc17b5e4bf293ea",
+      "name": "Avatar duo",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Size",
+          "values": [
+            "xxsm",
+            "xsm",
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Size",
+          "type": "VARIANT(xxsm,xsm,sm,md,lg,xl)",
+          "default": "xxsm"
+        }
+      ]
+    },
+    {
+      "key": "b7c939070a15a86f68ab7c5050adff689951401f",
+      "name": "Avatar label",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "size",
+          "values": [
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ]
+        },
+        {
+          "name": "Placeholder",
+          "values": [
+            "False",
+            "true"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Username#43287:21",
+          "type": "TEXT",
+          "default": "Username"
+        },
+        {
+          "name": "Supporting text#43287:28",
+          "type": "TEXT",
+          "default": "Supporting text"
+        },
+        {
+          "name": "Show supporting text#43351:0",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "size",
+          "type": "VARIANT(sm,md,lg,xl)",
+          "default": "sm"
+        },
+        {
+          "name": "Placeholder",
+          "type": "VARIANT(False,true)",
+          "default": "False"
+        }
+      ]
+    },
+    {
+      "key": "b1c74115c20d0a6b1278de224eb875bece4dbd43",
+      "name": "Avatar on card",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "size",
+          "values": [
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Username#43287:21",
+          "type": "TEXT",
+          "default": "Username"
+        },
+        {
+          "name": "Show supporting text#43351:0",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "date#44133:0",
+          "type": "TEXT",
+          "default": "now"
+        },
+        {
+          "name": "campaign name#44133:9",
+          "type": "TEXT",
+          "default": "published Save US Marine Monument"
+        },
+        {
+          "name": "size",
+          "type": "VARIANT(sm,md,lg,xl)",
+          "default": "sm"
+        }
+      ]
+    },
+    {
+      "key": "88926815a3831ce8c61fdb1730fc1113517b2035",
+      "name": "color pill",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Color",
+          "values": [
+            "blue",
+            "Desert Orange",
+            "Bright Cyan",
+            "Bright Pink",
+            "Ultra Blue",
+            "Amber Orange",
+            "Caribbean Green",
+            "Neon pink",
+            "Lime Green",
+            "Liquid blue",
+            "Antique Gold",
+            "Cyan Blue",
+            "Midnight Blue",
+            "orange",
+            "Electric magenta",
+            "Purple",
+            "red",
+            "Grey",
+            "Yellow",
+            "Lime"
+          ]
+        },
+        {
+          "name": "Mode",
+          "values": [
+            "Light"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Color",
+          "type": "VARIANT(blue,Desert Orange,Bright Cyan,Bright Pink,Ultra Blue,Amber Orange,Caribbean Green,Neon pink,Lime Green,Liquid blue,Antique Gold,Cyan Blue,Midnight Blue,orange,Electric magenta,Purple,red,Grey,Yellow,Lime)",
+          "default": "Neon pink"
+        },
+        {
+          "name": "Mode",
+          "type": "VARIANT(Light)",
+          "default": "Light"
+        }
+      ]
+    },
+    {
+      "key": "13b3e98bed4089b2d754f2b162700dd762f09888",
+      "name": "color pill item",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "selected"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "color#40892:13",
+          "type": "INSTANCE_SWAP",
+          "default": "40892:112776"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,selected)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "b802bd625056df9bf43831916b8f5e58811c3546",
+      "name": "Badge status",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Success",
+            "Warning",
+            "Danger",
+            "Loader"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Text#43635:86",
+          "type": "TEXT",
+          "default": "g.petrol@total.com"
+        },
+        {
+          "name": "Show left icon#43662:21",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show icon right#43662:26",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Success,Warning,Danger,Loader)",
+          "default": "Success"
+        }
+      ]
+    },
+    {
+      "key": "d98044ecbd53528bf3f12d53bf35c7befef2eff3",
+      "name": "Chips",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Size",
+          "values": [
+            "lg",
+            "md",
+            "sm",
+            "xl"
+          ]
+        },
+        {
+          "name": "Variant",
+          "values": [
+            "Default",
+            "Avatar",
+            "Social"
+          ]
+        },
+        {
+          "name": "Type",
+          "values": [
+            "Fill",
+            "light"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Label#31327:0",
+          "type": "TEXT",
+          "default": "label"
+        },
+        {
+          "name": "Show icon-right#31327:17",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "icon right swap#31327:34",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:243242"
+        },
+        {
+          "name": "Show icon-left#31327:51",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "icon left swap#31327:68",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:244018"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(lg,md,sm,xl)",
+          "default": "sm"
+        },
+        {
+          "name": "Variant",
+          "type": "VARIANT(Default,Avatar,Social)",
+          "default": "Default"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Fill,light)",
+          "default": "Fill"
+        }
+      ]
+    },
+    {
+      "key": "8ea71ae15bc89968b7a57b3ee63c505cdc5758c1",
+      "name": "dot",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "size",
+          "values": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "size",
+          "type": "VARIANT(sm,md,lg)",
+          "default": "sm"
+        }
+      ]
+    },
+    {
+      "key": "db301ce917a7e2f0db88990df7af896a68e74c98",
+      "name": "cause_chips",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Size",
+          "values": [
+            "xs",
+            "md",
+            "lg"
+          ]
+        },
+        {
+          "name": "Type",
+          "values": [
+            "Default",
+            "Glass"
+          ]
+        },
+        {
+          "name": "Mode",
+          "values": [
+            "Light",
+            "Dark"
+          ]
+        },
+        {
+          "name": "Color",
+          "values": [
+            "Grey",
+            "Neon pink",
+            "Bright pink",
+            "Electric magenta",
+            "Purple",
+            "Ultra blue",
+            "Blue",
+            "Cyan Blue",
+            "Liquid blue",
+            "Bright Cyan",
+            "Carrabean Grean",
+            "Lime Green",
+            "Lime",
+            "Yellow",
+            "Amber Orange",
+            "Orange",
+            "Red",
+            "Antique Gold",
+            "Desert Orange",
+            "Midnight Blue"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Text#43325:46",
+          "type": "TEXT",
+          "default": "cause_name"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(xs,md,lg)",
+          "default": "xs"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Default,Glass)",
+          "default": "Default"
+        },
+        {
+          "name": "Mode",
+          "type": "VARIANT(Light,Dark)",
+          "default": "Light"
+        },
+        {
+          "name": "Color",
+          "type": "VARIANT(Grey,Neon pink,Bright pink,Electric magenta,Purple,Ultra blue,Blue,Cyan Blue,Liquid blue,Bright Cyan,Carrabean Grean,Lime Green,Lime,Yellow,Amber Orange,Orange,Red,Antique Gold,Desert Orange,Midnight Blue)",
+          "default": "Neon pink"
+        }
+      ]
+    },
+    {
+      "key": "9d15cff504f7395b420e1cce140d39ad8b468096",
+      "name": "Tag",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "type",
+          "values": [
+            "fill",
+            "ghost"
+          ]
+        },
+        {
+          "name": "size",
+          "values": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Label#43559:0",
+          "type": "TEXT",
+          "default": "label"
+        },
+        {
+          "name": "left icon#43559:2",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "left icon swap#43559:4",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:243179"
+        },
+        {
+          "name": "right icon swap#43559:6",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:243179"
+        },
+        {
+          "name": "righ icon#43559:8",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "dot#43559:10",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "type",
+          "type": "VARIANT(fill,ghost)",
+          "default": "fill"
+        },
+        {
+          "name": "size",
+          "type": "VARIANT(sm,md,lg)",
+          "default": "sm"
+        }
+      ]
+    },
+    {
+      "key": "a1029c5d7a7579dfba495aad01d2b4e2a5636f34",
+      "name": "Banner",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Warning",
+            "Danger",
+            "Brand",
+            "Success",
+            "Neutral"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Title#31620:48",
+          "type": "TEXT",
+          "default": "This is title of the alert"
+        },
+        {
+          "name": "Subtle#31620:53",
+          "type": "TEXT",
+          "default": "Borem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+          "name": "show subtle#31620:58",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "with icon#43299:3",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Button#43431:0",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Warning,Danger,Brand,Success,Neutral)",
+          "default": "Brand"
+        }
+      ]
+    },
+    {
+      "key": "48759fd76d6c942c5aa4428ced58b5ffac606ecd",
+      "name": "BRB",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "type",
+          "values": [
+            "Default",
+            "Disabled",
+            "Pressed",
+            "in process"
+          ]
+        },
+        {
+          "name": "background",
+          "values": [
+            "false"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "type",
+          "type": "VARIANT(Default,Disabled,Pressed,in process)",
+          "default": "Default"
+        },
+        {
+          "name": "background",
+          "type": "VARIANT(false)",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "key": "d3a48af05f918bc1b7a0e0b299f38ee1af408582",
+      "name": "button/slider",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "state",
+          "values": [
+            "Default",
+            "release",
+            "done"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "state",
+          "type": "VARIANT(Default,release,done)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "bad026f42006a942b645e8d48c179fb4f03402a1",
+      "name": "Button onboarding",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Selected",
+            "Disabled"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Title#30296:12",
+          "type": "TEXT",
+          "default": "comment on Instagram"
+        },
+        {
+          "name": "Subtitle#30296:16",
+          "type": "TEXT",
+          "default": "pre-written, with the emotion of your choice"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Selected,Disabled)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "252369d8e67411fe4404e81afdecf4b4c9eb2b36",
+      "name": "setting_item",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "state",
+          "values": [
+            "Default",
+            "hover"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Label#37848:2",
+          "type": "TEXT",
+          "default": "personnal informations"
+        },
+        {
+          "name": "left-icon#37848:3",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:244396"
+        },
+        {
+          "name": "Show chevron-right#37848:4",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "state",
+          "type": "VARIANT(Default,hover)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "dcee1d5c1ab262dddb973d58cf1221673a57c8ce",
+      "name": "Buttons/button",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Hierarchy",
+          "values": [
+            "Primary",
+            "Secondary",
+            "Ghost",
+            "brand"
+          ]
+        },
+        {
+          "name": "Style",
+          "values": [
+            "Default",
+            "Glass"
+          ]
+        },
+        {
+          "name": "Size",
+          "values": [
+            "xsm",
+            "sm",
+            "md",
+            "lg"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover",
+            "Pressed",
+            "Disabled",
+            "Focused"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "✏️  Text#24091:4",
+          "type": "TEXT",
+          "default": "button"
+        },
+        {
+          "name": "👀 Right  Icon#24398:474",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "👀 Left  Icon#24427:711",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "🔄 Icon  Right#26894:16",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:244021"
+        },
+        {
+          "name": "🔄 Icon  Left#27015:0",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:244021"
+        },
+        {
+          "name": "text#39161:0",
+          "type": "TEXT",
+          "default": "button"
+        },
+        {
+          "name": "Hierarchy",
+          "type": "VARIANT(Primary,Secondary,Ghost,brand)",
+          "default": "brand"
+        },
+        {
+          "name": "Style",
+          "type": "VARIANT(Default,Glass)",
+          "default": "Default"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(xsm,sm,md,lg)",
+          "default": "xsm"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover,Pressed,Disabled,Focused)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "eadf86c981071ecb2dbf94609335043c53303d7e",
+      "name": "Buttons/destructive",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Primary",
+            "Secondary",
+            "Tertiary"
+          ]
+        },
+        {
+          "name": "Size",
+          "values": [
+            "lg",
+            "md",
+            "sm",
+            "xsm"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover",
+            "Pressed",
+            "Disabled"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "✏️  Text#35056:0",
+          "type": "TEXT",
+          "default": "delete"
+        },
+        {
+          "name": "👀 Right  Icon#35056:1",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "👀 Left  Icon#35056:2",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "🔄 Icon  Right#35056:3",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:244021"
+        },
+        {
+          "name": "🔄 Icon  Left#35056:4",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:244021"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Primary,Secondary,Tertiary)",
+          "default": "Primary"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(lg,md,sm,xsm)",
+          "default": "xsm"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover,Pressed,Disabled)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "f26382cd06daba24fa0bea33565c5375639f3928",
+      "name": "ButtonsIcon",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Primary",
+            "Secondary",
+            "Transparent",
+            "Glass"
+          ]
+        },
+        {
+          "name": "Style",
+          "values": [
+            "Default",
+            "Glass"
+          ]
+        },
+        {
+          "name": "Size",
+          "values": [
+            "xsm",
+            "sm",
+            "md",
+            "lg"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover",
+            "Disabled",
+            "Focus",
+            "Focused"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Instance#27015:253",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:243901"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Primary,Secondary,Transparent,Glass)",
+          "default": "Primary"
+        },
+        {
+          "name": "Style",
+          "type": "VARIANT(Default,Glass)",
+          "default": "Default"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(xsm,sm,md,lg)",
+          "default": "xsm"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover,Disabled,Focus,Focused)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "b9581a28020f6b0461238d6040851e9626892d54",
+      "name": "BRB button",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover",
+            "Pressed"
+          ]
+        },
+        {
+          "name": "Type",
+          "values": [
+            "Mobile",
+            "Desktop"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Title#33897:21",
+          "type": "TEXT",
+          "default": "chilli radar"
+        },
+        {
+          "name": "Sutbtitle#33912:0",
+          "type": "TEXT",
+          "default": "find impactful action for you"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover,Pressed)",
+          "default": "Default"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Mobile,Desktop)",
+          "default": "Desktop"
+        }
+      ]
+    },
+    {
+      "key": "3398ff1a925222c1b95e781cfe206bdfe8e44404",
+      "name": "donation-button",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Selected"
+          ]
+        },
+        {
+          "name": "Popular",
+          "values": [
+            "False",
+            "True"
+          ]
+        },
+        {
+          "name": "Glass",
+          "values": [
+            "False",
+            "True"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Number#37780:0",
+          "type": "TEXT",
+          "default": "$2"
+        },
+        {
+          "name": "Show emoji#37806:6",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Selected)",
+          "default": "Default"
+        },
+        {
+          "name": "Popular",
+          "type": "VARIANT(False,True)",
+          "default": "False"
+        },
+        {
+          "name": "Glass",
+          "type": "VARIANT(False,True)",
+          "default": "False"
+        }
+      ]
+    },
+    {
+      "key": "3865cabcbb1be244f69a3b6430398ff96e87ff2b",
+      "name": "Feature item",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover",
+            "Selected",
+            "Error"
+          ]
+        },
+        {
+          "name": "Type",
+          "values": [
+            "Default"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "title#31620:3",
+          "type": "TEXT",
+          "default": "start from scratch"
+        },
+        {
+          "name": "Subtle#31620:18",
+          "type": "TEXT",
+          "default": "know exactly what to say? Great! Craft your own compelling story with ease."
+        },
+        {
+          "name": "icon#43453:53",
+          "type": "INSTANCE_SWAP",
+          "default": "30296:65069"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover,Selected,Error)",
+          "default": "Default"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Default)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "ef4915e852930dc5177bdfdddb70756a78630ce2",
+      "name": "button_group-comment flow",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "selected"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Text#43299:0",
+          "type": "TEXT",
+          "default": "informative"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,selected)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "08446f8495addbf8fd592e9926fed4be83f71516",
+      "name": "quizz_button",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "state",
+          "values": [
+            "Default",
+            "Selected",
+            "Locked"
+          ]
+        },
+        {
+          "name": "Type",
+          "values": [
+            "Description"
+          ]
+        },
+        {
+          "name": "Most popular",
+          "values": [
+            "False",
+            "True"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Label#34753:0",
+          "type": "TEXT",
+          "default": "500"
+        },
+        {
+          "name": "state",
+          "type": "VARIANT(Default,Selected,Locked)",
+          "default": "Default"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Description)",
+          "default": "Description"
+        },
+        {
+          "name": "Most popular",
+          "type": "VARIANT(False,True)",
+          "default": "False"
+        }
+      ]
+    },
+    {
+      "key": "b868be3664d2eabaaa2ecf011d84d95db09e86fd",
+      "name": "Social login button",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Property 1",
+          "values": [
+            "Apple",
+            "Google"
+          ]
+        },
+        {
+          "name": "Type",
+          "values": [
+            "Primary",
+            "Secondary"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Property 1",
+          "type": "VARIANT(Apple,Google)",
+          "default": "Apple"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Primary,Secondary)",
+          "default": "Primary"
+        }
+      ]
+    },
+    {
+      "key": "c8900b1ce2ed735ff353602dc27c8eb8f13fdfd7",
+      "name": "badge_container",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "type",
+          "values": [
+            "Default",
+            "locked"
+          ]
+        },
+        {
+          "name": "size",
+          "values": [
+            "md",
+            "lg"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "type",
+          "type": "VARIANT(Default,locked)",
+          "default": "Default"
+        },
+        {
+          "name": "size",
+          "type": "VARIANT(md,lg)",
+          "default": "md"
+        }
+      ]
+    },
+    {
+      "key": "7d8c2452625325c7d66cc61ef346d07989df5d09",
+      "name": "card_shop",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Donation",
+            "shop"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Claimed",
+            "Finished",
+            "Hover"
+          ]
+        },
+        {
+          "name": "Breakpoint",
+          "values": [
+            "Mobile",
+            "Desktop"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Type",
+          "type": "VARIANT(Donation,shop)",
+          "default": "Donation"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Claimed,Finished,Hover)",
+          "default": "Default"
+        },
+        {
+          "name": "Breakpoint",
+          "type": "VARIANT(Mobile,Desktop)",
+          "default": "Mobile"
+        }
+      ]
+    },
+    {
+      "key": "dc98b91bcaad2cfc8e69a838db7e01a99e180ee1",
+      "name": "ElementCard-feed",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Leaderboard",
+            "empty-state",
+            "streak"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Friends",
+            "Empty state",
+            "Active",
+            "action completed",
+            "action not completed",
+            "Global"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Type",
+          "type": "VARIANT(Leaderboard,empty-state,streak)",
+          "default": "Leaderboard"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Friends,Empty state,Active,action completed,action not completed,Global)",
+          "default": "Friends"
+        }
+      ]
+    },
+    {
+      "key": "5ac0b50a390c5fe0ced4904112c8ebfbc9f6ce20",
+      "name": "ActionCard",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Default",
+            "Activity",
+            "In draft"
+          ]
+        },
+        {
+          "name": "Size",
+          "values": [
+            "Md",
+            "Sm"
+          ]
+        },
+        {
+          "name": "supporter",
+          "values": [
+            "false",
+            "true"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover",
+            "ligne"
+          ]
+        },
+        {
+          "name": "Creator avatar",
+          "values": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Border",
+          "values": [
+            "False"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Creator#4201:0",
+          "type": "TEXT",
+          "default": "@seaspiracy"
+        },
+        {
+          "name": "Title#4201:2",
+          "type": "TEXT",
+          "default": "Tell Einar Gustafsson: Your Buyout Bid Is Now Tied to Catch Fraud"
+        },
+        {
+          "name": "Subtitle#4201:4",
+          "type": "TEXT",
+          "default": "Einar Gustafsson, former CEO of American Seafoods, is leading a rival bid to acquire the company from Bregal Partners. The Northern Eagle enforcement action directly affects the asset's regulatory standing, liability exposure, and acquisition timeline. Gustafsson has enormous reputational skin in the game — he cannot credibly position himself as a sustainability-focused buyer while the company is under federal investigation for systemic catch underreporting. Pressure him to demand governance reforms as a condition of his bid, or walk away publicly."
+        },
+        {
+          "name": "Label#4201:6",
+          "type": "TEXT",
+          "default": "new from creator you like"
+        },
+        {
+          "name": "Show header#4201:8",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Show Creator header#4333:29",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show CTA#4503:68",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show Chips#4771:157",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "creator on card#4800:0",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Default,Activity,In draft)",
+          "default": "Default"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(Md,Sm)",
+          "default": "Sm"
+        },
+        {
+          "name": "supporter",
+          "type": "VARIANT(false,true)",
+          "default": "false"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover,ligne)",
+          "default": "Default"
+        },
+        {
+          "name": "Creator avatar",
+          "type": "VARIANT(True,False)",
+          "default": "True"
+        },
+        {
+          "name": "Border",
+          "type": "VARIANT(False)",
+          "default": "False"
+        }
+      ]
+    },
+    {
+      "key": "57aff4facabb03537a9c1259b2b779427f5b7e4d",
+      "name": "CreateActionCTA",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Email",
+            "Placeholder",
+            "Instagram",
+            "Google Maps review",
+            "External link",
+            "Phone call",
+            "Question"
+          ]
+        },
+        {
+          "name": "Status",
+          "values": [
+            "default",
+            "finished",
+            "Scheduled",
+            "Placeholder"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Type",
+          "type": "VARIANT(Email,Placeholder,Instagram,Google Maps review,External link,Phone call,Question)",
+          "default": "Placeholder"
+        },
+        {
+          "name": "Status",
+          "type": "VARIANT(default,finished,Scheduled,Placeholder)",
+          "default": "default"
+        }
+      ]
+    },
+    {
+      "key": "f1b3baacbb02ff2cff412e254eb94e13c49c4daa",
+      "name": "action CTA",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Action",
+            "Send Email",
+            "Comment Instagram",
+            "Google Maps comment",
+            "External link",
+            "Question",
+            "Phone call",
+            "button",
+            "InstagramComment Instagram",
+            "Petition",
+            "Linkedin",
+            "X"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "completed",
+            "top supporters",
+            "pinned",
+            "selected",
+            "close"
+          ]
+        },
+        {
+          "name": "Style",
+          "values": [
+            "Card",
+            "List",
+            "Supalist",
+            "no border",
+            "list + icon"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Email subject#3610:12",
+          "type": "TEXT",
+          "default": "Federal Wildlife Oversight Needed: Idaho Commissioner Charged with Poaching on Federal Land"
+        },
+        {
+          "name": "email body#3610:32",
+          "type": "TEXT",
+          "default": "Dear U.S. Fish & Wildlife Service, I am writing to bring to your attention a serious accountability concern in Idaho wildlife management. Fish and Game Commissioner Brody Harshbarger has been charged…"
+        },
+        {
+          "name": "External link#4114:70",
+          "type": "TEXT",
+          "default": "Hi all\nI am trying to build a community of artists, scientists, and people who care about climate and the environment! I have a website I made with fun stuff to look at and discuss and made a server…"
+        },
+        {
+          "name": "label2#4275:0",
+          "type": "TEXT",
+          "default": "34 people did this"
+        },
+        {
+          "name": "publish date#5011:0",
+          "type": "TEXT",
+          "default": "Apr 16th"
+        },
+        {
+          "name": "Show publish date#5011:23",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Action,Send Email,Comment Instagram,Google Maps comment,External link,Question,Phone call,button,InstagramComment Instagram,Petition,Linkedin,X)",
+          "default": "Send Email"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,completed,top supporters,pinned,selected,close)",
+          "default": "Default"
+        },
+        {
+          "name": "Style",
+          "type": "VARIANT(Card,List,Supalist,no border,list + icon)",
+          "default": "Card"
+        }
+      ]
+    },
+    {
+      "key": "5dced6c358dadb7c922ff871e99ff516ca70a8a9",
+      "name": "action post",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Status",
+          "values": [
+            "Default",
+            "completed",
+            "Expired"
+          ]
+        },
+        {
+          "name": "Breakpoints",
+          "values": [
+            "Mobile",
+            "Desktop"
+          ]
+        },
+        {
+          "name": "Type",
+          "values": [
+            "Default",
+            "Multiple creator",
+            "re-post",
+            "text only"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Text#43397:3",
+          "type": "TEXT",
+          "default": "Woaaaah!!! I’m bringing you some great news for the new year! Thanks to your contribution, we just saved the orcas from Marineland. Thanks guys, you’re awesome!"
+        },
+        {
+          "name": "Date#43401:0",
+          "type": "TEXT",
+          "default": "Jan 16th"
+        },
+        {
+          "name": "show text#43410:0",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "amount#43434:6",
+          "type": "TEXT",
+          "default": "$15,00 monthly"
+        },
+        {
+          "name": "Status",
+          "type": "VARIANT(Default,completed,Expired)",
+          "default": "Default"
+        },
+        {
+          "name": "Breakpoints",
+          "type": "VARIANT(Mobile,Desktop)",
+          "default": "Desktop"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Default,Multiple creator,re-post,text only)",
+          "default": "Default"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "90777e4d584ca51835be52f5af8044ff9906421b",
+      "name": "_explore loader",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Action",
+            "Cause",
+            "Avatar"
+          ]
+        },
+        {
+          "name": "Breakpoint",
+          "values": [
+            "Mobile",
+            "Desktop"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Type",
+          "type": "VARIANT(Action,Cause,Avatar)",
+          "default": "Action"
+        },
+        {
+          "name": "Breakpoint",
+          "type": "VARIANT(Mobile,Desktop)",
+          "default": "Desktop"
+        }
+      ]
+    },
+    {
+      "key": "9fffbfa29145889d59136abdef7a65f80b5836c1",
+      "name": "folder",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Size",
+          "values": [
+            "Sm",
+            "Md",
+            "Lg"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover"
+          ]
+        },
+        {
+          "name": "Action",
+          "values": [
+            "3+",
+            "2",
+            "1"
+          ]
+        },
+        {
+          "name": "Theme",
+          "values": [
+            "Light",
+            "Dark"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Show avatars#41048:0",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "text#41568:0",
+          "type": "TEXT",
+          "default": "7 actions to do"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(Sm,Md,Lg)",
+          "default": "Sm"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover)",
+          "default": "Default"
+        },
+        {
+          "name": "Action",
+          "type": "VARIANT(3+,2,1)",
+          "default": "3+"
+        },
+        {
+          "name": "Theme",
+          "type": "VARIANT(Light,Dark)",
+          "default": "Light"
+        }
+      ]
+    },
+    {
+      "key": "5dd535040ff58ff3116ad930ee7c10b5690de7f9",
+      "name": "_Chat button reaction",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Default",
+            "Filled",
+            "Hover",
+            "Pressed"
+          ]
+        },
+        {
+          "name": "Reaction",
+          "values": [
+            "No",
+            "yes"
+          ]
+        },
+        {
+          "name": "Size",
+          "values": [
+            "xs",
+            "sm",
+            "md",
+            "lg"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "number#33858:6",
+          "type": "TEXT",
+          "default": "2"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Default,Filled,Hover,Pressed)",
+          "default": "Default"
+        },
+        {
+          "name": "Reaction",
+          "type": "VARIANT(No,yes)",
+          "default": "No"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(xs,sm,md,lg)",
+          "default": "xs"
+        }
+      ]
+    },
+    {
+      "key": "b2df93ac7044bb734c7da4f1e6d52085fc1c2dfd",
+      "name": "badges/reaction group",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Size",
+          "values": [
+            "xs",
+            "sm",
+            "md"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Show comment#28958:0",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show emoji 1#28958:4",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show emoji 2#28958:8",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show emoji 3#28958:12",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show emoji 4#28958:16",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show emoji 5#28958:20",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show emoji 6#28958:24",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show emoji 7#28958:28",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "show emoji 8#28958:32",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "show emoji 9#28958:36",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(xs,sm,md)",
+          "default": "xs"
+        }
+      ]
+    },
+    {
+      "key": "122dc6fa193d2ccc6741f3fb759240f2693d003f",
+      "name": "Chat_messages",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "type",
+          "values": [
+            "media",
+            "text"
+          ]
+        },
+        {
+          "name": "Breakpoint",
+          "values": [
+            "Mobile"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "username#27570:38",
+          "type": "TEXT",
+          "default": "@kelly_infin8ty_"
+        },
+        {
+          "name": "City, Country#27570:76",
+          "type": "TEXT",
+          "default": "New York, USA"
+        },
+        {
+          "name": "show reactions#27570:114",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Body#27570:152",
+          "type": "TEXT",
+          "default": "Line 5 is literally risking one of the biggest sources of fresh water on Earth — for what? More oil?? Nahhh. Indigenous voices said NO. Scientists said NO. It’s 2025. We’re not letting corporations play Jenga with our planet. #StopLine5 #WaterIsLife #LandBack"
+        },
+        {
+          "name": "Show options#34620:0",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "time#34620:14",
+          "type": "TEXT",
+          "default": "10m"
+        },
+        {
+          "name": "type",
+          "type": "VARIANT(media,text)",
+          "default": "text"
+        },
+        {
+          "name": "Breakpoint",
+          "type": "VARIANT(Mobile)",
+          "default": "Mobile"
+        }
+      ]
+    },
+    {
+      "key": "60dfc942d986499ef0383ab15db7e1bf1e5521db",
+      "name": "Chat_thread",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Text",
+            "Media",
+            "Action"
+          ]
+        },
+        {
+          "name": "Breakpoint",
+          "values": [
+            "Mobile",
+            "Desktop"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Date#27623:78",
+          "type": "TEXT",
+          "default": "2 days"
+        },
+        {
+          "name": "Body#27623:103",
+          "type": "TEXT",
+          "default": "Say it louder for the ppl in the back!! 🔊💯 Ain’t no planet B. Shut that pipeline DOWN. 🌍✋ #StopLine5"
+        },
+        {
+          "name": "show reactions#27623:128",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show option#34620:21",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Text,Media,Action)",
+          "default": "Text"
+        },
+        {
+          "name": "Breakpoint",
+          "type": "VARIANT(Mobile,Desktop)",
+          "default": "Mobile"
+        }
+      ]
+    },
+    {
+      "key": "d6f020206dbed609a210b2e79b63afb8ec1b26a2",
+      "name": "chat_items",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "type",
+          "values": [
+            "user",
+            "cause"
+          ]
+        },
+        {
+          "name": "state",
+          "values": [
+            "default",
+            "Hover",
+            "Selected"
+          ]
+        },
+        {
+          "name": "new",
+          "values": [
+            "false",
+            "true"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Title#27259:29",
+          "type": "TEXT",
+          "default": "#general"
+        },
+        {
+          "name": "Subtitle#27259:44",
+          "type": "TEXT",
+          "default": "Xave: allez chris !! two days ago 294, yesterday 309, let's gooo"
+        },
+        {
+          "name": "Username#27259:59",
+          "type": "TEXT",
+          "default": "@username"
+        },
+        {
+          "name": "type",
+          "type": "VARIANT(user,cause)",
+          "default": "user"
+        },
+        {
+          "name": "state",
+          "type": "VARIANT(default,Hover,Selected)",
+          "default": "default"
+        },
+        {
+          "name": "new",
+          "type": "VARIANT(false,true)",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "key": "dcd07972606c6c6b4c2992b7749d9b60bb7e5dbc",
+      "name": "_Chat reaction item",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "state",
+          "values": [
+            "Default",
+            "focus",
+            "selected"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "state",
+          "type": "VARIANT(Default,focus,selected)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "4eb14ca850b1db57238e5bdb86771ea3af4e8049",
+      "name": "_Chat reaction row",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "state",
+          "values": [
+            "Default",
+            "selected",
+            "focus"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "state",
+          "type": "VARIANT(Default,selected,focus)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "0c14c51c1249c45d2c6bbfb540b757bff1653a8d",
+      "name": "Chat reaction",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "state",
+          "values": [
+            "Default",
+            "focus",
+            "selected"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "body#27572:0",
+          "type": "TEXT",
+          "default": "Line 5 is literally risking one of the biggest sources of fresh water on Earth — for what? More oil?? Nahhh. Indigenous voices said NO. Scientists said NO. It’s 2025. We’re not letting corporations play Jenga with our planet. #StopLine5 #WaterIsLife #LandBack"
+        },
+        {
+          "name": "username#27572:4",
+          "type": "TEXT",
+          "default": "@kelly_infin8ty_"
+        },
+        {
+          "name": "location#27572:8",
+          "type": "TEXT",
+          "default": "New York, USA"
+        },
+        {
+          "name": "state",
+          "type": "VARIANT(Default,focus,selected)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "1f1211e80fef8536cbf5206c547330a33098353c",
+      "name": "chat_input",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Breakpoint",
+          "values": [
+            "Mobile",
+            "Desktop"
+          ]
+        },
+        {
+          "name": "Style",
+          "values": [
+            "Default"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "typing",
+            "filled",
+            "focus"
+          ]
+        },
+        {
+          "name": "Dock",
+          "values": [
+            "False",
+            "True",
+            "keyboard"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Text#32242:0",
+          "type": "TEXT",
+          "default": "usertext"
+        },
+        {
+          "name": "Placeholder#32242:5",
+          "type": "TEXT",
+          "default": "drop your idea here..."
+        },
+        {
+          "name": "Show horizontal buttons#35498:60",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Show image row#35498:66",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Show vertical buttons#35498:72",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Filled#35498:78",
+          "type": "TEXT",
+          "default": "I’m really upset about the new Biarritz-Marrakech flight because it’s bad for the environment. Adding more flights means more pollution, which hurts the planet and worsens climate change"
+        },
+        {
+          "name": "Breakpoint",
+          "type": "VARIANT(Mobile,Desktop)",
+          "default": "Mobile"
+        },
+        {
+          "name": "Style",
+          "type": "VARIANT(Default)",
+          "default": "Default"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,typing,filled,focus)",
+          "default": "Default"
+        },
+        {
+          "name": "Dock",
+          "type": "VARIANT(False,True,keyboard)",
+          "default": "False"
+        }
+      ]
+    },
+    {
+      "key": "8c6791d74572a8ef5a7ccfd5d1cf09601691874c",
+      "name": "_buttons reaction",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "react",
+            "multiples react"
+          ]
+        },
+        {
+          "name": "User reacted",
+          "values": [
+            "False",
+            "True"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "State",
+          "type": "VARIANT(Default,react,multiples react)",
+          "default": "Default"
+        },
+        {
+          "name": "User reacted",
+          "type": "VARIANT(False,True)",
+          "default": "False"
+        }
+      ]
+    },
+    {
+      "key": "09cc915274d45953d10fed1b2a904decefa917da",
+      "name": "Comment 1st level",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "open",
+            "reply"
+          ]
+        },
+        {
+          "name": "Breakpoint",
+          "values": [
+            "Mobile",
+            "Desktop"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Username#36504:0",
+          "type": "TEXT",
+          "default": "@seaspiracy"
+        },
+        {
+          "name": "time#36504:2",
+          "type": "TEXT",
+          "default": "4d ago"
+        },
+        {
+          "name": "body#36504:6",
+          "type": "TEXT",
+          "default": "this actually made my day, no joke. Please try it!"
+        },
+        {
+          "name": "Show replies#36504:8",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "creator#43717:20",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,open,reply)",
+          "default": "Default"
+        },
+        {
+          "name": "Breakpoint",
+          "type": "VARIANT(Mobile,Desktop)",
+          "default": "Mobile"
+        }
+      ]
+    },
+    {
+      "key": "0950c40fd1980dee42fc233c56bae1d9fd2c8a29",
+      "name": "comment 2nd level",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Breakpoint",
+          "values": [
+            "Mobile",
+            "Desktop"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Username#36504:23",
+          "type": "TEXT",
+          "default": "@lola_Nyc"
+        },
+        {
+          "name": "date#36504:24",
+          "type": "TEXT",
+          "default": "1h ago"
+        },
+        {
+          "name": "location#36504:25",
+          "type": "TEXT",
+          "default": "1h ago"
+        },
+        {
+          "name": "body#36504:26",
+          "type": "TEXT",
+          "default": "yesss, I had the same feeling"
+        },
+        {
+          "name": "Breakpoint",
+          "type": "VARIANT(Mobile,Desktop)",
+          "default": "Mobile"
+        }
+      ]
+    },
+    {
+      "key": "2f57b8e6384d55f96a95a87cc8aa879bbcf7485c",
+      "name": "comment_input",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Breakpoint",
+          "values": [
+            "Mobile",
+            "Desktop"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Focus",
+            "Filled",
+            "Typing"
+          ]
+        },
+        {
+          "name": "Type",
+          "values": [
+            "Default",
+            "Reply"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "placeholder#36528:0",
+          "type": "TEXT",
+          "default": "drop your comment here..."
+        },
+        {
+          "name": "usertext#36528:4",
+          "type": "TEXT",
+          "default": "user te"
+        },
+        {
+          "name": "filled#36528:10",
+          "type": "TEXT",
+          "default": "thank you for this action! soo proud to be here and want to do more with you guyss!"
+        },
+        {
+          "name": "Breakpoint",
+          "type": "VARIANT(Mobile,Desktop)",
+          "default": "Mobile"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Focus,Filled,Typing)",
+          "default": "Default"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Default,Reply)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "6f00b5b9b429884f77bb875f3ffe9bf4238c2bff",
+      "name": "_Checkbox base",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Disabled",
+            "Hover",
+            "pressed",
+            "Focus"
+          ]
+        },
+        {
+          "name": "Variant",
+          "values": [
+            "False",
+            "checked",
+            "Number"
+          ]
+        },
+        {
+          "name": "size",
+          "values": [
+            "md",
+            "sm"
+          ]
+        },
+        {
+          "name": "Type",
+          "values": [
+            "Default"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Disabled,Hover,pressed,Focus)",
+          "default": "Default"
+        },
+        {
+          "name": "Variant",
+          "type": "VARIANT(False,checked,Number)",
+          "default": "False"
+        },
+        {
+          "name": "size",
+          "type": "VARIANT(md,sm)",
+          "default": "md"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Default)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "216aee9c0d92ab5b701244c9cb9dae3ef106204c",
+      "name": "Checkbox",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Size",
+          "values": [
+            "md",
+            "sm"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover",
+            "Pressed",
+            "Focus",
+            "Disabled"
+          ]
+        },
+        {
+          "name": "isChecked",
+          "values": [
+            "False",
+            "True"
+          ]
+        },
+        {
+          "name": "Number",
+          "values": [
+            "False",
+            "True"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "With label#43299:19",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Label#43299:21",
+          "type": "TEXT",
+          "default": "Label"
+        },
+        {
+          "name": "with Description#43299:23",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show text#44074:0",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(md,sm)",
+          "default": "md"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover,Pressed,Focus,Disabled)",
+          "default": "Default"
+        },
+        {
+          "name": "isChecked",
+          "type": "VARIANT(False,True)",
+          "default": "False"
+        },
+        {
+          "name": "Number",
+          "type": "VARIANT(False,True)",
+          "default": "False"
+        }
+      ]
+    },
+    {
+      "key": "f31afb6dc3d85aef6f7b1cb4e6fe16f6e9f4ef7e",
+      "name": "Toggle base",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover",
+            "Focus",
+            "Disabled",
+            "Pressed"
+          ]
+        },
+        {
+          "name": "Pressed",
+          "values": [
+            "False",
+            "True"
+          ]
+        },
+        {
+          "name": "Size",
+          "values": [
+            "sm",
+            "md"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover,Focus,Disabled,Pressed)",
+          "default": "Default"
+        },
+        {
+          "name": "Pressed",
+          "type": "VARIANT(False,True)",
+          "default": "False"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(sm,md)",
+          "default": "sm"
+        }
+      ]
+    },
+    {
+      "key": "c407072d975f3b6abf46e5a42eb0a70423b20852",
+      "name": "_Radio base",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Size",
+          "values": [
+            "md",
+            "sm"
+          ]
+        },
+        {
+          "name": "isChecked",
+          "values": [
+            "False",
+            "True"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover",
+            "Pressed",
+            "Disabled",
+            "Focus"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Size",
+          "type": "VARIANT(md,sm)",
+          "default": "md"
+        },
+        {
+          "name": "isChecked",
+          "type": "VARIANT(False,True)",
+          "default": "False"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover,Pressed,Disabled,Focus)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "2ac1baf22fc6bfa76dc0e20dc90e324652571fe3",
+      "name": "Radio",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Size",
+          "values": [
+            "md",
+            "sm"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover",
+            "Pressed",
+            "Focus",
+            "Disabled"
+          ]
+        },
+        {
+          "name": "isChecked",
+          "values": [
+            "True",
+            "False"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Label#43299:25",
+          "type": "TEXT",
+          "default": "Label"
+        },
+        {
+          "name": "with Label#43299:27",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Description#43299:29",
+          "type": "TEXT",
+          "default": "Description"
+        },
+        {
+          "name": "with Description#43299:31",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show Text Container#44068:0",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(md,sm)",
+          "default": "md"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover,Pressed,Focus,Disabled)",
+          "default": "Default"
+        },
+        {
+          "name": "isChecked",
+          "type": "VARIANT(True,False)",
+          "default": "False"
+        }
+      ]
+    },
+    {
+      "key": "04c5dab84d83bdb8a1d4552009b0553a867179b1",
+      "name": "Date and time - Collapsed",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Selected"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Date#41980:0",
+          "type": "TEXT",
+          "default": "nov 12,"
+        },
+        {
+          "name": "Year#41980:2",
+          "type": "TEXT",
+          "default": "2025"
+        },
+        {
+          "name": "Time#41980:4",
+          "type": "TEXT",
+          "default": "5:30PM"
+        },
+        {
+          "name": "Show date#41980:6",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show time#41980:8",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Selected)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "a8d7b2be3d68b4d3ae0bba26c5fbdf5dae4d45b0",
+      "name": "_calendar cell",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "today",
+            "Selected",
+            "none",
+            "Disabled"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Number#41982:10",
+          "type": "TEXT",
+          "default": "1"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,today,Selected,none,Disabled)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "cc30af855fcd8aac3e88050f58f61d50948314dc",
+      "name": "Input date picker",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover",
+            "Pressed",
+            "Focused",
+            "filled"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Helper text#43313:0",
+          "type": "TEXT",
+          "default": "your action will be avalaible during 7 days "
+        },
+        {
+          "name": "Show helper text#43313:3",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover,Pressed,Focused,filled)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "69194cf1dd0c0e3ded15e7d84d9a902bd698390b",
+      "name": "Date and time - picker",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Default",
+            "Glass"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Month#41982:14",
+          "type": "TEXT",
+          "default": "november"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Default,Glass)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "3e3b2efd5c351cd3b2f9567318114f0831950213",
+      "name": "Scroll bar",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Length",
+          "values": [
+            "25%",
+            "50%",
+            "75%"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Length",
+          "type": "VARIANT(25%,50%,75%)",
+          "default": "25%"
+        }
+      ]
+    },
+    {
+      "key": "26491c7b91db310b4c4b446347c6fc2e2fd02779",
+      "name": "Dropdown menu item",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Size",
+          "values": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover",
+            "Focused"
+          ]
+        },
+        {
+          "name": "isChecked",
+          "values": [
+            "True",
+            "False"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "showIcon#43302:21",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Icon#43302:23",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:244018"
+        },
+        {
+          "name": "Text#43317:27",
+          "type": "TEXT",
+          "default": "List item"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(sm,md,lg)",
+          "default": "sm"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover,Focused)",
+          "default": "Default"
+        },
+        {
+          "name": "isChecked",
+          "type": "VARIANT(True,False)",
+          "default": "False"
+        }
+      ]
+    },
+    {
+      "key": "13b47c3dd712b04af825370a52a2479a117d4169",
+      "name": "Input dropdown menu",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "size",
+          "values": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Show _Scroll bar#43302:25",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "size",
+          "type": "VARIANT(sm,md,lg)",
+          "default": "sm"
+        }
+      ]
+    },
+    {
+      "key": "a636693b4902666a04f823b693a5e4c901eeb47e",
+      "name": "_header_icon button_nav",
+      "category": "navigation",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover",
+            "Pressed"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Notification#33461:10",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "icon swap#33795:0",
+          "type": "INSTANCE_SWAP",
+          "default": "33789:107324"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover,Pressed)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "600b52aae664b3604e3a466a4abd36d5c4d472d2",
+      "name": "header_avatar_nav",
+      "category": "navigation",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover",
+            "Pressed"
+          ]
+        },
+        {
+          "name": "Type",
+          "values": [
+            "Avatar",
+            "username"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover,Pressed)",
+          "default": "Default"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Avatar,username)",
+          "default": "Avatar"
+        }
+      ]
+    },
+    {
+      "key": "f80f4a8743988e8ae1fc302544286f82d3b38057",
+      "name": "Header_app",
+      "category": "navigation",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Home",
+            "Notification",
+            "search",
+            "My profile",
+            "not connected"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "left icon#44308:0",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "right icon#44308:6",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Home,Notification,search,My profile,not connected)",
+          "default": "not connected"
+        }
+      ]
+    },
+    {
+      "key": "5c84f9347b08a88596efa3735e8ec70577c18d8b",
+      "name": "Mobile header",
+      "category": "navigation",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Default",
+            "scrolled"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Status bar#34016:16",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Default,scrolled)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "1aaa91517bc36eed46e21b4da5c4d547e697588f",
+      "name": "Header web",
+      "category": "navigation",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "My Profile",
+            "home",
+            "Notification"
+          ]
+        },
+        {
+          "name": "Breakpoint",
+          "values": [
+            "Desktop"
+          ]
+        },
+        {
+          "name": "Connected",
+          "values": [
+            "True",
+            "False"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "username#43629:0",
+          "type": "TEXT",
+          "default": "@seaspiracy"
+        },
+        {
+          "name": "Show icon left#43649:75",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(My Profile,home,Notification)",
+          "default": "home"
+        },
+        {
+          "name": "Breakpoint",
+          "type": "VARIANT(Desktop)",
+          "default": "Desktop"
+        },
+        {
+          "name": "Connected",
+          "type": "VARIANT(True,False)",
+          "default": "False"
+        }
+      ]
+    },
+    {
+      "key": "6dcaf92ac339e7008bab6c6554901e7313c63e8a",
+      "name": "Page navigation",
+      "category": "navigation",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Breakpoint",
+          "values": [
+            "Mobile",
+            "Desktop"
+          ]
+        },
+        {
+          "name": "Border",
+          "values": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "scroll"
+          ]
+        },
+        {
+          "name": "Glass",
+          "values": [
+            "False"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Title#31335:0",
+          "type": "TEXT",
+          "default": "title"
+        },
+        {
+          "name": "Show title#31335:42",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show icon left#31620:81",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show icon right-2#31620:117",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show icon right-1#31620:135",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "show progress#43300:15",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Show button#43646:0",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Breakpoint",
+          "type": "VARIANT(Mobile,Desktop)",
+          "default": "Mobile"
+        },
+        {
+          "name": "Border",
+          "type": "VARIANT(True,False)",
+          "default": "False"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,scroll)",
+          "default": "Default"
+        },
+        {
+          "name": "Glass",
+          "type": "VARIANT(False)",
+          "default": "False"
+        }
+      ]
+    },
+    {
+      "key": "9235adaa64e54e3cbff7c1e01f325151745c80db",
+      "name": "Header navigation bar",
+      "category": "navigation",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "scroll"
+          ]
+        },
+        {
+          "name": "Type",
+          "values": [
+            "Default",
+            "bottom-sheet"
+          ]
+        },
+        {
+          "name": "Glass",
+          "values": [
+            "False",
+            "True"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "State",
+          "type": "VARIANT(Default,scroll)",
+          "default": "Default"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Default,bottom-sheet)",
+          "default": "Default"
+        },
+        {
+          "name": "Glass",
+          "type": "VARIANT(False,True)",
+          "default": "False"
+        }
+      ]
+    },
+    {
+      "key": "e8491d89d513bcd10dd88971217e4ef111303c62",
+      "name": "Action navigation",
+      "category": "navigation",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Breakpoint",
+          "values": [
+            "Mobile",
+            "Desktop"
+          ]
+        },
+        {
+          "name": "Border",
+          "values": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Scroll"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Title#31335:0",
+          "type": "TEXT",
+          "default": "title"
+        },
+        {
+          "name": "Show title#31335:42",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show icon left#31620:81",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show icon right-2#31620:117",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show icon right-1#31620:135",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show button#43300:22",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Breakpoint",
+          "type": "VARIANT(Mobile,Desktop)",
+          "default": "Mobile"
+        },
+        {
+          "name": "Border",
+          "type": "VARIANT(True,False)",
+          "default": "False"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Scroll)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "a67b2e7052bf4c7a3ddc02b50813bfc2f96c8df1",
+      "name": "footer",
+      "category": "navigation",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Breakpoint",
+          "values": [
+            "Desktop",
+            "Mobile"
+          ]
+        },
+        {
+          "name": "Connected",
+          "values": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Type",
+          "values": [
+            "Default",
+            "Action"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Breakpoint",
+          "type": "VARIANT(Desktop,Mobile)",
+          "default": "Desktop"
+        },
+        {
+          "name": "Connected",
+          "type": "VARIANT(True,False)",
+          "default": "True"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Default,Action)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "a0881b429b11a949073bd1099d6dabae8680d526",
+      "name": "Nav item base",
+      "category": "navigation",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Default",
+            "Icon only",
+            "Avatar"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover",
+            "Selected",
+            "Pressed",
+            "Focus"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Label#33300:14",
+          "type": "TEXT",
+          "default": "label"
+        },
+        {
+          "name": "Notifications#33300:17",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "icon swap#33319:21",
+          "type": "INSTANCE_SWAP",
+          "default": "33283:85820"
+        },
+        {
+          "name": "icon swap bold#33319:28",
+          "type": "INSTANCE_SWAP",
+          "default": "33283:85817"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Default,Icon only,Avatar)",
+          "default": "Default"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover,Selected,Pressed,Focus)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "57f885eeb309cd7604a6672b02ecd576b927dce5",
+      "name": "Side navigation",
+      "category": "navigation",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "minus",
+            "new"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "State",
+          "type": "VARIANT(Default,minus,new)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "674d60514f504314531cd3e7660dc7c6a6ad493e",
+      "name": "tab item",
+      "category": "navigation",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Icon with text",
+            "Icon",
+            "avatar"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Active",
+            "Default"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Label#33283:2",
+          "type": "TEXT",
+          "default": "tab name"
+        },
+        {
+          "name": "icon swap#33788:0",
+          "type": "INSTANCE_SWAP",
+          "default": "33283:85820"
+        },
+        {
+          "name": "icon-full swap#33788:9",
+          "type": "INSTANCE_SWAP",
+          "default": "33283:85817"
+        },
+        {
+          "name": "Notification#33922:4",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show dot#43874:0",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Icon with text,Icon,avatar)",
+          "default": "Icon with text"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Active,Default)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "5bfa941b4182097d08b58285cf0388fb327ba9bd",
+      "name": "tab bar",
+      "category": "navigation",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "default",
+            "floatting"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "name": "Label",
+          "values": [
+            "False"
+          ]
+        },
+        {
+          "name": "Device",
+          "values": [
+            "iOS",
+            "Web mobile"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Type",
+          "type": "VARIANT(default,floatting)",
+          "default": "default"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(1,2,3,4)",
+          "default": "1"
+        },
+        {
+          "name": "Label",
+          "type": "VARIANT(False)",
+          "default": "False"
+        },
+        {
+          "name": "Device",
+          "type": "VARIANT(iOS,Web mobile)",
+          "default": "iOS"
+        }
+      ]
+    },
+    {
+      "key": "5534b09c9ebf77671bf812caafb34e2b85b812c5",
+      "name": "Input field",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Default",
+            "Phone number",
+            "Leading text"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Focused",
+            "Filled",
+            "Error",
+            "Disabled",
+            "Placeholder"
+          ]
+        },
+        {
+          "name": "Style",
+          "values": [
+            "Default"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Show Label#31306:20",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show Helper text#31306:86",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show right icon#31306:152",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show left icon#31306:218",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Helper text#31306:306",
+          "type": "TEXT",
+          "default": "helper text"
+        },
+        {
+          "name": "User text#31306:328",
+          "type": "TEXT",
+          "default": "user text"
+        },
+        {
+          "name": "Label#31306:339",
+          "type": "TEXT",
+          "default": "Label"
+        },
+        {
+          "name": "Show text Button#32445:0",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Show ButtonsIcon#32445:23",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "leading text#43379:1",
+          "type": "TEXT",
+          "default": "https://"
+        },
+        {
+          "name": "Placeholder#43379:17",
+          "type": "TEXT",
+          "default": "placeholder"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Default,Phone number,Leading text)",
+          "default": "Default"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Focused,Filled,Error,Disabled,Placeholder)",
+          "default": "Placeholder"
+        },
+        {
+          "name": "Style",
+          "type": "VARIANT(Default)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "c1d1974680359fb532e8e3ed7112a9700266c54a",
+      "name": "Text area",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Default",
+            "Badge"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Placeholder",
+            "Filled",
+            "Disabled",
+            "Focused",
+            "Close",
+            "edit again"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Show label#31317:0",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Label#31317:21",
+          "type": "TEXT",
+          "default": "Label"
+        },
+        {
+          "name": "Placeholder#31317:42",
+          "type": "TEXT",
+          "default": "add email"
+        },
+        {
+          "name": "User text#31317:63",
+          "type": "TEXT",
+          "default": "user description"
+        },
+        {
+          "name": "Show Helper text#31317:96",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Helper text#31317:108",
+          "type": "TEXT",
+          "default": "Helper text"
+        },
+        {
+          "name": "Show AI button#32383:19",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Show ButtonsIcon#43619:0",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show Tint text#43621:9",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Default,Badge)",
+          "default": "Default"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Placeholder,Filled,Disabled,Focused,Close,edit again)",
+          "default": "Placeholder"
+        }
+      ]
+    },
+    {
+      "key": "55a9ff8dbfa5a897da0e94fe93a39a4d303f7350",
+      "name": "_Number input item",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Filled",
+            "Default",
+            "Focus",
+            "Error"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Number#31315:7",
+          "type": "TEXT",
+          "default": "3"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Filled,Default,Focus,Error)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "29980515115f46ecad43bbc30aac24eb653c07f8",
+      "name": "Number input field",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "default",
+            "Focus",
+            "Typing",
+            "Filled",
+            "Error"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "State",
+          "type": "VARIANT(default,Focus,Typing,Filled,Error)",
+          "default": "default"
+        }
+      ]
+    },
+    {
+      "key": "32e6e59aa22e74811c2a2e7e895fcb88fe8ec3d9",
+      "name": "InputActionField",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Placeholder",
+            "Filled",
+            "Error",
+            "Disabled",
+            "Focused"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Show Helper text#31306:86",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show right icon#31306:152",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show left icon#31306:218",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Icon Swap left#31306:284",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:245735"
+        },
+        {
+          "name": "Icon Swap right#31306:295",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:243278"
+        },
+        {
+          "name": "Helper text#31306:306",
+          "type": "TEXT",
+          "default": "helper text"
+        },
+        {
+          "name": "Placeholder#31306:317",
+          "type": "TEXT",
+          "default": "placeholder"
+        },
+        {
+          "name": "User text#31306:328",
+          "type": "TEXT",
+          "default": "user text"
+        },
+        {
+          "name": "Label#31306:339",
+          "type": "TEXT",
+          "default": "Label"
+        },
+        {
+          "name": "Show avatar#43317:11",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "toggle#43847:0",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Placeholder,Filled,Error,Disabled,Focused)",
+          "default": "Placeholder"
+        }
+      ]
+    },
+    {
+      "key": "63e4fc6bbfd9da737ccee23e62b525c78f16b57c",
+      "name": "action form title",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Placeholder",
+            "filled",
+            "Error",
+            "Disabled",
+            "Focused"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Placeholder#31315:0",
+          "type": "TEXT",
+          "default": "title of your campaign"
+        },
+        {
+          "name": "User title#31315:3",
+          "type": "TEXT",
+          "default": "this is a great title"
+        },
+        {
+          "name": "Helper text#41808:0",
+          "type": "TEXT",
+          "default": "add a title for your action"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Placeholder,filled,Error,Disabled,Focused)",
+          "default": "Placeholder"
+        }
+      ]
+    },
+    {
+      "key": "f29d49611de3d1273600a20b1a64f97399e54a0b",
+      "name": "ActionFormTitle",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Placeholder",
+            "Filled",
+            "Error",
+            "Focused"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Placeholder#40892:0",
+          "type": "TEXT",
+          "default": "add cause"
+        },
+        {
+          "name": "Usertext#40892:2",
+          "type": "TEXT",
+          "default": "ClimateWalk"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Placeholder,Filled,Error,Focused)",
+          "default": "Placeholder"
+        }
+      ]
+    },
+    {
+      "key": "29273be8e3fa6620071989e3a2be61ffb31a6f80",
+      "name": "ActionTextArea",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Prompt"
+          ]
+        },
+        {
+          "name": "Style",
+          "values": [
+            "Default",
+            "Glass"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Placeholder",
+            "Filled",
+            "Error",
+            "Disabled",
+            "Focused"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Placeholder#31317:42",
+          "type": "TEXT",
+          "default": "tap to add"
+        },
+        {
+          "name": "User text#31317:63",
+          "type": "TEXT",
+          "default": "user description"
+        },
+        {
+          "name": "Prompt#31317:84",
+          "type": "TEXT",
+          "default": "what's your strategy? how will you turn challenges into opportunities?"
+        },
+        {
+          "name": "Helper text#31317:108",
+          "type": "TEXT",
+          "default": "Helper text"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Prompt)",
+          "default": "Prompt"
+        },
+        {
+          "name": "Style",
+          "type": "VARIANT(Default,Glass)",
+          "default": "Default"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Placeholder,Filled,Error,Disabled,Focused)",
+          "default": "Placeholder"
+        }
+      ]
+    },
+    {
+      "key": "2d574e664151f08585f6d2f5eb4b553272d81f0d",
+      "name": "Search_bar base",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Placeholder",
+            "Hover",
+            "Focused",
+            "filled"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Placeholder#43302:0",
+          "type": "TEXT",
+          "default": "search"
+        },
+        {
+          "name": "x-close button#44285:2",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Placeholder,Hover,Focused,filled)",
+          "default": "Placeholder"
+        }
+      ]
+    },
+    {
+      "key": "c984266ceae689247bf824cecd65a07a09764d96",
+      "name": "Search_bar",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover",
+            "Filled",
+            "Focus",
+            "Placeholder"
+          ]
+        },
+        {
+          "name": "Framed",
+          "values": [
+            "true",
+            "False"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Show helper text#32663:33",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "helper text#32663:43",
+          "type": "TEXT",
+          "default": "helper text"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover,Filled,Focus,Placeholder)",
+          "default": "Placeholder"
+        },
+        {
+          "name": "Framed",
+          "type": "VARIANT(true,False)",
+          "default": "true"
+        }
+      ]
+    },
+    {
+      "key": "3477bb6012c08dee96b250e96d6de4c132760d89",
+      "name": "email_form",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Recipients",
+            "Subject",
+            "Bodytext"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Focus",
+            "Typing",
+            "Filled",
+            "loader"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Placeholder#128:8",
+          "type": "TEXT",
+          "default": "email@gmail.com"
+        },
+        {
+          "name": "Show helper text#128:16",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Subject#143:2",
+          "type": "TEXT",
+          "default": "subject"
+        },
+        {
+          "name": "Body#143:9",
+          "type": "TEXT",
+          "default": "write your email here..."
+        },
+        {
+          "name": "Usertext#43635:0",
+          "type": "TEXT",
+          "default": "m.gasoil@total.com"
+        },
+        {
+          "name": "Show Cc + Bcc#43635:16",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show warning#43635:32",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Show danger#43635:45",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Show tint text#43635:58",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Helper text#43635:72",
+          "type": "TEXT",
+          "default": "Separate multiple emails with ;"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Recipients,Subject,Bodytext)",
+          "default": "Recipients"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Focus,Typing,Filled,loader)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "bb1e6a481515d39100631c0722e7aa10e64a802c",
+      "name": "_ranking_number",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "number",
+          "values": [
+            "1",
+            "2",
+            "3",
+            "dot"
+          ]
+        },
+        {
+          "name": "Size",
+          "values": [
+            "Default",
+            "small"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "number",
+          "type": "VARIANT(1,2,3,dot)",
+          "default": "1"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(Default,small)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "a8d848f6359a25220ce22ae96dddde9c74ad084c",
+      "name": "avatar_rank",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Rank",
+          "values": [
+            "1st",
+            "2nd",
+            "3rd"
+          ]
+        },
+        {
+          "name": "Size",
+          "values": [
+            "Big",
+            "Small"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Rank",
+          "type": "VARIANT(1st,2nd,3rd)",
+          "default": "1st"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(Big,Small)",
+          "default": "Big"
+        }
+      ]
+    },
+    {
+      "key": "fd2f3dcd711501c5a60ce1e39ea8ecfaf3fa3735",
+      "name": "_ranking_member_row",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "default",
+            "user"
+          ]
+        },
+        {
+          "name": "Number",
+          "values": [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        {
+          "name": "Size",
+          "values": [
+            "Default",
+            "small"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Username#27623:0",
+          "type": "TEXT",
+          "default": "Seb4Us"
+        },
+        {
+          "name": "actions#27623:13",
+          "type": "TEXT",
+          "default": "2,603"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(default,user)",
+          "default": "default"
+        },
+        {
+          "name": "Number",
+          "type": "VARIANT(1,2,3)",
+          "default": "1"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(Default,small)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "a76cbea617cea1772f37eb54989e0f2728bee86b",
+      "name": "_ranking_member_top",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Default",
+            "User"
+          ]
+        },
+        {
+          "name": "Rank",
+          "values": [
+            "1",
+            "2",
+            "3",
+            "empty_state"
+          ]
+        },
+        {
+          "name": "Size",
+          "values": [
+            "Big",
+            "Small"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Type",
+          "type": "VARIANT(Default,User)",
+          "default": "Default"
+        },
+        {
+          "name": "Rank",
+          "type": "VARIANT(1,2,3,empty_state)",
+          "default": "1"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(Big,Small)",
+          "default": "Big"
+        }
+      ]
+    },
+    {
+      "key": "d9deaf7f83fe48f559a4d9b6ebf1edb2b220b692",
+      "name": "User list",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Default",
+            "Glass"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover",
+            "Pressed"
+          ]
+        },
+        {
+          "name": "Style",
+          "values": [
+            "Default"
+          ]
+        },
+        {
+          "name": "size",
+          "values": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Show Button#99:49",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Show ButtonsIcon#31343:0",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Default,Glass)",
+          "default": "Default"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover,Pressed)",
+          "default": "Default"
+        },
+        {
+          "name": "Style",
+          "type": "VARIANT(Default)",
+          "default": "Default"
+        },
+        {
+          "name": "size",
+          "type": "VARIANT(sm,md,lg)",
+          "default": "sm"
+        }
+      ]
+    },
+    {
+      "key": "2248650b9f0f0681c5b0b0c831a59eb940778a18",
+      "name": "donation_comment",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Property 1",
+          "values": [
+            "Default"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "username#38002:0",
+          "type": "TEXT",
+          "default": "olga_ny_"
+        },
+        {
+          "name": "date#38002:1",
+          "type": "TEXT",
+          "default": "aug 6"
+        },
+        {
+          "name": "Amount#38002:2",
+          "type": "TEXT",
+          "default": "$15.00"
+        },
+        {
+          "name": "Status#38002:3",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Message#38002:4",
+          "type": "TEXT",
+          "default": "Thanks for everything you do — keep going, the world needs more people like you 💪🌍"
+        },
+        {
+          "name": "show message#38002:5",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "user#38370:0",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "frequency#42801:0",
+          "type": "TEXT",
+          "default": "recurring"
+        },
+        {
+          "name": "Property 1",
+          "type": "VARIANT(Default)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "88ff55815afeffe7923498256ef69239f4947d04",
+      "name": "donation_item",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "state",
+          "values": [
+            "Default"
+          ]
+        },
+        {
+          "name": "Stroke",
+          "values": [
+            "True",
+            "Flase"
+          ]
+        },
+        {
+          "name": "Breakpoint",
+          "values": [
+            "Mobile",
+            "Desktop"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "creator name#37848:8",
+          "type": "TEXT",
+          "default": "Kelly Dochi"
+        },
+        {
+          "name": "amount#37848:9",
+          "type": "TEXT",
+          "default": "$17"
+        },
+        {
+          "name": "date#37848:12",
+          "type": "TEXT",
+          "default": "aug 5"
+        },
+        {
+          "name": "type#37848:15",
+          "type": "TEXT",
+          "default": "recurring donation"
+        },
+        {
+          "name": "state",
+          "type": "VARIANT(Default)",
+          "default": "Default"
+        },
+        {
+          "name": "Stroke",
+          "type": "VARIANT(True,Flase)",
+          "default": "True"
+        },
+        {
+          "name": "Breakpoint",
+          "type": "VARIANT(Mobile,Desktop)",
+          "default": "Mobile"
+        }
+      ]
+    },
+    {
+      "key": "6c3d45daf136420275c91852cf00634578ffe7b6",
+      "name": "Notification_row",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "info",
+            "creator"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Body#35087:7",
+          "type": "TEXT",
+          "default": "publish a new action"
+        },
+        {
+          "name": "date#35087:14",
+          "type": "TEXT",
+          "default": "1h"
+        },
+        {
+          "name": "username#35087:21",
+          "type": "TEXT",
+          "default": "@seaspiracy"
+        },
+        {
+          "name": "Long text#43714:0",
+          "type": "TEXT",
+          "default": "Your action “Send an email to MSC to request a review of Aker BioMarine's MSC certification” expires today."
+        },
+        {
+          "name": "Show action card#43714:5",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "new#43714:10",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "badge#43715:15",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(info,creator)",
+          "default": "info"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "ac48f57b087055b1a21b195763a0ed47914c584d",
+      "name": "_Dropdown list item divider",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "size",
+          "values": [
+            "Default",
+            "md",
+            "lg"
+          ]
+        },
+        {
+          "name": "Divider",
+          "values": [
+            "False",
+            "True"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "size",
+          "type": "VARIANT(Default,md,lg)",
+          "default": "Default"
+        },
+        {
+          "name": "Divider",
+          "type": "VARIANT(False,True)",
+          "default": "False"
+        }
+      ]
+    },
+    {
+      "key": "6ec620b1618fdc78982c24d29e0c176ee9e3eb70",
+      "name": "Dropdown list item",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Size",
+          "values": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover",
+            "Focused"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Show icon left#43302:3",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "IconLeft#43302:9",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:244018"
+        },
+        {
+          "name": "IconRight#43302:11",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:244018"
+        },
+        {
+          "name": "Show icon right#43302:13",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show _Toggle base#43302:15",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Show _Checkbox base#43302:17",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Text#43317:17",
+          "type": "TEXT",
+          "default": "Main item"
+        },
+        {
+          "name": "Text 2#44176:0",
+          "type": "TEXT",
+          "default": "Secondary"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(sm,md,lg)",
+          "default": "sm"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover,Focused)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "edaa9dd0ea960654e7cdb909da40bdce3d4e9fa8",
+      "name": "Modal action item",
+      "category": "overlay",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Horizontal",
+            "Fill",
+            "close",
+            "vertical"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Type",
+          "type": "VARIANT(Horizontal,Fill,close,vertical)",
+          "default": "Horizontal"
+        }
+      ]
+    },
+    {
+      "key": "ff4c36c4a454ec3320494f08f46f483cf9c77fbc",
+      "name": "modal",
+      "category": "overlay",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Modal"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Type",
+          "type": "VARIANT(Modal)",
+          "default": "Modal"
+        }
+      ]
+    },
+    {
+      "key": "d8e62c7efa95643a75dd6b3e2d3743bdebe09c6f",
+      "name": "modal",
+      "category": "overlay",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Warning",
+            "success",
+            "warning",
+            "brand"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "icon#44279:0",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Warning,success,warning,brand)",
+          "default": "Warning"
+        }
+      ]
+    },
+    {
+      "key": "ad891edb6e88270cb3d9ffd84215454da1982b55",
+      "name": "bottom-sheet",
+      "category": "overlay",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Default",
+            "Glass"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Type",
+          "type": "VARIANT(Default,Glass)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "c1fe094e2d906a70ba8b530817b19ad758e9af55",
+      "name": "Tooltip_notification",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Arrow",
+          "values": [
+            "Bottom-center",
+            "None",
+            "Bottom-left",
+            "Bottom-right",
+            "Top",
+            "Left",
+            "Right",
+            "top-right",
+            "top-left"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Text#33055:0",
+          "type": "TEXT",
+          "default": "This is a tooltip"
+        },
+        {
+          "name": "icon swap#37199:0",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:244183"
+        },
+        {
+          "name": "close button#37199:10",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "icon#37199:20",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Arrow",
+          "type": "VARIANT(Bottom-center,None,Bottom-left,Bottom-right,Top,Left,Right,top-right,top-left)",
+          "default": "None"
+        }
+      ]
+    },
+    {
+      "key": "cd05fc1f0f29505207259b6e3134ce2a2730cb5e",
+      "name": "Pagination item base",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Number",
+            "Icon"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Active",
+            "Hover",
+            "Pressed"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Number#510:29",
+          "type": "TEXT",
+          "default": "1"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Number,Icon)",
+          "default": "Number"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Active,Hover,Pressed)",
+          "default": "Active"
+        }
+      ]
+    },
+    {
+      "key": "cefb2ad522f3b7a81f20e62f678d3363291cd1b2",
+      "name": "_Stepper item",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Focus"
+          ]
+        },
+        {
+          "name": "Breakpoint",
+          "values": [
+            "Desktop",
+            "Mobile"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Focus)",
+          "default": "Default"
+        },
+        {
+          "name": "Breakpoint",
+          "type": "VARIANT(Desktop,Mobile)",
+          "default": "Desktop"
+        }
+      ]
+    },
+    {
+      "key": "e34e8bfe49bc86db0349f828bc1f5eefe5197908",
+      "name": "Stepper",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Breakpoint",
+          "values": [
+            "Desktop",
+            "Mobile"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Breakpoint",
+          "type": "VARIANT(Desktop,Mobile)",
+          "default": "Desktop"
+        }
+      ]
+    },
+    {
+      "key": "043bbd2d361f7179f58094f1b2e661b1daf051d8",
+      "name": "_Progress Item",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "size",
+          "values": [
+            "sm",
+            "md"
+          ]
+        },
+        {
+          "name": "isDisabled",
+          "values": [
+            "False",
+            "True"
+          ]
+        },
+        {
+          "name": "position",
+          "values": [
+            "left",
+            "middle",
+            "right"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "size",
+          "type": "VARIANT(sm,md)",
+          "default": "md"
+        },
+        {
+          "name": "isDisabled",
+          "type": "VARIANT(False,True)",
+          "default": "False"
+        },
+        {
+          "name": "position",
+          "type": "VARIANT(left,middle,right)",
+          "default": "left"
+        }
+      ]
+    },
+    {
+      "key": "372ee4f19d3f703753085fb7c259eef5209a5b7b",
+      "name": "Progress indicator",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Size",
+          "values": [
+            "md",
+            "sm"
+          ]
+        },
+        {
+          "name": "Progress",
+          "values": [
+            "0",
+            "100",
+            "80",
+            "60",
+            "40",
+            "20"
+          ]
+        },
+        {
+          "name": "Position",
+          "values": [
+            "None",
+            "Bottom",
+            "right"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Size",
+          "type": "VARIANT(md,sm)",
+          "default": "md"
+        },
+        {
+          "name": "Progress",
+          "type": "VARIANT(0,100,80,60,40,20)",
+          "default": "0"
+        },
+        {
+          "name": "Position",
+          "type": "VARIANT(None,Bottom,right)",
+          "default": "None"
+        }
+      ]
+    },
+    {
+      "key": "fd1dee7edb451d935d801bef7b48d7493cc1acea",
+      "name": "filter button",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Size",
+          "values": [
+            "sm",
+            "md"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "filled",
+            "Pressed",
+            "Default",
+            "Hover"
+          ]
+        },
+        {
+          "name": "Style",
+          "values": [
+            "Default",
+            "Avatar",
+            "Bordless"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Text#40490:3",
+          "type": "TEXT",
+          "default": "@creator_name"
+        },
+        {
+          "name": "Icon right#40490:4",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Icon left#40490:5",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Placeholder#40490:6",
+          "type": "TEXT",
+          "default": "creator"
+        },
+        {
+          "name": "Icon swap right#42269:0",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:243266"
+        },
+        {
+          "name": "Icon swap left#42269:7",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:243266"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(sm,md)",
+          "default": "sm"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(filled,Pressed,Default,Hover)",
+          "default": "Default"
+        },
+        {
+          "name": "Style",
+          "type": "VARIANT(Default,Avatar,Bordless)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "cd131a9ec271e8b7528257ce9c9547668ef1e9ed",
+      "name": "Tab_item",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Text",
+            "Button"
+          ]
+        },
+        {
+          "name": "Select",
+          "values": [
+            "False",
+            "True"
+          ]
+        },
+        {
+          "name": "Size",
+          "values": [
+            "md",
+            "lg",
+            "sm"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Label#27734:0",
+          "type": "TEXT",
+          "default": "label"
+        },
+        {
+          "name": "Show icon right#31335:147",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "icon right swap#31335:152",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:243266"
+        },
+        {
+          "name": "show icon left#31335:157",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "icon left swap#31335:162",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:244018"
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(Text,Button)",
+          "default": "Text"
+        },
+        {
+          "name": "Select",
+          "type": "VARIANT(False,True)",
+          "default": "False"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(md,lg,sm)",
+          "default": "sm"
+        }
+      ]
+    },
+    {
+      "key": "a49a502b751934ddc5b12d96362596d7d142cefa",
+      "name": "Tabs",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "01",
+            "02",
+            "03",
+            "04"
+          ]
+        },
+        {
+          "name": "Size",
+          "values": [
+            "md",
+            "lg",
+            "sm"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Type",
+          "type": "VARIANT(01,02,03,04)",
+          "default": "01"
+        },
+        {
+          "name": "Size",
+          "type": "VARIANT(md,lg,sm)",
+          "default": "sm"
+        }
+      ]
+    },
+    {
+      "key": "1ee561c273fd3599acbac5c35da02e2c7e00b1a6",
+      "name": "Table cell header",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover",
+            "Pressed"
+          ]
+        },
+        {
+          "name": "Text",
+          "values": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Checkbox",
+          "values": [
+            "False",
+            "True"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "label#469:2",
+          "type": "TEXT",
+          "default": "label"
+        },
+        {
+          "name": "WtihIcon#469:6",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Instance#43536:83",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:243179"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover,Pressed)",
+          "default": "Default"
+        },
+        {
+          "name": "Text",
+          "type": "VARIANT(True,False)",
+          "default": "True"
+        },
+        {
+          "name": "Checkbox",
+          "type": "VARIANT(False,True)",
+          "default": "False"
+        }
+      ]
+    },
+    {
+      "key": "8d774dfff1cf664f40cda71a9b83cc611ad1188f",
+      "name": "Table Cell Item",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Style",
+          "values": [
+            "Action lead",
+            "Text",
+            "Button",
+            "Action row",
+            "badge",
+            "multiples",
+            "Checkbox",
+            "Lead avatar",
+            "tag"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover",
+            "Action"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "action title#469:10",
+          "type": "TEXT",
+          "default": "Holding Huawei Accountable – Urging the EU to ACT"
+        },
+        {
+          "name": "Date#469:14",
+          "type": "TEXT",
+          "default": "schedule for 18 jan."
+        },
+        {
+          "name": "Show arrow-up#469:16",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Text#486:21",
+          "type": "TEXT",
+          "default": "103"
+        },
+        {
+          "name": "completed#43478:58",
+          "type": "TEXT",
+          "default": "1.1k completed"
+        },
+        {
+          "name": "views#43478:64",
+          "type": "TEXT",
+          "default": "1.1k views"
+        },
+        {
+          "name": "Show Badge#43479:70",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Icon#43531:76",
+          "type": "INSTANCE_SWAP",
+          "default": "24398:243242"
+        },
+        {
+          "name": "date#43544:0",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "Style",
+          "type": "VARIANT(Action lead,Text,Button,Action row,badge,multiples,Checkbox,Lead avatar,tag)",
+          "default": "Action lead"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover,Action)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "1c73f36d8d542f4c43bbbfd58440c3ef7244a84d",
+      "name": "table row",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "Action"
+          ]
+        },
+        {
+          "name": "State",
+          "values": [
+            "Default",
+            "Hover"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Type",
+          "type": "VARIANT(Action)",
+          "default": "Action"
+        },
+        {
+          "name": "State",
+          "type": "VARIANT(Default,Hover)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "de46b3b7854897748e61953ed2be78bf19ac961f",
+      "name": "Toast",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Type",
+          "values": [
+            "with image",
+            "default",
+            "with icon"
+          ]
+        },
+        {
+          "name": "Style",
+          "values": [
+            "Default",
+            "Glass"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Title#31881:0",
+          "type": "TEXT",
+          "default": "this is a title"
+        },
+        {
+          "name": "Body#35933:3",
+          "type": "TEXT",
+          "default": "write here the body text"
+        },
+        {
+          "name": "show body#35933:6",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Show button#35933:9",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Type",
+          "type": "VARIANT(with image,default,with icon)",
+          "default": "default"
+        },
+        {
+          "name": "Style",
+          "type": "VARIANT(Default,Glass)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "ff40b0a0dbb7bf174d001be7b33cc95d5db3c9a3",
+      "name": "Dialog",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Mode",
+          "values": [
+            "Default"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "show secondary button#30244:0",
+          "type": "BOOLEAN",
+          "default": false
+        },
+        {
+          "name": "body#30244:3",
+          "type": "TEXT",
+          "default": "Oops, you’ve run out of climate-friendly actions! Adjust your settings to discover more ways to get impact!"
+        },
+        {
+          "name": "Title#30244:6",
+          "type": "TEXT",
+          "default": "no action found"
+        },
+        {
+          "name": "show close button#30244:9",
+          "type": "BOOLEAN",
+          "default": true
+        },
+        {
+          "name": "Mode",
+          "type": "VARIANT(Default)",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "key": "6db13f5d4476faefc5619bf4926fb28924af3a7a",
+      "name": "Destructire dialogue",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "Breaklpoint",
+          "values": [
+            "Desktop",
+            "Mobile"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Breaklpoint",
+          "type": "VARIANT(Desktop,Mobile)",
+          "default": "Mobile"
+        }
+      ]
+    },
+    {
+      "key": "a943c15922593fa041852c58a22dae0f8c2477cc",
+      "name": "Command_image",
+      "category": "layout",
+      "status": "stable",
+      "variants": [
+        {
+          "name": "State",
+          "values": [
+            "Unsplash",
+            "upload"
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "State",
+          "type": "VARIANT(Unsplash,upload)",
+          "default": "Unsplash"
+        }
+      ]
+    }
+  ]
+}
