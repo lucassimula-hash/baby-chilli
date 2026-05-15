@@ -17,6 +17,8 @@ const foundations = [
   { name: "Logos", slug: "logos" },
 ];
 
+const showcase = [{ name: "Showcase", slug: "showcase" }];
+
 interface SidebarProps {
   open: boolean;
   onClose: () => void;
@@ -151,7 +153,30 @@ export function Sidebar({ open, onClose }: SidebarProps) {
           />
 
           <div className="mb-[var(--space-9)]">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.05em] text-[var(--text-base-secondary)] px-3 mb-2 block">
+            <ul className="space-y-0.5">
+              {showcase.map((item) => (
+                <li key={item.slug}>
+                  <Link
+                    href={`/docs/${item.slug}`}
+                    ref={(el) => registerRef(item.slug, el)}
+                    onClick={onClose}
+                    onMouseEnter={() => handleItemHover(item.slug)}
+                    className={cn(
+                      "relative z-10 rounded-full px-3 py-2 text-sm transition-colors duration-100 block",
+                      isActive(item.slug)
+                        ? "text-[var(--text-base-primary)] font-medium"
+                        : "text-[var(--text-base-secondary)]"
+                    )}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="mb-[var(--space-9)]">
+            <span className="px-3 mb-2 block text-[11px] font-semibold tracking-[0.05em] text-[var(--text-base-secondary)]">
               Components
             </span>
             <ul className="space-y-0.5">
@@ -178,7 +203,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
 
           {/* Foundations */}
           <div>
-            <span className="text-[11px] font-semibold uppercase tracking-[0.05em] text-[var(--text-base-secondary)] px-3 mb-2 block">
+            <span className="px-3 mb-2 block text-[11px] font-semibold tracking-[0.05em] text-[var(--text-base-secondary)]">
               Foundations
             </span>
             <ul className="space-y-0.5">

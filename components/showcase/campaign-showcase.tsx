@@ -6,6 +6,7 @@ import { Bell, ChevronRight, ArrowRight, Home, Compass, User } from "lucide-reac
 import { CampaignCard, SHARED_ELEMENT_TRANSITION } from "@/components/ui/campaign-card";
 import { CampaignPage } from "@/components/ui/campaign-page";
 import { Button } from "@/components/ui/button";
+import { AnimatedTitle } from "@/components/ui/animated-title";
 import { cn } from "@/lib/utils";
 
 const SEASPIRACY = {
@@ -174,12 +175,12 @@ function MobileHeader() {
       <IOSStatusBar />
       <div className="flex items-center justify-between py-2 pl-4 pr-3">
         {/* Title — Headings/display/semibold (32/40, -1px) per Figma */}
-        <h1
+        <AnimatedTitle as="h1"
           className="text-[32px] font-semibold leading-10 tracking-[-1px] text-[var(--text-base-primary)]"
           style={{ fontFamily: "var(--font-family-primary), sans-serif" }}
         >
           feed
-        </h1>
+        </AnimatedTitle>
         {/* Icon nav button — 40×40 with notification dot */}
         <button
           type="button"

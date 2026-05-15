@@ -1,6 +1,7 @@
 "use client";
 
 import { ChilliLogo } from "@/components/ui/chilli-logo";
+import { AnimatedTitle } from "@/components/ui/animated-title";
 
 /* ------------------------------------------------------------------ */
 /*  Logos & Brand Guidelines page                                      */
@@ -35,9 +36,9 @@ export default function LogosPage() {
   return (
     <article>
       <header className="mb-10">
-        <h1 className="text-[24px] font-bold tracking-tight text-[var(--text-base-primary)]">
+        <AnimatedTitle as="h1" className="text-[24px] font-bold tracking-tight text-[var(--text-base-primary)]">
           Logos
-        </h1>
+        </AnimatedTitle>
         <p className="mt-2 max-w-2xl text-[14px] leading-relaxed text-[var(--text-base-secondary)]">
           Brand guidelines for using the Chilli logo across products, marketing, and partner
           materials. Consistent usage protects brand recognition and visual trust.

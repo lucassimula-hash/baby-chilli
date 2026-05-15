@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Check, Copy } from "lucide-react";
+import { AnimatedTitle } from "@/components/ui/animated-title";
 
 /* ------------------------------------------------------------------ */
 /*  Token data — mirrors the Figma "theme" collection (Light / Dark)  */
@@ -410,9 +411,9 @@ export default function ColorsPage() {
   return (
     <article>
       <header className="mb-10">
-        <h1 className="text-[24px] font-bold tracking-tight text-[var(--text-base-primary)]">
+        <AnimatedTitle as="h1" className="text-[24px] font-bold tracking-tight text-[var(--text-base-primary)]">
           Colors
-        </h1>
+        </AnimatedTitle>
         <p className="mt-2 max-w-2xl text-[14px] leading-relaxed text-[var(--text-base-secondary)]">
           The Chilli design system uses semantic color tokens mapped to CSS custom properties.
           Each token adapts automatically between light and dark themes. Click any swatch to

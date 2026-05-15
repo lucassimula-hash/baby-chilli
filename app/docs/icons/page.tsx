@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { Check, Copy } from "lucide-react";
+import { AnimatedTitle } from "@/components/ui/animated-title";
 import {
   Search,
   Menu,
@@ -160,9 +161,9 @@ export default function IconsPage() {
   return (
     <article>
       <header className="mb-10">
-        <h1 className="text-[24px] font-bold tracking-tight text-[var(--text-base-primary)]">
+        <AnimatedTitle as="h1" className="text-[24px] font-bold tracking-tight text-[var(--text-base-primary)]">
           Icons
-        </h1>
+        </AnimatedTitle>
         <p className="mt-2 max-w-2xl text-[14px] leading-relaxed text-[var(--text-base-secondary)]">
           The Chilli design system uses <strong className="text-[var(--text-base-primary)]">Lucide</strong> as
           its icon library. Over 1,400 icons are available -- below are the most commonly used

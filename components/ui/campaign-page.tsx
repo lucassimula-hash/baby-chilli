@@ -11,6 +11,7 @@ import { X, ArrowRight, MoreVertical, Heart } from "lucide-react";
 import { ActionCtaCard } from "@/components/ui/action-cta-card";
 import { Button } from "@/components/ui/button";
 import { type CampaignCreator, SHARED_ELEMENT_TRANSITION } from "@/components/ui/campaign-card";
+import { AnimatedTitle } from "@/components/ui/animated-title";
 
 export interface CampaignPageProps {
   campaignId: string;
@@ -125,12 +126,12 @@ export function CampaignPage({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}
           >
-            <h1
+            <AnimatedTitle as="h1"
               className="text-2xl font-semibold leading-8 tracking-[-0.5px] text-[var(--text-base-primary)]"
               style={{ fontFamily: "var(--font-family-primary), sans-serif" }}
             >
               {title}
-            </h1>
+            </AnimatedTitle>
             <p className="text-sm leading-5 text-[var(--text-glass-primary)]">{body}</p>
             <div className="mt-2 flex items-center justify-center gap-1">
               <div className="flex items-center -space-x-1.5">
