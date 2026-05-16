@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Check, Copy } from "lucide-react";
+import { AnimatedTitle } from "@/components/ui/animated-title";
 
 /* ------------------------------------------------------------------ */
 /*  Token data — mirrors Figma "_root font" + "theme/text" collections */
@@ -166,9 +167,9 @@ export default function TypographyPage() {
   return (
     <article>
       <header className="mb-10">
-        <h1 className="text-[24px] font-bold tracking-tight text-[var(--text-base-primary)]">
+        <AnimatedTitle as="h1" className="text-[24px] font-bold tracking-tight text-[var(--text-base-primary)]">
           Typography
-        </h1>
+        </AnimatedTitle>
         <p className="mt-2 max-w-2xl text-[14px] leading-relaxed text-[var(--text-base-secondary)]">
           The Chilli design system uses{" "}
           <strong className="text-[var(--text-base-primary)]">SF Pro Display</strong> for headings

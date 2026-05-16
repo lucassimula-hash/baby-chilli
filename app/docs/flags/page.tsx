@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Check, Copy } from "lucide-react";
 import { FlagIcon } from "@/components/ui/flag-icon";
 import { FLAG_OPTIONS, type FlagCode } from "@/lib/flags.generated";
+import { AnimatedTitle } from "@/components/ui/animated-title";
 
 function FlagButton({
   code,
@@ -46,9 +47,9 @@ export default function FlagsPage() {
   return (
     <article>
       <header className="mb-10">
-        <h1 className="text-[24px] font-bold tracking-tight text-[var(--text-base-primary)]">
+        <AnimatedTitle as="h1" className="text-[24px] font-bold tracking-tight text-[var(--text-base-primary)]">
           Flags
-        </h1>
+        </AnimatedTitle>
         <p className="mt-2 max-w-2xl text-[14px] leading-relaxed text-[var(--text-base-secondary)]">
           Circular country flags used across the Chilli product for geo context, supporter stacks,
           and campaign UI. The library follows the 24px foundation from Figma. Click any flag to
