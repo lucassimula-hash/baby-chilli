@@ -33,7 +33,7 @@ export default async function DocsPage({
   return (
     <div className="min-w-0 flex-1">
       <PageHeader currentSlug={slug} title={component.name} />
-      <p className="mb-12 text-[14px] text-[var(--text-base-secondary)]">
+      <p className="mb-12 max-w-[570px] text-[14px] leading-relaxed text-[var(--text-base-secondary)]">
         {component.description}
       </p>
 

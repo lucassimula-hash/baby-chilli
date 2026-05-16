@@ -52,12 +52,12 @@ export function PageHeader({
         className
       )}
     >
-      <div className="max-w-2xl">
+      <div className="max-w-[640px]">
         <AnimatedTitle as="h1" className="text-[24px] font-bold tracking-tight text-[var(--text-base-primary)]">
           {title}
         </AnimatedTitle>
         {subtitle ? (
-          <p className="mt-2 max-w-2xl text-[14px] leading-relaxed text-[var(--text-base-secondary)]">
+          <p className="mt-2 max-w-[570px] text-[14px] leading-relaxed text-[var(--text-base-secondary)]">
             {subtitle}
           </p>
         ) : null}
