@@ -163,7 +163,7 @@ export default function LogosPage() {
               </div>
               <div className="px-4 py-3 border-t border-[var(--borders-default)]">
                 <p className="text-sm font-medium text-[var(--text-base-primary)]">Black</p>
-                <p className="text-xs text-[var(--text-base-secondary)]">Light surfaces. #140F14.</p>
+                <p className="text-xs text-[var(--text-base-secondary)]">Bright surfaces. #140F14.</p>
               </div>
             </div>
 

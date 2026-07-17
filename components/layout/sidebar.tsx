@@ -17,7 +17,10 @@ const foundations = [
   { name: "Logos", slug: "logos" },
 ];
 
-const showcase = [{ name: "Showcase", slug: "showcase" }];
+const showcase = [
+  { name: "Showcase", slug: "showcase" },
+  { name: "Installation", slug: "installation" },
+];
 
 interface SidebarProps {
   open: boolean;
