@@ -29,7 +29,7 @@ export function InstallBlock({ command }: { command: string }) {
         <button
           onClick={handleCopy}
           className={cn(
-            "ml-3 flex shrink-0 items-center gap-1.5 rounded-md border border-[var(--borders-default)] bg-[var(--backgrounds-base)] px-2 py-1 text-[var(--text-base-secondary)] transition-all hover:text-[var(--text-base-primary)]",
+            "ml-3 flex min-h-8 shrink-0 items-center gap-1.5 rounded-md border border-[var(--borders-default)] bg-[var(--backgrounds-base)] px-2.5 py-1 text-[var(--text-base-secondary)] transition-[opacity,color,background-color,border-color] duration-150 hover:text-[var(--text-base-primary)]",
             copied
               ? "opacity-100 text-[var(--text-base-primary)]"
               : "opacity-0 group-hover:opacity-100"

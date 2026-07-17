@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { slug: "showcase" },
+  { slug: "installation" },
   ...components.map((component) => ({ slug: component.slug })),
   { slug: "colors" },
   { slug: "typography" },
