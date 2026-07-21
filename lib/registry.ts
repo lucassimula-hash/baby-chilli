@@ -272,8 +272,8 @@ export function CtaCardDefault() {
   return (
     <CtaCard
       title="Federal Wildlife Oversight Needed: Idaho Commissioner Charged with Poaching on Federal Land"
-      body="Dear U.S. Fish & Wildlife Service, I am writing to bring to your attention a serious accountability concern in Idaho wildlife management."
       primaryLabel="review email"
+      secondaryLabel="skip"
       socialProof="34 people did this"
     />
   )
@@ -291,7 +291,7 @@ export function CtaCardWithSecondary() {
       title="Federal Wildlife Oversight Needed: Idaho Commissioner Charged with Poaching on Federal Land"
       body="Dear U.S. Fish & Wildlife Service, I am writing to bring to your attention a serious accountability concern in Idaho wildlife management."
       primaryLabel="review email"
-      secondaryLabel="skip for now"
+      secondaryLabel="skip"
       socialProof="34 people did this"
     />
   )
@@ -426,13 +426,13 @@ export function CtaCardAllArrowVariants() {
                         prop: "primaryLabel",
                         type: "string",
                         default: "preset label",
-                        description: "Primary full-width CTA label."
+                        description: "Primary full-width CTA label. The buttons variant renders an edit icon before the label."
                     },
                     {
                         prop: "secondaryLabel",
                         type: "string",
                         default: "—",
-                        description: "Optional secondary full-width CTA label rendered below the primary CTA."
+                        description: "Optional secondary CTA label rendered below the primary CTA with a trailing arrow."
                     },
                     {
                         prop: "socialProof",
