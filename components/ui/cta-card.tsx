@@ -1,7 +1,7 @@
 "use client";
 
 import { forwardRef, useId, type ButtonHTMLAttributes, type HTMLAttributes, type ReactNode } from "react";
-import { ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight, PencilLine } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Chip } from "@/components/ui/chip";
@@ -740,6 +740,7 @@ export const CtaCard = forwardRef<HTMLDivElement, CtaCardProps>(
     const resolvedMediaSrc = mediaSrc ?? preset.mediaSrc;
     const resolvedMediaAlt = mediaAlt ?? preset.mediaAlt;
     const resolvedPrimaryLabel = primaryLabel ?? preset.primaryLabel;
+    const resolvedSecondaryLabel = secondaryLabel ?? "skip for now";
     const hasMedia = Boolean(resolvedMediaSrc);
 
     return (
@@ -755,15 +756,15 @@ export const CtaCard = forwardRef<HTMLDivElement, CtaCardProps>(
                 "after:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04),inset_0_0_0_1px_rgba(255,255,255,0.08)]",
               ]
             : [
-                "border border-[var(--borders-glass-strong)] bg-[var(--backgrounds-neutral-secondary-default)]",
-                "pb-[var(--space-6)] shadow-[0_8px_16px_0_rgba(20,15,20,0.08)]",
+                "border border-[var(--text-base-primary)] bg-[var(--backgrounds-neutral-secondary-default)]",
+                "pb-[var(--space-5)] shadow-[0_8px_16px_0_rgba(20,15,20,0.08)]",
               ],
           "relative",
           className
         )}
         {...props}
       >
-        <div className="flex flex-col gap-[var(--space-5)] px-[var(--space-6)] pt-[var(--space-6)]">
+        <div className="flex flex-col gap-[var(--space-4)] px-[var(--space-6)] pt-[var(--space-6)]">
           <div className="flex items-center">
             <CtaChip
               size="md"
@@ -830,9 +831,9 @@ export const CtaCard = forwardRef<HTMLDivElement, CtaCardProps>(
             />
           </div>
         ) : (
-          <div className="flex flex-col items-center justify-center gap-[var(--space-3)] px-[var(--space-6)] pt-[var(--space-5)]">
+          <div className="flex flex-col items-center justify-center gap-[var(--space-2)] px-[var(--space-6)] pt-[var(--space-5)]">
             {socialProof && (
-              <p className="max-w-full truncate text-center text-[12px] font-normal leading-[var(--line-height-xs)] tracking-[0] text-[var(--text-glass-primary)]">
+              <p className="max-w-full truncate pb-[var(--space-2)] text-center text-[12px] font-normal leading-[var(--line-height-xs)] tracking-[0] text-[var(--text-glass-primary)]">
                 {socialProof}
               </p>
             )}
@@ -841,28 +842,27 @@ export const CtaCard = forwardRef<HTMLDivElement, CtaCardProps>(
               type="button"
               size="md"
               variant="primary"
+              leftIcon={PencilLine}
               loading={primaryLoading}
               disabled={primaryDisabled}
               onClick={onPrimaryClick}
-              className="w-full text-[14px] leading-[var(--line-height-sm)]"
+              className="h-10 w-full gap-[var(--space-3)] px-[var(--space-5)] text-[14px] leading-[var(--line-height-sm)]"
             >
               {resolvedPrimaryLabel}
             </CtaButton>
 
-            {secondaryLabel && (
-              <CtaButton
-                type="button"
-                size="md"
-                variant="secondary"
-                glass
-                loading={secondaryLoading}
-                disabled={secondaryDisabled}
-                onClick={onSecondaryClick}
-                className="w-full text-[14px] leading-[var(--line-height-sm)]"
-              >
-                {secondaryLabel}
-              </CtaButton>
-            )}
+            <CtaButton
+              type="button"
+              size="sm"
+              variant="ghost"
+              rightIcon={ArrowRight}
+              loading={secondaryLoading}
+              disabled={secondaryDisabled}
+              onClick={onSecondaryClick}
+              className="h-8 w-full gap-[var(--space-2)] px-[var(--space-4)] text-[14px] leading-[var(--line-height-sm)] text-[var(--text-base-secondary)] hover:bg-transparent hover:text-[var(--text-base-primary)]"
+            >
+              {resolvedSecondaryLabel}
+            </CtaButton>
           </div>
         )}
       </div>

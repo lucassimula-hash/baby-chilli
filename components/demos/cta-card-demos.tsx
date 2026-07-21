@@ -9,7 +9,7 @@ const EMAIL_BODY =
 export function CtaCardDefault() {
   return (
     <div className="flex w-full flex-col gap-4">
-      <CtaCard title={EMAIL_TITLE} body={EMAIL_BODY} />
+      <CtaCard title={EMAIL_TITLE} />
     </div>
   );
 }

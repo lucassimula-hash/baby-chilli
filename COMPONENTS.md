@@ -355,8 +355,8 @@ import { CtaCard } from "../index";
 | channel | string | No | preset channel | Optional label override inside the medium chip. |
 | channelIcon | ReactNode | No | preset icon | Optional leading icon override inside the chip. |
 | mediaSrc / mediaAlt | string | No | preset media | Optional 80×80 media preview used by social and maps variants. |
-| primaryLabel | string | No | preset label | Primary full-width CTA label. |
-| secondaryLabel | string | No | - | Optional secondary full-width CTA label. |
+| primaryLabel | string | No | preset label | Primary full-width CTA label. The buttons variant renders an edit icon before the label. |
+| secondaryLabel | string | No | `skip for now` | Tertiary CTA label rendered below the primary CTA with a trailing arrow. |
 | socialProof | string | No | `34 people did this` | Centered proof text under the CTA group. |
 | onPrimaryClick | function | No | - | Fires when pressing the primary CTA. |
 | onSecondaryClick | function | No | - | Fires when pressing the optional secondary CTA. |
