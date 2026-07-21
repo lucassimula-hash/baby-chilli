@@ -740,6 +740,7 @@ export const CtaCard = forwardRef<HTMLDivElement, CtaCardProps>(
     const resolvedMediaSrc = mediaSrc ?? preset.mediaSrc;
     const resolvedMediaAlt = mediaAlt ?? preset.mediaAlt;
     const resolvedPrimaryLabel = primaryLabel ?? preset.primaryLabel;
+    const resolvedSecondaryLabel = secondaryLabel ?? "skip for now";
     const hasMedia = Boolean(resolvedMediaSrc);
 
     return (
@@ -850,20 +851,18 @@ export const CtaCard = forwardRef<HTMLDivElement, CtaCardProps>(
               {resolvedPrimaryLabel}
             </CtaButton>
 
-            {secondaryLabel && (
-              <CtaButton
-                type="button"
-                size="sm"
-                variant="ghost"
-                rightIcon={ArrowRight}
-                loading={secondaryLoading}
-                disabled={secondaryDisabled}
-                onClick={onSecondaryClick}
-                className="h-8 w-full gap-[var(--space-2)] px-[var(--space-4)] text-[14px] leading-[var(--line-height-sm)] text-[var(--text-base-secondary)] hover:bg-transparent hover:text-[var(--text-base-primary)]"
-              >
-                {secondaryLabel}
-              </CtaButton>
-            )}
+            <CtaButton
+              type="button"
+              size="sm"
+              variant="ghost"
+              rightIcon={ArrowRight}
+              loading={secondaryLoading}
+              disabled={secondaryDisabled}
+              onClick={onSecondaryClick}
+              className="h-8 w-full gap-[var(--space-2)] px-[var(--space-4)] text-[14px] leading-[var(--line-height-sm)] text-[var(--text-base-secondary)] hover:bg-transparent hover:text-[var(--text-base-primary)]"
+            >
+              {resolvedSecondaryLabel}
+            </CtaButton>
           </div>
         )}
       </div>

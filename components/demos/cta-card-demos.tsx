@@ -9,7 +9,7 @@ const EMAIL_BODY =
 export function CtaCardDefault() {
   return (
     <div className="flex w-full flex-col gap-4">
-      <CtaCard title={EMAIL_TITLE} secondaryLabel="skip" />
+      <CtaCard title={EMAIL_TITLE} />
     </div>
   );
 }
@@ -21,7 +21,7 @@ export function CtaCardWithSecondary() {
         title={EMAIL_TITLE}
         body={EMAIL_BODY}
         primaryLabel="review email"
-        secondaryLabel="skip"
+        secondaryLabel="skip for now"
         socialProof="34 people did this"
       />
     </div>
