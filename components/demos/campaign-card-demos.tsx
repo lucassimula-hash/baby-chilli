@@ -3,15 +3,15 @@
 import { CampaignCard } from "@/components/ui/campaign-card";
 
 const CAMPAIGN = {
-  id: "save-marine-monument",
-  image: "/campaign-card/hero-thailand.png",
+  id: "einar-buyout-fraud",
+  image: "/campaign-card/hero-einar-gustafsson.jpg",
   creator: {
     name: "@seaspiracy",
     avatar: "/campaign-card/creator-seaspiracy.png",
     verified: true,
   },
-  title: "Tell Thailand's Energy Ministry: Renewables needed amid Hormuz Crisis",
-  body: "Trump wants to rollback the protections for the Northeast Canyons & Seamounts Marine National Monument. We have to stop him!",
+  title: "Tell Einar Gustafsson: Your Buyout Bid Is Now Tied to Catch Fraud",
+  body: "",
   supporters: {
     count: 3400,
     avatars: [
@@ -31,10 +31,8 @@ export function CampaignCardDefault() {
         image={CAMPAIGN.image}
         creator={CAMPAIGN.creator}
         title={CAMPAIGN.title}
-        body={CAMPAIGN.body}
         supporters={CAMPAIGN.supporters}
         commentCount={CAMPAIGN.commentCount}
-        sectionLabel="new from creator you like"
       />
     </div>
   );
@@ -48,12 +46,44 @@ export function CampaignCardSupporter() {
         image={CAMPAIGN.image}
         creator={CAMPAIGN.creator}
         title={CAMPAIGN.title}
-        body={CAMPAIGN.body}
         supporters={CAMPAIGN.supporters}
         commentCount={CAMPAIGN.commentCount}
-        sectionLabel="new from creator you like"
         supporter
         progress={{ done: 2, total: 4 }}
+      />
+    </div>
+  );
+}
+
+export function CampaignCardDefaultHover() {
+  return (
+    <div className="flex justify-center p-4">
+      <CampaignCard
+        campaignId="demo-default-hover"
+        image={CAMPAIGN.image}
+        creator={CAMPAIGN.creator}
+        title={CAMPAIGN.title}
+        supporters={CAMPAIGN.supporters}
+        commentCount={CAMPAIGN.commentCount}
+        state="hover"
+      />
+    </div>
+  );
+}
+
+export function CampaignCardSupporterHover() {
+  return (
+    <div className="flex justify-center p-4">
+      <CampaignCard
+        campaignId="demo-supporter-hover"
+        image={CAMPAIGN.image}
+        creator={CAMPAIGN.creator}
+        title={CAMPAIGN.title}
+        supporters={CAMPAIGN.supporters}
+        commentCount={CAMPAIGN.commentCount}
+        supporter
+        progress={{ done: 2, total: 4 }}
+        state="hover"
       />
     </div>
   );
@@ -67,7 +97,6 @@ export function CampaignCardStart() {
         image={CAMPAIGN.image}
         creator={CAMPAIGN.creator}
         title={CAMPAIGN.title}
-        body={CAMPAIGN.body}
         supporters={CAMPAIGN.supporters}
         commentCount={CAMPAIGN.commentCount}
         supporter
@@ -85,7 +114,6 @@ export function CampaignCardFinish() {
         image={CAMPAIGN.image}
         creator={CAMPAIGN.creator}
         title={CAMPAIGN.title}
-        body={CAMPAIGN.body}
         supporters={CAMPAIGN.supporters}
         commentCount={CAMPAIGN.commentCount}
         supporter
