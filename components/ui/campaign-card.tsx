@@ -1,11 +1,11 @@
 "use client";
 
 /**
- * CampaignCard — bound to `CampaignCard` (node 4201:389668) in the Product Figma library.
- * fileKey: 7S4EQFfpK3hIN87Nd7ggV8
+ * CampaignCard — bound to `CampaignCard` in the Foundations Components Figma library.
+ * fileKey: RcR7D8LPcMhNadWgs8T5cF
  *
  * Full-bleed image card for a campaign feed. Two size variants:
- *  - default / activity — 343 × 360px, image fills the card, content overlaid at bottom.
+ *  - default / activity — 343 × 280px, image fills the card, content overlaid at bottom.
  *  - minus             — 160 × 200px compact card for carousels.
  *
  * Hero image uses framer-motion `layoutId` for a shared-element transition into the
@@ -35,7 +35,7 @@ export interface CampaignCardProps {
 
   /**
    * Card variant:
-   * - `default`  — standard full card (343 × 360px).
+   * - `default`  — standard full card (343 × 280px).
    * - `activity` — full card with creator header rendered above the card.
    * - `minus`    — compact carousel card (160 × 200px).
    */
@@ -47,6 +47,10 @@ export interface CampaignCardProps {
   commentCount?: number | string;
   /** Optional section label above the card (e.g. "new from creator you like"). */
   sectionLabel?: string;
+  /** Shows the creator row inside the image card. */
+  creatorOnCard?: boolean;
+  /** Forces the visual state for docs and controlled previews. */
+  state?: "default" | "hover";
   /** True when the current user has joined — changes gradient + footer text. */
   supporter?: boolean;
   /** Drives progress copy ("2 of 4 completed") when supporter=true. */
@@ -90,7 +94,7 @@ export function CampaignCard(props: CampaignCardProps) {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Md variant — 343 × 360px full-bleed card                          */
+/*  Md variant — 343 × 280px full-bleed card                          */
 /* ------------------------------------------------------------------ */
 
 function CampaignCardMd({
@@ -103,6 +107,8 @@ function CampaignCardMd({
   commentCount = 0,
   sectionLabel,
   type = "default",
+  creatorOnCard = true,
+  state = "default",
   supporter = false,
   progress,
   onOpen,
@@ -111,10 +117,12 @@ function CampaignCardMd({
 }: CampaignCardProps) {
   const ctaLabel = deriveCtaLabel(supporter, progress);
   const heroId = `campaign-${campaignId}-hero`;
+  const isForcedHover = state === "hover";
+  const actionTotal = progress?.total ?? 4;
 
   const progressText = supporter && progress
     ? `${progress.done} of ${progress.total} completed`
-    : `${progress?.total ?? 4} actions left`;
+    : `${actionTotal} actions left`;
 
   return (
     <div className={cn("flex w-full max-w-[343px] flex-col gap-2", className)}>
@@ -151,11 +159,11 @@ function CampaignCardMd({
         }}
         aria-label={`Open campaign: ${title}`}
         className={cn(
-          "group relative flex h-[360px] w-full cursor-pointer flex-col",
+          "group relative flex h-[280px] w-full cursor-pointer flex-col",
           "overflow-hidden rounded-[var(--radius-7)]",
           "border border-[var(--borders-default)]",
           "shadow-[0_32px_64px_-12px_rgba(20,15,20,0.14),0_5px_5px_-2.5px_rgba(20,15,20,0.04)]",
-          "transition-[transform,filter] duration-150 ease-out",
+          "transition-[transform,filter] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
           "active:scale-[0.98] active:brightness-95",
           "motion-reduce:active:scale-100 motion-reduce:active:brightness-100",
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--shadow-brand-moderate)] focus-visible:ring-offset-2 focus-visible:ring-offset-transparent",
@@ -182,10 +190,10 @@ function CampaignCardMd({
         />
 
         {/* Content layer */}
-        <div className="relative flex h-full flex-col justify-between px-5 pb-4 pt-5">
+        <div className="relative flex h-full flex-col justify-between px-[var(--space-7)] pb-[var(--space-6)] pt-[var(--space-7)]">
 
           {/* Creator on card (default type only) */}
-          {type !== "activity" && (
+          {type !== "activity" && creatorOnCard && (
             <div className="flex items-center gap-1.5">
               <img
                 src={creator.avatar}
@@ -200,13 +208,17 @@ function CampaignCardMd({
           )}
 
           {/* Bottom content */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-[var(--space-5)]">
 
             {/* Text block */}
             <div className="flex flex-col gap-0.5">
               <h3
-                className="overflow-hidden text-ellipsis text-[20px] font-semibold leading-7 tracking-[-0.4px] text-[var(--text-base-primary)] drop-shadow-[0_2px_4px_rgba(20,15,20,0.06)]"
-                style={{ fontFamily: "var(--font-family-primary), sans-serif" }}
+                className="overflow-hidden text-ellipsis font-[family-name:var(--font-family-primary)] text-[20px] font-semibold leading-7 tracking-[-1px] text-[var(--text-base-primary)] drop-shadow-[0_2px_4px_rgba(20,15,20,0.06)]"
+                style={{
+                  display: "-webkit-box",
+                  WebkitLineClamp: 2,
+                  WebkitBoxOrient: "vertical",
+                }}
               >
                 {title}
               </h3>
@@ -217,22 +229,56 @@ function CampaignCardMd({
               )}
             </div>
 
-            {/* Footer: metrics + progress text, CTA on hover */}
-            <div className="flex items-center justify-between">
-              <div className="flex h-6 items-center gap-2">
-                {/* Avatar group + supporter count */}
-                <SupporterAvatars avatars={supporters.avatars} count={supporters.count} />
-                {/* Comment count */}
-                <CommentCount count={commentCount} />
+            {/* Footer: metrics/progress + CTA */}
+            <div className="relative flex min-h-8 w-full items-center justify-between">
+              <div
+                className={cn(
+                  "flex items-center transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
+                  supporter && "group-hover:-translate-x-1 group-hover:opacity-0",
+                  supporter && isForcedHover && "-translate-x-1 opacity-0"
+                )}
+              >
+                <div className="flex h-6 items-center gap-2">
+                  {/* Avatar group + supporter count */}
+                  <SupporterAvatars avatars={supporters.avatars} count={supporters.count} />
+                  {/* Comment count */}
+                  <CommentCount count={commentCount} />
+                </div>
               </div>
 
-              <div className="flex items-center gap-3">
-                <GlassPillButton
-                  label={ctaLabel}
-                  onClick={(e) => { e.stopPropagation(); onCta?.(); }}
-                  className="opacity-0 transition-opacity duration-150 group-hover:opacity-100"
-                />
-              </div>
+              <p
+                className={cn(
+                  "absolute right-0 truncate text-sm leading-5 text-[var(--text-glass-primary)] transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
+                  supporter
+                    ? "group-hover:pointer-events-none group-hover:-translate-x-3 group-hover:opacity-0"
+                    : "group-hover:pointer-events-none group-hover:translate-x-3 group-hover:opacity-0",
+                  isForcedHover && "pointer-events-none opacity-0",
+                  supporter && isForcedHover && "-translate-x-3",
+                  !supporter && isForcedHover && "translate-x-3"
+                )}
+              >
+                {progressText}
+              </p>
+
+              {supporter && (
+                <p
+                  className={cn(
+                    "pointer-events-none absolute left-0 truncate text-sm leading-5 text-[var(--text-glass-primary)] opacity-0 transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:pointer-events-auto group-hover:translate-x-0 group-hover:opacity-100",
+                    isForcedHover ? "pointer-events-auto translate-x-0 opacity-100" : "translate-x-3"
+                  )}
+                >
+                  {progressText}
+                </p>
+              )}
+
+              <GlassPillButton
+                label={ctaLabel}
+                onClick={(e) => { e.stopPropagation(); onCta?.(); }}
+                className={cn(
+                  "pointer-events-none absolute right-0 opacity-0 transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:pointer-events-auto group-hover:translate-x-0 group-hover:opacity-100",
+                  isForcedHover ? "pointer-events-auto translate-x-0 opacity-100" : "translate-x-3"
+                )}
+              />
             </div>
           </div>
         </div>
@@ -379,7 +425,7 @@ function SupporterAvatars({
 }
 
 function CommentCount({ count, size = "md" }: { count: number | string; size?: "md" | "sm" }) {
-  const iconSize = size === "sm" ? 12 : 16;
+  const iconSize = size === "sm" ? 12 : 20;
   return (
     <div className="flex items-center gap-1">
       {/* message-dots-circle icon (mirrored as in Figma) */}

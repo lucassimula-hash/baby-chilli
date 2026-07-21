@@ -179,11 +179,11 @@
     {
       "name": "CampaignCard",
       "category": "campaign",
-      "description": "Mobile feed card for a campaign with creator, media, title, body and action states.",
+      "description": "Mobile feed card for a campaign with full-bleed media, title, supporter proof and action states.",
       "importPath": "../index",
       "sourcePath": "components/ui/campaign-card.tsx",
       "status": "stable",
-      "variants": ["default", "minus", "supporter progress"],
+      "variants": ["default", "activity", "minus", "supporter progress"],
       "useWhen": ["Display a campaign in feeds, lists or related campaign carousels."],
       "doNotUseWhen": ["Rendering the full campaign detail page; use CampaignPage."],
       "relatedComponents": ["CampaignPage", "AvatarGroup", "ProgressBar"],
@@ -263,16 +263,16 @@
     {
       "name": "CtaCard",
       "category": "campaign",
-      "description": "Compact action card for email, comment, question, phone, link and map CTAs.",
+      "description": "Dark CTA card with a channel chip, clamped title, optional preview text, optional media, social proof and either text CTAs or a round arrow CTA.",
       "importPath": "../index",
       "sourcePath": "components/ui/cta-card.tsx",
       "status": "stable",
-      "variants": ["email", "comment", "external-link", "google-maps", "question", "phone-call", "mobile", "desktop"],
-      "useWhen": ["Show a small action option inside a campaign or action list."],
-      "doNotUseWhen": ["The action card needs the larger visual treatment; use ActionCtaCard."],
-      "relatedComponents": ["ActionCtaCard", "Button"],
+      "variants": ["buttons", "arrow", "email", "instagram", "linkedin", "x", "google-maps", "external-link", "question", "phone-call", "petition", "channel chip", "primary CTA", "secondary CTA optional", "social proof", "media", "loading", "disabled"],
+      "useWhen": ["Show one clear email, social, maps, link, question, call or petition action with compact context and proof inside a campaign or action list."],
+      "doNotUseWhen": ["The action needs pinned, completed or top-supporter states; use ActionCtaCard."],
+      "relatedComponents": ["ActionCtaCard", "Button", "Chip"],
       "storybookPath": "",
-      "registryName": ""
+      "registryName": "cta-card"
     },
     {
       "name": "DatePicker",

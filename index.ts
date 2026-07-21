@@ -20,7 +20,7 @@ export { CauseInput } from "./components/ui/cause-input";
 export { Checkbox } from "./components/ui/checkbox";
 export { Chip } from "./components/ui/chip";
 export { CtaCard } from "./components/ui/cta-card";
-export type { CtaCardProps, CtaCardType } from "./components/ui/cta-card";
+export type { CtaCardActionType, CtaCardProps } from "./components/ui/cta-card";
 export { DatePicker } from "./components/ui/date-picker";
 export { Dropdown, MenuItem } from "./components/ui/dropdown";
 export { FormTitle } from "./components/ui/form-title";

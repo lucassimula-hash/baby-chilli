@@ -32,7 +32,7 @@ If this design system becomes a published package, replace `../index` with the p
 | CauseInput | Form | Input specialized for cause values. | default, focused, error, disabled | Stable | `import { CauseInput } from "../index";` |
 | Checkbox | Form | Selects one or more options. | sizes, checked, disabled, error | Stable | `import { Checkbox } from "../index";` |
 | Chip | Status | Shows tags, filters or selected items. | fill, light, avatar, social, removable, sizes | Stable | `import { Chip } from "../index";` |
-| CtaCard | Campaign | Shows a compact campaign CTA option. | email, comment, external-link, google-maps, question, phone-call | Stable | `import { CtaCard } from "../index";` |
+| CtaCard | Campaign | Shows a compact CTA card with channel chip, title, CTA and social proof. | buttons, arrow, email, instagram, linkedin, x, google-maps, external-link, question, phone-call, petition, secondary CTA optional | Stable | `import { CtaCard } from "../index";` |
 | DatePicker | Form | Chooses a calendar date. | default, interactive, min/max | Stable | `import { DatePicker } from "../index";` |
 | Dropdown | Overlay | Shows a floating menu. | sm, md, lg | Stable | `import { Dropdown } from "../index";` |
 | MenuItem | Overlay | Shows a selectable dropdown row. | sm, md, lg, checked | Stable | `import { MenuItem } from "../index";` |
@@ -173,7 +173,7 @@ Use a clear text label. Do not rely only on color to communicate danger or loadi
 
 **Purpose**
 
-Displays a campaign preview with creator, media, title, body, supporter proof and CTA state.
+Displays a campaign preview with full-bleed media, title, supporter proof and CTA state.
 
 **Use when**
 
@@ -195,6 +195,8 @@ import { CampaignCard } from "../index";
 - `type="default"` renders the full mobile feed card.
 - `type="minus"` renders the compact mini card.
 - `supporter` changes the footer from social proof to progress.
+- `creatorOnCard` controls the creator row inside the image card.
+- `state="hover"` forces the hover visual state for docs and controlled previews.
 
 **Important props**
 
@@ -206,6 +208,8 @@ import { CampaignCard } from "../index";
 | title | string | Yes | - | Campaign title. |
 | body | string | No | - | Supporting text. |
 | supporters | object | No | - | Count and avatar social proof. |
+| creatorOnCard | boolean | No | `true` | Shows the creator row inside the image card. |
+| state | `"default" \| "hover"` | No | `"default"` | Forces the visual state for docs and controlled previews. |
 | supporter | boolean | No | `false` | Enables supporter progress mode. |
 | progress | object | No | - | Done and total action count. |
 | onOpen | function | No | - | Called when opening the card. |
@@ -215,10 +219,10 @@ import { CampaignCard } from "../index";
 
 ```tsx
 <CampaignCard
-  campaignId="ocean-action"
-  image="/campaign-card/hero-thailand.png"
+  campaignId="einar-buyout-fraud"
+  image="/campaign-card/hero-einar-gustafsson.jpg"
   creator={{ name: "@seaspiracy", avatar: "/campaign-card/creator-seaspiracy.png", verified: true }}
-  title="Protect marine reserves"
+  title="Tell Einar Gustafsson: Your Buyout Bid Is Now Tied to Catch Fraud"
 />
 ```
 
@@ -226,14 +230,12 @@ import { CampaignCard } from "../index";
 
 ```tsx
 <CampaignCard
-  campaignId="renewables-thailand"
-  image="/campaign-card/hero-thailand.png"
+  campaignId="einar-buyout-fraud"
+  image="/campaign-card/hero-einar-gustafsson.jpg"
   creator={{ name: "@seaspiracy", avatar: "/campaign-card/creator-seaspiracy.png", verified: true }}
-  title="Tell Thailand's Energy Ministry: Renewables needed amid Hormuz Crisis"
-  body="Ask decision makers to protect communities and accelerate clean energy."
+  title="Tell Einar Gustafsson: Your Buyout Bid Is Now Tied to Catch Fraud"
   supporters={{ count: 3400, avatars: ["/campaign-card/avatar-1.png", "/campaign-card/avatar-2.png"] }}
   commentCount={12}
-  sectionLabel="new from creator you like"
 />
 ```
 
@@ -318,6 +320,74 @@ The title must explain the action without relying on the icon alone.
 - Component: `components/ui/action-cta-card.tsx`
 - Types: `ActionCtaCardProps`
 - Demo: `components/demos/action-cta-card-demos.tsx`
+
+### CtaCard
+
+**Purpose**
+
+Displays a compact CTA card for one campaign action, with a channel chip, clamped title, optional preview text, social proof and either full-width text CTAs or a round arrow CTA.
+
+**Use when**
+
+- Showing a single recommended email, social, maps, link, question, call or petition action inside a campaign or action list.
+- The action needs a compact dark card, not the larger pinned/completed treatment.
+- Social proof should sit close to the CTA.
+
+**Do not use when**
+
+- The action needs pinned, completed or top-supporter states. Use `ActionCtaCard`.
+- The CTA is a standalone page button. Use `Button`.
+
+**Import**
+
+```tsx
+import { CtaCard } from "../index";
+```
+
+**Important props**
+
+| Prop | Type | Required | Default | Description |
+|---|---|---|---|---|
+| variant | `"buttons" \| "arrow"` | No | `buttons` | `buttons` renders full-width text CTAs. `arrow` renders social proof with a round chevron CTA. |
+| type | `"email" \| "instagram" \| "linkedin" \| "x" \| "google-maps" \| "external-link" \| "question" \| "phone-call" \| "petition"` | No | `email` | Preset that fills chip, icon, copy, media and CTA label. |
+| title | string | No | preset title | Main action title, clamped to three lines. |
+| body | string | No | preset body | Optional preview text below the title. Media presets clamp this to three lines. |
+| channel | string | No | preset channel | Optional label override inside the medium chip. |
+| channelIcon | ReactNode | No | preset icon | Optional leading icon override inside the chip. |
+| mediaSrc / mediaAlt | string | No | preset media | Optional 80×80 media preview used by social and maps variants. |
+| primaryLabel | string | No | preset label | Primary full-width CTA label. |
+| secondaryLabel | string | No | - | Optional secondary full-width CTA label. |
+| socialProof | string | No | `34 people did this` | Centered proof text under the CTA group. |
+| onPrimaryClick | function | No | - | Fires when pressing the primary CTA. |
+| onSecondaryClick | function | No | - | Fires when pressing the optional secondary CTA. |
+| primaryLoading / secondaryLoading | boolean | No | `false` | Shows loading state and disables the matching CTA. |
+
+**Basic example**
+
+```tsx
+<CtaCard
+  title="Federal Wildlife Oversight Needed: Idaho Commissioner Charged with Poaching on Federal Land"
+  body="Dear U.S. Fish & Wildlife Service, I am writing..."
+/>
+```
+
+```tsx
+<CtaCard type="instagram" />
+```
+
+**Related components**
+
+`ActionCtaCard`, `Button`, `Chip`.
+
+**Accessibility**
+
+The title must describe the action without relying on the channel icon. Keep CTA labels short and explicit.
+
+**Source**
+
+- Component: `components/ui/cta-card.tsx`
+- Types: `CtaCardProps`
+- Demo: `components/demos/cta-card-demos.tsx`
 
 ### Forms
 

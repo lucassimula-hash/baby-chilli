@@ -2,12 +2,12 @@ export const components = [
     {
         name: "Campaign Card",
         slug: "campaign-card",
-        description: "Mobile feed card for a campaign — tap anywhere on the card to open the campaign detail page. Hero image uses a framer-motion `layoutId` for a shared-element transition (App Store / Airbnb pattern). Bound to the `CampaignCard` component set (4 variants across Breakpoint × supporter × State) in the Product Figma library.",
+        description: "Mobile feed card for a campaign — tap anywhere on the card to open the campaign detail page. Hero image uses a framer-motion `layoutId` for a shared-element transition (App Store / Airbnb pattern). Bound to the `CampaignCard` component set (4 variants across Breakpoint × supporter × State) in the Foundations Figma library.",
         installCmd: "npx chilli@latest add campaign-card",
         figma: {
-            source: "Product",
-            fileKey: "7S4EQFfpK3hIN87Nd7ggV8",
-            nodeId: "4201:389668",
+            source: "Foundations Components",
+            fileKey: "RcR7D8LPcMhNadWgs8T5cF",
+            nodeId: "44260:5134",
         },
         sections: [
             {
@@ -23,15 +23,33 @@ export const components = [
 export function CampaignCardDefault() {
   return (
     <CampaignCard
-      campaignId="save-marine"
+      campaignId="einar-buyout-fraud"
       image="/hero.png"
       creator={{ name: "@seaspiracy", avatar: "/creator.png", verified: true }}
-      title="Tell Thailand's Energy Ministry: Renewables needed amid Hormuz Crisis"
-      body="Trump wants to rollback the protections for the Northeast Canyons..."
+      title="Tell Einar Gustafsson: Your Buyout Bid Is Now Tied to Catch Fraud"
       supporters={{ count: 3400, avatars: [...] }}
       commentCount={12}
-      sectionLabel="new from creator you like"
-      onOpen={() => navigate('/campaigns/save-marine')}
+      onOpen={() => navigate('/campaigns/einar-buyout-fraud')}
+    />
+  )
+}`
+            },
+            {
+                title: "Default — hover",
+                type: "preview",
+                demoKey: "campaign-card-default-hover",
+                demoCode: `import { CampaignCard } from "@chilli-ui/react"
+
+export function CampaignCardDefaultHover() {
+  return (
+    <CampaignCard
+      campaignId="einar-buyout-fraud"
+      image="/hero.png"
+      creator={{ name: "@seaspiracy", avatar: "/creator.png", verified: true }}
+      title="Tell Einar Gustafsson: Your Buyout Bid Is Now Tied to Catch Fraud"
+      supporters={{ count: 3400, avatars: [...] }}
+      commentCount={12}
+      state="hover"
     />
   )
 }`
@@ -45,11 +63,30 @@ export function CampaignCardDefault() {
 export function CampaignCardSupporter() {
   return (
     <CampaignCard
-      campaignId="save-marine"
+      campaignId="einar-buyout-fraud"
       // ...same props
       supporter
       progress={{ done: 2, total: 4 }}   // → button reads "continue →"
-      onCta={() => navigate('/campaigns/save-marine/call')}
+      onCta={() => navigate('/campaigns/einar-buyout-fraud/call')}
+    />
+  )
+}`
+            },
+            {
+                title: "Supporter — hover",
+                type: "preview",
+                demoKey: "campaign-card-supporter-hover",
+                demoCode: `import { CampaignCard } from "@chilli-ui/react"
+
+export function CampaignCardSupporterHover() {
+  return (
+    <CampaignCard
+      campaignId="einar-buyout-fraud"
+      // ...same props
+      supporter
+      progress={{ done: 2, total: 4 }}
+      state="hover"
+      onCta={() => navigate('/campaigns/einar-buyout-fraud/call')}
     />
   )
 }`
@@ -74,7 +111,7 @@ export function CampaignCardSupporter() {
                 demoKey: "campaign-card-minus",
                 demoCode: `import { CampaignCard } from "@chilli-ui/react"
 
-// 160×236 compact card — for "more from" carousels, related campaigns, etc.
+// 160×200 compact card — for "more from" carousels, related campaigns, etc.
 // Renders: image (160×160) + 2-line clamped title + small creator avatar label.
 export function CampaignCardMinus() {
   return (
@@ -106,9 +143,9 @@ export function CampaignCardMinus() {
                 props: [
                     {
                         prop: "type",
-                        type: '"default" | "minus"',
+                        type: '"default" | "activity" | "minus"',
                         default: '"default"',
-                        description: "Card variant. `default` renders the full 343×363 card. `minus` renders the compact 160×236 mini card used in carousels (image + title + optional creator label)."
+                        description: "Card variant. `default` renders the full 343×280 card. `activity` adds a creator header above the card. `minus` renders the compact 160×200 mini card used in carousels."
                     },
                     {
                         prop: "campaignId",
@@ -129,6 +166,18 @@ export function CampaignCardMinus() {
                         description: "Campaign creator. `name` is the handle (e.g. `@seaspiracy`), `avatar` is the URL, `verified` adds the blue check."
                     },
                     {
+                        prop: "creatorOnCard",
+                        type: "boolean",
+                        default: "true",
+                        description: "Shows the creator row inside the image card."
+                    },
+                    {
+                        prop: "state",
+                        type: '"default" | "hover"',
+                        default: '"default"',
+                        description: "Visual state used by docs and controlled previews. In production, hover is still handled by CSS."
+                    },
+                    {
                         prop: "title",
                         type: "string",
                         default: "—",
@@ -138,7 +187,7 @@ export function CampaignCardMinus() {
                         prop: "body",
                         type: "string",
                         default: "—",
-                        description: "Supporting description — faded out via mask gradient after ~2 lines."
+                        description: "Optional supporting description shown below the title when a campaign card needs extra context."
                     },
                     {
                         prop: "supporters",
@@ -193,6 +242,221 @@ export function CampaignCardMinus() {
                         type: "string",
                         default: "—",
                         description: "Additional classes applied to the outer wrapper."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        name: "CTA-Card",
+        slug: "cta-card",
+        description: "Dark campaign action card with a channel chip, clamped title, optional body preview, primary CTA, optional secondary CTA and centered social proof.",
+        installCmd: "npx chilli@latest add cta-card",
+        figma: {
+            source: "Foundations Components",
+            fileKey: "RcR7D8LPcMhNadWgs8T5cF",
+            nodeId: "44260:7188",
+        },
+        sections: [
+            {
+                title: "Installation",
+                type: "install"
+            },
+            {
+                title: "Default",
+                type: "preview",
+                demoKey: "cta-card-default",
+                demoCode: `import { CtaCard } from "@chilli-ui/react"
+
+export function CtaCardDefault() {
+  return (
+    <CtaCard
+      title="Federal Wildlife Oversight Needed: Idaho Commissioner Charged with Poaching on Federal Land"
+      body="Dear U.S. Fish & Wildlife Service, I am writing to bring to your attention a serious accountability concern in Idaho wildlife management."
+      primaryLabel="review email"
+      socialProof="34 people did this"
+    />
+  )
+}`
+            },
+            {
+                title: "Secondary CTA",
+                type: "preview",
+                demoKey: "cta-card-secondary",
+                demoCode: `import { CtaCard } from "@chilli-ui/react"
+
+export function CtaCardWithSecondary() {
+  return (
+    <CtaCard
+      title="Federal Wildlife Oversight Needed: Idaho Commissioner Charged with Poaching on Federal Land"
+      body="Dear U.S. Fish & Wildlife Service, I am writing to bring to your attention a serious accountability concern in Idaho wildlife management."
+      primaryLabel="review email"
+      secondaryLabel="skip for now"
+      socialProof="34 people did this"
+    />
+  )
+}`
+            },
+            {
+                title: "Arrow CTA",
+                type: "preview",
+                demoKey: "cta-card-arrow",
+                demoCode: `import { CtaCard } from "@chilli-ui/react"
+
+export function CtaCardArrow() {
+  return (
+    <CtaCard
+      variant="arrow"
+      title="Federal Wildlife Oversight Needed: Idaho Commissioner Charged with Poaching on Federal Land"
+      body="Dear U.S. Fish & Wildlife Service, I am writing to bring to your attention a serious accountability concern in Idaho wildlife management."
+      primaryLabel="review email"
+      socialProof="34 people did this"
+    />
+  )
+}`
+            },
+            {
+                title: "All Button Variants",
+                type: "preview",
+                demoKey: "cta-card-all-buttons",
+                demoCode: `import { CtaCard, type CtaCardActionType } from "@chilli-ui/react"
+
+const types: CtaCardActionType[] = [
+  "email",
+  "instagram",
+  "linkedin",
+  "x",
+  "google-maps",
+  "external-link",
+  "question",
+  "phone-call",
+  "petition",
+]
+
+export function CtaCardAllButtonVariants() {
+  return (
+    <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+      {types.map((type) => (
+        <CtaCard key={type} type={type} />
+      ))}
+    </div>
+  )
+}`
+            },
+            {
+                title: "All Arrow Variants",
+                type: "preview",
+                demoKey: "cta-card-all-arrows",
+                demoCode: `import { CtaCard, type CtaCardActionType } from "@chilli-ui/react"
+
+const types: CtaCardActionType[] = [
+  "email",
+  "instagram",
+  "linkedin",
+  "x",
+  "google-maps",
+  "external-link",
+  "question",
+  "phone-call",
+  "petition",
+]
+
+export function CtaCardAllArrowVariants() {
+  return (
+    <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+      {types.map((type) => (
+        <CtaCard key={type} type={type} variant="arrow" />
+      ))}
+    </div>
+  )
+}`
+            },
+            {
+                title: "API Reference",
+                type: "api"
+            }
+        ],
+        apiTables: [
+            {
+                title: "CtaCard",
+                props: [
+                    {
+                        prop: "variant",
+                        type: '"buttons" | "arrow"',
+                        default: '"buttons"',
+                        description: "`buttons` renders full-width text CTAs. `arrow` renders social proof with a round chevron CTA."
+                    },
+                    {
+                        prop: "type",
+                        type: '"email" | "instagram" | "linkedin" | "x" | "google-maps" | "external-link" | "question" | "phone-call" | "petition"',
+                        default: '"email"',
+                        description: "Preset that fills the chip, icon, title, preview, media and primary CTA label. Explicit props still override preset values."
+                    },
+                    {
+                        prop: "channel",
+                        type: "string",
+                        default: "preset channel",
+                        description: "Optional override for the chip label shown in the card header."
+                    },
+                    {
+                        prop: "channelIcon",
+                        type: "ReactNode",
+                        default: "preset icon",
+                        description: "Optional override for the icon rendered inside the medium chip."
+                    },
+                    {
+                        prop: "title",
+                        type: "string",
+                        default: "—",
+                        description: "Main action title, clamped to three lines."
+                    },
+                    {
+                        prop: "body",
+                        type: "string",
+                        default: "—",
+                        description: "Optional preview text below the title. Media presets clamp this to three lines."
+                    },
+                    {
+                        prop: "mediaSrc / mediaAlt",
+                        type: "string",
+                        default: "preset media when available",
+                        description: "Optional 80×80 media preview used by social and maps variants."
+                    },
+                    {
+                        prop: "primaryLabel",
+                        type: "string",
+                        default: "preset label",
+                        description: "Primary full-width CTA label."
+                    },
+                    {
+                        prop: "secondaryLabel",
+                        type: "string",
+                        default: "—",
+                        description: "Optional secondary full-width CTA label rendered below the primary CTA."
+                    },
+                    {
+                        prop: "socialProof",
+                        type: "string",
+                        default: '"34 people did this"',
+                        description: "Centered proof text under the CTA group."
+                    },
+                    {
+                        prop: "onPrimaryClick / onSecondaryClick",
+                        type: "MouseEventHandler<HTMLButtonElement>",
+                        default: "—",
+                        description: "Click handlers for the primary and optional secondary CTA."
+                    },
+                    {
+                        prop: "primaryLoading / secondaryLoading",
+                        type: "boolean",
+                        default: "false",
+                        description: "Shows loading state and disables the corresponding CTA."
+                    },
+                    {
+                        prop: "className",
+                        type: "string",
+                        default: "—",
+                        description: "Additional classes applied to the card shell."
                     }
                 ]
             }
