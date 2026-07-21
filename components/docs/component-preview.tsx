@@ -18,7 +18,9 @@ import { ActionTextAreaDefault, ActionTextAreaStates, ActionTextAreaGlass } from
 // Campaign Card demos
 import {
   CampaignCardDefault,
+  CampaignCardDefaultHover,
   CampaignCardSupporter,
+  CampaignCardSupporterHover,
   CampaignCardStart,
   CampaignCardFinish,
   CampaignCardMinusDemo,
@@ -29,7 +31,13 @@ import { FormTitleDefault, FormTitleStates } from "@/components/demos/form-title
 // Avatar demos
 import { AvatarSizes, AvatarFallbacks, AvatarImageError, AvatarGroupDemo, AvatarDuoDemo, AvatarLabelDemo } from "@/components/demos/avatar-demos";
 // CTA Card demos
-import { CtaCardEmail, CtaCardComment, CtaCardQuestion, CtaCardPhoneCall, CtaCardExternalLink, CtaCardGoogleMaps } from "@/components/demos/cta-card-demos";
+import {
+  CtaCardAllArrowVariants,
+  CtaCardAllButtonVariants,
+  CtaCardArrow,
+  CtaCardDefault,
+  CtaCardWithSecondary,
+} from "@/components/demos/cta-card-demos";
 // Chip demos
 import { ChipDefault, ChipAvatar, ChipSocial, ChipTypes, ChipRemovable } from "@/components/demos/chip-demos";
 // Button demos
@@ -94,7 +102,9 @@ const DEMO_MAP: Record<string, React.ReactNode> = {
   "action-textarea-glass": <ActionTextAreaGlass />,
   // Campaign Card
   "campaign-card-default": <CampaignCardDefault />,
+  "campaign-card-default-hover": <CampaignCardDefaultHover />,
   "campaign-card-supporter": <CampaignCardSupporter />,
+  "campaign-card-supporter-hover": <CampaignCardSupporterHover />,
   "campaign-card-start": <CampaignCardStart />,
   "campaign-card-finish": <CampaignCardFinish />,
   "campaign-card-minus": <CampaignCardMinusDemo />,
@@ -120,12 +130,11 @@ const DEMO_MAP: Record<string, React.ReactNode> = {
   "avatar-duo-default": <AvatarDuoDemo />,
   "avatar-label-default": <AvatarLabelDemo />,
   // CTA Card
-  "cta-card-email": <CtaCardEmail />,
-  "cta-card-comment": <CtaCardComment />,
-  "cta-card-question": <CtaCardQuestion />,
-  "cta-card-phone": <CtaCardPhoneCall />,
-  "cta-card-link": <CtaCardExternalLink />,
-  "cta-card-maps": <CtaCardGoogleMaps />,
+  "cta-card-default": <CtaCardDefault />,
+  "cta-card-secondary": <CtaCardWithSecondary />,
+  "cta-card-arrow": <CtaCardArrow />,
+  "cta-card-all-buttons": <CtaCardAllButtonVariants />,
+  "cta-card-all-arrows": <CtaCardAllArrowVariants />,
   // Chip
   "chip-default": <ChipDefault />,
   "chip-types": <ChipTypes />,
