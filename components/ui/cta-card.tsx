@@ -831,9 +831,9 @@ export const CtaCard = forwardRef<HTMLDivElement, CtaCardProps>(
             />
           </div>
         ) : (
-          <div className="flex flex-col items-center justify-center gap-[var(--space-4)] px-[var(--space-6)] pt-[var(--space-5)]">
+          <div className="flex flex-col items-center justify-center gap-[var(--space-2)] px-[var(--space-6)] pt-[var(--space-5)]">
             {socialProof && (
-              <p className="max-w-full truncate text-center text-[12px] font-normal leading-[var(--line-height-xs)] tracking-[0] text-[var(--text-glass-primary)]">
+              <p className="max-w-full truncate pb-[var(--space-2)] text-center text-[12px] font-normal leading-[var(--line-height-xs)] tracking-[0] text-[var(--text-glass-primary)]">
                 {socialProof}
               </p>
             )}
